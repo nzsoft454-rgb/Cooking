@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B-001-A UI 案 — 冷蔵庫一覧</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #E9EEF1;
+      color: #1A2228;
+      line-height: 1.5;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #C5CDD3;
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 { margin: 0 0 4px; font-size: 20px; }
+    header p { margin: 0; color: #5C6B76; font-size: 14px; }
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px 24px;
+      background: #fff;
+      border-bottom: 1px solid #C5CDD3;
+      position: sticky;
+      top: 72px;
+      z-index: 9;
+    }
+    nav a {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: #F3F6F8;
+      color: #2BB5A0;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    nav a:hover { background: #E6F7F4; }
+    main { max-width: 960px; margin: 0 auto; padding: 24px; }
+    section {
+      background: #fff;
+      border: 1px solid #C5CDD3;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    section h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #2BB5A0;
+    }
+    section .desc {
+      margin: 0 0 16px;
+      color: #5C6B76;
+      font-size: 14px;
+    }
+    section img {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      margin: 0 auto;
+      border: 1px solid #C5CDD3;
+      border-radius: 8px;
+    }
+    ul { margin: 8px 0 0; padding-left: 20px; color: #5C6B76; font-size: 14px; }
+    .note {
+      margin-top: 24px;
+      padding: 12px 16px;
+      background: #E6F7F4;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #1A2228;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>B-001-A 冷蔵庫一覧 — UI 改善案</h1>
+    <p>Design D1（マットスチール） / 実装前モック</p>
+  </header>
+  <nav>
+    <a href="#a">案 A リスト</a>
+    <a href="#b">案 B セクション</a>
+    <a href="#c">案 C サマリー</a>
+    <a href="#d">案 D タブ</a>
+  </nav>
+  <main>
+    <section id="a">
+      <h2>案 A：1 列リスト型</h2>
+      <p class="desc">読みやすさ最優先。横長カードで名前・残量バー・期限ピルを整理。</p>
+      <img src="b001a-proposal-a-list.png" alt="案A 1列リスト型" />
+      <ul>
+        <li>食材名を大きく表示、3 列より情報が追いやすい</li>
+        <li>1 画面の件数は減る</li>
+      </ul>
+    </section>
+
+    <section id="b">
+      <h2>案 B：期限セクション + 2 列</h2>
+      <p class="desc">期限切れ / 期限近 / 余裕ありで自動グループ化。</p>
+      <img src="b001a-proposal-b-sections.png" alt="案B 期限セクション" />
+      <ul>
+        <li>期限管理が主目的のときに有効</li>
+        <li>セクション見出しを sticky にするとスクロール中も文脈が保てる</li>
+      </ul>
+    </section>
+
+    <section id="c">
+      <h2>案 C：サマリー + 簡略カード</h2>
+      <p class="desc">上部サマリー + 2 列グリッド。現行構造から移行しやすい。</p>
+      <img src="b001a-proposal-c-summary.png" alt="案C サマリー" />
+      <ul>
+        <li>全体把握と一覧性のバランスが良い</li>
+        <li>選択バーとフッターの重複を解消しやすい</li>
+      </ul>
+    </section>
+
+    <section id="d">
+      <h2>案 D：フィルタタブ + 2 列</h2>
+      <p class="desc">タブで絞り込み、メタ情報を 1 行に集約。</p>
+      <img src="b001a-proposal-d-tabs.png" alt="案D フィルタタブ" />
+      <ul>
+        <li>今すぐ使う食材だけ絞り込みたいとき向け</li>
+        <li>タブ分の縦スペースを消費</li>
+      </ul>
+    </section>
+
+    <div class="note">
+      <strong>おすすめ：</strong> 案 C をベースに、案 B の「期限近を上に」を組み合わせる案。
+    </div>
+  </main>
+</body>
+</html>

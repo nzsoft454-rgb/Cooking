@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B-001-a 食材の編集 — UI 案（画像）</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #E9EEF1;
+      color: #1A2228;
+      line-height: 1.5;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #C5CDD3;
+      padding: 20px 24px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 20px; }
+    header p { margin: 0; color: #5C6B76; font-size: 14px; }
+    .policy {
+      margin: 16px 24px 0;
+      padding: 12px 16px;
+      background: #E6F7F4;
+      border-radius: 8px;
+      font-size: 14px;
+      max-width: 960px;
+    }
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px 24px;
+      background: #fff;
+      border-bottom: 1px solid #C5CDD3;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: #F3F6F8;
+      color: #2BB5A0;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    nav a:hover { background: #E6F7F4; }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    article {
+      background: #fff;
+      border: 1px solid #C5CDD3;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    article h2 {
+      margin: 0;
+      padding: 14px 16px 6px;
+      font-size: 16px;
+      color: #2BB5A0;
+    }
+    article p {
+      margin: 0;
+      padding: 0 16px 12px;
+      font-size: 13px;
+      color: #5C6B76;
+    }
+    article img {
+      display: block;
+      width: 100%;
+      border-top: 1px solid #C5CDD3;
+    }
+    article ul {
+      margin: 0;
+      padding: 12px 16px 16px 32px;
+      font-size: 13px;
+      color: #5C6B76;
+    }
+    .open-hint {
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+      color: #5C6B76;
+    }
+    .open-hint code { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>B-001-a「食材の編集」UI 案 — 全 8 パターン</h1>
+    <p>IngredientEditScreen · Design D1 · カレンダー UI なし（チップ / スライダー / 直接入力）</p>
+  </header>
+  <div class="policy">
+    <strong>方針：</strong> スマホ画面のため月間カレンダーは使わない。期限は
+    <strong>相対日チップ</strong>（+3日 / 1週間 等）＋必要時のみ <strong>日付テキスト入力</strong>。
+  </div>
+  <nav>
+    <a href="#a">A カード</a>
+    <a href="#b">B リスト</a>
+    <a href="#c">C ビジュアル</a>
+    <a href="#d">D 分割</a>
+    <a href="#e">E ステッパー</a>
+    <a href="#f">F シート</a>
+    <a href="#g">G カウント</a>
+    <a href="#h">H 拡大カード</a>
+  </nav>
+  <main>
+    <article id="a">
+      <h2>案 A：セクションカード型</h2>
+      <p>ヒーロー + 期限チップ + 残量スライダー</p>
+      <img src="b001a-edit-v2-a-cards.png" alt="案A" loading="lazy" />
+      <ul><li>情報の塊が分かりやすい</li><li>手入力を減らせる</li></ul>
+    </article>
+    <article id="b">
+      <h2>案 B：設定リスト型</h2>
+      <p>iOS Settings 風の行 UI</p>
+      <img src="b001a-edit-v2-b-rows.png" alt="案B" loading="lazy" />
+      <ul><li>1 画面に収まりやすい</li><li>実装コスト低め</li></ul>
+    </article>
+    <article id="c">
+      <h2>案 C：ビジュアル操作型 ★</h2>
+      <p>25/50/75/100% + 期限チップ</p>
+      <img src="b001a-edit-v2-c-visual.png" alt="案C" loading="lazy" />
+      <ul><li>モバイル向けで最も直感的</li><li>0〜1 を UI から隠せる</li></ul>
+    </article>
+    <article id="d">
+      <h2>案 D：上下分割型</h2>
+      <p>上半分で食材、下半分で残量リング + 期限チップ</p>
+      <img src="b001a-edit-v2-d-split.png" alt="案D" loading="lazy" />
+      <ul><li>編集対象が常に見える</li></ul>
+    </article>
+    <article id="e">
+      <h2>案 E：3 ステップ型</h2>
+      <p>名前 → 期限（チップ）→ 残量</p>
+      <img src="b001a-edit-v2-e-stepper.png" alt="案E" loading="lazy" />
+      <ul><li>1 画面 1 目的</li><li>初めてのユーザー向け</li></ul>
+    </article>
+    <article id="f">
+      <h2>案 F：ボトムシート型</h2>
+      <p>一覧を薄く残して下から編集</p>
+      <img src="b001a-edit-v2-f-sheet.png" alt="案F" loading="lazy" />
+      <ul><li>一覧との文脈を保つ</li><li>スワイプで閉じやすい</li></ul>
+    </article>
+    <article id="g">
+      <h2>案 G：期限カウントダウン型</h2>
+      <p>「あと N 日」を主役に</p>
+      <img src="b001a-edit-v2-g-countdown.png" alt="案G" loading="lazy" />
+      <ul><li>期限管理が主目的のとき有効</li></ul>
+    </article>
+    <article id="h">
+      <h2>案 H：カード拡大型</h2>
+      <p>B-001 のカードをそのまま拡大</p>
+      <img src="b001a-edit-v2-h-card.png" alt="案H" loading="lazy" />
+      <ul><li>一覧からの遷移が自然</li></ul>
+    </article>
+  </main>
+  <p class="open-hint">
+    このファイルをブラウザで開くと全画像が表示されます。<br />
+    <code>docks/mockups/b001-a-edit/index.html</code>
+  </p>
+</body>
+</html>

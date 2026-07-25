@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>色違いサンプル — B-001 UI</title>
+  <base href="./" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", "Hiragino Sans", sans-serif; background: #E9EEF1; color: #1A2228; line-height: 1.6; }
+    header { background: #fff; border-bottom: 1px solid #C5CDD3; padding: 24px; }
+    header h1 { margin: 0 0 6px; font-size: 22px; }
+    header p { margin: 0; color: #5C6B76; font-size: 14px; }
+    .notice { margin: 16px 24px 0; padding: 12px 16px; background: #FFF8E6; border: 1px solid #E8A045; border-radius: 8px; font-size: 13px; max-width: 1200px; }
+    .notice code { font-size: 12px; background: #fff; padding: 2px 6px; border-radius: 4px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    article { background: #fff; border: 1px solid #C5CDD3; border-radius: 8px; overflow: hidden; }
+    article.current { border-color: #2BB5A0; border-width: 2px; }
+    article h2 { margin: 0; padding: 14px 16px 4px; font-size: 16px; }
+    article .palette { padding: 0 16px 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+    article .swatch { width: 28px; height: 28px; border-radius: 4px; border: 1px solid rgba(0,0,0,.1); }
+    article p { margin: 0; padding: 0 16px 10px; font-size: 13px; color: #5C6B76; }
+    article img { width: 100%; display: block; border-top: 1px solid #C5CDD3; min-height: 200px; object-fit: contain; background: #F3F6F8; }
+    article img.err { border: 2px dashed #C23B3B; }
+    .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+    .tag-current { background: #E6F7F4; color: #2BB5A0; }
+    .img-fallback { display: none; padding: 16px; font-size: 12px; color: #C23B3B; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>色違いサンプル — B-001 冷蔵庫（レイアウト同一）</h1>
+    <p>UI 構造は現在の D1 と同じ。アクセントカラーと背景トーンのみ変更。</p>
+  </header>
+  <div class="notice">
+    画像が表示されない場合は <code>open-gallery.bat</code> をダブルクリックしてください（ローカルサーバー経由で開きます）。
+  </div>
+  <main>
+    <article class="current">
+      <h2>D1 マットスチール <span class="tag tag-current">現在</span></h2>
+      <div class="palette">
+        <span class="swatch" style="background:#E9EEF1" title="背景"></span>
+        <span class="swatch" style="background:#2BB5A0" title="アクセント"></span>
+        <span class="swatch" style="background:#1A2228" title="文字"></span>
+      </div>
+      <p>明るいグレー + ティール。静かなワークステーション。</p>
+      <img src="./color-variant-d1-matte-steel.png" alt="D1 マットスチール" loading="eager" />
+    </article>
+    <article>
+      <h2>D2 グラファイト・アンバー</h2>
+      <div class="palette">
+        <span class="swatch" style="background:#2A3038"></span>
+        <span class="swatch" style="background:#E8A045"></span>
+        <span class="swatch" style="background:#F0F2F5"></span>
+      </div>
+      <p>ダークモード + 暖色アンバー。夜のキッチン向け。</p>
+      <img src="./color-variant-d2-graphite-amber.png" alt="D2 グラファイトアンバー" loading="eager" />
+    </article>
+    <article>
+      <h2>D3 セージ・エディトリアル</h2>
+      <div class="palette">
+        <span class="swatch" style="background:#E8EDE4"></span>
+        <span class="swatch" style="background:#6B8F71"></span>
+        <span class="swatch" style="background:#1E2A22"></span>
+      </div>
+      <p>セージグリーン。自然・オーガニックな印象。</p>
+      <img src="./color-variant-d3-sage.png" alt="D3 セージ" loading="eager" />
+    </article>
+    <article>
+      <h2>D4 コッパー・キッチン</h2>
+      <div class="palette">
+        <span class="swatch" style="background:#F5EDE4"></span>
+        <span class="swatch" style="background:#C4683A"></span>
+        <span class="swatch" style="background:#2C2218"></span>
+      </div>
+      <p>クリーム + テラコッタ。温かみのある家庭料理感。</p>
+      <img src="./color-variant-d4-copper.png" alt="D4 コッパー" loading="eager" />
+    </article>
+    <article>
+      <h2>D5 ネイビー・クリーン</h2>
+      <div class="palette">
+        <span class="swatch" style="background:#EEF1F6"></span>
+        <span class="swatch" style="background:#3B6FD4"></span>
+        <span class="swatch" style="background:#1A2332"></span>
+      </div>
+      <p>クールブルー。すっきり pro なキッチンアプリ。</p>
+      <img src="./color-variant-d5-navy.png" alt="D5 ネイビー" loading="eager" />
+    </article>
+  </main>
+  <script>
+    document.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('error', function () {
+        img.classList.add('err');
+        img.alt = '読み込み失敗 — open-gallery.bat を実行してください';
+      });
+    });
+  </script>
+</body>
+</html>

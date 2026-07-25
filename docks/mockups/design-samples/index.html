@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>デザインサンプル — D1 マットスチール</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #E9EEF1;
+      color: #1A2228;
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #C5CDD3;
+      padding: 24px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 22px; }
+    header p { margin: 0; color: #5C6B76; font-size: 14px; }
+    .tokens {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .token {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #5C6B76;
+    }
+    .swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #C5CDD3;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    article {
+      background: #fff;
+      border: 1px solid #C5CDD3;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    article h2 {
+      margin: 0;
+      padding: 16px 16px 6px;
+      font-size: 16px;
+      color: #2BB5A0;
+    }
+    article p {
+      margin: 0;
+      padding: 0 16px 12px;
+      font-size: 13px;
+      color: #5C6B76;
+    }
+    article img {
+      display: block;
+      width: 100%;
+      border-top: 1px solid #C5CDD3;
+    }
+    article ul {
+      margin: 0;
+      padding: 12px 16px 16px 32px;
+      font-size: 13px;
+      color: #5C6B76;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>デザインサンプル — D1 マットスチール（洗練版）</h1>
+    <p>案 B 設定リスト型ベース · カレンダーなし · コード未反映（参考モック）</p>
+    <div class="tokens">
+      <span class="token"><span class="swatch" style="background:#E9EEF1"></span>背景 #E9EEF1</span>
+      <span class="token"><span class="swatch" style="background:#FFFFFF"></span>パネル #FFFFFF</span>
+      <span class="token"><span class="swatch" style="background:#2BB5A0"></span>アクセント #2BB5A0</span>
+      <span class="token"><span class="swatch" style="background:#1A2228"></span>文字 #1A2228</span>
+      <span class="token">角丸 8px</span>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h2>B-001-a 食材の編集（メイン）</h2>
+      <p>ヒーローカード + 設定リスト + 横並びフッター</p>
+      <img src="b001a-design-sample-final.png" alt="B-001-a 完成サンプル" />
+      <ul>
+        <li>左アクセントライン + 写真フレーム</li>
+        <li>期限はチップ + 直接入力（カレンダーなし）</li>
+        <li>保存 / 完食・削除 横並び</li>
+      </ul>
+    </article>
+    <article>
+      <h2>B-001 冷蔵庫一覧</h2>
+      <p>編集画面と同じトーンで統一</p>
+      <img src="b001-design-sample-fridge.png" alt="B-001 冷蔵庫" />
+      <ul>
+        <li>2 列グリッド + プログレスバー</li>
+        <li>選択バー + フッター 2 ボタン</li>
+      </ul>
+    </article>
+    <article>
+      <h2>B-001-a まとめて編集</h2>
+      <p>複数選択時の一括編集</p>
+      <img src="b001a-design-sample-batch.png" alt="まとめて編集" />
+      <ul>
+        <li>選択サマリーカード</li>
+        <li>同じフォーム UI を流用</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
