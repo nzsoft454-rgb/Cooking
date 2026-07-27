@@ -1,0 +1,19 @@
+# OSX
+#
+.DS_Store
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+
+# Bundle artifacts
+*.jsbundle
+
+# Linked from ../mock (see mock/scripts/ensure-android-link.cjs)
+node_modules/

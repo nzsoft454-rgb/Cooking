@@ -1,0 +1,11 @@
+{
+  "name": "cookingapp",
+  "private": true,
+  "scripts": {
+    "install:mock": "npm install --prefix mock",
+    "start": "npm run start --prefix mock",
+    "web": "npm run web --prefix mock",
+    "android": "npm run android:dev --prefix mock",
+    "android:gradle": "cd android && gradlew.bat assembleDebug"
+  }
+}

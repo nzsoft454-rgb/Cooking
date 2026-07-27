@@ -1,0 +1,3 @@
+# Android SDK の場所（Android Studio 標準パス例）
+# このファイルを local.properties にコピーし、sdk.dir を環境に合わせて編集してください。
+sdk.dir=C\:\\Users\\YOUR_USER\\AppData\\Local\\Android\\Sdk
