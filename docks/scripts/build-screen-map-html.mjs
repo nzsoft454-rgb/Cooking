@@ -1,0 +1,353 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const tsxPath =
+  process.env.CANVAS_TSX ??
+  path.join(
+    process.env.USERPROFILE ?? '',
+    '.cursor/projects/c-Users-akiyama-Project-cookingApp/canvases/screen-map.canvas.tsx'
+  );
+
+const tsx = fs.readFileSync(tsxPath, 'utf8');
+const start = tsx.indexOf('const INVENTORY: ScreenItem[] = [');
+const end = tsx.indexOf('];\n\ntype FilterKind');
+const block = tsx.slice(start, end + 2);
+
+const items = [];
+const itemRe =
+  /\{\s*id: '([^']+)'[\s\S]*?kind: '(screen|modal|alert)'[\s\S]*?tab: '(camera|fridge|recipe|settings|shared)'[\s\S]*?title: '((?:\\'|[^'])*)'[\s\S]*?source: '([^']+)'([\s\S]*?)\}/g;
+
+let m;
+while ((m = itemRe.exec(block)) !== null) {
+  const tail = m[5];
+  const spec = tail.match(/spec: '([^']+)'/);
+  const host = tail.match(/host: '([^']+)'/);
+  const trigger = tail.match(/trigger: '([^']+)'/);
+  items.push({
+    id: m[1],
+    kind: m[2],
+    tab: m[3],
+    title: m[4].replace(/\\'/g, "'"),
+    source: m[5].includes('source:') ? m[4] && m[5] : m[5],
+    sourceFile: m[5].match(/source: '([^']+)'/) ? m[5].match(/source: '([^']+)'/)[1] : m[5],
+    spec: spec?.[1] ?? '',
+    host: host?.[1] ?? '',
+    trigger: trigger?.[1] ?? '',
+  });
+}
+
+// fix source extraction
+for (const item of items) {
+  const chunk = block.slice(block.indexOf(`id: '${item.id}'`));
+  const sm = chunk.match(/source: '([^']+)'/);
+  item.source = sm?.[1] ?? '';
+  delete item.sourceFile;
+}
+
+const TAB_LABEL = {
+  camera: 'カメラ',
+  fridge: '冷蔵庫',
+  recipe: 'レシピ',
+  settings: '設定',
+  shared: '共通',
+};
+const KIND_LABEL = { screen: '画面', modal: 'モーダル', alert: 'Alert' };
+
+const html = `<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>モックアプリ 画面・モーダル一覧</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --surface: #fff;
+      --ink: #1a1d21;
+      --muted: #5c6370;
+      --faint: #8b939e;
+      --border: #dfe3ea;
+      --accent: #2f6fed;
+      --accent-soft: #e8f0ff;
+      --warn-soft: #fff4e5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.5rem; margin: 0 0 8px; }
+    .lead { color: var(--muted); margin: 0 0 20px; font-size: 0.95rem; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+    .stat b { display: block; font-size: 1.4rem; }
+    .stat span { font-size: 0.8rem; color: var(--muted); }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+    .filters label { font-size: 0.85rem; color: var(--muted); margin-right: 4px; }
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .layout { display: grid; grid-template-columns: 320px 1fr; gap: 16px; align-items: start; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } }
+    .list {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      max-height: 70vh;
+      overflow: auto;
+    }
+    .list button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      background: transparent;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+    .list button:hover { background: #f8f9fb; }
+    .list button.active { background: var(--accent-soft); }
+    .pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      margin-right: 6px;
+      color: var(--muted);
+    }
+    .title { font-weight: 600; font-size: 0.92rem; }
+    .meta { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
+    .detail {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .detail h2 { margin: 0 0 4px; font-size: 1.15rem; }
+    .detail .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 16px; }
+    .detail-grid { display: grid; grid-template-columns: auto 1fr; gap: 20px; }
+    @media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+    .phone {
+      width: 280px;
+      border: 2px solid #333;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+    }
+    .phone.dim { opacity: 0.45; }
+    .status {
+      height: 22px;
+      background: #eee;
+      border-bottom: 1px solid var(--border);
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--faint);
+    }
+    .block {
+      margin: 6px 10px;
+      padding: 6px 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 11px;
+      color: var(--muted);
+      background: #fafbfc;
+    }
+    .block.header { border: none; border-bottom: 1px solid var(--border); margin: 0; border-radius: 0; background: #fff; }
+    .block.header b { display: block; color: var(--ink); font-size: 13px; }
+    .block.footer { display: flex; gap: 6px; border: none; border-top: 1px solid var(--border); margin: 0; border-radius: 0; padding: 8px 10px; background: #fff; }
+    .block.footer span { flex: 1; text-align: center; font-size: 10px; font-weight: 600; padding: 8px 4px; border-radius: 6px; border: 1px solid var(--border); }
+    .block.footer span.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .overlay-card {
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .overlay-card .label {
+      padding: 8px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+    .info h3 { font-size: 0.85rem; margin: 12px 0 4px; color: var(--muted); }
+    .info p { margin: 0; font-size: 0.9rem; }
+    .nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 16px; }
+    .nav-grid section { font-size: 0.8rem; }
+    .nav-grid h4 { margin: 0 0 6px; font-size: 0.85rem; }
+    .nav-grid button { display: block; width: 100%; margin-bottom: 4px; text-align: left; font-size: 0.75rem; padding: 4px 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>モックアプリ 画面・モーダル一覧</h1>
+    <p class="lead">フェーズ1モック（mock/）の全画面・ダイアログ確認用。ブラウザで開いて左から選択してください。</p>
+    <div class="stats" id="stats"></div>
+    <div class="filters" id="kindFilters"></div>
+    <div class="filters" id="tabFilters"></div>
+    <div class="layout">
+      <div class="list" id="list"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+    <div class="detail" style="margin-top:16px">
+      <h2 style="margin-top:0">ナビゲーション構造</h2>
+      <div class="nav-grid" id="nav"></div>
+    </div>
+  </div>
+  <script>
+    const INVENTORY = ${JSON.stringify(items)};
+    const TAB_LABEL = ${JSON.stringify(TAB_LABEL)};
+    const KIND_LABEL = ${JSON.stringify(KIND_LABEL)};
+
+    let kindFilter = 'all';
+    let tabFilter = 'all';
+    let selectedId = 'fridge-home';
+
+    function counts() {
+      const c = { screen: 0, modal: 0, alert: 0 };
+      INVENTORY.forEach(i => c[i.kind]++);
+      return c;
+    }
+
+    function filtered() {
+      return INVENTORY.filter(i => {
+        if (kindFilter !== 'all' && i.kind !== kindFilter) return false;
+        if (tabFilter !== 'all' && i.tab !== tabFilter) return false;
+        return true;
+      });
+    }
+
+    function wireBlocks(item) {
+      const isModal = item.kind !== 'screen';
+      const blocks = [];
+      if (item.kind === 'screen') {
+        blocks.push({ t: 'header', title: item.title, sub: item.spec || item.tab });
+      }
+      if (item.title.includes('step') || item.title.includes('①') || item.title.includes('②')) {
+        blocks.push({ t: 'note', text: 'ステップバー付きフロー' });
+      }
+      if (item.kind === 'modal' || item.kind === 'alert') {
+        blocks.push({ t: 'note', text: item.trigger || 'ダイアログ表示' });
+      }
+      blocks.push({ t: 'note', text: 'mock/src/screens/…/' + item.source });
+      if (item.host) blocks.push({ t: 'note', text: '表示元: ' + item.host });
+      blocks.push({ t: 'footer', buttons: item.kind === 'alert' ? ['OK'] : ['キャンセル', '確定'] });
+      return blocks;
+    }
+
+    function renderPhone(item, overlay) {
+      const blocks = wireBlocks(item);
+      let inner = '<div class="status">9:41 · Cooking App Mock</div>';
+      blocks.forEach(b => {
+        if (b.t === 'header') {
+          inner += '<div class="block header"><b>' + b.title + '</b>' + (b.sub ? '<small>' + b.sub + '</small>' : '') + '</div>';
+        } else if (b.t === 'note') {
+          inner += '<div class="block">' + b.text + '</div>';
+        } else if (b.t === 'footer') {
+          inner += '<div class="block footer">' + b.buttons.map((btn, i) =>
+            '<span class="' + (i === b.buttons.length - 1 ? 'primary' : '') + '">' + btn + '</span>'
+          ).join('') + '</div>';
+        }
+      });
+      const phone = '<div class="phone' + (overlay ? ' dim' : '') + '">' + inner + '</div>';
+      if (!overlay) return phone;
+      return '<div style="position:relative;width:280px">' + phone +
+        '<div class="overlay"><div class="overlay-card"><div class="label">' +
+        KIND_LABEL[item.kind] + ' · ' + item.title + '</div>' + inner + '</div></div></div>';
+    }
+
+    function renderDetail(item) {
+      const overlay = item.kind !== 'screen';
+      return '<h2>' + item.title + '</h2><p class="sub">' + item.source + '</p>' +
+        '<div class="detail-grid"><div>' + renderPhone(item, overlay) + '</div><div class="info">' +
+        (item.spec ? '<h3>仕様ID</h3><p>' + item.spec + '</p>' : '') +
+        (item.host ? '<h3>表示元画面</h3><p>' + item.host + '</p>' : '') +
+        (item.trigger ? '<h3>表示トリガー</h3><p>' + item.trigger + '</p>' : '') +
+        '<h3>実装ファイル</h3><p>mock/src/screens/…/' + item.source + '</p>' +
+        (overlay ? '<p style="color:var(--faint);font-size:0.85rem">モーダル/Alertは親画面を半透明にしたイメージです。</p>' : '') +
+        '</div></div>';
+    }
+
+    function render() {
+      const c = counts();
+      document.getElementById('stats').innerHTML =
+        '<div class="stat"><b>' + c.screen + '</b><span>画面</span></div>' +
+        '<div class="stat"><b>' + c.modal + '</b><span>モーダル</span></div>' +
+        '<div class="stat"><b>' + c.alert + '</b><span>Alert</span></div>' +
+        '<div class="stat"><b>' + INVENTORY.length + '</b><span>合計</span></div>';
+
+      const kinds = [['all','すべて'],['screen','画面'],['modal','モーダル'],['alert','Alert']];
+      document.getElementById('kindFilters').innerHTML = '<label>種別:</label>' + kinds.map(([k,l]) =>
+        '<button class="btn' + (kindFilter===k?' active':'') + '" data-kind="' + k + '">' + l + '</button>'
+      ).join('');
+
+      const tabs = [['all','すべて'],['camera','カメラ'],['fridge','冷蔵庫'],['recipe','レシピ'],['settings','設定'],['shared','共通']];
+      document.getElementById('tabFilters').innerHTML = '<label>タブ:</label>' + tabs.map(([k,l]) =>
+        '<button class="btn' + (tabFilter===k?' active':'') + '" data-tab="' + k + '">' + l + '</button>'
+      ).join('');
+
+      const list = filtered();
+      if (!list.find(i => i.id === selectedId)) selectedId = list[0]?.id ?? INVENTORY[0].id;
+      const sel = INVENTORY.find(i => i.id === selectedId) ?? INVENTORY[0];
+
+      document.getElementById('list').innerHTML = list.map(i =>
+        '<button class="' + (i.id===selectedId?'active':'') + '" data-id="' + i.id + '">' +
+        '<span class="pill">' + KIND_LABEL[i.kind] + '</span><span class="title">' + i.title + '</span>' +
+        '<div class="meta">' + TAB_LABEL[i.tab] + (i.spec ? ' · ' + i.spec : '') + '</div></button>'
+      ).join('');
+
+      document.getElementById('detail').innerHTML = renderDetail(sel);
+
+      const navTabs = ['camera','fridge','recipe','settings'];
+      document.getElementById('nav').innerHTML = navTabs.map(tab =>
+        '<section><h4>' + TAB_LABEL[tab] + 'Tab</h4>' +
+        INVENTORY.filter(i => i.tab === tab && i.kind === 'screen').map(s =>
+          '<button class="btn" data-id="' + s.id + '">' + s.title + '</button>'
+        ).join('') + '</section>'
+      ).join('');
+    }
+
+    document.body.addEventListener('click', e => {
+      const t = e.target;
+      if (!(t instanceof HTMLElement)) return;
+      if (t.dataset.kind) { kindFilter = t.dataset.kind; render(); return; }
+      if (t.dataset.tab) { tabFilter = t.dataset.tab; render(); return; }
+      if (t.dataset.id) { selectedId = t.dataset.id; render(); return; }
+    });
+
+    render();
+  </script>
+</body>
+</html>`;
+
+const out = path.join(__dirname, '..', 'screen-map.html');
+fs.writeFileSync(out, html, 'utf8');
+console.log('Wrote', out, 'items:', items.length);
