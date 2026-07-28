@@ -1,0 +1,5 @@
+# mock/android は ensure-android-link.cjs が ../android へのジャンクションを作成
+android/
+node_modules/
+.expo/
+dist-web/

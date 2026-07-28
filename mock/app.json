@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "CookingMock",
+    "slug": "cooking-mock",
+    "scheme": "cookingmock",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "出来上がり写真をコレクションに保存するため、写真ライブラリへのアクセスを許可してください。",
+          "cameraPermission": "調理後の料理を撮影するため、カメラへのアクセスを許可してください。"
+        }
+      ],
+      "expo-asset"
+    ]
+  }
+}
