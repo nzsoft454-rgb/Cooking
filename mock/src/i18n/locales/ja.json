@@ -14,6 +14,8 @@
     "mockApiHint": "モック: 実APIは呼びません",
     "noImage": "画像なし",
     "captureImage": "撮影画像",
+    "tapToExpandImage": "タップで拡大表示",
+    "pinchToZoom": "2本指で拡大・縮小、拡大後はドラッグで移動",
     "ingredientName": "食材名",
     "quantity": "数量",
     "amount": "分量",
@@ -131,12 +133,14 @@
   "camera": {
     "home": {
       "title": "カメラ",
-      "subtitle": "A-001 · 撮影はモックです",
-      "hint": "食材をフレームに合わせてください",
-      "hintSub": "（実カメラは起動しません）",
+      "subtitle": "A-001 · 食材撮影",
+      "hint": "「撮影する」でカメラが起動します",
+      "hintSub": "撮影後に AI 解析へ進めます（解析はモック）",
       "capture": "撮影する",
+      "openingCamera": "カメラ起動中…",
+      "albumFood": "食材アルバム",
       "album": "アルバムから読み取る",
-      "albumHint": "保存済みの画像から解析します",
+      "albumHint": "アルバムから選んだあと、確認画面で「レシート」解析にも切り替えられます",
       "foodPlaceholder": "食"
     },
     "receiptResult": {
@@ -163,7 +167,8 @@
       "title": "画像確認",
       "subtitle": "A-001-a",
       "caption": "撮影した画像（モック）",
-      "captionAlbum": "選択した画像",
+      "captionAlbum": "選択したレシート画像",
+      "captionFoodAlbum": "選択した食材画像",
       "note": "解析の種類を選び、内容を確認してください。",
       "retake": "撮り直す",
       "reselect": "画像を選び直す",
@@ -176,7 +181,12 @@
       "modalBody": "この写真で食材を解析しますか？",
       "modalBodyReceipt": "このレシートから購入食材を読み取りますか？",
       "modalMeta": "外部 API で食材を判定します（モック）",
-      "modalMetaReceipt": "外部 API でレシートを読み取ります（モック）"
+      "modalMetaReceipt": "外部 API でレシートを読み取ります（モック）",
+      "backConfirmTitle": "撮影をやめますか？",
+      "backConfirmBodyCamera": "戻ると、この写真は破棄され、カメラ画面に戻ります。",
+      "backConfirmBodyAlbum": "戻ると、選択した画像は破棄され、カメラ画面に戻ります。",
+      "backConfirmConfirmCamera": "撮り直す",
+      "backConfirmConfirmAlbum": "選び直す"
     },
     "analyzing": {
       "title": "分析中",

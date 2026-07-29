@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { AnalysisStep, AnalysisStepBar } from '../../components/AnalysisStepBar';
 import {
-  CapturePreview,
+  ExpandableCapturePreview,
   Chip,
   FadeInView,
   FieldLabel,
@@ -206,7 +206,7 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
             <>
               <SectionTitle label={t('camera.receiptResult.sectionReceipt')} />
               <Panel style={styles.photoPanel}>
-                <CapturePreview imageUrl={imageUrl} height={150} />
+                <ExpandableCapturePreview imageUrl={imageUrl} height={150} />
               </Panel>
 
               {reviewCount > 0 ? (
@@ -284,7 +284,7 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
               <Panel style={styles.editCard}>
                 <View style={styles.editCardRow}>
                   <View style={styles.editPhotoCol}>
-                    <CapturePreview imageUrl={imageUrl} height={120} />
+                    <ExpandableCapturePreview imageUrl={imageUrl} height={120} />
                     <Text style={styles.editPhotoCaption}>
                       {t('camera.receiptResult.sectionReceipt')}
                     </Text>

@@ -28,7 +28,7 @@
         "expo-image-picker",
         {
           "photosPermission": "出来上がり写真をコレクションに保存するため、写真ライブラリへのアクセスを許可してください。",
-          "cameraPermission": "調理後の料理を撮影するため、カメラへのアクセスを許可してください。"
+          "cameraPermission": "食材の撮影と調理後の料理写真のため、カメラへのアクセスを許可してください。"
         }
       ],
       "expo-asset"

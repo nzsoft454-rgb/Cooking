@@ -1,32 +1,53 @@
+import { Ionicons } from '@expo/vector-icons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
-import { FoodThumb, FooterBar, FooterPrimaryButton, Header, HeroCard, Screen } from '../../components/ui';
-import { CAPTURE_IMAGE } from '../../data/dummy';
+import { CapturePreview, FooterBar, FooterPrimaryButton, Header, HeroCard, Screen } from '../../components/ui';
 import { CameraStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
-import { pickReceiptImageFromLibrary } from '../../utils/pickCaptureImage';
+import {
+  pickFoodImageFromLibrary,
+  takeFoodPhotoFromCamera,
+} from '../../utils/pickCaptureImage';
 
 type Props = NativeStackScreenProps<CameraStackParamList, 'CameraHome'>;
 
 export function CameraHomeScreen({ navigation }: Props) {
   const { t } = useTranslation();
   const { remainingGemini, user } = useApp();
-  const [pickingReceipt, setPickingReceipt] = useState(false);
+  const [capturing, setCapturing] = useState(false);
+  const [pickingFood, setPickingFood] = useState(false);
+  const [lastPreview, setLastPreview] = useState<string | null>(null);
 
-  const onReceiptPress = useCallback(async () => {
-    if (pickingReceipt) return;
-    setPickingReceipt(true);
+  const onCapturePress = useCallback(async () => {
+    if (capturing) return;
+    setCapturing(true);
     try {
-      const uri = await pickReceiptImageFromLibrary();
+      const uri = await takeFoodPhotoFromCamera();
       if (!uri) return;
-      navigation.navigate('CaptureConfirm', { imageUrl: uri, source: 'album' });
+      setLastPreview(uri);
+      navigation.navigate('CaptureConfirm', { imageUrl: uri, source: 'camera' });
     } finally {
-      setPickingReceipt(false);
+      setCapturing(false);
     }
-  }, [navigation, pickingReceipt]);
+  }, [capturing, navigation]);
+
+  const onFoodAlbumPress = useCallback(async () => {
+    if (pickingFood) return;
+    setPickingFood(true);
+    try {
+      const uri = await pickFoodImageFromLibrary();
+      if (!uri) return;
+      setLastPreview(uri);
+      navigation.navigate('CaptureConfirm', { imageUrl: uri, source: 'foodAlbum' });
+    } finally {
+      setPickingFood(false);
+    }
+  }, [navigation, pickingFood]);
+
+  const busy = capturing || pickingFood;
 
   return (
     <Screen edges={['top']}>
@@ -45,32 +66,31 @@ export function CameraHomeScreen({ navigation }: Props) {
       />
       <View style={styles.viewfinderWrap}>
         <HeroCard style={styles.viewfinder}>
-          <View style={styles.frame}>
-            <FoodThumb
-              imageUrl={CAPTURE_IMAGE}
-              name={t('camera.home.foodPlaceholder')}
-              size={120}
-            />
-            <Text style={styles.hint}>{t('camera.home.hint')}</Text>
-            <Text style={styles.hintSub}>{t('camera.home.hintSub')}</Text>
-          </View>
+          {lastPreview ? (
+            <CapturePreview imageUrl={lastPreview} height={280} />
+          ) : (
+            <View style={styles.frame}>
+              <View style={styles.viewfinderIconWrap}>
+                <Ionicons name="camera-outline" size={48} color={colors.primary} />
+              </View>
+              <Text style={styles.hint}>{t('camera.home.hint')}</Text>
+              <Text style={styles.hintSub}>{t('camera.home.hintSub')}</Text>
+            </View>
+          )}
         </HeroCard>
+        <Text style={styles.albumHint}>{t('camera.home.albumHint')}</Text>
       </View>
       <FooterBar>
         <FooterPrimaryButton
-          label={t('camera.home.album')}
+          label={t('camera.home.albumFood')}
           variant="secondary"
-          disabled={pickingReceipt}
-          onPress={onReceiptPress}
+          disabled={busy}
+          onPress={onFoodAlbumPress}
         />
         <FooterPrimaryButton
-          label={t('camera.home.capture')}
-          onPress={() =>
-            navigation.navigate('CaptureConfirm', {
-              imageUrl: CAPTURE_IMAGE,
-              source: 'camera',
-            })
-          }
+          label={capturing ? t('camera.home.openingCamera') : t('camera.home.capture')}
+          disabled={busy}
+          onPress={onCapturePress}
         />
       </FooterBar>
     </Screen>
@@ -96,17 +116,30 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 16,
     marginBottom: 8,
+    gap: 10,
   },
   viewfinder: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
+    padding: 12,
   },
   frame: {
     alignItems: 'center',
     gap: 14,
     padding: 24,
     paddingLeft: 28,
+  },
+  viewfinderIconWrap: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    backgroundColor: colors.primarySoft,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   hint: {
     color: colors.ink,
@@ -116,5 +149,13 @@ const styles = StyleSheet.create({
   hintSub: {
     color: colors.inkFaint,
     fontSize: 12,
+    textAlign: 'center',
+    lineHeight: 18,
+  },
+  albumHint: {
+    fontSize: 12,
+    color: colors.inkFaint,
+    textAlign: 'center',
+    paddingHorizontal: 8,
   },
 });

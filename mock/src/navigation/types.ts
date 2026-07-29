@@ -4,7 +4,7 @@ import type { AnalysisMode } from '../services/analyzeImage';
 import type { DetectedItem, RecipeConditions } from '../types';
 import type { FridgeSortKey } from '../utils/fridgeSort';
 
-export type CaptureSource = 'camera' | 'album';
+export type CaptureSource = 'camera' | 'foodAlbum' | 'receiptAlbum';
 
 export type CameraStackParamList = {
   CameraHome: undefined;

@@ -1,6 +1,6 @@
 import { useFocusEffect } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ActivityIndicator,
@@ -24,19 +24,19 @@ import {
   confirmStyles,
 } from '../../components/ui';
 import { delay } from '../../data/dummy';
-import { CameraStackParamList } from '../../navigation/types';
+import { CameraStackParamList, CaptureSource } from '../../navigation/types';
 import type { AnalysisMode } from '../../services/analyzeImage';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 
 type Props = NativeStackScreenProps<CameraStackParamList, 'CaptureConfirm'>;
 
-type ModalStep = null | 'confirm' | 'quota' | 'watchingAd';
+type ModalStep = null | 'confirm' | 'quota' | 'watchingAd' | 'backConfirm';
 
 const AD_REWARD = 1;
 
-function defaultMode(source: 'camera' | 'album' | undefined): AnalysisMode {
-  return source === 'album' ? 'receipt' : 'photo';
+function defaultMode(source: CaptureSource | undefined): AnalysisMode {
+  return source === 'receiptAlbum' ? 'receipt' : 'photo';
 }
 
 export function CaptureConfirmScreen({ navigation, route }: Props) {
@@ -47,17 +47,49 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
   const [modalStep, setModalStep] = useState<ModalStep>(null);
   const [adMessage, setAdMessage] = useState<string | null>(null);
   const navigatingRef = useRef(false);
+  const allowBackRef = useRef(false);
   const isReceipt = mode === 'receipt';
+
+  const closeModal = useCallback(() => {
+    navigatingRef.current = false;
+    setModalStep(null);
+  }, []);
 
   useFocusEffect(
     useCallback(() => {
       navigatingRef.current = false;
+      allowBackRef.current = false;
     }, [])
   );
 
-  const closeModal = () => {
-    navigatingRef.current = false;
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', (e) => {
+      if (allowBackRef.current || navigatingRef.current) return;
+      e.preventDefault();
+      setModalStep((current) => {
+        if (current !== null && current !== 'backConfirm') {
+          navigatingRef.current = false;
+          return null;
+        }
+        if (current === 'backConfirm') return current;
+        return 'backConfirm';
+      });
+    });
+    return unsubscribe;
+  }, [navigation]);
+
+  const requestGoBack = () => {
+    if (modalStep !== null && modalStep !== 'backConfirm') {
+      closeModal();
+      return;
+    }
+    setModalStep('backConfirm');
+  };
+
+  const confirmGoBack = () => {
+    allowBackRef.current = true;
     setModalStep(null);
+    navigation.goBack();
   };
 
   const remainingLabel = user.isPremium ? '∞' : String(remainingGemini);
@@ -99,12 +131,12 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
       <Header
         title={t('camera.captureConfirm.title')}
         subtitle={t('camera.captureConfirm.subtitle')}
-        onBack={() => navigation.goBack()}
+        onBack={requestGoBack}
       />
       <View style={styles.body}>
         <HeroCard style={styles.heroCard}>
           <View style={styles.heroInner}>
-            <CapturePreview imageUrl={imageUrl} height={240} />
+            <CapturePreview imageUrl={imageUrl} maxHeight={360} />
             <Text style={styles.modeLabel}>{t('camera.captureConfirm.modeLabel')}</Text>
             <View style={styles.modeRow}>
               <Chip
@@ -121,9 +153,11 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
               />
             </View>
             <Text style={styles.caption}>
-              {source === 'album'
+              {source === 'receiptAlbum'
                 ? t('camera.captureConfirm.captionAlbum')
-                : t('camera.captureConfirm.caption')}
+                : source === 'foodAlbum'
+                  ? t('camera.captureConfirm.captionFoodAlbum')
+                  : t('camera.captureConfirm.caption')}
             </Text>
             <Text style={styles.note}>{t('camera.captureConfirm.note')}</Text>
           </View>
@@ -132,12 +166,12 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
       <FooterBar>
         <FooterPrimaryButton
           label={
-            source === 'album'
-              ? t('camera.captureConfirm.reselect')
-              : t('camera.captureConfirm.retake')
+            source === 'camera'
+              ? t('camera.captureConfirm.retake')
+              : t('camera.captureConfirm.reselect')
           }
           variant="ghost"
-          onPress={() => navigation.goBack()}
+          onPress={requestGoBack}
         />
         <FooterPrimaryButton
           label={
@@ -148,6 +182,25 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
           onPress={openConfirm}
         />
       </FooterBar>
+
+      <ConfirmDialog
+        visible={modalStep === 'backConfirm'}
+        onClose={closeModal}
+        title={t('camera.captureConfirm.backConfirmTitle')}
+        body={
+          source === 'camera'
+            ? t('camera.captureConfirm.backConfirmBodyCamera')
+            : t('camera.captureConfirm.backConfirmBodyAlbum')
+        }
+        cancelLabel={t('common.cancel')}
+        confirmLabel={
+          source === 'camera'
+            ? t('camera.captureConfirm.backConfirmConfirmCamera')
+            : t('camera.captureConfirm.backConfirmConfirmAlbum')
+        }
+        confirmVariant="dangerOutline"
+        onConfirm={confirmGoBack}
+      />
 
       <ConfirmDialog
         visible={modalStep === 'confirm'}

@@ -14,6 +14,8 @@
     "mockApiHint": "Mock: No real API is called",
     "noImage": "No image",
     "captureImage": "Captured photo",
+    "tapToExpandImage": "Tap to expand",
+    "pinchToZoom": "Pinch to zoom; drag to pan when zoomed in",
     "ingredientName": "Ingredient name",
     "quantity": "Quantity",
     "amount": "Amount",
@@ -131,12 +133,14 @@
   "camera": {
     "home": {
       "title": "Camera",
-      "subtitle": "A-001 · Capture is mocked",
-      "hint": "Align ingredients within the frame",
-      "hintSub": "(Camera will not actually open)",
+      "subtitle": "A-001 · Ingredient capture",
+      "hint": "Tap Take photo to open the camera",
+      "hintSub": "After capture, continue to AI analysis (mock)",
       "capture": "Take photo",
+      "openingCamera": "Opening camera…",
+      "albumFood": "Food album",
       "album": "Read from album",
-      "albumHint": "Analyze a saved image from your library",
+      "albumHint": "After choosing from the album, you can switch to receipt analysis on the confirm screen",
       "foodPlaceholder": "F"
     },
     "receiptResult": {
@@ -163,7 +167,8 @@
       "title": "Review image",
       "subtitle": "A-001-a",
       "caption": "Captured image (mock)",
-      "captionAlbum": "Selected image",
+      "captionAlbum": "Selected receipt image",
+      "captionFoodAlbum": "Selected food image",
       "note": "Choose analysis type and confirm the image.",
       "retake": "Retake",
       "reselect": "Choose another",
@@ -176,7 +181,12 @@
       "modalBody": "Analyze ingredients in this photo?",
       "modalBodyReceipt": "Read purchased ingredients from this receipt?",
       "modalMeta": "External API will detect ingredients (mock)",
-      "modalMetaReceipt": "External API will read the receipt (mock)"
+      "modalMetaReceipt": "External API will read the receipt (mock)",
+      "backConfirmTitle": "Discard this photo?",
+      "backConfirmBodyCamera": "Going back will discard this photo and return to the camera screen.",
+      "backConfirmBodyAlbum": "Going back will discard the selected image and return to the camera screen.",
+      "backConfirmConfirmCamera": "Retake",
+      "backConfirmConfirmAlbum": "Choose another"
     },
     "analyzing": {
       "title": "Analyzing",
