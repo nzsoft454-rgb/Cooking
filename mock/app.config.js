@@ -8,6 +8,9 @@ module.exports = {
     scheme: 'cooking-mock',
     userInterfaceStyle: 'light',
     newArchEnabled: true,
+    extra: {
+      geminiApiKeyConfigured: Boolean(process.env.EXPO_PUBLIC_GEMINI_API_KEY?.trim()),
+    },
     android: {
       package: 'com.cookingapp.mock',
       adaptiveIcon: {

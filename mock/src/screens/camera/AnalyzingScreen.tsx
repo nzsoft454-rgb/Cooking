@@ -7,6 +7,8 @@ import { CameraStackParamList } from '../../navigation/types';
 import { analyzeImage } from '../../services/analyzeImage';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
+import { getGeminiApiHintKey } from '../../utils/geminiApiHint';
+import { resolveGeminiErrorKey } from '../../utils/resolveGeminiError';
 
 type Props = NativeStackScreenProps<CameraStackParamList, 'Analyzing'>;
 
@@ -46,15 +48,13 @@ export function AnalyzingScreen({ navigation, route }: Props) {
         } else {
           navigation.replace('AnalysisResult', { items: result.items, imageUrl });
         }
-      } catch {
+      } catch (err) {
         if (alive) {
           if (consumedRef.current && !completedRef.current) {
             rewardGeminiFromAd(1);
             consumedRef.current = false;
           }
-          setError(
-            isReceipt ? t('camera.analyzing.errorReceipt') : t('camera.analyzing.errorPhoto')
-          );
+          setError(t(resolveGeminiErrorKey(err)));
         }
       }
     })();
@@ -90,7 +90,7 @@ export function AnalyzingScreen({ navigation, route }: Props) {
             <Text style={styles.loadingText}>
               {isReceipt ? t('camera.analyzing.loadingReceipt') : t('camera.analyzing.loading')}
             </Text>
-            <Text style={styles.loadingHint}>{t('common.mockApiHint')}</Text>
+            <Text style={styles.loadingHint}>{t(getGeminiApiHintKey())}</Text>
             {error ? <Text style={styles.error}>{error}</Text> : null}
           </View>
         </HeroCard>

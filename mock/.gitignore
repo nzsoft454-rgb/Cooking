@@ -3,3 +3,5 @@ android/
 node_modules/
 .expo/
 dist-web/
+.env
+.env.local

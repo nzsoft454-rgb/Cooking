@@ -46,7 +46,7 @@
     "start:raw": "expo start",
     "qr": "node scripts/show-qr.cjs",
     "android": "node scripts/start-expo.cjs --android",
-    "android:dev": "node scripts/ensure-android-link.cjs && expo run:android",
+    "android:dev": "node scripts/ensure-android-link.cjs && node scripts/with-gradle-env.cjs npx expo run:android",
     "ios": "node scripts/start-expo.cjs --ios",
     "web": "node scripts/start-expo.cjs --web"
   },

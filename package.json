@@ -6,6 +6,7 @@
     "start": "npm run start --prefix mock",
     "web": "npm run web --prefix mock",
     "android": "npm run android:dev --prefix mock",
-    "android:gradle": "cd android && gradlew.bat assembleDebug"
+    "android:gradle": "node scripts/android-assemble-debug.cjs",
+    "android:apk": "node scripts/android-assemble-release.cjs"
   }
 }

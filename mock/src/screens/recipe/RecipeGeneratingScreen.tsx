@@ -10,12 +10,13 @@ import {
   Screen,
 } from '../../components/ui';
 import {
-  mockGenerateGachaRecipe,
-  mockGenerateRecipe,
-} from '../../data/dummy';
+  generateRecipe,
+} from '../../services/generateRecipe';
 import { RecipeStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
+import { getGeminiApiHintKey } from '../../utils/geminiApiHint';
+import { resolveGeminiErrorKey } from '../../utils/resolveGeminiError';
 
 type Props = NativeStackScreenProps<RecipeStackParamList, 'RecipeGenerating'>;
 
@@ -36,6 +37,7 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
   const consumedRef = useRef(false);
   const completedRef = useRef(false);
   const [quotaDialogOpen, setQuotaDialogOpen] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
   const cancelGeneration = () => {
     cancelledRef.current = true;
@@ -72,6 +74,7 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
     completedRef.current = false;
 
     (async () => {
+      setError(null);
       if (!user.isPremium) {
         if (geminiPreConsumed) {
           consumedRef.current = true;
@@ -84,21 +87,32 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
         }
       }
 
-      const generated = isGacha
-        ? await mockGenerateGachaRecipe(ingredientNames)
-        : await mockGenerateRecipe(ingredientNames, conditions);
-      if (cancelledRef.current) return;
+      try {
+        const generated = await generateRecipe(
+          ingredientNames,
+          conditions,
+          isGacha ? 'gacha' : 'normal',
+        );
+        if (cancelledRef.current) return;
 
-      const recipe = addRecipe({
-        ...generated,
-        userMemo: '',
-        isFavorite: false,
-      });
-      completedRef.current = true;
-      navigation.replace('RecipeDetail', {
-        recipeId: recipe.id,
-        ingredientIds,
-      });
+        const recipe = addRecipe({
+          ...generated,
+          userMemo: '',
+          isFavorite: false,
+        });
+        completedRef.current = true;
+        navigation.replace('RecipeDetail', {
+          recipeId: recipe.id,
+          ingredientIds,
+        });
+      } catch (err) {
+        if (cancelledRef.current) return;
+        if (consumedRef.current && !completedRef.current) {
+          rewardGeminiFromAd(1);
+          consumedRef.current = false;
+        }
+        setError(t(resolveGeminiErrorKey(err)));
+      }
     })();
 
     return () => {
@@ -119,6 +133,7 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
     isGacha,
     navigation,
     rewardGeminiFromAd,
+    t,
     user.isPremium,
   ]);
 
@@ -138,7 +153,8 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
           <View style={styles.loadingInner}>
             <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>{label}</Text>
-            <Text style={styles.loadingHint}>{t('common.mockApiHint')}</Text>
+            <Text style={styles.loadingHint}>{t(getGeminiApiHintKey())}</Text>
+            {error ? <Text style={styles.error}>{error}</Text> : null}
           </View>
         </HeroCard>
       </View>
@@ -180,5 +196,11 @@ const styles = StyleSheet.create({
   loadingHint: {
     fontSize: 12,
     color: colors.inkFaint,
+  },
+  error: {
+    marginTop: 8,
+    color: colors.danger,
+    fontWeight: '600',
+    textAlign: 'center',
   },
 });
