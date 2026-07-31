@@ -13,9 +13,16 @@ export function resolveGeminiErrorKey(error: unknown): string {
     return 'common.geminiApiImageReadError';
   }
   if (error instanceof GeminiParseError) {
+    if (/No food items|No receipt lines|Empty/i.test(error.message)) {
+      return 'common.geminiApiEmptyResult';
+    }
     return 'common.geminiApiParseError';
   }
   if (error instanceof GeminiApiError) {
+    if (error.status === 429) return 'common.geminiApiQuotaError';
+    if (__DEV__ && error.detail) {
+      console.warn('[Gemini API]', error.status, error.detail);
+    }
     return 'common.geminiApiError';
   }
   return 'common.geminiApiError';

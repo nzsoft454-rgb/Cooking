@@ -4,33 +4,27 @@ import { normalizeIngredientAttribute } from '../../utils/ingredientAttribute';
 import { generateGeminiContent } from './client';
 import { GeminiImageReadError, GeminiParseError } from './errors';
 import { readImageAsInlineData } from './imagePayload';
-import { parseJsonResponse } from './parseJsonResponse';
+import {
+  extractItemArray,
+  normalizeFoodFields,
+  parseJsonResponse,
+} from './parseJsonResponse';
 import { FOOD_PHOTO_PROMPT } from './prompts';
-
-type RawFoodItem = {
-  name?: string;
-  quantity?: string;
-  confidence?: string;
-  attribute?: string;
-};
-
-type FoodPhotoResponse = {
-  items?: RawFoodItem[];
-};
+import { FOOD_PHOTO_RESPONSE_SCHEMA } from './schemas';
 
 function normalizeConfidence(value: unknown): string {
   if (value === 'high' || value === 'medium' || value === 'low') return value;
   return 'medium';
 }
 
-function normalizeItem(raw: RawFoodItem): DetectedItem | null {
-  const name = raw.name?.trim();
-  if (!name) return null;
+function normalizeItem(raw: unknown): DetectedItem | null {
+  const fields = normalizeFoodFields(raw);
+  if (!fields.name) return null;
   return {
-    name,
-    quantity: raw.quantity?.trim() || '適量',
-    confidence: normalizeConfidence(raw.confidence),
-    attribute: normalizeIngredientAttribute(raw.attribute) as IngredientAttribute,
+    name: fields.name,
+    quantity: fields.quantity || '適量',
+    confidence: normalizeConfidence(fields.confidence),
+    attribute: normalizeIngredientAttribute(fields.attribute) as IngredientAttribute,
   };
 }
 
@@ -45,14 +39,15 @@ export async function analyzeFoodPhotoWithGemini(
   const text = await generateGeminiContent({
     model: getGeminiVisionModel(),
     jsonMode: true,
+    responseSchema: FOOD_PHOTO_RESPONSE_SCHEMA,
     parts: [
       { text: FOOD_PHOTO_PROMPT },
       { inlineData: { mimeType: inline.mimeType, data: inline.data } },
     ],
   });
 
-  const parsed = parseJsonResponse<FoodPhotoResponse>(text);
-  const items = (parsed.items ?? [])
+  const parsed = parseJsonResponse<unknown>(text);
+  const items = extractItemArray(parsed)
     .map(normalizeItem)
     .filter((item): item is DetectedItem => item != null);
 

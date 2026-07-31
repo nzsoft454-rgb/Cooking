@@ -47,6 +47,11 @@
     "qr": "node scripts/show-qr.cjs",
     "android": "node scripts/start-expo.cjs --android",
     "android:dev": "node scripts/ensure-android-link.cjs && node scripts/with-gradle-env.cjs npx expo run:android",
+    "test:gemini": "node scripts/test-gemini.cjs",
+    "ingredients:catalog": "python scripts/build-ingredient-catalog-200.py",
+    "ingredients:images": "python scripts/sync-ingredient-images-200.py",
+    "ingredients:images:gemini": "python scripts/generate-ingredient-images-gemini.py --placeholders-only",
+    "ingredients:build": "python scripts/build-ingredient-catalog-200.py && python scripts/generate-ingredient-images-ts.py && python scripts/sync-ingredient-images-200.py",
     "ios": "node scripts/start-expo.cjs --ios",
     "web": "node scripts/start-expo.cjs --web"
   },

@@ -4,6 +4,7 @@ import { generateGeminiContent } from './client';
 import { GeminiParseError } from './errors';
 import { parseJsonResponse } from './parseJsonResponse';
 import { buildRecipePrompt } from './prompts';
+import { RECIPE_RESPONSE_SCHEMA } from './schemas';
 
 type RawRecipeStep = {
   stepNumber?: number;
@@ -38,6 +39,7 @@ export async function generateRecipeWithGemini(
   const text = await generateGeminiContent({
     model: getGeminiTextModel(),
     jsonMode: true,
+    responseSchema: RECIPE_RESPONSE_SCHEMA,
     parts: [{ text: buildRecipePrompt(sourceIngredients, conditions, gacha) }],
   });
 

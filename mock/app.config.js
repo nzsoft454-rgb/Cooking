@@ -1,4 +1,6 @@
 /** @type {import('expo/config').ExpoConfig} */
+require('dotenv').config({ path: require('path').join(__dirname, '.env') });
+
 module.exports = {
   expo: {
     name: 'Cooking Mock',

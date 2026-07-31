@@ -38,10 +38,7 @@ import {
   resolveIngredientAttribute,
 } from '../../utils/ingredientAttribute';
 import { syncPersistedIngredients } from '../../utils/syncPersistedIngredients';
-import {
-  resolveCatalogEntry,
-  resolveIngredientImageUrl,
-} from '../../utils/resolveIngredientImage';
+import { matchReceiptLine } from '../../utils/resolveIngredientImage';
 
 type Props = NativeStackScreenProps<CameraStackParamList, 'ReceiptResult'>;
 
@@ -53,15 +50,13 @@ type ReceiptRow = ReceiptLineItem & {
 };
 
 function toRow(item: ReceiptLineItem): ReceiptRow {
-  const entry = resolveCatalogEntry(item.rawName);
-  const resolvedName = entry?.name ?? item.rawName;
-  const imageUrl = resolveIngredientImageUrl(item.rawName);
+  const matched = matchReceiptLine(item.rawName);
   return {
     ...item,
-    resolvedName,
-    imageUrl,
-    known: entry != null,
-    attribute: resolveIngredientAttribute(resolvedName),
+    resolvedName: matched.resolvedName,
+    imageUrl: matched.imageUrl,
+    known: matched.known,
+    attribute: resolveIngredientAttribute(matched.resolvedName),
   };
 }
 
@@ -101,10 +96,11 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
         if (i !== index) return row;
         const next = { ...row, ...patch };
         if (patch.resolvedName !== undefined) {
-          const entry = resolveCatalogEntry(next.resolvedName);
-          next.imageUrl = resolveIngredientImageUrl(next.resolvedName);
-          next.known = entry != null;
-          next.attribute = resolveIngredientAttribute(next.resolvedName);
+          const matched = matchReceiptLine(next.resolvedName);
+          next.resolvedName = matched.resolvedName;
+          next.imageUrl = matched.imageUrl;
+          next.known = matched.known;
+          next.attribute = resolveIngredientAttribute(matched.resolvedName);
         }
         return next;
       })
@@ -114,16 +110,16 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
   const addRow = () => {
     if (!newName.trim()) return;
     const name = newName.trim();
-    const entry = resolveCatalogEntry(name);
+    const matched = matchReceiptLine(name);
     setRows((prev) => [
       ...prev,
       {
         rawName: name,
         quantity: newQty.trim() || defaultQty,
-        resolvedName: entry?.name ?? name,
-        imageUrl: resolveIngredientImageUrl(name),
-        known: entry != null,
-        attribute: resolveIngredientAttribute(entry?.name ?? name),
+        resolvedName: matched.resolvedName,
+        imageUrl: matched.imageUrl,
+        known: matched.known,
+        attribute: resolveIngredientAttribute(matched.resolvedName),
       },
     ]);
     setNewName('');

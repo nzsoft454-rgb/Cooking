@@ -1,19 +1,21 @@
 import { delay } from './dummy';
-import { INGREDIENT_CATALOG } from './ingredientCatalog';
+import { RECEIPT_CATALOG_COUNT } from './receiptCatalog';
 import { RECEIPT_IMAGE_KEY } from './images';
 
-export { RECEIPT_IMAGE_KEY };
+export { RECEIPT_IMAGE_KEY, RECEIPT_CATALOG_COUNT };
 
-/** デモ: レシートから読み取った品目 */
+/** デモ: レシートから読み取った品目（200件カタログから抜粋） */
 export const MOCK_RECEIPT_LINES = [
-  'トマト',
+  '国産キャベツ',
+  'ミニトマト',
   'タマネギ',
-  '鶏卵',
-  '牛乳',
-  'サケ',
-  'バナナ',
-  'パスタ',
-  'ツナ缶',
+  '鶏モモ肉',
+  'サーモン',
+  'リンゴ',
+  '木綿豆腐',
+  '白米',
+  '明太',
+  'ブロッコリー',
 ] as const;
 
 export type ReceiptLineItem = {
@@ -30,5 +32,3 @@ export async function mockParseReceipt(_imageKey: string): Promise<ReceiptLineIt
   }));
 }
 
-/** カタログ登録数（設定画面等で参照可） */
-export const RECEIPT_CATALOG_COUNT = INGREDIENT_CATALOG.length;
