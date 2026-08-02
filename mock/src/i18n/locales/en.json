@@ -20,6 +20,7 @@
     "geminiApiImageReadError": "Could not read the image. Retake or choose another image.",
     "geminiApiParseError": "Could not parse Gemini response. Please try again.",
     "geminiApiEmptyResult": "Gemini could not detect ingredients. Retake with food clearly visible.",
+    "geminiApiTimeout": "Gemini API request timed out. Check your connection and try again.",
     "noImage": "No image",
     "captureImage": "Captured photo",
     "tapToExpandImage": "Tap to expand",

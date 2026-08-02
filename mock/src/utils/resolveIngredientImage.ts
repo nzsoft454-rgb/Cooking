@@ -46,7 +46,6 @@ const RECEIPT_PREFIXES = [
   'パック',
   '束',
   '株',
-  '玉',
   '枚',
 ];
 
@@ -71,7 +70,7 @@ function normalizeKey(raw: string): string {
     .replace(/[\s\u3000]+/g, '')
     .replace(/[(*\d).,円¥￥/\\\-×x×ｇｋｇｍｌ％%]+/gi, '')
     .replace(/[pPkKｐＰ]/g, '')
-    .replace(/[コ個本枚尾匹杯束株玉]/g, '')
+    .replace(/[コ個本枚尾匹杯束株]/g, '')
     .trim();
 }
 
@@ -108,6 +107,9 @@ export function resolveCatalogEntry(name: string): IngredientCatalogEntry | null
 /** 画像ファイル id（カタログ id からのエイリアス） */
 const IMAGE_ID_ALIASES: Record<string, string> = {
   edamame_dup: 'edamame',
+  pork_offcuts: 'pork',
+  fish_fillet: 'salmon',
+  dango: 'mochi_rice',
 };
 
 export function catalogEntryToImageId(catalogId: string): string {

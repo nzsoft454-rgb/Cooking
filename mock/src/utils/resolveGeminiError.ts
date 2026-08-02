@@ -20,6 +20,7 @@ export function resolveGeminiErrorKey(error: unknown): string {
   }
   if (error instanceof GeminiApiError) {
     if (error.status === 429) return 'common.geminiApiQuotaError';
+    if (error.status === 408) return 'common.geminiApiTimeout';
     if (__DEV__ && error.detail) {
       console.warn('[Gemini API]', error.status, error.detail);
     }

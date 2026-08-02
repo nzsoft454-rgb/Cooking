@@ -3,7 +3,11 @@ import {
   GEMINI_MODEL_FALLBACKS,
   getGeminiApiKey,
 } from '../../config/gemini';
+import { withTimeout } from '../../utils/withTimeout';
 import { GeminiApiError, GeminiNotConfiguredError } from './errors';
+
+/** Gemini API 呼び出しの上限（ms） */
+const GEMINI_FETCH_TIMEOUT_MS = 90_000;
 
 export type GeminiPart =
   | { text: string }
@@ -95,14 +99,28 @@ async function requestGeminiContent(
     },
   };
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-goog-api-key': apiKey,
-    },
-    body: JSON.stringify(body),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), GEMINI_FETCH_TIMEOUT_MS);
+
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': apiKey,
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+  } catch (error) {
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw new GeminiApiError(408, 'Request timed out');
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+  }
 
   const payload = (await response.json()) as GeminiResponse;
   if (!response.ok) {

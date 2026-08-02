@@ -3,6 +3,7 @@ import { manipulateAsync, SaveFormat } from 'expo-image-manipulator';
 import { Image, Platform } from 'react-native';
 
 import { isRemoteImageUri } from '../../utils/resolveImageSource';
+import { TimeoutError, withTimeout } from '../../utils/withTimeout';
 import { GeminiImageReadError } from './errors';
 
 /** Gemini 送信用: 長辺の上限（px） */
@@ -10,6 +11,8 @@ const GEMINI_MAX_LONG_EDGE = 1280;
 /** Gemini 送信用: 目標ファイルサイズ上限 */
 const GEMINI_MAX_BYTES = 512 * 1024;
 const GEMINI_COMPRESS_LEVELS = [0.72, 0.65, 0.58, 0.5] as const;
+const IMAGE_SIZE_TIMEOUT_MS = 8_000;
+const COMPRESS_TIMEOUT_MS = 25_000;
 
 function guessMimeType(uri: string): string {
   const lower = uri.split('?')[0]?.toLowerCase() ?? '';
@@ -81,9 +84,25 @@ function getImageSize(uri: string): Promise<{ width: number; height: number }> {
 
 /** 端末上の画像を Gemini 向けにリサイズ・JPEG 圧縮 */
 async function compressImageForGemini(sourceUri: string): Promise<GeminiInlineImage> {
-  const { width, height } = await getImageSize(sourceUri);
-  const resizeActions = buildResizeAction(width, height);
+  let resizeActions: { resize: { width?: number; height?: number } }[];
+  try {
+    const { width, height } = await withTimeout(
+      getImageSize(sourceUri),
+      IMAGE_SIZE_TIMEOUT_MS,
+      'Image size read timed out',
+    );
+    resizeActions = buildResizeAction(width, height);
+  } catch {
+    resizeActions = [{ resize: { width: GEMINI_MAX_LONG_EDGE } }];
+  }
 
+  return withTimeout(compressWithLevels(sourceUri, resizeActions), COMPRESS_TIMEOUT_MS, 'Image compress timed out');
+}
+
+async function compressWithLevels(
+  sourceUri: string,
+  resizeActions: { resize: { width?: number; height?: number } }[],
+): Promise<GeminiInlineImage> {
   let lastBase64: string | undefined;
   for (const compress of GEMINI_COMPRESS_LEVELS) {
     const result = await manipulateAsync(sourceUri, resizeActions, {
@@ -143,7 +162,10 @@ export async function readImageAsInlineData(
       if (localUri) {
         return await compressImageForGemini(localUri);
       }
-    } catch {
+    } catch (error) {
+      if (error instanceof TimeoutError) {
+        throw new GeminiImageReadError(error.message);
+      }
       // 圧縮に失敗した場合は原寸読み込みへフォールバック
     }
   }

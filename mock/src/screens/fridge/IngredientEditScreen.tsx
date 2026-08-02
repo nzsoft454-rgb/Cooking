@@ -33,6 +33,7 @@ import {
   getDefaultIngredientAttribute,
   guessIngredientAttribute,
 } from '../../utils/ingredientAttribute';
+import { resolveIngredientImageUrl } from '../../utils/resolveIngredientImage';
 
 type Props = NativeStackScreenProps<FridgeStackParamList, 'IngredientEdit'>;
 
@@ -92,13 +93,17 @@ export function IngredientEditScreen({ navigation, route }: Props) {
 
   const quantityPct = Math.round(quantity * 100);
   const displayName = name.trim() || ingredient.name;
+  const previewImageUrl =
+    resolveIngredientImageUrl(displayName) || ingredient.imageUrl;
   const addedShort = formatAddedShort(ingredient.addedDate);
 
   const save = () => {
+    const catalogImageUrl = resolveIngredientImageUrl(displayName);
     updateIngredient(ingredient.id, {
       name: displayName,
       attribute,
       quantity: Math.min(1, Math.max(0, quantity)),
+      imageUrl: catalogImageUrl || ingredient.imageUrl,
     });
     navigation.goBack();
   };
@@ -132,7 +137,7 @@ export function IngredientEditScreen({ navigation, route }: Props) {
           <View style={styles.heroAccent} />
           <View style={styles.heroInner}>
             <View style={styles.heroPhotoFrame}>
-              <FoodThumb imageUrl={ingredient.imageUrl} name={displayName} size={76} />
+              <FoodThumb imageUrl={previewImageUrl} name={displayName} size={76} />
             </View>
             <View style={styles.heroBody}>
               <Text style={styles.heroEyebrow}>{t('fridge.ingredientEdit.editingEyebrow')}</Text>

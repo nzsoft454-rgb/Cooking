@@ -31,6 +31,7 @@ export function AnalyzingScreen({ navigation, route }: Props) {
       if (!user.isPremium) {
         if (!consumeGemini()) {
           if (!alive) return;
+          setError(t('gemini.quotaExceeded'));
           Alert.alert(t('gemini.quotaZero'), t('gemini.quotaExceeded'), [
             { text: t('common.close'), onPress: () => navigation.goBack() },
           ]);
