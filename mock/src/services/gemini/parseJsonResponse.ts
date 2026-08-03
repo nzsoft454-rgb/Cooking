@@ -71,6 +71,7 @@ export function normalizeFoodFields(raw: unknown): {
   quantity?: string;
   confidence?: string;
   attribute?: string;
+  box2d?: unknown;
 } {
   const record = asRecord(raw);
   if (!record) return {};
@@ -80,5 +81,6 @@ export function normalizeFoodFields(raw: unknown): {
     quantity: pickString(record, ['quantity', 'qty', 'amount']),
     confidence: pickString(record, ['confidence', 'certainty']),
     attribute: pickString(record, ['attribute', 'category', 'type']),
+    box2d: record.box_2d ?? record.box2d ?? record.box,
   };
 }

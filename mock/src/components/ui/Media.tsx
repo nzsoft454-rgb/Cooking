@@ -55,19 +55,24 @@ export function FoodThumb({
 
   if (source) {
     return (
-      <Image
-        source={source}
+      <View
         style={{
           width: size,
           height: size,
           borderRadius: R,
+          overflow: 'hidden',
           backgroundColor: bg,
           borderWidth: 1,
           borderColor: colors.border,
         }}
-        resizeMode="cover"
-        accessibilityLabel={name}
-      />
+      >
+        <Image
+          source={source}
+          style={{ width: size, height: size }}
+          resizeMode="cover"
+          accessibilityLabel={name}
+        />
+      </View>
     );
   }
 

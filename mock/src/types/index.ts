@@ -77,6 +77,10 @@ export type DetectedItem = {
   quantity: string;
   confidence: string;
   attribute: IngredientAttribute;
+  /** 食材ごとの切り抜きサムネ（file://）。無い場合は撮影写真全体 */
+  imageUrl?: string;
+  /** Gemini 返却 bbox [ymin, xmin, ymax, xmax]（0-1000 正規化） */
+  box2d?: [number, number, number, number];
 };
 
 export type RecipeConditions = {

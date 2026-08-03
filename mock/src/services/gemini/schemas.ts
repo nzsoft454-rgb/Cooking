@@ -12,8 +12,12 @@ export const FOOD_PHOTO_RESPONSE_SCHEMA = {
           quantity: { type: 'STRING' },
           confidence: { type: 'STRING' },
           attribute: { type: 'STRING' },
+          box_2d: {
+            type: 'ARRAY',
+            items: { type: 'NUMBER' },
+          },
         },
-        required: ['name'],
+        required: ['name', 'quantity', 'confidence', 'attribute', 'box_2d'],
       },
     },
   },

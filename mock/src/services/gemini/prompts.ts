@@ -4,8 +4,12 @@ export const FOOD_PHOTO_PROMPT = `あなたは日本の家庭向け料理アプ�
 写真に写っている食材を日本語で列挙してください。
 
 ルール:
-- 食材名は一般的な日本語表記（例: トマト、玉ねぎ、鶏卵）
-- quantity は「1個」「200g」「1束」「適量」など分かりやすい単位
+- 食材名は一般的な日本語表記（例: トマト、玉ねぎ、鶏卵）。2〜12文字程度
+- パッケージ・ラベルの英語文字列は name に含めない（食材の日本語名のみ）
+- box_2d は食材本体全体を囲む正方形に近い矩形（細長いラベル帯だけを囲まない）
+- quantity は「1個」「200g」「1束」「適量」など短い表記のみ（最大10文字）。説明文・繰り返し・推測の長文は禁止
+- box_2d は必須。各食材が写っている矩形 [ymin, xmin, ymax, xmax]（0-1000 の整数、画像左上原点）
+- box_2d は食材本体全体を囲む（細長いラベル帯だけを囲まない）
 - confidence は high / medium / low
 - attribute は fresh（生鮮）/ processed（加工品・缶詰・冷凍食品）/ other（調味料・乾物など）
 - 写っていないものは推測しない
@@ -16,7 +20,13 @@ export const FOOD_PHOTO_PROMPT = `あなたは日本の家庭向け料理アプ�
 JSONのみ返してください:
 {
   "items": [
-    { "name": "トマト", "quantity": "2個", "confidence": "high", "attribute": "fresh" }
+    {
+      "name": "トマト",
+      "quantity": "2個",
+      "confidence": "high",
+      "attribute": "fresh",
+      "box_2d": [320, 120, 680, 450]
+    }
   ]
 }`;
 

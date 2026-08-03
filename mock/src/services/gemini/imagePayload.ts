@@ -30,6 +30,11 @@ function base64ByteLength(base64: string): number {
 export type GeminiInlineImage = {
   mimeType: string;
   data: string;
+  /** Gemini に送った画像そのものの端末上 URI（EXIF 焼き込み済み）。bbox 座標の基準 */
+  normalizedUri?: string;
+  /** normalizedUri のピクセルサイズ（crop 座標変換用） */
+  width?: number;
+  height?: number;
 };
 
 async function resolveLocalImageUri(imageUrl: string): Promise<string | null> {
@@ -99,11 +104,17 @@ async function compressImageForGemini(sourceUri: string): Promise<GeminiInlineIm
   return withTimeout(compressWithLevels(sourceUri, resizeActions), COMPRESS_TIMEOUT_MS, 'Image compress timed out');
 }
 
+async function persistNormalizedImage(sourceUri: string): Promise<string> {
+  const dest = `${FileSystem.cacheDirectory}gemini_norm_${Date.now()}.jpg`;
+  await FileSystem.copyAsync({ from: sourceUri, to: dest });
+  return dest;
+}
+
 async function compressWithLevels(
   sourceUri: string,
   resizeActions: { resize: { width?: number; height?: number } }[],
 ): Promise<GeminiInlineImage> {
-  let lastBase64: string | undefined;
+  let last: GeminiInlineImage | undefined;
   for (const compress of GEMINI_COMPRESS_LEVELS) {
     const result = await manipulateAsync(sourceUri, resizeActions, {
       compress,
@@ -111,16 +122,44 @@ async function compressWithLevels(
       base64: true,
     });
     if (!result.base64) continue;
-    lastBase64 = result.base64;
+
+    const normalizedUri = await persistNormalizedImage(result.uri);
+    last = {
+      mimeType: 'image/jpeg',
+      data: result.base64,
+      normalizedUri,
+      width: result.width,
+      height: result.height,
+    };
     if (base64ByteLength(result.base64) <= GEMINI_MAX_BYTES) {
-      return { mimeType: 'image/jpeg', data: result.base64 };
+      return last;
     }
   }
 
-  if (!lastBase64) {
+  if (!last) {
     throw new GeminiImageReadError('Failed to compress image for Gemini');
   }
-  return { mimeType: 'image/jpeg', data: lastBase64 };
+  return last;
+}
+
+/** EXIF 焼き込みのみ（圧縮失敗時の最終手段） */
+async function normalizeImageOnly(sourceUri: string): Promise<GeminiInlineImage> {
+  const result = await manipulateAsync(sourceUri, [], {
+    compress: 0.85,
+    format: SaveFormat.JPEG,
+    base64: true,
+  });
+  if (!result.base64) {
+    throw new GeminiImageReadError('Failed to normalize image for Gemini');
+  }
+  const normalizedUri = await persistNormalizedImage(result.uri);
+  return {
+    mimeType: 'image/jpeg',
+    data: result.base64,
+    normalizedUri,
+    width: result.width,
+    height: result.height,
+  };
 }
 
 async function readUncompressedInlineData(imageUrl: string): Promise<GeminiInlineImage | null> {
@@ -166,7 +205,18 @@ export async function readImageAsInlineData(
       if (error instanceof TimeoutError) {
         throw new GeminiImageReadError(error.message);
       }
-      // 圧縮に失敗した場合は原寸読み込みへフォールバック
+      const localUri = await resolveLocalImageUri(imageUrl);
+      if (localUri) {
+        try {
+          return await withTimeout(
+            normalizeImageOnly(localUri),
+            COMPRESS_TIMEOUT_MS,
+            'Image normalize timed out',
+          );
+        } catch {
+          // 原寸読み込みへ
+        }
+      }
     }
   }
 

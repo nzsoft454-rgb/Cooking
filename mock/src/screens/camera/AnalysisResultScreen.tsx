@@ -37,6 +37,16 @@ import {
   guessIngredientAttribute,
 } from '../../utils/ingredientAttribute';
 import { syncPersistedIngredients } from '../../utils/syncPersistedIngredients';
+import { detectedItemImageUrl } from '../../utils/cropFoodThumbnails';
+import { displayQuantity, sanitizeDetectedFoodQuantity } from '../../utils/sanitizeDetectedFoodQuantity';
+
+function normalizeDetectedItem(item: DetectedItem): DetectedItem {
+  return {
+    ...item,
+    quantity: sanitizeDetectedFoodQuantity(item.quantity),
+    attribute: item.attribute ?? guessIngredientAttribute(item.name),
+  };
+}
 
 type Props = NativeStackScreenProps<CameraStackParamList, 'AnalysisResult'>;
 
@@ -47,7 +57,7 @@ function needsReview(item: DetectedItem): boolean {
 function displayName(name: string): string {
   const short = name.split('（')[0]?.trim();
   if (!short) return name;
-  return short.length <= 14 ? short : `${short.slice(0, 14)}…`;
+  return short.length <= 12 ? short : `${short.slice(0, 12)}…`;
 }
 
 function aiOriginalLabel(name: string): string {
@@ -61,17 +71,11 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
   const imageUrl = route.params.imageUrl;
   const defaultQty = t('common.defaultQuantity');
   const [originalItems] = useState<DetectedItem[]>(
-    route.params.items.map((i) => ({
-      ...i,
-      attribute: i.attribute ?? guessIngredientAttribute(i.name),
-    }))
+    route.params.items.map(normalizeDetectedItem),
   );
   const [step, setStep] = useState<AnalysisStep>(1);
   const [items, setItems] = useState<DetectedItem[]>(
-    route.params.items.map((i) => ({
-      ...i,
-      attribute: i.attribute ?? guessIngredientAttribute(i.name),
-    }))
+    route.params.items.map(normalizeDetectedItem),
   );
   const [newName, setNewName] = useState('');
   const [newQty, setNewQty] = useState(defaultQty);
@@ -123,7 +127,7 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
   const persistIngredients = () => {
     const payloads = items.map((item) => ({
       name: item.name,
-      imageUrl,
+      imageUrl: detectedItemImageUrl(item, imageUrl),
       attribute: item.attribute ?? getDefaultIngredientAttribute(),
       quantity: parseQuantityRatio(item.quantity),
     }));
@@ -224,20 +228,26 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
                     <View style={styles.checkCircle}>
                       <Text style={styles.checkMark}>{t('common.checkmark')}</Text>
                     </View>
-                    <FoodThumb imageUrl={imageUrl} name={item.name} size={52} />
+                    <FoodThumb
+                      imageUrl={detectedItemImageUrl(item, imageUrl)}
+                      name={item.name}
+                      size={52}
+                    />
                     <View style={styles.resultBody}>
                       <View style={styles.nameRow}>
-                        <Text style={styles.resultName}>{displayName(item.name)}</Text>
+                        <Text style={styles.resultName} numberOfLines={2} ellipsizeMode="tail">
+                          {displayName(item.name)}
+                        </Text>
                         {needsReview(item) ? (
                           <View style={styles.reviewBadge}>
                             <Text style={styles.reviewBadgeText}>{t('common.reviewNeeded')}</Text>
                           </View>
                         ) : null}
                       </View>
-                      <Text style={styles.resultMeta}>
+                      <Text style={styles.resultMeta} numberOfLines={1} ellipsizeMode="tail">
                         {t('camera.analysisResult.resultMeta', {
                           attribute: t(`ingredientAttribute.short.${item.attribute}`),
-                          quantity: item.quantity,
+                          quantity: displayQuantity(item.quantity, defaultQty),
                           confidence: confidenceLabel(item.confidence),
                         })}
                       </Text>
@@ -271,7 +281,11 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
             <Panel style={styles.editCard}>
               <View style={styles.editCardRow}>
                 <View style={styles.editPhotoCol}>
-                  <CapturePreview imageUrl={imageUrl} height={120} />
+                  <FoodThumb
+                    imageUrl={detectedItemImageUrl(activeItem, imageUrl)}
+                    name={activeItem.name}
+                    size={120}
+                  />
                   <Text style={styles.editPhotoCaption}>
                     {t('camera.analysisResult.sectionCapture')}
                   </Text>
@@ -388,12 +402,18 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
                 <React.Fragment key={`save-${index}-${item.name}`}>
                   {index > 0 ? <PanelDivider /> : null}
                   <View style={styles.saveRow}>
-                    <FoodThumb imageUrl={imageUrl} name={item.name} size={52} />
+                    <FoodThumb
+                      imageUrl={detectedItemImageUrl(item, imageUrl)}
+                      name={item.name}
+                      size={52}
+                    />
                     <View style={styles.resultBody}>
-                      <Text style={styles.resultName}>{item.name}</Text>
-                      <Text style={styles.resultMeta}>
+                      <Text style={styles.resultName} numberOfLines={2} ellipsizeMode="tail">
+                        {item.name}
+                      </Text>
+                      <Text style={styles.resultMeta} numberOfLines={1} ellipsizeMode="tail">
                         {t('camera.analysisResult.confirmedMeta', {
-                          quantity: item.quantity,
+                          quantity: displayQuantity(item.quantity, defaultQty),
                         })}
                         {' · '}
                         {t(`ingredientAttribute.short.${item.attribute}`)}
@@ -548,7 +568,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '800',
   },
-  resultBody: { flex: 1 },
+  resultBody: { flex: 1, minWidth: 0 },
   nameRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -556,6 +576,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   resultName: {
+    flexShrink: 1,
     fontSize: 15,
     fontWeight: '600',
     color: colors.ink,
