@@ -1,0 +1,2634 @@
+[
+  {
+    "slug": "kamasu",
+    "name": "かます"
+  },
+  {
+    "slug": "shouhakuna",
+    "name": "小白菜"
+  },
+  {
+    "slug": "sumomo",
+    "name": "すもも"
+  },
+  {
+    "slug": "kishimen",
+    "name": "きしめん"
+  },
+  {
+    "slug": "uguisumame",
+    "name": "うぐいす豆"
+  },
+  {
+    "slug": "nori_2",
+    "name": "海苔"
+  },
+  {
+    "slug": "piinattsu",
+    "name": "ピーナッツ"
+  },
+  {
+    "slug": "satou",
+    "name": "砂糖"
+  },
+  {
+    "slug": "nihonshu",
+    "name": "日本酒"
+  },
+  {
+    "slug": "takuan",
+    "name": "たくあん"
+  },
+  {
+    "slug": "shirokoshou",
+    "name": "白胡椒"
+  },
+  {
+    "slug": "saradaabura",
+    "name": "サラダ油"
+  },
+  {
+    "slug": "hoshiebi",
+    "name": "干しエビ"
+  },
+  {
+    "slug": "sabakan",
+    "name": "サバ缶"
+  },
+  {
+    "slug": "chikuwa",
+    "name": "ちくわ"
+  },
+  {
+    "slug": "teishibouchichi",
+    "name": "低脂肪乳"
+  },
+  {
+    "slug": "ushisuji",
+    "name": "牛すじ"
+  },
+  {
+    "slug": "sawara",
+    "name": "さわら"
+  },
+  {
+    "slug": "chingenna",
+    "name": "青梗菜"
+  },
+  {
+    "slug": "ume",
+    "name": "梅"
+  },
+  {
+    "slug": "shirakinomimi",
+    "name": "白木の耳"
+  },
+  {
+    "slug": "noritsukudani",
+    "name": "海苔佃煮"
+  },
+  {
+    "slug": "kashuunattsu",
+    "name": "カシューナッツ"
+  },
+  {
+    "slug": "jouhakutou",
+    "name": "上白糖"
+  },
+  {
+    "slug": "shouchuu",
+    "name": "焼酎"
+  },
+  {
+    "slug": "nukatsuke",
+    "name": "ぬか漬け"
+  },
+  {
+    "slug": "reitoushuumai",
+    "name": "冷凍シュウマイ"
+  },
+  {
+    "slug": "beeguru",
+    "name": "ベーグル"
+  },
+  {
+    "slug": "koikuchishouyu",
+    "name": "濃口醤油"
+  },
+  {
+    "slug": "kurokoshou",
+    "name": "黒胡椒"
+  },
+  {
+    "slug": "taihakugomaabura",
+    "name": "太白胡麻油"
+  },
+  {
+    "slug": "ushiteeru",
+    "name": "牛テール"
+  },
+  {
+    "slug": "shimesaba",
+    "name": "しめさば"
+  },
+  {
+    "slug": "nanohana",
+    "name": "菜の花"
+  },
+  {
+    "slug": "anzu",
+    "name": "杏"
+  },
+  {
+    "slug": "reimen",
+    "name": "冷麺"
+  },
+  {
+    "slug": "kotsubuazuki",
+    "name": "小粒小豆"
+  },
+  {
+    "slug": "kurokinomimi",
+    "name": "黒木の耳"
+  },
+  {
+    "slug": "konbutsukudani",
+    "name": "昆布佃煮"
+  },
+  {
+    "slug": "senmaitsuke",
+    "name": "千枚漬け"
+  },
+  {
+    "slug": "reitouharumakiki",
+    "name": "冷凍春巻き"
+  },
+  {
+    "slug": "buriosshu",
+    "name": "ブリオッシュ"
+  },
+  {
+    "slug": "tamarishouyu",
+    "name": "たまり醤油"
+  },
+  {
+    "slug": "shichimitougarashi",
+    "name": "七味唐辛子"
+  },
+  {
+    "slug": "oriibuoiru",
+    "name": "オリーブオイル"
+  },
+  {
+    "slug": "kirihoshidaikon",
+    "name": "切り干し大根"
+  },
+  {
+    "slug": "koonkan",
+    "name": "コーン缶"
+  },
+  {
+    "slug": "satsumaage",
+    "name": "さつま揚げ"
+  },
+  {
+    "slug": "konamiruku",
+    "name": "粉ミルク"
+  },
+  {
+    "slug": "buruusupurooto",
+    "name": "ブルースプロート"
+  },
+  {
+    "slug": "biwa",
+    "name": "枇杷"
+  },
+  {
+    "slug": "raisunuudoru",
+    "name": "ライスヌードル"
+  },
+  {
+    "slug": "shiroingen",
+    "name": "白いんげん"
+  },
+  {
+    "slug": "ichoutake",
+    "name": "銀杏茸"
+  },
+  {
+    "slug": "hijikitsukudani",
+    "name": "ひじき佃煮"
+  },
+  {
+    "slug": "makadamianattsu",
+    "name": "マカダミアナッツ"
+  },
+  {
+    "slug": "san_ontou",
+    "name": "三温糖"
+  },
+  {
+    "slug": "wain",
+    "name": "ワイン"
+  },
+  {
+    "slug": "asazukeke",
+    "name": "浅漬け"
+  },
+  {
+    "slug": "reitoukorokke",
+    "name": "冷凍コロッケ"
+  },
+  {
+    "slug": "ekusutorabaajin_oriibuoiru",
+    "name": "エクストラバージンオリーブオイル"
+  },
+  {
+    "slug": "hoshiwakame",
+    "name": "干しわかめ"
+  },
+  {
+    "slug": "tomatokan",
+    "name": "トマト缶"
+  },
+  {
+    "slug": "naruto",
+    "name": "なると"
+  },
+  {
+    "slug": "rennyuu",
+    "name": "練乳"
+  },
+  {
+    "slug": "ushikarubi",
+    "name": "牛カルビ"
+  },
+  {
+    "slug": "kanpachi",
+    "name": "カンパチ"
+  },
+  {
+    "slug": "rukkora",
+    "name": "ルッコラ"
+  },
+  {
+    "slug": "yuzu",
+    "name": "ゆず"
+  },
+  {
+    "slug": "foo",
+    "name": "フォー"
+  },
+  {
+    "slug": "kuroingen",
+    "name": "黒いんげん"
+  },
+  {
+    "slug": "numeritake",
+    "name": "ヌメリタケ"
+  },
+  {
+    "slug": "mozukusu",
+    "name": "もずく酢"
+  },
+  {
+    "slug": "burajirunattsu",
+    "name": "ブラジルナッツ"
+  },
+  {
+    "slug": "kokutou",
+    "name": "黒糖"
+  },
+  {
+    "slug": "akawain",
+    "name": "赤ワイン"
+  },
+  {
+    "slug": "kimuchi",
+    "name": "キムチ"
+  },
+  {
+    "slug": "reitoumenchikatsu",
+    "name": "冷凍メンチカツ"
+  },
+  {
+    "slug": "mafin",
+    "name": "マフィン"
+  },
+  {
+    "slug": "gen_enshouyu",
+    "name": "減塩醤油"
+  },
+  {
+    "slug": "tougarashi",
+    "name": "唐辛子"
+  },
+  {
+    "slug": "kokonattsuoiru",
+    "name": "ココナッツオイル"
+  },
+  {
+    "slug": "hoshihijiki",
+    "name": "干しひじき"
+  },
+  {
+    "slug": "ushiroosu",
+    "name": "牛ロース"
+  },
+  {
+    "slug": "hiramasa",
+    "name": "ヒラマサ"
+  },
+  {
+    "slug": "saniiretasu",
+    "name": "サニーレタス"
+  },
+  {
+    "slug": "kabosu",
+    "name": "かぼす"
+  },
+  {
+    "slug": "maronii",
+    "name": "マロニー"
+  },
+  {
+    "slug": "akaingen",
+    "name": "赤いんげん"
+  },
+  {
+    "slug": "agarikusu",
+    "name": "アガリクス"
+  },
+  {
+    "slug": "umibudousu",
+    "name": "海ぶどう酢"
+  },
+  {
+    "slug": "heezerunattsu",
+    "name": "ヘーゼルナッツ"
+  },
+  {
+    "slug": "kibisatou",
+    "name": "きび砂糖"
+  },
+  {
+    "slug": "sukoon",
+    "name": "スコーン"
+  },
+  {
+    "slug": "honjouzoushouyu",
+    "name": "本醸造醤油"
+  },
+  {
+    "slug": "konatougarashi",
+    "name": "粉唐辛子"
+  },
+  {
+    "slug": "komeabura",
+    "name": "米油"
+  },
+  {
+    "slug": "hoshikonbu",
+    "name": "干し昆布"
+  },
+  {
+    "slug": "daisutomato",
+    "name": "ダイストマト"
+  },
+  {
+    "slug": "chikuwa_2",
+    "name": "竹輪"
+  },
+  {
+    "slug": "saradana",
+    "name": "サラダ菜"
+  },
+  {
+    "slug": "sudachi",
+    "name": "すだち"
+  },
+  {
+    "slug": "supagettei",
+    "name": "スパゲッティ"
+  },
+  {
+    "slug": "shiroazuki",
+    "name": "白小豆"
+  },
+  {
+    "slug": "kawaratake",
+    "name": "カワラタケ"
+  },
+  {
+    "slug": "amakusasu",
+    "name": "天草酢"
+  },
+  {
+    "slug": "piikannattsu",
+    "name": "ピーカンナッツ"
+  },
+  {
+    "slug": "hachimitsu",
+    "name": "はちみつ"
+  },
+  {
+    "slug": "rozewain",
+    "name": "ロゼワイン"
+  },
+  {
+    "slug": "fukujinzukeke",
+    "name": "福神漬け"
+  },
+  {
+    "slug": "takanotsume",
+    "name": "鷹の爪"
+  },
+  {
+    "slug": "kyanooraabura",
+    "name": "キャノーラ油"
+  },
+  {
+    "slug": "hoshinori",
+    "name": "干しのり"
+  },
+  {
+    "slug": "tomatopeesuto",
+    "name": "トマトペースト"
+  },
+  {
+    "slug": "kamaboko_2",
+    "name": "蒲鉾"
+  },
+  {
+    "slug": "hoippukuriimu",
+    "name": "ホイップクリーム"
+  },
+  {
+    "slug": "ushibara",
+    "name": "牛バラ"
+  },
+  {
+    "slug": "mekajiki",
+    "name": "メカジキ"
+  },
+  {
+    "slug": "fettochiine",
+    "name": "フェットチーネ"
+  },
+  {
+    "slug": "dainattou",
+    "name": "大納豆"
+  },
+  {
+    "slug": "shirokikurage",
+    "name": "シロキクラゲ"
+  },
+  {
+    "slug": "wakamesu",
+    "name": "若布酢"
+  },
+  {
+    "slug": "matsunomi",
+    "name": "松の実"
+  },
+  {
+    "slug": "meepurushiroppu",
+    "name": "メープルシロップ"
+  },
+  {
+    "slug": "shanpan",
+    "name": "シャンパン"
+  },
+  {
+    "slug": "rakkyoutsuke",
+    "name": "らっきょう漬け"
+  },
+  {
+    "slug": "reitoukaraage_2",
+    "name": "冷凍唐揚げ"
+  },
+  {
+    "slug": "bataarooru",
+    "name": "バターロール"
+  },
+  {
+    "slug": "tomatopyuure",
+    "name": "トマトピューレ"
+  },
+  {
+    "slug": "neriseihin",
+    "name": "練り製品"
+  },
+  {
+    "slug": "masukarupoone",
+    "name": "マスカルポーネ"
+  },
+  {
+    "slug": "gyuukataroosu",
+    "name": "牛肩ロース"
+  },
+  {
+    "slug": "kihada",
+    "name": "キハダ"
+  },
+  {
+    "slug": "tsurumurasaki",
+    "name": "ツルムラサキ"
+  },
+  {
+    "slug": "kawauchibankan",
+    "name": "河内晩柑"
+  },
+  {
+    "slug": "penne",
+    "name": "ペンネ"
+  },
+  {
+    "slug": "mochimame",
+    "name": "もち豆"
+  },
+  {
+    "slug": "koonshiroppu",
+    "name": "コーンシロップ"
+  },
+  {
+    "slug": "supaakuringuwain",
+    "name": "スパークリングワイン"
+  },
+  {
+    "slug": "pikurusu",
+    "name": "ピクルス"
+  },
+  {
+    "slug": "reitoufuraidopoteto",
+    "name": "冷凍フライドポテト"
+  },
+  {
+    "slug": "sandoitchiyoupan",
+    "name": "サンドイッチ用パン"
+  },
+  {
+    "slug": "nijishikomishouyu",
+    "name": "二次仕込み醤油"
+  },
+  {
+    "slug": "garamumasara",
+    "name": "ガラムマサラ"
+  },
+  {
+    "slug": "piinattsuoiru",
+    "name": "ピーナッツオイル"
+  },
+  {
+    "slug": "hoshiankou",
+    "name": "干しあんこう"
+  },
+  {
+    "slug": "suzuki",
+    "name": "スズキ"
+  },
+  {
+    "slug": "ingen",
+    "name": "インゲン"
+  },
+  {
+    "slug": "iyokan",
+    "name": "伊予柑"
+  },
+  {
+    "slug": "ringuine",
+    "name": "リングイネ"
+  },
+  {
+    "slug": "shiroendou",
+    "name": "白えんどう"
+  },
+  {
+    "slug": "amitake",
+    "name": "アミタケ"
+  },
+  {
+    "slug": "hijikini",
+    "name": "ひじき煮"
+  },
+  {
+    "slug": "shirogoma",
+    "name": "白ごま"
+  },
+  {
+    "slug": "gaarikkupikurusu",
+    "name": "ガーリックピクルス"
+  },
+  {
+    "slug": "reitoupiza",
+    "name": "冷凍ピザ"
+  },
+  {
+    "slug": "hottodogguban",
+    "name": "ホットドッグバン"
+  },
+  {
+    "slug": "tenkuchishouyu",
+    "name": "甜口醤油"
+  },
+  {
+    "slug": "kumin",
+    "name": "クミン"
+  },
+  {
+    "slug": "raado",
+    "name": "ラード"
+  },
+  {
+    "slug": "hoshishiitake_2",
+    "name": "干しシイタケ"
+  },
+  {
+    "slug": "furuutsukan",
+    "name": "フルーツ缶"
+  },
+  {
+    "slug": "hamu",
+    "name": "ハム"
+  },
+  {
+    "slug": "fetachiizu",
+    "name": "フェタチーズ"
+  },
+  {
+    "slug": "ushiriburoosu",
+    "name": "牛リブロース"
+  },
+  {
+    "slug": "maaji",
+    "name": "マアジ"
+  },
+  {
+    "slug": "ryokutou",
+    "name": "緑豆"
+  },
+  {
+    "slug": "rengetake",
+    "name": "レンゲ茸"
+  },
+  {
+    "slug": "konbuni",
+    "name": "昆布煮"
+  },
+  {
+    "slug": "kurogoma",
+    "name": "黒ごま"
+  },
+  {
+    "slug": "mitarashi",
+    "name": "みたらし"
+  },
+  {
+    "slug": "non_arukoorubiiru",
+    "name": "ノンアルコールビール"
+  },
+  {
+    "slug": "oriibu",
+    "name": "オリーブ"
+  },
+  {
+    "slug": "reitoupasuta",
+    "name": "冷凍パスタ"
+  },
+  {
+    "slug": "hanbaagaaban",
+    "name": "ハンバーガーバン"
+  },
+  {
+    "slug": "shanhaikazeamakuchishouyu",
+    "name": "上海風甘口醤油"
+  },
+  {
+    "slug": "shootoningu",
+    "name": "ショートニング"
+  },
+  {
+    "slug": "hoshiwakame_2",
+    "name": "干しワカメ"
+  },
+  {
+    "slug": "mikankan",
+    "name": "みかん缶"
+  },
+  {
+    "slug": "chorisoo",
+    "name": "チョリソー"
+  },
+  {
+    "slug": "buruuchiizu",
+    "name": "ブルーチーズ"
+  },
+  {
+    "slug": "ushiminchi",
+    "name": "牛ミンチ"
+  },
+  {
+    "slug": "isaki",
+    "name": "イサキ"
+  },
+  {
+    "slug": "sunappuendou",
+    "name": "スナップエンドウ"
+  },
+  {
+    "slug": "dekopon",
+    "name": "デコポン"
+  },
+  {
+    "slug": "kaneroni",
+    "name": "カネロニ"
+  },
+  {
+    "slug": "chamame",
+    "name": "茶豆"
+  },
+  {
+    "slug": "mozukuni",
+    "name": "もずく煮"
+  },
+  {
+    "slug": "an",
+    "name": "餡"
+  },
+  {
+    "slug": "umeshu",
+    "name": "梅酒"
+  },
+  {
+    "slug": "keppaa",
+    "name": "ケッパー"
+  },
+  {
+    "slug": "reitouguriinpiisu",
+    "name": "冷凍グリーンピース"
+  },
+  {
+    "slug": "pitapan",
+    "name": "ピタパン"
+  },
+  {
+    "slug": "miso",
+    "name": "味噌"
+  },
+  {
+    "slug": "taamerikku",
+    "name": "ターメリック"
+  },
+  {
+    "slug": "koon_oiru",
+    "name": "コーンオイル"
+  },
+  {
+    "slug": "hoshihijiki_2",
+    "name": "干しヒジキ"
+  },
+  {
+    "slug": "painkan",
+    "name": "パイン缶"
+  },
+  {
+    "slug": "sarami",
+    "name": "サラミ"
+  },
+  {
+    "slug": "sunoopiisu",
+    "name": "スノーピース"
+  },
+  {
+    "slug": "shiranui",
+    "name": "不知火"
+  },
+  {
+    "slug": "joruno",
+    "name": "ジョルノ"
+  },
+  {
+    "slug": "sasage",
+    "name": "ササゲ"
+  },
+  {
+    "slug": "benishimeji",
+    "name": "ベニシメジ"
+  },
+  {
+    "slug": "amakusani",
+    "name": "天草煮"
+  },
+  {
+    "slug": "surigoma",
+    "name": "すりごま"
+  },
+  {
+    "slug": "anko",
+    "name": "あんこ"
+  },
+  {
+    "slug": "rikyuuru",
+    "name": "リキュール"
+  },
+  {
+    "slug": "iburigakko",
+    "name": "いぶりがっこ"
+  },
+  {
+    "slug": "abokadooiru",
+    "name": "アボカドオイル"
+  },
+  {
+    "slug": "hoshitoufu",
+    "name": "干し豆腐"
+  },
+  {
+    "slug": "masshuruumukan",
+    "name": "マッシュルーム缶"
+  },
+  {
+    "slug": "puroshuuto",
+    "name": "プロシュート"
+  },
+  {
+    "slug": "sutoratchatera",
+    "name": "ストラッチャテラ"
+  },
+  {
+    "slug": "ushisagari",
+    "name": "牛サガリ"
+  },
+  {
+    "slug": "fugu",
+    "name": "フグ"
+  },
+  {
+    "slug": "guriinpiisu",
+    "name": "グリーンピース"
+  },
+  {
+    "slug": "setoka",
+    "name": "せとか"
+  },
+  {
+    "slug": "sobakona",
+    "name": "そば粉"
+  },
+  {
+    "slug": "wakameni",
+    "name": "若布煮"
+  },
+  {
+    "slug": "oguraan",
+    "name": "小倉あん"
+  },
+  {
+    "slug": "kakuteru",
+    "name": "カクテル"
+  },
+  {
+    "slug": "bettaratsuke",
+    "name": "べったら漬け"
+  },
+  {
+    "slug": "reitoukongouyasai",
+    "name": "冷凍混合野菜"
+  },
+  {
+    "slug": "chabata",
+    "name": "チャバタ"
+  },
+  {
+    "slug": "akamiso",
+    "name": "赤味噌"
+  },
+  {
+    "slug": "shinamon",
+    "name": "シナモン"
+  },
+  {
+    "slug": "gureepushiidooiru",
+    "name": "グレープシードオイル"
+  },
+  {
+    "slug": "oriibukan",
+    "name": "オリーブ缶"
+  },
+  {
+    "slug": "panchetta",
+    "name": "パンチェッタ"
+  },
+  {
+    "slug": "puroboroone",
+    "name": "プロボローネ"
+  },
+  {
+    "slug": "butabara",
+    "name": "豚バラ"
+  },
+  {
+    "slug": "torafugu",
+    "name": "トラフグ"
+  },
+  {
+    "slug": "sayaendou",
+    "name": "さやえんどう"
+  },
+  {
+    "slug": "hassaku",
+    "name": "はっさく"
+  },
+  {
+    "slug": "udonkona",
+    "name": "うどん粉"
+  },
+  {
+    "slug": "sasakure",
+    "name": "ササクレ"
+  },
+  {
+    "slug": "nebutake",
+    "name": "ネブタケ"
+  },
+  {
+    "slug": "mekabuni",
+    "name": "めかぶ煮"
+  },
+  {
+    "slug": "kabochanotane",
+    "name": "かぼちゃの種"
+  },
+  {
+    "slug": "reitouyasaimikkusu",
+    "name": "冷凍野菜ミックス"
+  },
+  {
+    "slug": "fokatcha",
+    "name": "フォカッチャ"
+  },
+  {
+    "slug": "mugimiso",
+    "name": "麦味噌"
+  },
+  {
+    "slug": "natsumegu",
+    "name": "ナツメグ"
+  },
+  {
+    "slug": "nataneabura",
+    "name": "ナタネ油"
+  },
+  {
+    "slug": "soumen",
+    "name": "素麺"
+  },
+  {
+    "slug": "anchobikan",
+    "name": "アンチョビ缶"
+  },
+  {
+    "slug": "namahamu",
+    "name": "生ハム"
+  },
+  {
+    "slug": "ementaaru",
+    "name": "エメンタール"
+  },
+  {
+    "slug": "butaroosu",
+    "name": "豚ロース"
+  },
+  {
+    "slug": "sasanishiki",
+    "name": "ササニシキ"
+  },
+  {
+    "slug": "karakasatake",
+    "name": "カラカサタケ"
+  },
+  {
+    "slug": "himawarinotane",
+    "name": "ひまわりの種"
+  },
+  {
+    "slug": "tsubuan_2",
+    "name": "つぶあん"
+  },
+  {
+    "slug": "uokka",
+    "name": "ウォッカ"
+  },
+  {
+    "slug": "narashi",
+    "name": "奈良漬"
+  },
+  {
+    "slug": "reitoufuruutsu",
+    "name": "冷凍フルーツ"
+  },
+  {
+    "slug": "raimugipan",
+    "name": "ライ麦パン"
+  },
+  {
+    "slug": "awasemiso",
+    "name": "合わせ味噌"
+  },
+  {
+    "slug": "kuroobu",
+    "name": "クローブ"
+  },
+  {
+    "slug": "taihakugomaabura_2",
+    "name": "太白ごま油"
+  },
+  {
+    "slug": "sabamisonikan",
+    "name": "サバ味噌煮缶"
+  },
+  {
+    "slug": "roosuhamu",
+    "name": "ロースハム"
+  },
+  {
+    "slug": "guranapadaano",
+    "name": "グラナパダーノ"
+  },
+  {
+    "slug": "tonkenroosu",
+    "name": "豚肩ロース"
+  },
+  {
+    "slug": "hamo",
+    "name": "ハモ"
+  },
+  {
+    "slug": "aotougarashi",
+    "name": "青唐辛子"
+  },
+  {
+    "slug": "natsumikan",
+    "name": "夏みかん"
+  },
+  {
+    "slug": "guranoora",
+    "name": "グラノーラ"
+  },
+  {
+    "slug": "tamogitake",
+    "name": "タモギタケ"
+  },
+  {
+    "slug": "chiashiido",
+    "name": "チアシード"
+  },
+  {
+    "slug": "koshian",
+    "name": "こしあん"
+  },
+  {
+    "slug": "ramu",
+    "name": "ラム"
+  },
+  {
+    "slug": "zenryuukonapan",
+    "name": "全粒粉パン"
+  },
+  {
+    "slug": "shinshuumiso",
+    "name": "信州味噌"
+  },
+  {
+    "slug": "karudamon",
+    "name": "カルダモン"
+  },
+  {
+    "slug": "kurogomaabura",
+    "name": "黒ごま油"
+  },
+  {
+    "slug": "soumen_2",
+    "name": "そうめん"
+  },
+  {
+    "slug": "sabamisokan",
+    "name": "さば味噌缶"
+  },
+  {
+    "slug": "bonresuhamu",
+    "name": "ボンレスハム"
+  },
+  {
+    "slug": "pekoriino",
+    "name": "ペコリーノ"
+  },
+  {
+    "slug": "butamomo",
+    "name": "豚もも"
+  },
+  {
+    "slug": "utsubo",
+    "name": "ウツボ"
+  },
+  {
+    "slug": "hatakeshimeji",
+    "name": "ハタケシメジ"
+  },
+  {
+    "slug": "amani",
+    "name": "亜麻仁"
+  },
+  {
+    "slug": "shiroan",
+    "name": "白あん"
+  },
+  {
+    "slug": "tekiira",
+    "name": "テキーラ"
+  },
+  {
+    "slug": "fukinotsukudani",
+    "name": "ふきの佃煮"
+  },
+  {
+    "slug": "reitouudo",
+    "name": "冷凍うど"
+  },
+  {
+    "slug": "ingurisshumafin",
+    "name": "イングリッシュマフィン"
+  },
+  {
+    "slug": "saikyoumiso",
+    "name": "西京味噌"
+  },
+  {
+    "slug": "fenneru",
+    "name": "フェンネル"
+  },
+  {
+    "slug": "toryufuoiru",
+    "name": "トリュフオイル"
+  },
+  {
+    "slug": "raamen",
+    "name": "ラーメン"
+  },
+  {
+    "slug": "butatan",
+    "name": "豚タン"
+  },
+  {
+    "slug": "tachiuo",
+    "name": "タチウオ"
+  },
+  {
+    "slug": "aoshiso",
+    "name": "青しそ"
+  },
+  {
+    "slug": "ponkan",
+    "name": "ポンカン"
+  },
+  {
+    "slug": "shiriaru",
+    "name": "シリアル"
+  },
+  {
+    "slug": "taimanomi",
+    "name": "大麻の実"
+  },
+  {
+    "slug": "matchaan",
+    "name": "抹茶あん"
+  },
+  {
+    "slug": "burandee",
+    "name": "ブランデー"
+  },
+  {
+    "slug": "shisonomi",
+    "name": "しその実"
+  },
+  {
+    "slug": "reitousoba",
+    "name": "冷凍そば"
+  },
+  {
+    "slug": "buriosshupan",
+    "name": "ブリオッシュパン"
+  },
+  {
+    "slug": "sutaaanisu",
+    "name": "スターアニス"
+  },
+  {
+    "slug": "ninnikuoiru",
+    "name": "にんにくオイル"
+  },
+  {
+    "slug": "insutantoraamen",
+    "name": "インスタントラーメン"
+  },
+  {
+    "slug": "tsunaoirutsuke",
+    "name": "ツナオイル漬け"
+  },
+  {
+    "slug": "beekonburokku",
+    "name": "ベーコンブロック"
+  },
+  {
+    "slug": "chiizu",
+    "name": "チーズ"
+  },
+  {
+    "slug": "tonsoku",
+    "name": "豚足"
+  },
+  {
+    "slug": "sayori",
+    "name": "サヨリ"
+  },
+  {
+    "slug": "akashiso",
+    "name": "赤しそ"
+  },
+  {
+    "slug": "neeburu",
+    "name": "ネーブル"
+  },
+  {
+    "slug": "poppukoon",
+    "name": "ポップコーン"
+  },
+  {
+    "slug": "shisonominoshiozuke",
+    "name": "しその実の塩漬け"
+  },
+  {
+    "slug": "reitouraamen",
+    "name": "冷凍ラーメン"
+  },
+  {
+    "slug": "denisshupan",
+    "name": "デニッシュパン"
+  },
+  {
+    "slug": "komemiso",
+    "name": "米味噌"
+  },
+  {
+    "slug": "bajiru",
+    "name": "バジル"
+  },
+  {
+    "slug": "tougarashioiru",
+    "name": "唐辛子オイル"
+  },
+  {
+    "slug": "kanmen",
+    "name": "乾麺"
+  },
+  {
+    "slug": "tsunamizuni",
+    "name": "ツナ水煮"
+  },
+  {
+    "slug": "hamusuraisu",
+    "name": "ハムスライス"
+  },
+  {
+    "slug": "suraisuchiizu",
+    "name": "スライスチーズ"
+  },
+  {
+    "slug": "koon",
+    "name": "コーン"
+  },
+  {
+    "slug": "zerachin",
+    "name": "ゼラチン"
+  },
+  {
+    "slug": "esupuresso",
+    "name": "エスプレッソ"
+  },
+  {
+    "slug": "aotougarashinoshiozuke",
+    "name": "青唐辛子の塩漬け"
+  },
+  {
+    "slug": "reitouchaahan",
+    "name": "冷凍チャーハン"
+  },
+  {
+    "slug": "mamemiso",
+    "name": "豆味噌"
+  },
+  {
+    "slug": "oregano",
+    "name": "オレガノ"
+  },
+  {
+    "slug": "bajiruoiru",
+    "name": "バジルオイル"
+  },
+  {
+    "slug": "sokusekimisoshiru",
+    "name": "即席みそ汁"
+  },
+  {
+    "slug": "sappa",
+    "name": "サッパ"
+  },
+  {
+    "slug": "koujinsan",
+    "name": "黄人参"
+  },
+  {
+    "slug": "kinkan",
+    "name": "キンカン"
+  },
+  {
+    "slug": "komenuka",
+    "name": "米ぬか"
+  },
+  {
+    "slug": "konazerachin",
+    "name": "粉ゼラチン"
+  },
+  {
+    "slug": "kaferate",
+    "name": "カフェラテ"
+  },
+  {
+    "slug": "akatougarashinoshiozuke",
+    "name": "赤唐辛子の塩漬け"
+  },
+  {
+    "slug": "reitouomuraisu",
+    "name": "冷凍オムライス"
+  },
+  {
+    "slug": "sendaimiso",
+    "name": "仙台味噌"
+  },
+  {
+    "slug": "heezerunattsuoiru",
+    "name": "ヘーゼルナッツオイル"
+  },
+  {
+    "slug": "sokusekisuupu",
+    "name": "即席スープ"
+  },
+  {
+    "slug": "iwashimizuni",
+    "name": "イワシ水煮"
+  },
+  {
+    "slug": "hanbaagu",
+    "name": "ハンバーグ"
+  },
+  {
+    "slug": "shureddochiizu",
+    "name": "シュレッドチーズ"
+  },
+  {
+    "slug": "butakata",
+    "name": "豚カタ"
+  },
+  {
+    "slug": "maiwashi",
+    "name": "マイワシ"
+  },
+  {
+    "slug": "murasakininjin",
+    "name": "紫人参"
+  },
+  {
+    "slug": "kinkan_2",
+    "name": "金柑"
+  },
+  {
+    "slug": "haiga",
+    "name": "胚芽"
+  },
+  {
+    "slug": "shiitozerachin",
+    "name": "シートゼラチン"
+  },
+  {
+    "slug": "hottochokoreeto",
+    "name": "ホットチョコレート"
+  },
+  {
+    "slug": "kurumiabura",
+    "name": "くるみ油"
+  },
+  {
+    "slug": "hijiki",
+    "name": "ひじき"
+  },
+  {
+    "slug": "hoorukoon",
+    "name": "ホールコーン"
+  },
+  {
+    "slug": "tonkatsu",
+    "name": "とんかつ"
+  },
+  {
+    "slug": "sawaakuriimu",
+    "name": "サワークリーム"
+  },
+  {
+    "slug": "niwatorirebaa",
+    "name": "鶏レバー"
+  },
+  {
+    "slug": "shishamo_2",
+    "name": "柳葉魚"
+  },
+  {
+    "slug": "wakegi",
+    "name": "わけぎ"
+  },
+  {
+    "slug": "mangosuchin",
+    "name": "マンゴスチン"
+  },
+  {
+    "slug": "oshimugi",
+    "name": "押麦"
+  },
+  {
+    "slug": "reitouhanbaagu",
+    "name": "冷凍ハンバーグ"
+  },
+  {
+    "slug": "seeji",
+    "name": "セージ"
+  },
+  {
+    "slug": "shokuyoushokubutsuyuabura",
+    "name": "食用植物油脂"
+  },
+  {
+    "slug": "wakame_2",
+    "name": "若布"
+  },
+  {
+    "slug": "kuriimukoon",
+    "name": "クリームコーン"
+  },
+  {
+    "slug": "menchikatsu",
+    "name": "メンチカツ"
+  },
+  {
+    "slug": "kefia",
+    "name": "ケフィア"
+  },
+  {
+    "slug": "niwatorisunagimo",
+    "name": "鶏砂肝"
+  },
+  {
+    "slug": "hokke",
+    "name": "ホッケ"
+  },
+  {
+    "slug": "asatsuki",
+    "name": "あさつき"
+  },
+  {
+    "slug": "sutaafuruutsu",
+    "name": "スターフルーツ"
+  },
+  {
+    "slug": "reitoumiitobooru",
+    "name": "冷凍ミートボール"
+  },
+  {
+    "slug": "honmirin",
+    "name": "本みりん"
+  },
+  {
+    "slug": "diru",
+    "name": "ディル"
+  },
+  {
+    "slug": "kongouabura",
+    "name": "混合油"
+  },
+  {
+    "slug": "mekabu",
+    "name": "めかぶ"
+  },
+  {
+    "slug": "furuutsukakuterukan",
+    "name": "フルーツカクテル缶"
+  },
+  {
+    "slug": "korokke",
+    "name": "コロッケ"
+  },
+  {
+    "slug": "hoippu",
+    "name": "ホイップ"
+  },
+  {
+    "slug": "niwatorishinzou",
+    "name": "鶏心臓"
+  },
+  {
+    "slug": "masu",
+    "name": "鱒"
+  },
+  {
+    "slug": "rakkyou",
+    "name": "ラッキョウ"
+  },
+  {
+    "slug": "reitouebifurai",
+    "name": "冷凍エビフライ"
+  },
+  {
+    "slug": "mirinfuuchouajiryou",
+    "name": "みりん風調味料"
+  },
+  {
+    "slug": "paseri",
+    "name": "パセリ"
+  },
+  {
+    "slug": "tenpuraabura",
+    "name": "天ぷら油"
+  },
+  {
+    "slug": "arame",
+    "name": "荒布"
+  },
+  {
+    "slug": "mikanshiropputsuke",
+    "name": "みかんシロップ漬け"
+  },
+  {
+    "slug": "harumakiki",
+    "name": "春巻き"
+  },
+  {
+    "slug": "kuriimu",
+    "name": "クリーム"
+  },
+  {
+    "slug": "kokonattsu",
+    "name": "ココナッツ"
+  },
+  {
+    "slug": "raimugi",
+    "name": "ライ麦"
+  },
+  {
+    "slug": "chokoreeto",
+    "name": "チョコレート"
+  },
+  {
+    "slug": "saidaa",
+    "name": "サイダー"
+  },
+  {
+    "slug": "reitoukanikuriimukorokke",
+    "name": "冷凍かにクリームコロッケ"
+  },
+  {
+    "slug": "ryourishu",
+    "name": "料理酒"
+  },
+  {
+    "slug": "minto",
+    "name": "ミント"
+  },
+  {
+    "slug": "ageabura",
+    "name": "揚げ油"
+  },
+  {
+    "slug": "arame_2",
+    "name": "アラメ"
+  },
+  {
+    "slug": "painshiropputsuke",
+    "name": "パインシロップ漬け"
+  },
+  {
+    "slug": "nijimasu",
+    "name": "ニジマス"
+  },
+  {
+    "slug": "shirouri",
+    "name": "白瓜"
+  },
+  {
+    "slug": "passhonfuruutsu",
+    "name": "パッションフルーツ"
+  },
+  {
+    "slug": "kinua",
+    "name": "キヌア"
+  },
+  {
+    "slug": "bitaachokoreeto",
+    "name": "ビターチョコレート"
+  },
+  {
+    "slug": "jinjaaeeru",
+    "name": "ジンジャーエール"
+  },
+  {
+    "slug": "reitoutakoyaki",
+    "name": "冷凍たこ焼き"
+  },
+  {
+    "slug": "seishu",
+    "name": "清酒"
+  },
+  {
+    "slug": "sanshou",
+    "name": "山椒"
+  },
+  {
+    "slug": "raadooiru",
+    "name": "ラードオイル"
+  },
+  {
+    "slug": "umibudou",
+    "name": "海ぶどう"
+  },
+  {
+    "slug": "masshuruumumizuni",
+    "name": "マッシュルーム水煮"
+  },
+  {
+    "slug": "girishayooguruto",
+    "name": "ギリシャヨーグルト"
+  },
+  {
+    "slug": "jidori",
+    "name": "地鶏"
+  },
+  {
+    "slug": "amago",
+    "name": "アマゴ"
+  },
+  {
+    "slug": "etsuuri",
+    "name": "越瓜"
+  },
+  {
+    "slug": "guaba",
+    "name": "グアバ"
+  },
+  {
+    "slug": "amaransasu",
+    "name": "アマランサス"
+  },
+  {
+    "slug": "mirukuchokoreeto",
+    "name": "ミルクチョコレート"
+  },
+  {
+    "slug": "tonikkuuootaa",
+    "name": "トニックウォーター"
+  },
+  {
+    "slug": "reitouokonomiyaki",
+    "name": "冷凍お好み焼き"
+  },
+  {
+    "slug": "shio",
+    "name": "塩"
+  },
+  {
+    "slug": "konasanshou",
+    "name": "粉山椒"
+  },
+  {
+    "slug": "shuumai_2",
+    "name": "焼売"
+  },
+  {
+    "slug": "pureenyooguruto",
+    "name": "プレーンヨーグルト"
+  },
+  {
+    "slug": "ushimotsu",
+    "name": "牛もつ"
+  },
+  {
+    "slug": "iwana",
+    "name": "イワナ"
+  },
+  {
+    "slug": "kinusaya",
+    "name": "絹さや"
+  },
+  {
+    "slug": "karin",
+    "name": "カリン"
+  },
+  {
+    "slug": "sobami",
+    "name": "そば実"
+  },
+  {
+    "slug": "howaitochokoreeto",
+    "name": "ホワイトチョコレート"
+  },
+  {
+    "slug": "soodamizu",
+    "name": "ソーダ水"
+  },
+  {
+    "slug": "reitoumonjayaki",
+    "name": "冷凍もんじゃ焼き"
+  },
+  {
+    "slug": "taihakuabura",
+    "name": "太白油"
+  },
+  {
+    "slug": "amakusa",
+    "name": "天草"
+  },
+  {
+    "slug": "anchobimizuni",
+    "name": "アンチョビ水煮"
+  },
+  {
+    "slug": "shuumai_3",
+    "name": "しゅうまい"
+  },
+  {
+    "slug": "furuutsuyooguruto",
+    "name": "フルーツヨーグルト"
+  },
+  {
+    "slug": "butamotsu",
+    "name": "豚もつ"
+  },
+  {
+    "slug": "tarako",
+    "name": "たらこ"
+  },
+  {
+    "slug": "burokkoriisupurauto",
+    "name": "ブロッコリースプラウト"
+  },
+  {
+    "slug": "marumero",
+    "name": "マルメロ"
+  },
+  {
+    "slug": "kakaopaudaa",
+    "name": "カカオパウダー"
+  },
+  {
+    "slug": "mineraruuootaa",
+    "name": "ミネラルウォーター"
+  },
+  {
+    "slug": "kaien",
+    "name": "海塩"
+  },
+  {
+    "slug": "wasabikona",
+    "name": "わさび粉"
+  },
+  {
+    "slug": "shokuyouseiseikakouyushi",
+    "name": "食用精製加工油脂"
+  },
+  {
+    "slug": "sakuraebi",
+    "name": "桜エビ"
+  },
+  {
+    "slug": "sabamisoni",
+    "name": "サバ味噌煮"
+  },
+  {
+    "slug": "yakitori",
+    "name": "焼き鳥"
+  },
+  {
+    "slug": "nomuyooguruto",
+    "name": "飲むヨーグルト"
+  },
+  {
+    "slug": "horumon",
+    "name": "ホルモン"
+  },
+  {
+    "slug": "sujiko",
+    "name": "すじこ"
+  },
+  {
+    "slug": "aateichooku",
+    "name": "アーティチョーク"
+  },
+  {
+    "slug": "kakaonibu",
+    "name": "カカオニブ"
+  },
+  {
+    "slug": "tansansui",
+    "name": "炭酸水"
+  },
+  {
+    "slug": "arashio",
+    "name": "粗塩"
+  },
+  {
+    "slug": "karashikona",
+    "name": "からし粉"
+  },
+  {
+    "slug": "komenukaabura",
+    "name": "米糠油"
+  },
+  {
+    "slug": "hoshisakuraebi",
+    "name": "干し桜エビ"
+  },
+  {
+    "slug": "iwashimisoni",
+    "name": "いわし味噌煮"
+  },
+  {
+    "slug": "karaage",
+    "name": "唐揚げ"
+  },
+  {
+    "slug": "tounyuuyooguruto",
+    "name": "豆乳ヨーグルト"
+  },
+  {
+    "slug": "teeru",
+    "name": "テール"
+  },
+  {
+    "slug": "surumeika",
+    "name": "スルメイカ"
+  },
+  {
+    "slug": "chokochippu",
+    "name": "チョコチップ"
+  },
+  {
+    "slug": "supootsudorinku",
+    "name": "スポーツドリンク"
+  },
+  {
+    "slug": "gan_en",
+    "name": "岩塩"
+  },
+  {
+    "slug": "gaarikkupaudaa",
+    "name": "ガーリックパウダー"
+  },
+  {
+    "slug": "sabamisoni_2",
+    "name": "さば味噌煮"
+  },
+  {
+    "slug": "karaage_2",
+    "name": "から揚げ"
+  },
+  {
+    "slug": "soiyooguruto",
+    "name": "ソイヨーグルト"
+  },
+  {
+    "slug": "hachinosu",
+    "name": "ハチノス"
+  },
+  {
+    "slug": "nattsuchoko",
+    "name": "ナッツチョコ"
+  },
+  {
+    "slug": "enajiidorinku",
+    "name": "エナジードリンク"
+  },
+  {
+    "slug": "himarayagan_en",
+    "name": "ヒマラヤ岩塩"
+  },
+  {
+    "slug": "onionpaudaa",
+    "name": "オニオンパウダー"
+  },
+  {
+    "slug": "furaidochikin",
+    "name": "フライドチキン"
+  },
+  {
+    "slug": "rakutofuriigyuunyuu",
+    "name": "ラクトフリー牛乳"
+  },
+  {
+    "slug": "senmai",
+    "name": "センマイ"
+  },
+  {
+    "slug": "shouebi",
+    "name": "小エビ"
+  },
+  {
+    "slug": "furuutsuchoko",
+    "name": "フルーツチョコ"
+  },
+  {
+    "slug": "yasaijuusu",
+    "name": "野菜ジュース"
+  },
+  {
+    "slug": "komezu",
+    "name": "米酢"
+  },
+  {
+    "slug": "chiripaudaa",
+    "name": "チリパウダー"
+  },
+  {
+    "slug": "chikinnagetto",
+    "name": "チキンナゲット"
+  },
+  {
+    "slug": "ootsumiruku",
+    "name": "オーツミルク"
+  },
+  {
+    "slug": "rebaa",
+    "name": "レバー"
+  },
+  {
+    "slug": "burakkutaigaa",
+    "name": "ブラックタイガー"
+  },
+  {
+    "slug": "esharotto",
+    "name": "エシャロット"
+  },
+  {
+    "slug": "masukatto",
+    "name": "マスカット"
+  },
+  {
+    "slug": "reddopeppaa",
+    "name": "レッドペッパー"
+  },
+  {
+    "slug": "fisshufurai",
+    "name": "フィッシュフライ"
+  },
+  {
+    "slug": "aamondomiruku",
+    "name": "アーモンドミルク"
+  },
+  {
+    "slug": "hatsu",
+    "name": "ハツ"
+  },
+  {
+    "slug": "banameiebi",
+    "name": "バナメイエビ"
+  },
+  {
+    "slug": "mizuna_2",
+    "name": "みずな"
+  },
+  {
+    "slug": "kousui",
+    "name": "幸水"
+  },
+  {
+    "slug": "shichigoukome",
+    "name": "七合米"
+  },
+  {
+    "slug": "matchapaudaa",
+    "name": "抹茶パウダー"
+  },
+  {
+    "slug": "kurozu",
+    "name": "黒酢"
+  },
+  {
+    "slug": "giara",
+    "name": "ギアラ"
+  },
+  {
+    "slug": "iseebi",
+    "name": "伊勢エビ"
+  },
+  {
+    "slug": "aonegi",
+    "name": "青ねぎ"
+  },
+  {
+    "slug": "housui",
+    "name": "豊水"
+  },
+  {
+    "slug": "juugokokukome",
+    "name": "十五穀米"
+  },
+  {
+    "slug": "koucha",
+    "name": "紅茶"
+  },
+  {
+    "slug": "ringosu",
+    "name": "りんご酢"
+  },
+  {
+    "slug": "masutaadoshiido",
+    "name": "マスタードシード"
+  },
+  {
+    "slug": "kanikuriimukorokke",
+    "name": "かにクリームコロッケ"
+  },
+  {
+    "slug": "raisumiruku",
+    "name": "ライスミルク"
+  },
+  {
+    "slug": "korikori",
+    "name": "コリコリ"
+  },
+  {
+    "slug": "kurumaebi",
+    "name": "車エビ"
+  },
+  {
+    "slug": "bannounegi",
+    "name": "万能ねぎ"
+  },
+  {
+    "slug": "nijusseiki",
+    "name": "二十世紀"
+  },
+  {
+    "slug": "nijuukokukome",
+    "name": "二十穀米"
+  },
+  {
+    "slug": "ryokucha",
+    "name": "緑茶"
+  },
+  {
+    "slug": "barusamikosu",
+    "name": "バルサミコ酢"
+  },
+  {
+    "slug": "anisu",
+    "name": "アニス"
+  },
+  {
+    "slug": "takoyaki",
+    "name": "たこ焼き"
+  },
+  {
+    "slug": "heezerunattsumiruku",
+    "name": "ヘーゼルナッツミルク"
+  },
+  {
+    "slug": "kamoroosu",
+    "name": "鴨ロース"
+  },
+  {
+    "slug": "kegani",
+    "name": "毛ガニ"
+  },
+  {
+    "slug": "kyuujounegi",
+    "name": "九条ねぎ"
+  },
+  {
+    "slug": "hoshikaki",
+    "name": "干し柿"
+  },
+  {
+    "slug": "sanjuukokukome",
+    "name": "三十穀米"
+  },
+  {
+    "slug": "uuroncha",
+    "name": "ウーロン茶"
+  },
+  {
+    "slug": "wainbinegaa",
+    "name": "ワインビネガー"
+  },
+  {
+    "slug": "safuran",
+    "name": "サフラン"
+  },
+  {
+    "slug": "okonomiyaki",
+    "name": "お好み焼き"
+  },
+  {
+    "slug": "kamomunajishi",
+    "name": "鴨胸肉"
+  },
+  {
+    "slug": "zuwaigani",
+    "name": "ズワイガニ"
+  },
+  {
+    "slug": "shintamanegi",
+    "name": "新玉ねぎ"
+  },
+  {
+    "slug": "hoshiume",
+    "name": "干し梅"
+  },
+  {
+    "slug": "gojuukokukome",
+    "name": "五十穀米"
+  },
+  {
+    "slug": "jasumincha",
+    "name": "ジャスミン茶"
+  },
+  {
+    "slug": "ponsu",
+    "name": "ポン酢"
+  },
+  {
+    "slug": "gokouryou",
+    "name": "五香料"
+  },
+  {
+    "slug": "monjayaki",
+    "name": "もんじゃ焼き"
+  },
+  {
+    "slug": "kamomomoniku",
+    "name": "鴨もも肉"
+  },
+  {
+    "slug": "tarabagani",
+    "name": "タラバガニ"
+  },
+  {
+    "slug": "shironegi",
+    "name": "白ネギ"
+  },
+  {
+    "slug": "umeboshi",
+    "name": "梅干し"
+  },
+  {
+    "slug": "haabuteii",
+    "name": "ハーブティー"
+  },
+  {
+    "slug": "mentsuyu",
+    "name": "めんつゆ"
+  },
+  {
+    "slug": "juusankaori",
+    "name": "十三香"
+  },
+  {
+    "slug": "yakisoba",
+    "name": "焼そば"
+  },
+  {
+    "slug": "shikaroosu",
+    "name": "鹿ロース"
+  },
+  {
+    "slug": "watarigani",
+    "name": "ワタリガニ"
+  },
+  {
+    "slug": "wakegi_2",
+    "name": "分葱"
+  },
+  {
+    "slug": "sarunashi",
+    "name": "サルナシ"
+  },
+  {
+    "slug": "ruibosuteii",
+    "name": "ルイボスティー"
+  },
+  {
+    "slug": "tsuyu",
+    "name": "つゆ"
+  },
+  {
+    "slug": "kashou",
+    "name": "花椒"
+  },
+  {
+    "slug": "yakisoba_2",
+    "name": "やきそば"
+  },
+  {
+    "slug": "inoshishiroosu",
+    "name": "猪ロース"
+  },
+  {
+    "slug": "hokkikai",
+    "name": "ホッキ貝"
+  },
+  {
+    "slug": "kanounegi",
+    "name": "叶ネギ"
+  },
+  {
+    "slug": "karin_2",
+    "name": "花梨"
+  },
+  {
+    "slug": "roozuhippu",
+    "name": "ローズヒップ"
+  },
+  {
+    "slug": "shirodashi",
+    "name": "白だし"
+  },
+  {
+    "slug": "hakkaku",
+    "name": "八角"
+  },
+  {
+    "slug": "chaahan",
+    "name": "チャーハン"
+  },
+  {
+    "slug": "basashishi",
+    "name": "馬刺し"
+  },
+  {
+    "slug": "tsubukai",
+    "name": "ツブ貝"
+  },
+  {
+    "slug": "rutabaga",
+    "name": "ルタバガ"
+  },
+  {
+    "slug": "boke",
+    "name": "木瓜"
+  },
+  {
+    "slug": "kamomiiru",
+    "name": "カモミール"
+  },
+  {
+    "slug": "katsuofushi",
+    "name": "かつお節"
+  },
+  {
+    "slug": "shinamonsuteikku",
+    "name": "シナモンスティック"
+  },
+  {
+    "slug": "omuraisu",
+    "name": "オムライス"
+  },
+  {
+    "slug": "ramuchoppu",
+    "name": "ラムチョップ"
+  },
+  {
+    "slug": "awabi",
+    "name": "アワビ"
+  },
+  {
+    "slug": "kaburera",
+    "name": "カブレラ"
+  },
+  {
+    "slug": "biwa_2",
+    "name": "ビワ"
+  },
+  {
+    "slug": "pepaamintoteii",
+    "name": "ペパーミントティー"
+  },
+  {
+    "slug": "konbudashi",
+    "name": "昆布だし"
+  },
+  {
+    "slug": "banirabiinzu",
+    "name": "バニラビーンズ"
+  },
+  {
+    "slug": "karee",
+    "name": "カレー"
+  },
+  {
+    "slug": "ramurakku",
+    "name": "ラムラック"
+  },
+  {
+    "slug": "sazae",
+    "name": "サザエ"
+  },
+  {
+    "slug": "mekyabetsu",
+    "name": "芽キャベツ"
+  },
+  {
+    "slug": "sakuranbo",
+    "name": "サクランボ"
+  },
+  {
+    "slug": "aamondopaudaa",
+    "name": "アーモンドパウダー"
+  },
+  {
+    "slug": "hondashi",
+    "name": "ほんだし"
+  },
+  {
+    "slug": "baniraessensu",
+    "name": "バニラエッセンス"
+  },
+  {
+    "slug": "hayashiraisu",
+    "name": "ハヤシライス"
+  },
+  {
+    "slug": "ramureggu",
+    "name": "ラムレッグ"
+  },
+  {
+    "slug": "baikai",
+    "name": "バイ貝"
+  },
+  {
+    "slug": "suiitopii",
+    "name": "スイートピー"
+  },
+  {
+    "slug": "amerikancherii",
+    "name": "アメリカンチェリー"
+  },
+  {
+    "slug": "kokonattsupaudaa",
+    "name": "ココナッツパウダー"
+  },
+  {
+    "slug": "karyuudashi",
+    "name": "顆粒だし"
+  },
+  {
+    "slug": "kareeruu",
+    "name": "カレールー"
+  },
+  {
+    "slug": "doria",
+    "name": "ドリア"
+  },
+  {
+    "slug": "ramushorudaa",
+    "name": "ラムショルダー"
+  },
+  {
+    "slug": "botan_ebi",
+    "name": "ボタンエビ"
+  },
+  {
+    "slug": "shizensho",
+    "name": "自然薯"
+  },
+  {
+    "slug": "kokonattsufureeku",
+    "name": "ココナッツフレーク"
+  },
+  {
+    "slug": "hondashi_2",
+    "name": "本だし"
+  },
+  {
+    "slug": "chuukarakareeruu",
+    "name": "中辛カレールー"
+  },
+  {
+    "slug": "guratan",
+    "name": "グラタン"
+  },
+  {
+    "slug": "matonchoppu",
+    "name": "マトンチョップ"
+  },
+  {
+    "slug": "omaaruebi",
+    "name": "オマールエビ"
+  },
+  {
+    "slug": "yamatoimo",
+    "name": "大和芋"
+  },
+  {
+    "slug": "kokonattsuchippu",
+    "name": "ココナッツチップ"
+  },
+  {
+    "slug": "chuukadashi",
+    "name": "中華だし"
+  },
+  {
+    "slug": "amakuchikareeruu",
+    "name": "甘口カレールー"
+  },
+  {
+    "slug": "piza",
+    "name": "ピザ"
+  },
+  {
+    "slug": "matonreggu",
+    "name": "マトンレッグ"
+  },
+  {
+    "slug": "robusutaa",
+    "name": "ロブスター"
+  },
+  {
+    "slug": "murasakiimo",
+    "name": "紫芋"
+  },
+  {
+    "slug": "kokonattsushureddo",
+    "name": "ココナッツシュレッド"
+  },
+  {
+    "slug": "wafuudashi",
+    "name": "和風だし"
+  },
+  {
+    "slug": "karakuchikareeruu",
+    "name": "辛口カレールー"
+  },
+  {
+    "slug": "pasutasoosu",
+    "name": "パスタソース"
+  },
+  {
+    "slug": "gyuutanshio",
+    "name": "牛タン塩"
+  },
+  {
+    "slug": "makotoiwashi",
+    "name": "真いわし"
+  },
+  {
+    "slug": "inkanomezame",
+    "name": "インカのめざめ"
+  },
+  {
+    "slug": "kokonattsushugaa",
+    "name": "ココナッツシュガー"
+  },
+  {
+    "slug": "dashinomoto",
+    "name": "だしの素"
+  },
+  {
+    "slug": "guriinkareepeesuto",
+    "name": "グリーンカレーペースト"
+  },
+  {
+    "slug": "naporitan",
+    "name": "ナポリタン"
+  },
+  {
+    "slug": "butatanshio",
+    "name": "豚タン塩"
+  },
+  {
+    "slug": "aozakana",
+    "name": "青魚"
+  },
+  {
+    "slug": "shinseikyou",
+    "name": "新生姜"
+  },
+  {
+    "slug": "kokonattsuuootaa",
+    "name": "ココナッツウォーター"
+  },
+  {
+    "slug": "kezurifushi",
+    "name": "削り節"
+  },
+  {
+    "slug": "reddokareepeesuto",
+    "name": "レッドカレーペースト"
+  },
+  {
+    "slug": "peperonchiino",
+    "name": "ペペロンチーノ"
+  },
+  {
+    "slug": "niwatoritataki",
+    "name": "鶏タタキ"
+  },
+  {
+    "slug": "shiromizakana",
+    "name": "白身魚"
+  },
+  {
+    "slug": "myouga",
+    "name": "みょうが"
+  },
+  {
+    "slug": "kokonattsukuriimu",
+    "name": "ココナッツクリーム"
+  },
+  {
+    "slug": "honkarefushi",
+    "name": "本枯れ節"
+  },
+  {
+    "slug": "tomuyamupeesuto",
+    "name": "トムヤムペースト"
+  },
+  {
+    "slug": "karubonaara",
+    "name": "カルボナーラ"
+  },
+  {
+    "slug": "gyuutansashimi",
+    "name": "牛タン刺身"
+  },
+  {
+    "slug": "hanakokuna",
+    "name": "花穀菜"
+  },
+  {
+    "slug": "kokonattsubataa",
+    "name": "ココナッツバター"
+  },
+  {
+    "slug": "hanakatsuo",
+    "name": "花かつお"
+  },
+  {
+    "slug": "remongurasu",
+    "name": "レモングラス"
+  },
+  {
+    "slug": "boroneeze",
+    "name": "ボロネーゼ"
+  },
+  {
+    "slug": "butatansashimi",
+    "name": "豚タン刺身"
+  },
+  {
+    "slug": "takenoko",
+    "name": "タケノコ"
+  },
+  {
+    "slug": "atsushikezuri",
+    "name": "厚削り"
+  },
+  {
+    "slug": "chaisupaisu",
+    "name": "チャイスパイス"
+  },
+  {
+    "slug": "wakatake",
+    "name": "若竹"
+  },
+  {
+    "slug": "niboshishi",
+    "name": "煮干し"
+  },
+  {
+    "slug": "itarianhaabu",
+    "name": "イタリアンハーブ"
+  },
+  {
+    "slug": "mousoutake",
+    "name": "孟宗竹"
+  },
+  {
+    "slug": "iriko",
+    "name": "いりこ"
+  }
+]

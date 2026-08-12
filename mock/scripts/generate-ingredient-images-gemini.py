@@ -17,7 +17,8 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 FOOD_DIR = ROOT / "assets" / "food"
-META_PATH = Path(__file__).resolve().parent / "ingredient-catalog-200.json"
+META_PATH = Path(__file__).resolve().parent / "ingredient-catalog-full.json"
+META_FALLBACK = Path(__file__).resolve().parent / "ingredient-catalog-200.json"
 ENV_PATH = ROOT / ".env"
 PROGRESS_PATH = Path(__file__).resolve().parent / "ingredient-image-progress.json"
 
@@ -25,9 +26,8 @@ MAX_BYTES = 300 * 1024
 TARGET_SIZE = (800, 800)
 
 IMAGE_MODELS = [
-    "gemini-2.0-flash-preview-image-generation",
     "gemini-2.5-flash-image",
-    "gemini-3.1-flash-image-preview",
+    "gemini-2.0-flash-preview-image-generation",
 ]
 
 PROMPT = (
@@ -96,7 +96,10 @@ def request_image(api_key: str, model: str, name: str) -> bytes | None:
     )
     body = {
         "contents": [{"role": "user", "parts": [{"text": PROMPT.format(name=name)}]}],
-        "generationConfig": {"responseModalities": ["TEXT", "IMAGE"]},
+        "generationConfig": {
+            "responseModalities": ["TEXT", "IMAGE"],
+            "imageConfig": {"aspectRatio": "1:1"},
+        },
     }
     req = urllib.request.Request(
         url,
@@ -122,19 +125,30 @@ def request_image(api_key: str, model: str, name: str) -> bytes | None:
 
 
 def generate_with_fallback(api_key: str, name: str) -> tuple[bytes | None, str | None]:
-    last_err = None
+    errors: list[str] = []
     for model in IMAGE_MODELS:
-        try:
-            data = request_image(api_key, model, name)
-            if data:
-                return data, model
-        except urllib.error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", errors="replace")
-            last_err = f"{model}: HTTP {exc.code} {detail[:200]}"
-        except Exception as exc:  # noqa: BLE001
-            last_err = f"{model}: {exc}"
-        time.sleep(1.5)
-    return None, last_err
+        for attempt in range(4):
+            try:
+                data = request_image(api_key, model, name)
+                if data:
+                    return data, model
+                errors.append(f"{model}: no image in response")
+                break
+            except urllib.error.HTTPError as exc:
+                detail = exc.read().decode("utf-8", errors="replace")
+                msg = f"{model}: HTTP {exc.code} {detail[:160]}"
+                errors.append(msg)
+                if exc.code == 429 and attempt < 3:
+                    wait = 30 * (2**attempt)
+                    print(f"    rate limit, retry in {wait}s...", flush=True)
+                    time.sleep(wait)
+                    continue
+                break
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"{model}: {exc}")
+                break
+            time.sleep(1.5)
+    return None, "; ".join(errors[-2:])
 
 
 def load_progress() -> dict:
@@ -164,39 +178,80 @@ def is_placeholder(path: Path) -> bool:
     return path.exists() and path.stat().st_size <= PLACEHOLDER_MAX_BYTES
 
 
+def needs_generation(dest: Path, *, force: bool) -> bool:
+    if force:
+        return True
+    if not dest.exists():
+        return True
+    return is_placeholder(dest)
+
+
+def check_quota(api_key: str) -> bool:
+    print("checking image generation quota...", flush=True)
+    raw, info = generate_with_fallback(api_key, "りんご")
+    if raw:
+        print("quota OK (test image generated)", flush=True)
+        return True
+    print(f"quota check failed: {info}", flush=True)
+    return False
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     limit = int(args[0]) if args else 0
     force = "--force" in sys.argv
-    placeholders_only = "--all" not in sys.argv
+    # デフォルト: プレースホルダー + 未生成のみ（既存の実写真はスキップ）
+    replace_only = "--all" not in sys.argv
 
     api_key = load_api_key()
-    meta = json.loads(META_PATH.read_text(encoding="utf-8"))
+    if "--check-quota" in sys.argv:
+        raise SystemExit(0 if check_quota(api_key) else 1)
+    meta_path = META_PATH if META_PATH.exists() else META_FALLBACK
+    if not meta_path.exists():
+        raise SystemExit("Run build-ingredient-catalog-merge-excel.py first")
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
     targets = unique_image_targets(meta)
     progress = load_progress()
     sizes: dict[str, int] = {}
 
-    if not META_PATH.exists():
-        raise SystemExit("Run build-ingredient-catalog-200.py first")
+    pending = [
+        e
+        for e in targets
+        if needs_generation(FOOD_DIR / f"ing_{e['imageSlug']}.jpg", force=force)
+        and (
+            force
+            or e["imageSlug"] not in progress.get("done", {})
+            or is_placeholder(FOOD_DIR / f"ing_{e['imageSlug']}.jpg")
+        )
+    ]
+    if replace_only:
+        pending = [
+            e
+            for e in pending
+            if needs_generation(FOOD_DIR / f"ing_{e['imageSlug']}.jpg", force=force)
+        ]
+    print(f"targets: {len(targets)}, pending gemini: {len(pending)}", flush=True)
 
     attempted = 0
+    consecutive_429 = 0
     for entry in targets:
         slug = entry["imageSlug"]
         dest = FOOD_DIR / f"ing_{slug}.jpg"
 
-        if placeholders_only and not is_placeholder(dest) and not force:
+        if replace_only and not needs_generation(dest, force=force):
             if dest.exists():
                 sizes[slug] = dest.stat().st_size
             continue
 
         if dest.exists() and not force and slug in progress.get("done", {}):
-            sizes[slug] = dest.stat().st_size
-            continue
+            if not is_placeholder(dest):
+                sizes[slug] = dest.stat().st_size
+                continue
         if limit and attempted >= limit:
             break
 
         name = entry["name"]
-        print(f"generating {slug} ({name})...", flush=True)
+        print(f"[{attempted + 1}/{len(pending) if limit else '?'}] generating {slug} ({name})...", flush=True)
         raw, info = generate_with_fallback(api_key, name)
         attempted += 1
         if not raw:
@@ -204,10 +259,17 @@ def main() -> None:
             save_progress(progress)
             print(f"  FAIL {info}", flush=True)
             if "429" in (info or ""):
-                print("quota exceeded; stopping batch", flush=True)
-                break
+                consecutive_429 += 1
+                if consecutive_429 >= 5:
+                    print("too many 429 errors; stopping batch (quota or rate limit)", flush=True)
+                    break
+                print("waiting 60s before next item...", flush=True)
+                time.sleep(60)
+            else:
+                consecutive_429 = 0
             continue
 
+        consecutive_429 = 0
         img = Image.open(BytesIO(raw))
         size = save_under_limit(img, dest)
         sizes[slug] = size

@@ -14,7 +14,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 FOOD_DIR = ROOT / "assets" / "food"
-META_PATH = Path(__file__).resolve().parent / "ingredient-catalog-200.json"
+META_PATH = Path(__file__).resolve().parent / "ingredient-catalog-full.json"
+META_FALLBACK = Path(__file__).resolve().parent / "ingredient-catalog-200.json"
 
 MAX_BYTES = 300 * 1024
 TARGET = (800, 800)
@@ -26,6 +27,28 @@ CATEGORY_COLORS = {
     "seafood": ("#E3F2FD", "#64B5F6"),
     "soy_dairy": ("#FFF8E1", "#FFB74D"),
     "fruit": ("#FCE4EC", "#F06292"),
+    # Excel カテゴリ（プレースホルダー色）
+    "調味料": ("#FFF3E0", "#FB8C00"),
+    "スパイス": ("#FBE9E7", "#D84315"),
+    "油脂": ("#FFFDE7", "#F9A825"),
+    "乾物": ("#EFEBE9", "#8D6E63"),
+    "缶詰": ("#ECEFF1", "#607D8B"),
+    "加工食品": ("#F3E5F5", "#8E24AA"),
+    "冷凍食品": ("#E1F5FE", "#039BE5"),
+    "ベーカリー": ("#FFF8E1", "#FFB300"),
+    "漬物": ("#F1F8E9", "#7CB342"),
+    "飲料": ("#E0F7FA", "#00838F"),
+    "菓子・デザート材料": ("#FCE4EC", "#EC407A"),
+    "きのこ": ("#EFEBE9", "#6D4C41"),
+    "海藻": ("#E0F2F1", "#00897B"),
+    "ナッツ・種": ("#FFF3E0", "#EF6C00"),
+    "豆類": ("#FFFDE7", "#C0CA33"),
+    "乳製品": ("#FFF8E1", "#FFB74D"),
+    "穀物・麺": ("#F5E6C8", "#C4A35A"),
+    "肉類": ("#FFEBEE", "#E57373"),
+    "魚介類": ("#E3F2FD", "#64B5F6"),
+    "野菜": ("#E8F5E9", "#4CAF50"),
+    "果物": ("#FCE4EC", "#F06292"),
 }
 
 # Reuse legacy assets when slug matches old catalog file
@@ -174,8 +197,9 @@ def wikimedia_fetch(query: str, *, with_food_suffix: bool = True) -> Image.Image
     return None
 
 
-def make_placeholder(name: str, category: str) -> Image.Image:
-    bg, accent = CATEGORY_COLORS.get(category, ("#EEEEEE", "#888888"))
+def make_placeholder(name: str, entry: dict) -> Image.Image:
+    label_category = entry.get("excelCategory") or entry.get("category") or "grain"
+    bg, accent = CATEGORY_COLORS.get(label_category, ("#EEEEEE", "#888888"))
     img = Image.new("RGB", TARGET, bg)
     draw = ImageDraw.Draw(img)
     draw.rounded_rectangle((60, 60, 740, 740), radius=40, fill=accent)
@@ -221,7 +245,9 @@ def main() -> None:
     import sys
 
     placeholders_only = "--placeholders-only" in sys.argv
-    meta = json.loads(META_PATH.read_text(encoding="utf-8"))
+    only_missing = "--only-missing" in sys.argv
+    meta_path = META_PATH if META_PATH.exists() else META_FALLBACK
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
     targets = unique_targets(meta)
     FOOD_DIR.mkdir(parents=True, exist_ok=True)
     sizes: dict[str, int] = {}
@@ -230,6 +256,10 @@ def main() -> None:
     for i, entry in enumerate(targets, 1):
         slug = entry["slug"]
         dest = FOOD_DIR / f"ing_{slug}.jpg"
+        if only_missing and dest.exists() and dest.stat().st_size > 35_000:
+            sizes[slug] = dest.stat().st_size
+            stats["skipped"] += 1
+            continue
         if placeholders_only and dest.exists() and dest.stat().st_size > 35_000:
             sizes[slug] = dest.stat().st_size
             stats["skipped"] += 1
@@ -246,7 +276,7 @@ def main() -> None:
                 src_img = None
 
         if src_img is None:
-            src_img = make_placeholder(entry["name"], entry["category"])
+            src_img = make_placeholder(entry["name"], entry)
             source_type = "placeholder"
 
         size = save_under_limit(src_img, dest)
