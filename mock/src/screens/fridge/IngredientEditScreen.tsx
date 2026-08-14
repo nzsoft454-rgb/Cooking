@@ -13,6 +13,7 @@ import {
 import {
   AddedDateReadOnly,
   AttributeField,
+  QuantitySlider,
 } from '../../components/d1Layout';
 import {
   ConfirmDialog,
@@ -68,7 +69,6 @@ export function IngredientEditScreen({ navigation, route }: Props) {
     ingredient?.attribute ?? getDefaultIngredientAttribute()
   );
   const [quantity, setQuantity] = useState(ingredient?.quantity ?? 1);
-  const [sliderWidth, setSliderWidth] = useState(0);
   const [deleteOpen, setDeleteOpen] = useState(false);
 
   useEffect(() => {
@@ -112,12 +112,6 @@ export function IngredientEditScreen({ navigation, route }: Props) {
     softDeleteIngredient(ingredient.id);
     setDeleteOpen(false);
     navigation.goBack();
-  };
-
-  const setQuantityFromX = (x: number) => {
-    if (sliderWidth <= 0) return;
-    const ratio = Math.min(1, Math.max(0, x / sliderWidth));
-    setQuantity(Math.round(ratio * 100) / 100);
   };
 
   return (
@@ -196,33 +190,12 @@ export function IngredientEditScreen({ navigation, route }: Props) {
 
           <View style={styles.rowDivider} />
 
-          <View style={styles.block}>
-            <View style={styles.rowTop}>
-              <FieldLabel icon="analytics-outline" label={t('common.remaining')} />
-              <Text style={styles.quantityValue}>{quantityPct}%</Text>
-            </View>
-            <Pressable
-              style={styles.sliderTrack}
-              onLayout={(e) => setSliderWidth(e.nativeEvent.layout.width)}
-              onPress={(e) => setQuantityFromX(e.nativeEvent.locationX)}
-            >
-              <View style={[styles.sliderFill, { width: `${quantityPct}%` }]} />
-              <View style={[styles.sliderThumb, { left: `${quantityPct}%` }]} />
-            </Pressable>
-            <View style={styles.sliderMarks}>
-              {[0, 25, 50, 75, 100].map((mark) => (
-                <Text
-                  key={mark}
-                  style={[
-                    styles.sliderMark,
-                    quantityPct >= mark && styles.sliderMarkActive,
-                  ]}
-                >
-                  {mark}
-                </Text>
-              ))}
-            </View>
-          </View>
+          <QuantitySlider
+            value={quantity}
+            onChange={(v) => {
+              if (v !== null) setQuantity(v);
+            }}
+          />
         </Panel>
 
         <SectionTitle label={t('fridge.ingredientEdit.sectionQuickActions')} />
@@ -399,18 +372,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 14,
   },
-  rowTop: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 12,
-  },
-  quantityValue: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: colors.primary,
-    letterSpacing: -0.5,
-  },
   rowInput: {
     flex: 1,
     fontSize: 16,
@@ -422,46 +383,6 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: colors.border,
     marginHorizontal: 16,
-  },
-  block: {
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    gap: 12,
-  },
-  sliderTrack: {
-    height: 10,
-    borderRadius: colors.radius,
-    backgroundColor: colors.bgAlt,
-    overflow: 'visible',
-    position: 'relative',
-  },
-  sliderFill: {
-    height: '100%',
-    backgroundColor: colors.primary,
-    borderRadius: colors.radius,
-  },
-  sliderThumb: {
-    position: 'absolute',
-    top: -5,
-    width: 20,
-    height: 20,
-    marginLeft: -10,
-    borderRadius: 10,
-    backgroundColor: colors.surface,
-    borderWidth: 2,
-    borderColor: colors.primary,
-  },
-  sliderMarks: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  sliderMark: {
-    fontSize: 10,
-    fontWeight: '600',
-    color: colors.inkFaint,
-  },
-  sliderMarkActive: {
-    color: colors.primary,
   },
   actionRow: {
     flexDirection: 'row',

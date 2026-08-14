@@ -8,7 +8,12 @@ export const PREMIUM_PLAN_MONTHS: Record<Exclude<PremiumPlanId, 'free'>, number>
 
 export function computePremiumExpiry(plan: Exclude<PremiumPlanId, 'free'>, from = new Date()): string {
   const expires = new Date(from);
+  const day = expires.getDate();
+  expires.setDate(1);
   expires.setMonth(expires.getMonth() + PREMIUM_PLAN_MONTHS[plan]);
+  // 1/31 の1ヶ月後が 3/3 に繰り上がらないよう、月末日で丸める
+  const lastDayOfMonth = new Date(expires.getFullYear(), expires.getMonth() + 1, 0).getDate();
+  expires.setDate(Math.min(day, lastDayOfMonth));
   return expires.toISOString();
 }
 

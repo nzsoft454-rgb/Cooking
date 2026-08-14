@@ -3,8 +3,11 @@ import {
   GEMINI_MODEL_FALLBACKS,
   getGeminiApiKey,
 } from '../../config/gemini';
-import { withTimeout } from '../../utils/withTimeout';
-import { GeminiApiError, GeminiNotConfiguredError } from './errors';
+import {
+  GeminiApiError,
+  GeminiNetworkError,
+  GeminiNotConfiguredError,
+} from './errors';
 
 /** Gemini API 呼び出しの上限（ms） */
 const GEMINI_FETCH_TIMEOUT_MS = 90_000;
@@ -117,7 +120,10 @@ async function requestGeminiContent(
     if (error instanceof Error && error.name === 'AbortError') {
       throw new GeminiApiError(408, 'Request timed out');
     }
-    throw error;
+    // fetch の reject は通信到達前の失敗。素の Error のままだと再試行対象から漏れる
+    throw new GeminiNetworkError(
+      error instanceof Error ? error.message : 'Could not reach Gemini API',
+    );
   } finally {
     clearTimeout(timeoutId);
   }

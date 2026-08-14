@@ -48,7 +48,15 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
   const [adMessage, setAdMessage] = useState<string | null>(null);
   const navigatingRef = useRef(false);
   const allowBackRef = useRef(false);
+  const mountedRef = useRef(true);
   const isReceipt = mode === 'receipt';
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   const closeModal = useCallback(() => {
     navigatingRef.current = false;
@@ -120,7 +128,9 @@ export function CaptureConfirmScreen({ navigation, route }: Props) {
   const watchAd = async () => {
     setModalStep('watchingAd');
     await delay(2200);
+    // 視聴済みなので離脱していても回数は付与する
     rewardGeminiFromAd(AD_REWARD);
+    if (!mountedRef.current) return;
     navigatingRef.current = false;
     setAdMessage(t('gemini.adComplete', { count: AD_REWARD }));
     setModalStep('quota');

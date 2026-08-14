@@ -34,8 +34,6 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
   } = route.params;
   const isGacha = mode === 'gacha';
   const cancelledRef = useRef(false);
-  const consumedRef = useRef(false);
-  const completedRef = useRef(false);
   const [quotaDialogOpen, setQuotaDialogOpen] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -69,21 +67,26 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
   };
 
   useEffect(() => {
+    // alive は effect ごとに独立させる。cancelledRef を共有したまま false に戻すと、
+    // 再実行時に前回の生成が復活してレシピの二重登録・二重遷移が起きる
+    let alive = true;
+    let consumed = false;
+    let completed = false;
     cancelledRef.current = false;
-    consumedRef.current = false;
-    completedRef.current = false;
+
+    const aborted = () => !alive || cancelledRef.current;
 
     (async () => {
       setError(null);
       if (!user.isPremium) {
         if (geminiPreConsumed) {
-          consumedRef.current = true;
+          consumed = true;
         } else if (!consumeGemini()) {
-          if (cancelledRef.current) return;
+          if (aborted()) return;
           setQuotaDialogOpen(true);
           return;
         } else {
-          consumedRef.current = true;
+          consumed = true;
         }
       }
 
@@ -93,32 +96,33 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
           conditions,
           isGacha ? 'gacha' : 'normal',
         );
-        if (cancelledRef.current) return;
+        if (aborted()) return;
 
         const recipe = addRecipe({
           ...generated,
           userMemo: '',
           isFavorite: false,
         });
-        completedRef.current = true;
+        completed = true;
         navigation.replace('RecipeDetail', {
           recipeId: recipe.id,
           ingredientIds,
         });
       } catch (err) {
-        if (cancelledRef.current) return;
-        if (consumedRef.current && !completedRef.current) {
+        if (aborted()) return;
+        if (consumed && !completed) {
           rewardGeminiFromAd(1);
-          consumedRef.current = false;
+          consumed = false;
         }
         setError(t(resolveGeminiErrorKey(err)));
       }
     })();
 
     return () => {
+      alive = false;
       cancelledRef.current = true;
       // 生成完了前に離脱した場合、消費した Gemini 回数を返却（モック）
-      if (consumedRef.current && !completedRef.current) {
+      if (consumed && !completed) {
         rewardGeminiFromAd(1);
       }
     };

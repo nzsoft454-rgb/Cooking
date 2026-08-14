@@ -16,22 +16,29 @@ export function CookedPhotoImage({ uri, style, containerStyle, accessibilityLabe
   const { t } = useTranslation();
   const defaultLabel = accessibilityLabel ?? t('components.cookedPhoto');
 
-  if (uri.startsWith('asset://')) {
-    const source = FOOD_IMAGES[uri];
-    if (source) {
-      return (
-        <Image
-          source={source}
-          style={style}
-          resizeMode="cover"
-          onLoad={onLoad}
-          accessibilityLabel={defaultLabel}
-        />
-      );
-    }
+  const assetSource = uri.startsWith('asset://') ? FOOD_IMAGES[uri] : undefined;
+  const isFileSource =
+    uri.startsWith('file://') || uri.startsWith('content://') || uri.startsWith('http');
+  const hasImage = Boolean(assetSource) || isFileSource;
+
+  // 代替表示では Image の onLoad が発火しないため、共有カード側を待たせない
+  React.useEffect(() => {
+    if (!hasImage) onLoad?.();
+  }, [hasImage, onLoad]);
+
+  if (assetSource) {
+    return (
+      <Image
+        source={assetSource}
+        style={style}
+        resizeMode="cover"
+        onLoad={onLoad}
+        accessibilityLabel={defaultLabel}
+      />
+    );
   }
 
-  if (uri.startsWith('file://') || uri.startsWith('content://') || uri.startsWith('http')) {
+  if (isFileSource) {
     return (
       <Image
         source={{ uri }}

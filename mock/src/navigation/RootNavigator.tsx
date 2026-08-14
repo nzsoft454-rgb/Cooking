@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AnalysisResultScreen } from '../screens/camera/AnalysisResultScreen';
 import { AnalyzingScreen } from '../screens/camera/AnalyzingScreen';
-import { CameraHomeScreen } from '../screens/camera/CameraHomeScreen';
+import { DashboardScreen } from '../screens/camera/DashboardScreen';
 import { CaptureConfirmScreen } from '../screens/camera/CaptureConfirmScreen';
 import { CookingConfirmScreen } from '../screens/camera/CookingConfirmScreen';
 import { ManualEditScreen } from '../screens/camera/ManualEditScreen';
@@ -39,7 +39,6 @@ import {
 import { useApp } from '../store/AppContext';
 import { colors } from '../theme/colors';
 import { MOTION } from '../theme/motion';
-import { TabMotionProvider, TabSlideScene, useTabMotion } from './TabMotionContext';
 import type {
   CameraStackParamList,
   FridgeStackParamList,
@@ -89,13 +88,11 @@ const stackScreenOptions = {
 };
 
 function CameraNavigator() {
-  const { t } = useTranslation();
-
   return (
     <CameraStack.Navigator screenOptions={stackScreenOptions}>
       <CameraStack.Screen
-        name="CameraHome"
-        component={CameraHomeScreen}
+        name="DashboardHome"
+        component={DashboardScreen}
         options={{ headerShown: false }}
       />
       <CameraStack.Screen
@@ -231,62 +228,19 @@ function SettingsNavigator() {
   );
 }
 
-function CameraTabWrapper() {
-  return (
-    <TabSlideScene>
-      <CameraNavigator />
-    </TabSlideScene>
-  );
-}
-
-function FridgeTabWrapper() {
-  return (
-    <TabSlideScene>
-      <FridgeNavigator />
-    </TabSlideScene>
-  );
-}
-
-function RecipeTabWrapper() {
-  return (
-    <TabSlideScene>
-      <RecipeNavigator />
-    </TabSlideScene>
-  );
-}
-
-function SettingsTabWrapper() {
-  return (
-    <TabSlideScene>
-      <SettingsNavigator />
-    </TabSlideScene>
-  );
-}
-
-const TAB_ROUTE_NAMES = ['CameraTab', 'FridgeTab', 'RecipeTab', 'SettingsTab'] as const;
-
 function NavigationRoot() {
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
-  const { setTabIndex } = useTabMotion();
   const tabBottomPad = Math.max(insets.bottom, 10) + 14;
   const tabBarHeight = 52 + tabBottomPad;
 
   return (
-    <NavigationContainer
-      theme={navTheme}
-      onStateChange={(state) => {
-        if (!state) return;
-        const route = state.routes[state.index];
-        if (TAB_ROUTE_NAMES.includes(route.name as (typeof TAB_ROUTE_NAMES)[number])) {
-          setTabIndex(state.index);
-        }
-      }}
-    >
+    <NavigationContainer theme={navTheme}>
       <Tab.Navigator
-        initialRouteName="FridgeTab"
+        initialRouteName="DashboardTab"
         screenOptions={({ route }) => ({
           headerShown: false,
+          animation: 'shift',
           tabBarActiveTintColor: colors.primary,
           tabBarInactiveTintColor: colors.tabInactive,
           tabBarLabelStyle: {
@@ -313,7 +267,7 @@ function NavigationRoot() {
           ),
           tabBarIcon: ({ color, size }) => {
             const map: Record<string, keyof typeof Ionicons.glyphMap> = {
-              CameraTab: 'camera-outline',
+              DashboardTab: 'home-outline',
               FridgeTab: 'grid-outline',
               RecipeTab: 'restaurant-outline',
               SettingsTab: 'settings-outline',
@@ -323,23 +277,23 @@ function NavigationRoot() {
         })}
       >
         <Tab.Screen
-          name="CameraTab"
-          component={CameraTabWrapper}
-          options={{ title: t('tabs.camera') }}
+          name="DashboardTab"
+          component={CameraNavigator}
+          options={{ title: t('tabs.dashboard') }}
         />
         <Tab.Screen
           name="FridgeTab"
-          component={FridgeTabWrapper}
+          component={FridgeNavigator}
           options={{ title: t('tabs.fridge') }}
         />
         <Tab.Screen
           name="RecipeTab"
-          component={RecipeTabWrapper}
+          component={RecipeNavigator}
           options={{ title: t('tabs.recipe') }}
         />
         <Tab.Screen
           name="SettingsTab"
-          component={SettingsTabWrapper}
+          component={SettingsNavigator}
           options={{ title: t('tabs.settings') }}
         />
       </Tab.Navigator>
@@ -358,9 +312,5 @@ export function RootNavigator() {
     );
   }
 
-  return (
-    <TabMotionProvider>
-      <NavigationRoot />
-    </TabMotionProvider>
-  );
+  return <NavigationRoot />;
 }

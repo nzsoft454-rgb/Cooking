@@ -28,6 +28,7 @@ import {
 } from '../../components/ui';
 import { AttributeField } from '../../components/d1Layout';
 import type { ReceiptLineItem } from '../../data/receiptMock';
+import { resetToDashboardHome } from '../../navigation/resetToDashboardHome';
 import { CameraStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
@@ -151,6 +152,8 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
       t('common.savedTitle'),
       t('camera.receiptResult.savedMessage', { count: created.length })
     );
+    // 分析フローを閉じ、ダッシュボードに戻ったときに結果画面が残らないようにする
+    resetToDashboardHome(navigation);
     navigation.getParent()?.navigate('FridgeTab', { screen: 'FridgeHome' });
   };
 

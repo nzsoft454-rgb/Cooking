@@ -1,6 +1,7 @@
 import { Alert, Share } from 'react-native';
 import i18n from '../i18n';
 import type { Recipe } from '../types';
+import { isShareCancelled } from './share/sharePlatforms';
 
 /** レシピ本文を SNS 等にシェア */
 export async function shareRecipeText(recipe: Recipe): Promise<void> {
@@ -21,7 +22,8 @@ export async function shareRecipeText(recipe: Recipe): Promise<void> {
 
   try {
     await Share.share({ message: text, title: recipe.title });
-  } catch {
-    Alert.alert(t('common.shareTitle'), t('common.shareCancelled'));
+  } catch (error) {
+    if (isShareCancelled(error)) return;
+    Alert.alert(t('common.shareTitle'), t('common.shareFailed'));
   }
 }

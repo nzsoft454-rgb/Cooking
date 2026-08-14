@@ -51,10 +51,14 @@ type LegacyIngredient = Omit<Ingredient, 'attribute'> & {
 
 function normalizeIngredient(raw: LegacyIngredient): Ingredient {
   const legacyExpiry = raw.expirationDate;
+  // createdAt は UTC の ISO 文字列。slice すると端末のローカル日付と1日ずれる
+  const createdAt = raw.createdAt ? new Date(raw.createdAt) : null;
   const addedDate =
     raw.addedDate ??
     (legacyExpiry ? String(legacyExpiry).slice(0, 10) : undefined) ??
-    (raw.createdAt ? raw.createdAt.slice(0, 10) : localTodayKey());
+    (createdAt && !Number.isNaN(createdAt.getTime())
+      ? localTodayKey(createdAt)
+      : localTodayKey());
   const { expirationDate: _legacyExpiry, storageType: legacyStorage, ...rest } = raw;
   const attribute =
     raw.attribute != null
@@ -160,19 +164,26 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           setUser(nextUser);
           const storedSeedVersion = parsed.demoSeedVersion ?? 1;
           const shouldRefreshSeed = storedSeedVersion < DEMO_SEED_VERSION;
+          // 空配列は「ユーザーが全削除した状態」なのでシードに戻さない
           setIngredients(
             shouldRefreshSeed
               ? SEED_INGREDIENTS
               : normalizeIngredients(
-                  parsed.ingredients?.length ? parsed.ingredients : SEED_INGREDIENTS
+                  Array.isArray(parsed.ingredients) ? parsed.ingredients : SEED_INGREDIENTS
                 )
           );
-          setRecipes(shouldRefreshSeed ? SEED_RECIPES : parsed.recipes?.length ? parsed.recipes : SEED_RECIPES);
-          setShoppingList(parsed.shoppingList ?? []);
+          setRecipes(
+            shouldRefreshSeed
+              ? SEED_RECIPES
+              : Array.isArray(parsed.recipes)
+                ? parsed.recipes
+                : SEED_RECIPES
+          );
+          setShoppingList(Array.isArray(parsed.shoppingList) ? parsed.shoppingList : []);
           setCookedPhotos(
             shouldRefreshSeed
               ? SEED_COOKED_PHOTOS
-              : parsed.cookedPhotos?.length
+              : Array.isArray(parsed.cookedPhotos)
                 ? parsed.cookedPhotos
                 : SEED_COOKED_PHOTOS
           );
@@ -379,14 +390,18 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCookedPhotos((prev) => prev.filter((p) => p.id !== id));
   }, []);
 
+  // 撮影日時の新しい順。呼び出し側は先頭を「最新の完成写真」として扱う
   const photosForRecipe = useCallback(
-    (recipeId: string) => cookedPhotos.filter((p) => p.recipeId === recipeId),
+    (recipeId: string) =>
+      cookedPhotos
+        .filter((p) => p.recipeId === recipeId)
+        .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt))),
     [cookedPhotos]
   );
 
   const latestPhotoForRecipe = useCallback(
-    (recipeId: string) => cookedPhotos.find((p) => p.recipeId === recipeId),
-    [cookedPhotos]
+    (recipeId: string) => photosForRecipe(recipeId)[0],
+    [photosForRecipe]
   );
 
   const addShoppingItem = useCallback((name: string) => {

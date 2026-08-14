@@ -7,7 +7,7 @@ import type { FridgeSortKey } from '../utils/fridgeSort';
 export type CaptureSource = 'camera' | 'foodAlbum' | 'receiptAlbum';
 
 export type CameraStackParamList = {
-  CameraHome: undefined;
+  DashboardHome: undefined;
   CaptureConfirm: { imageUrl: string; source?: CaptureSource };
   Analyzing: { imageUrl: string; mode: AnalysisMode; analysisKey?: number };
   AnalysisResult: { items: DetectedItem[]; imageUrl: string };
@@ -72,7 +72,7 @@ export type SettingsStackParamList = {
 };
 
 export type RootTabParamList = {
-  CameraTab: NavigatorScreenParams<CameraStackParamList>;
+  DashboardTab: NavigatorScreenParams<CameraStackParamList>;
   FridgeTab: NavigatorScreenParams<FridgeStackParamList>;
   RecipeTab: NavigatorScreenParams<RecipeStackParamList>;
   SettingsTab: NavigatorScreenParams<SettingsStackParamList>;

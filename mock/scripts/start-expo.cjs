@@ -2,7 +2,9 @@ const { spawn } = require('child_process');
 const path = require('path');
 const { showExpoQr } = require('./show-qr.cjs');
 
-showExpoQr(process.env.EXPO_PORT || '8081');
+(async () => {
+  await showExpoQr(process.env.EXPO_PORT || '8081');
+})();
 
 const env = { ...process.env };
 delete env.CI;

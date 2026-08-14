@@ -30,3 +30,19 @@ export class GeminiParseError extends Error {
     this.name = 'GeminiParseError';
   }
 }
+
+/** 応答自体は正常だが対象が0件。再試行しても結果は変わらない */
+export class GeminiEmptyResultError extends GeminiParseError {
+  constructor(message = 'Gemini returned no items') {
+    super(message);
+    this.name = 'GeminiEmptyResultError';
+  }
+}
+
+/** 通信到達前の失敗（オフライン・DNS 失敗など）。再試行する価値がある */
+export class GeminiNetworkError extends Error {
+  constructor(message = 'Could not reach Gemini API') {
+    super(message);
+    this.name = 'GeminiNetworkError';
+  }
+}

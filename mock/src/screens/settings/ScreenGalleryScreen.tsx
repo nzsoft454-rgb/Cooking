@@ -56,13 +56,13 @@ export function ScreenGalleryScreen({ navigation }: Props) {
         {
           id: 'A-001',
           label: t('settings.screenGallery.cameraHome'),
-          onPress: () => go('CameraTab', 'CameraHome'),
+          onPress: () => go('DashboardTab', 'DashboardHome'),
         },
         {
           id: 'A-001-a',
           label: t('settings.screenGallery.captureConfirm'),
           onPress: () =>
-            go('CameraTab', 'CaptureConfirm', {
+            go('DashboardTab', 'CaptureConfirm', {
               imageUrl: CAPTURE_IMAGE_KEY,
               source: 'camera',
             }),
@@ -71,7 +71,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           id: 'A-001-b',
           label: t('settings.screenGallery.analyzing'),
           onPress: () =>
-            go('CameraTab', 'Analyzing', {
+            go('DashboardTab', 'Analyzing', {
               imageUrl: CAPTURE_IMAGE_KEY,
               mode: 'food',
             }),
@@ -80,7 +80,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           id: 'A-001-c',
           label: t('settings.screenGallery.analysisResult'),
           onPress: () =>
-            go('CameraTab', 'AnalysisResult', {
+            go('DashboardTab', 'AnalysisResult', {
               items: DUMMY_DETECTED,
               imageUrl: CAPTURE_IMAGE_KEY,
             }),
@@ -89,7 +89,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           id: 'A-001-d',
           label: t('settings.screenGallery.manualEdit'),
           onPress: () =>
-            go('CameraTab', 'ManualEdit', {
+            go('DashboardTab', 'ManualEdit', {
               items: DUMMY_DETECTED,
               imageUrl: CAPTURE_IMAGE_KEY,
             }),
@@ -98,7 +98,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           id: 'R-001-c',
           label: t('settings.screenGallery.receiptResult'),
           onPress: () =>
-            go('CameraTab', 'ReceiptResult', {
+            go('DashboardTab', 'ReceiptResult', {
               items: MOCK_RECEIPT_LINES.map((rawName) => ({
                 rawName,
                 quantity: '1',
@@ -112,7 +112,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
             if (ingredientIds.length < 1) return;
-            go('CameraTab', 'CookingConfirm', { ingredientIds, ingredientNames });
+            go('DashboardTab', 'CookingConfirm', { ingredientIds, ingredientNames });
           },
         },
       ],

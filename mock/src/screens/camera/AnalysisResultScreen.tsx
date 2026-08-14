@@ -27,6 +27,7 @@ import {
   SectionTitle,
 } from '../../components/ui';
 import { AttributeField } from '../../components/d1Layout';
+import { resetToDashboardHome } from '../../navigation/resetToDashboardHome';
 import { CameraStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
@@ -148,6 +149,8 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
       t('common.savedTitle'),
       t('camera.analysisResult.savedMessage', { count: created.length })
     );
+    // 分析フローを閉じ、ダッシュボードに戻ったときに分析結果が残らないようにする
+    resetToDashboardHome(navigation);
     navigation.getParent()?.navigate('FridgeTab', { screen: 'FridgeHome' });
   };
 

@@ -1,6 +1,8 @@
 import {
   GeminiApiError,
+  GeminiEmptyResultError,
   GeminiImageReadError,
+  GeminiNetworkError,
   GeminiParseError,
 } from '../services/gemini/errors';
 
@@ -10,6 +12,9 @@ export function isRetryableGeminiError(error: unknown): boolean {
   if (error instanceof GeminiApiError) {
     return RETRYABLE_STATUS.has(error.status);
   }
+  if (error instanceof GeminiNetworkError) return true;
+  // 0件は再試行しても同じ結果になるので即座に確定させる
+  if (error instanceof GeminiEmptyResultError) return false;
   if (error instanceof GeminiParseError) return true;
   if (error instanceof GeminiImageReadError) {
     return /timed out/i.test(error.message);

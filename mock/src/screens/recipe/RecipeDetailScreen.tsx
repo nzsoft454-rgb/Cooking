@@ -94,7 +94,7 @@ export function RecipeDetailScreen({ navigation, route }: Props) {
 
   useEffect(() => {
     setMemo(recipe?.userMemo ?? '');
-  }, [recipe?.id]);
+  }, [recipe?.id, recipe?.userMemo]);
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, collapseRange],

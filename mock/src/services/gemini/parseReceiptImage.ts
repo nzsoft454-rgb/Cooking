@@ -1,7 +1,7 @@
 import { getGeminiVisionModel } from '../../config/gemini';
 import type { ReceiptLineItem } from '../../data/receiptMock';
 import { generateGeminiContent } from './client';
-import { GeminiImageReadError, GeminiParseError } from './errors';
+import { GeminiEmptyResultError, GeminiImageReadError } from './errors';
 import { readImageAsInlineData } from './imagePayload';
 import {
   extractItemArray,
@@ -44,7 +44,7 @@ export async function parseReceiptImageWithGemini(
     .filter((item): item is ReceiptLineItem => item != null);
 
   if (items.length === 0) {
-    throw new GeminiParseError('No receipt lines detected in Gemini response');
+    throw new GeminiEmptyResultError('No receipt lines detected in Gemini response');
   }
 
   return items;

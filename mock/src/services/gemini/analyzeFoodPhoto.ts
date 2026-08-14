@@ -6,7 +6,7 @@ import { sanitizeDetectedFoodName } from '../../utils/sanitizeDetectedFoodName';
 import { sanitizeDetectedFoodQuantity } from '../../utils/sanitizeDetectedFoodQuantity';
 import { normalizeIngredientAttribute } from '../../utils/ingredientAttribute';
 import { generateGeminiContent } from './client';
-import { GeminiImageReadError, GeminiParseError } from './errors';
+import { GeminiEmptyResultError, GeminiImageReadError, GeminiParseError } from './errors';
 import { readImageAsInlineData } from './imagePayload';
 import {
   extractItemArray,
@@ -70,7 +70,7 @@ async function requestFoodDetection(
 
   const items = parseDetectedItems(text);
   if (items.length === 0) {
-    throw new GeminiParseError('No food items detected in Gemini response');
+    throw new GeminiEmptyResultError('No food items detected in Gemini response');
   }
   return items;
 }

@@ -1,5 +1,5 @@
-import { NavigationProp, useFocusEffect, useNavigation } from '@react-navigation/native';
-import React, { useCallback, useRef, useState } from 'react';
+import { CommonActions, NavigationProp, useFocusEffect, useNavigation } from '@react-navigation/native';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ActivityIndicator,
@@ -27,7 +27,7 @@ import { DEFAULT_CONDITIONS, delay } from '../../data/dummy';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 import type { RecipeConditions } from '../../types';
-import type { RootTabParamList } from '../../navigation/types';
+import type { CameraStackParamList, RootTabParamList } from '../../navigation/types';
 
 type Props = {
   ingredientIds: string[];
@@ -147,6 +147,14 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
   const [modalStep, setModalStep] = useState<ModalStep>(null);
   const [adMessageKey, setAdMessageKey] = useState<AdMessageKey | null>(null);
   const navigatingRef = useRef(false);
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   useFocusEffect(
     useCallback(() => {
@@ -190,6 +198,16 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
     navigatingRef.current = true;
     setModalStep(null);
     setAdMessageKey(null);
+    // ダッシュボード経由の場合は分析フローを閉じておく
+    const stackState = stackNav.getState();
+    if (stackState?.routeNames?.includes('DashboardHome')) {
+      stackNav.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: 'DashboardHome' satisfies keyof CameraStackParamList }],
+        })
+      );
+    }
     navigation.navigate('RecipeTab', {
       screen: 'RecipeGenerating',
       params: {
@@ -204,7 +222,9 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
   const watchAd = async () => {
     setModalStep('watchingAd');
     await delay(2200);
+    // 視聴済みなので離脱していても回数は付与する
     rewardGeminiFromAd(AD_REWARD);
+    if (!mountedRef.current) return;
     navigatingRef.current = false;
     setAdMessageKey('adComplete');
     setModalStep('quota');

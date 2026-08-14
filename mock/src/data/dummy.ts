@@ -8,6 +8,7 @@ import type {
   UserProfile,
 } from '../types';
 import { CAPTURE_IMAGE_KEY } from './images';
+import { localTodayKey } from '../utils/dateKey';
 
 export const DEMO_USER_ID = 'demo-user-001';
 
@@ -20,7 +21,7 @@ export const INITIAL_USER: UserProfile = {
   geminiLimit: {
     usedToday: 0,
     maxPerDay: 5,
-    lastResetDate: new Date().toISOString().slice(0, 10),
+    lastResetDate: localTodayKey(),
   },
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),

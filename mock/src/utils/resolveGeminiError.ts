@@ -1,6 +1,8 @@
 import {
   GeminiApiError,
+  GeminiEmptyResultError,
   GeminiImageReadError,
+  GeminiNetworkError,
   GeminiNotConfiguredError,
   GeminiParseError,
 } from '../services/gemini/errors';
@@ -11,6 +13,12 @@ export function resolveGeminiErrorKey(error: unknown): string {
   }
   if (error instanceof GeminiImageReadError) {
     return 'common.geminiApiImageReadError';
+  }
+  if (error instanceof GeminiNetworkError) {
+    return 'common.geminiApiNetworkError';
+  }
+  if (error instanceof GeminiEmptyResultError) {
+    return 'common.geminiApiEmptyResult';
   }
   if (error instanceof GeminiParseError) {
     if (/No food items|No receipt lines|Empty/i.test(error.message)) {

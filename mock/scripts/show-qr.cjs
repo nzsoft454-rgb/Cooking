@@ -1,8 +1,9 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { spawn } = require('child_process');
-const qrcode = require('qrcode-terminal');
+const { spawn, execFile } = require('child_process');
+const qrcode = require('qrcode');
+const qrcodeTerminal = require('qrcode-terminal');
 
 function getLanIp() {
   const nets = os.networkInterfaces();
@@ -16,9 +17,13 @@ function getLanIp() {
   return '127.0.0.1';
 }
 
-function writeQrHtml(url) {
+async function writeQrHtml(url) {
   const htmlPath = path.join(__dirname, '..', 'expo-go-qr.html');
-  const encoded = encodeURIComponent(url);
+  const dataUri = await qrcode.toDataURL(url, {
+    errorCorrectionLevel: 'M',
+    margin: 2,
+    width: 260,
+  });
   const html = `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,7 +43,7 @@ function writeQrHtml(url) {
   <div class="card">
     <h1>CookingMock — Expo Go</h1>
     <p>Expo Go アプリで QR をスキャン<br>または URL を手入力</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=${encoded}" alt="Expo Go QR" />
+    <img src="${dataUri}" alt="Expo Go QR" />
     <code>${url}</code>
   </div>
 </body>
@@ -47,25 +52,42 @@ function writeQrHtml(url) {
   return htmlPath;
 }
 
-function showExpoQr(port = '8081') {
+function openQrPage(htmlPath) {
+  if (process.platform === 'win32') {
+    execFile('powershell.exe', [
+      '-NoProfile',
+      '-Command',
+      `Start-Process -FilePath '${htmlPath.replace(/'/g, "''")}'`,
+    ], () => {});
+    return;
+  }
+  if (process.platform === 'darwin') {
+    spawn('open', [htmlPath], { detached: true, stdio: 'ignore' }).unref();
+    return;
+  }
+  spawn('xdg-open', [htmlPath], { detached: true, stdio: 'ignore' }).unref();
+}
+
+async function showExpoQr(port = '8081') {
   const url = `exp://${getLanIp()}:${port}`;
   console.log('\n========================================');
   console.log('  Expo Go — QRコード / 接続URL');
   console.log('========================================\n');
-  qrcode.generate(url, { small: true });
+  qrcodeTerminal.generate(url, { small: true });
   console.log(`\n  ${url}\n`);
   console.log('  ※ PC とスマホを同じ Wi‑Fi に接続してください');
   console.log('========================================\n');
-  const htmlPath = writeQrHtml(url);
+  const htmlPath = await writeQrHtml(url);
   console.log(`  QR ページ: ${htmlPath}\n`);
-  if (process.platform === 'win32') {
-    spawn('cmd', ['/c', 'start', '', htmlPath], { detached: true, stdio: 'ignore' }).unref();
-  }
+  openQrPage(htmlPath);
   return url;
 }
 
-module.exports = { showExpoQr, getLanIp, writeQrHtml };
+module.exports = { showExpoQr, getLanIp, writeQrHtml, openQrPage };
 
 if (require.main === module) {
-  showExpoQr(process.env.EXPO_PORT || '8081');
+  showExpoQr(process.env.EXPO_PORT || '8081').catch((err) => {
+    console.error('[show-qr]', err);
+    process.exit(1);
+  });
 }
