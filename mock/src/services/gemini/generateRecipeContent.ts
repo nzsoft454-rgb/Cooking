@@ -1,9 +1,10 @@
 import { getGeminiTextModel } from '../../config/gemini';
 import type { Recipe, RecipeConditions } from '../../types';
+import { ingredientNamesMatch } from '../../utils/ingredientNameMatch';
 import { generateGeminiContent } from './client';
 import { GeminiParseError } from './errors';
 import { parseJsonResponse } from './parseJsonResponse';
-import { buildRecipePrompt } from './prompts';
+import { buildRecipePrompt, type DishGenerationContext } from './prompts';
 import { RECIPE_RESPONSE_SCHEMA } from './schemas';
 
 type RawRecipeStep = {
@@ -35,12 +36,17 @@ export async function generateRecipeWithGemini(
   sourceIngredients: string[],
   conditions: RecipeConditions,
   gacha: boolean,
+  dishContext?: DishGenerationContext,
 ): Promise<GeneratedRecipePayload> {
   const text = await generateGeminiContent({
     model: getGeminiTextModel(),
     jsonMode: true,
     responseSchema: RECIPE_RESPONSE_SCHEMA,
-    parts: [{ text: buildRecipePrompt(sourceIngredients, conditions, gacha) }],
+    parts: [
+      {
+        text: buildRecipePrompt(sourceIngredients, conditions, gacha, dishContext),
+      },
+    ],
   });
 
   const parsed = parseJsonResponse<RawRecipeResponse>(text);
@@ -68,9 +74,14 @@ export async function generateRecipeWithGemini(
     throw new GeminiParseError('Incomplete recipe in Gemini response');
   }
 
+  const pool = sourceIngredients.length ? sourceIngredients : ['おまかせ'];
+  const usedFromPool = pool.filter((poolName) =>
+    ingredientsList.some((item) => ingredientNamesMatch(poolName, item.name)),
+  );
+
   return {
     title,
-    sourceIngredients: sourceIngredients.length ? sourceIngredients : ['おまかせ'],
+    sourceIngredients: usedFromPool.length > 0 ? usedFromPool : pool,
     servings: Math.max(1, conditions.servings),
     cookingTime: Math.max(1, Math.round(parsed.cookingTime ?? 15)),
     difficulty: conditions.difficulty,

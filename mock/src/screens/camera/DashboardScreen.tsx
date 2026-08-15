@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import type { NavigationProp } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,7 @@ import {
   Panel,
   Screen,
 } from '../../components/ui';
+import { openTabScreen } from '../../navigation/navigationHelpers';
 import type { CameraStackParamList, RootTabParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
@@ -90,8 +91,7 @@ export function DashboardScreen({ navigation }: Props) {
     remainingGemini,
     user,
   } = useApp();
-  const rootNavigation =
-    navigation.getParent<BottomTabNavigationProp<RootTabParamList>>();
+  const rootNavigation = navigation.getParent<NavigationProp<RootTabParamList>>();
   const [capturing, setCapturing] = useState(false);
   const [pickingFood, setPickingFood] = useState(false);
   const [lastPreview, setLastPreview] = useState<string | null>(null);
@@ -139,22 +139,31 @@ export function DashboardScreen({ navigation }: Props) {
     }
   }, [busy, openCaptureConfirm]);
 
+  const openCatalogPick = useCallback(() => {
+    if (!rootNavigation) return;
+    openTabScreen(rootNavigation, 'FridgeTab', 'CatalogPick');
+  }, [rootNavigation]);
+
   const openFridge = useCallback(
     (params?: { sortKey?: 'addedAsc' }) => {
-      rootNavigation?.navigate('FridgeTab', {
-        screen: 'FridgeHome',
-        params,
-      });
+      if (!rootNavigation) return;
+      openTabScreen(rootNavigation, 'FridgeTab', 'FridgeHome', params);
     },
     [rootNavigation]
   );
 
   const openRecipes = useCallback(
     (initialTab: 'all' | 'fav' | 'collection' = 'all') => {
-      rootNavigation?.navigate('RecipeTab', {
-        screen: 'RecipeHome',
-        params: { initialTab },
-      });
+      if (!rootNavigation) return;
+      openTabScreen(rootNavigation, 'RecipeTab', 'RecipeHome', { initialTab });
+    },
+    [rootNavigation]
+  );
+
+  const openIngredient = useCallback(
+    (ingredientId: string) => {
+      if (!rootNavigation) return;
+      openTabScreen(rootNavigation, 'FridgeTab', 'IngredientEdit', { ingredientId });
     },
     [rootNavigation]
   );
@@ -280,6 +289,17 @@ export function DashboardScreen({ navigation }: Props) {
           <Text style={styles.sectionTitle}>{t('dashboard.quickActionsTitle')}</Text>
         </View>
         <Panel style={styles.actionsPanel}>
+          {activeIngredients.length === 0 ? (
+            <>
+              <ActionCard
+                icon="nutrition-outline"
+                title={t('fridge.catalogPick.ctaTitle')}
+                subtitle={t('fridge.catalogPick.ctaSub')}
+                onPress={openCatalogPick}
+              />
+              <View style={styles.divider} />
+            </>
+          ) : null}
           <ActionCard
             icon="grid-outline"
             title={t('dashboard.openFridge')}
@@ -313,7 +333,7 @@ export function DashboardScreen({ navigation }: Props) {
                     styles.ingredientRow,
                     pressed && pressFeedback(true),
                   ]}
-                  onPress={() => openFridge()}
+                  onPress={() => openIngredient(item.id)}
                 >
                   <FoodThumb imageUrl={item.imageUrl} name={item.name} size={42} />
                   <View style={styles.ingredientCopy}>
@@ -333,6 +353,16 @@ export function DashboardScreen({ navigation }: Props) {
             <View style={styles.emptyRecent}>
               <Ionicons name="basket-outline" size={28} color={colors.inkFaint} />
               <Text style={styles.emptyRecentText}>{t('dashboard.noIngredients')}</Text>
+              <Pressable
+                onPress={openCatalogPick}
+                style={({ pressed }) => [
+                  styles.emptyCta,
+                  pressed && pressFeedback(true),
+                ]}
+                accessibilityRole="button"
+              >
+                <Text style={styles.emptyCtaText}>{t('fridge.catalogPick.cta')}</Text>
+              </Pressable>
             </View>
           )}
         </Panel>
@@ -584,5 +614,19 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.inkMuted,
     textAlign: 'center',
+  },
+  emptyCta: {
+    marginTop: 4,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: colors.radius,
+    backgroundColor: colors.primarySoft,
+    borderWidth: 1,
+    borderColor: colors.primary,
+  },
+  emptyCtaText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.primary,
   },
 });

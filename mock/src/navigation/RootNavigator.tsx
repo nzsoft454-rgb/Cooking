@@ -14,6 +14,7 @@ import { CaptureConfirmScreen } from '../screens/camera/CaptureConfirmScreen';
 import { CookingConfirmScreen } from '../screens/camera/CookingConfirmScreen';
 import { ManualEditScreen } from '../screens/camera/ManualEditScreen';
 import { ReceiptResultScreen } from '../screens/camera/ReceiptResultScreen';
+import { CatalogPickScreen } from '../screens/fridge/CatalogPickScreen';
 import { FridgeCookingConfirmScreen } from '../screens/fridge/FridgeCookingConfirmScreen';
 import { FridgeHomeScreen } from '../screens/fridge/FridgeHomeScreen';
 import { FridgeSearchScreen } from '../screens/fridge/FridgeSearchScreen';
@@ -39,6 +40,8 @@ import {
 import { useApp } from '../store/AppContext';
 import { colors } from '../theme/colors';
 import { MOTION } from '../theme/motion';
+import { resetTabToHome } from './navigationHelpers';
+import { bottomTabTransition, nativeStackTransition } from './transitionOptions';
 import type {
   CameraStackParamList,
   FridgeStackParamList,
@@ -83,8 +86,7 @@ const stackScreenOptions = {
   },
   headerShadowVisible: false,
   contentStyle: { backgroundColor: colors.bg },
-  animation: 'fade_from_bottom' as const,
-  animationDuration: MOTION.durationNormal,
+  ...nativeStackTransition,
 };
 
 function CameraNavigator() {
@@ -140,6 +142,11 @@ function FridgeNavigator() {
       <FridgeStack.Screen
         name="FridgeSearch"
         component={FridgeSearchScreen}
+        options={{ headerShown: false }}
+      />
+      <FridgeStack.Screen
+        name="CatalogPick"
+        component={CatalogPickScreen}
         options={{ headerShown: false }}
       />
       <FridgeStack.Screen
@@ -240,7 +247,7 @@ function NavigationRoot() {
         initialRouteName="DashboardTab"
         screenOptions={({ route }) => ({
           headerShown: false,
-          animation: 'shift',
+          ...bottomTabTransition,
           tabBarActiveTintColor: colors.primary,
           tabBarInactiveTintColor: colors.tabInactive,
           tabBarLabelStyle: {
@@ -280,21 +287,53 @@ function NavigationRoot() {
           name="DashboardTab"
           component={CameraNavigator}
           options={{ title: t('tabs.dashboard') }}
+          listeners={({ navigation }) => ({
+            tabPress: (e) => {
+              const current = navigation.getState().routes[navigation.getState().index]?.name;
+              if (current !== 'DashboardTab') return;
+              e.preventDefault();
+              resetTabToHome(navigation, 'DashboardTab');
+            },
+          })}
         />
         <Tab.Screen
           name="FridgeTab"
           component={FridgeNavigator}
           options={{ title: t('tabs.fridge') }}
+          listeners={({ navigation }) => ({
+            tabPress: (e) => {
+              const current = navigation.getState().routes[navigation.getState().index]?.name;
+              if (current !== 'FridgeTab') return;
+              e.preventDefault();
+              resetTabToHome(navigation, 'FridgeTab');
+            },
+          })}
         />
         <Tab.Screen
           name="RecipeTab"
           component={RecipeNavigator}
           options={{ title: t('tabs.recipe') }}
+          listeners={({ navigation }) => ({
+            tabPress: (e) => {
+              const current = navigation.getState().routes[navigation.getState().index]?.name;
+              if (current !== 'RecipeTab') return;
+              e.preventDefault();
+              resetTabToHome(navigation, 'RecipeTab');
+            },
+          })}
         />
         <Tab.Screen
           name="SettingsTab"
           component={SettingsNavigator}
           options={{ title: t('tabs.settings') }}
+          listeners={({ navigation }) => ({
+            tabPress: (e) => {
+              const current = navigation.getState().routes[navigation.getState().index]?.name;
+              if (current !== 'SettingsTab') return;
+              e.preventDefault();
+              resetTabToHome(navigation, 'SettingsTab');
+            },
+          })}
         />
       </Tab.Navigator>
     </NavigationContainer>

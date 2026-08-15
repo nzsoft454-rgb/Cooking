@@ -48,22 +48,22 @@ export function AppModal({
     Animated.parallel([
       Animated.timing(backdropOpacity, {
         toValue: 1,
-        duration: MOTION.durationNormal,
+        duration: MOTION.durationTransition,
         useNativeDriver: true,
       }),
       Animated.timing(contentOpacity, {
         toValue: 1,
-        duration: MOTION.durationNormal,
+        duration: MOTION.durationTransition,
         useNativeDriver: true,
       }),
       Animated.timing(translateY, {
         toValue: 0,
-        duration: MOTION.durationNormal,
+        duration: MOTION.durationTransition,
         useNativeDriver: true,
       }),
       Animated.timing(scale, {
         toValue: 1,
-        duration: MOTION.durationNormal,
+        duration: MOTION.durationTransition,
         useNativeDriver: true,
       }),
     ]).start();

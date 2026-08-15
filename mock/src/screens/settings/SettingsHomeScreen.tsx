@@ -1,7 +1,8 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { NavigationProp } from '@react-navigation/native';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 import {
   FooterBar,
   FooterPrimaryButton,
@@ -14,7 +15,8 @@ import {
   SectionTitle,
   SettingsRow,
 } from '../../components/ui';
-import { SettingsStackParamList } from '../../navigation/types';
+import { openTabScreenFresh } from '../../navigation/navigationHelpers';
+import type { RootTabParamList, SettingsStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { premiumPlanI18nKey } from '../../utils/premiumPlan';
 import { colors } from '../../theme/colors';
@@ -44,6 +46,24 @@ export function SettingsHomeScreen({ navigation }: Props) {
         remaining: remainingGemini,
         max: user.geminiLimit.maxPerDay,
       });
+
+  const confirmReplayTutorial = () => {
+    Alert.alert(
+      t('settings.home.replayTutorialConfirmTitle'),
+      t('settings.home.replayTutorialConfirmMessage'),
+      [
+        { text: t('common.cancel'), style: 'cancel' },
+        {
+          text: t('settings.home.replayTutorial'),
+          onPress: () => {
+            resetDemoData();
+            const parent = navigation.getParent<NavigationProp<RootTabParamList>>();
+            if (parent) openTabScreenFresh(parent, 'FridgeTab', 'FridgeHome');
+          },
+        },
+      ]
+    );
+  };
 
   const confirmReset = () => {
     Alert.alert(
@@ -88,6 +108,13 @@ export function SettingsHomeScreen({ navigation }: Props) {
             </React.Fragment>
           ))}
         </Panel>
+
+        <View style={styles.replayBlock}>
+          <PrimaryButton
+            label={t('settings.home.replayTutorial')}
+            onPress={confirmReplayTutorial}
+          />
+        </View>
       </View>
 
       <FooterBar>
@@ -132,5 +159,8 @@ const styles = StyleSheet.create({
   },
   list: {
     overflow: 'hidden',
+  },
+  replayBlock: {
+    marginTop: 20,
   },
 });

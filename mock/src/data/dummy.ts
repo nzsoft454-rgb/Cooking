@@ -125,8 +125,8 @@ export const SEED_INGREDIENTS: Ingredient[] = [
   seedItem('ing-seed-24', 'もやし', 'asset://hourensou_spinach', 1, 1),
 ];
 
-/** デモ食材セットの版 */
-export const DEMO_SEED_VERSION = 5;
+/** デモ食材セットの版。上げると次回起動でシードを差し替える */
+export const DEMO_SEED_VERSION = 6;
 
 /** C-001 履歴デモ用：出来上がり写真 */
 export const COOKED_DISH_DEMO_IMAGES = {
@@ -270,22 +270,79 @@ export async function mockAnalyzeImage(): Promise<DetectedItem[]> {
   return DUMMY_DETECTED.map((item) => ({ ...item }));
 }
 
+const MOCK_MULTI_TITLES = [
+  'ほうれん草と卵の彩り炒め',
+  '小松菜のごま和え',
+  '野菜のコンソメスープ',
+  '余った野菜の卵とじ',
+];
+
+const MOCK_SINGLE_INGREDIENT_TITLES = [
+  'のソテー',
+  'のサラダ',
+  'のマリネ',
+  'のスープ',
+];
+
+function pickIngredientsForDish(
+  sourceIngredients: string[],
+  dishIndex: number,
+  dishTotal: number,
+): string[] {
+  if (sourceIngredients.length === 0) return ['おまかせ'];
+  if (sourceIngredients.length === 1) return [sourceIngredients[0]];
+
+  if (dishIndex === 1) return [...sourceIngredients];
+
+  const subsetSize = Math.max(1, sourceIngredients.length - (dishIndex - 1));
+  return sourceIngredients.slice(0, subsetSize);
+}
+
+function mockTitleForDish(
+  dishIngredients: string[],
+  dishIndex: number,
+  dishTotal: number,
+): string {
+  if (dishTotal === 1) return DUMMY_RECIPE_BASE.recipe_name;
+
+  if (dishIngredients.length === 1) {
+    const suffix =
+      MOCK_SINGLE_INGREDIENT_TITLES[(dishIndex - 1) % MOCK_SINGLE_INGREDIENT_TITLES.length];
+    return `【${dishIndex}/${dishTotal}】${dishIngredients[0]}${suffix}`;
+  }
+
+  const titleBase = MOCK_MULTI_TITLES[(dishIndex - 1) % MOCK_MULTI_TITLES.length];
+  return `【${dishIndex}/${dishTotal}】${titleBase}`;
+}
+
 export async function mockGenerateRecipe(
   sourceIngredients: string[],
-  conditions: RecipeConditions
+  conditions: RecipeConditions,
+  dishContext?: { dishIndex: number; dishTotal: number },
 ): Promise<Omit<Recipe, 'id' | 'userId' | 'createdAt' | 'updatedAt' | 'isFavorite' | 'userMemo'>> {
   await delay(2000);
+  const dishTotal = dishContext?.dishTotal ?? Math.max(1, conditions.dishCount);
+  const dishIndex = dishContext?.dishIndex ?? 1;
+  const dishIngredients = pickIngredientsForDish(sourceIngredients, dishIndex, dishTotal);
+  const title = mockTitleForDish(dishIngredients, dishIndex, dishTotal);
+
   return {
-    title: DUMMY_RECIPE_BASE.recipe_name,
-    sourceIngredients,
+    title,
+    sourceIngredients: dishIngredients,
     servings: conditions.servings,
-    cookingTime: DUMMY_RECIPE_BASE.cooking_time_minutes,
+    cookingTime: DUMMY_RECIPE_BASE.cooking_time_minutes + (dishIndex - 1) * 3,
     difficulty: conditions.difficulty,
     genre: conditions.genre,
-    ingredientsList: DUMMY_RECIPE_BASE.ingredients,
+    ingredientsList: dishIngredients.map((name) => ({
+      name,
+      amount: name.includes('卵') ? '2個' : '適量',
+    })),
     steps: DUMMY_RECIPE_BASE.steps.map((s) => ({
       stepNumber: s.step_number,
-      instruction: s.instruction,
+      instruction:
+        dishTotal > 1
+          ? `${s.instruction}（${dishIndex}品目: ${dishIngredients.join('・')}）`
+          : s.instruction,
       timerSeconds: (s as { timerSeconds?: number }).timerSeconds,
     })),
     tips: DUMMY_RECIPE_BASE.tips,

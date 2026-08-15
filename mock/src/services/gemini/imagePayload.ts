@@ -11,8 +11,8 @@ const GEMINI_MAX_LONG_EDGE = 1280;
 /** Gemini 送信用: 目標ファイルサイズ上限 */
 const GEMINI_MAX_BYTES = 512 * 1024;
 const GEMINI_COMPRESS_LEVELS = [0.72, 0.65, 0.58, 0.5] as const;
-const IMAGE_SIZE_TIMEOUT_MS = 8_000;
-const COMPRESS_TIMEOUT_MS = 25_000;
+const IMAGE_SIZE_TIMEOUT_MS = 12_000;
+const COMPRESS_TIMEOUT_MS = 45_000;
 
 function guessMimeType(uri: string): string {
   const lower = uri.split('?')[0]?.toLowerCase() ?? '';

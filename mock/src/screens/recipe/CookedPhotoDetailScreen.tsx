@@ -109,7 +109,7 @@ export function CookedPhotoDetailScreen({ navigation, route }: Props) {
         <FooterPrimaryButton
           label={t('recipe.cookedPhotoDetail.viewRecipe')}
           variant="secondary"
-          onPress={() => navigation.replace('RecipeDetail', { recipeId: photo.recipeId })}
+          onPress={() => navigation.navigate('RecipeDetail', { recipeId: photo.recipeId })}
         />
       </FooterBar>
 

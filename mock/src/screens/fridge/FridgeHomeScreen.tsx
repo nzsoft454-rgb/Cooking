@@ -103,6 +103,7 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
     navigation.navigate('CookingConfirm', {
       ingredientIds: selected,
       ingredientNames: selectedNames(),
+      origin: 'fridge',
     });
   };
 
@@ -130,6 +131,7 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
         mode: 'gacha',
         generationKey: Date.now(),
         geminiPreConsumed,
+        origin: 'fridge',
       },
     });
   };
@@ -258,22 +260,42 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
         onToggle={toggle}
         onEdit={(id) => navigation.navigate('IngredientEdit', { ingredientId: id })}
         emptyMessage={t('fridge.home.empty')}
+        emptyComponent={
+          <View style={styles.emptyWrap}>
+            <Text style={styles.emptyTitle}>{t('fridge.home.emptyTitle')}</Text>
+            <Text style={styles.emptyBody}>{t('fridge.home.empty')}</Text>
+            <PrimaryButton
+              label={t('fridge.catalogPick.cta')}
+              onPress={() => navigation.navigate('CatalogPick')}
+              style={styles.emptyCta}
+            />
+          </View>
+        }
       />
 
       <FooterBar>
-        <FooterPrimaryButton
-          label={t('fridge.home.gacha')}
-          variant="secondary"
-          onPress={startGacha}
-        />
-        <FooterPrimaryButton
-          label={
-            selected.length > 0
-              ? t('fridge.home.cookWithCount', { count: selected.length })
-              : t('fridge.home.cook')
-          }
-          onPress={cookSelected}
-        />
+        {sorted.length === 0 ? (
+          <FooterPrimaryButton
+            label={t('fridge.catalogPick.cta')}
+            onPress={() => navigation.navigate('CatalogPick')}
+          />
+        ) : (
+          <>
+            <FooterPrimaryButton
+              label={t('fridge.home.gacha')}
+              variant="secondary"
+              onPress={startGacha}
+            />
+            <FooterPrimaryButton
+              label={
+                selected.length > 0
+                  ? t('fridge.home.cookWithCount', { count: selected.length })
+                  : t('fridge.home.cook')
+              }
+              onPress={cookSelected}
+            />
+          </>
+        )}
       </FooterBar>
 
       <ConfirmDialog
@@ -477,5 +499,28 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
     color: colors.ink,
+  },
+  emptyWrap: {
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingTop: 36,
+    paddingBottom: 16,
+  },
+  emptyTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: colors.ink,
+    textAlign: 'center',
+  },
+  emptyBody: {
+    marginTop: 8,
+    fontSize: 13,
+    lineHeight: 20,
+    color: colors.inkMuted,
+    textAlign: 'center',
+  },
+  emptyCta: {
+    marginTop: 16,
+    alignSelf: 'stretch',
   },
 });

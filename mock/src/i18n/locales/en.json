@@ -48,6 +48,7 @@
     "planPremium": "Premium",
     "planFree": "Free",
     "servings": "{{count}} servings",
+    "dishCount": "{{count}} dishes",
     "minutes": "{{count}} min",
     "minutesSuffix": " min",
     "servingsSuffix": " servings",
@@ -78,6 +79,7 @@
   },
   "confidence": {
     "high": "High",
+    "medium": "Medium",
     "low": "Low",
     "manual": "Manual"
   },
@@ -162,7 +164,7 @@
     "recentIngredientsTitle": "Recently added ingredients",
     "seeAll": "See all",
     "remaining": "{{percent}}% remaining",
-    "noIngredients": "No ingredients yet. Add some with the camera above"
+    "noIngredients": "No ingredients yet. Pick staples from the catalog, or add some with the camera"
   },
   "camera": {
     "home": {
@@ -179,7 +181,7 @@
     },
     "receiptResult": {
       "title": "Receipt result",
-      "subtitle": "R-001-c",
+      "subtitle": "Review and correct read results",
       "stepHint1": "Review the read results",
       "stepHint2": "Correct ingredient names",
       "stepHint3": "Add these items to your fridge",
@@ -199,7 +201,7 @@
     },
     "captureConfirm": {
       "title": "Review image",
-      "subtitle": "A-001-a",
+      "subtitle": "Review before analysis",
       "caption": "Captured image (mock)",
       "captionAlbum": "Selected receipt image",
       "captionFoodAlbum": "Selected food image",
@@ -225,7 +227,7 @@
     "analyzing": {
       "title": "Analyzing",
       "titleReceipt": "Reading receipt",
-      "subtitle": "A-001-b",
+      "subtitle": "AI is analyzing the image",
       "loading": "AI is analyzing ingredients…",
       "loadingReceipt": "Reading receipt…",
       "errorPhoto": "Failed to analyze ingredients",
@@ -233,7 +235,7 @@
     },
     "analysisResult": {
       "title": "Analysis results",
-      "subtitle": "A-001-c",
+      "subtitle": "Review and correct detections",
       "stepHint1": "Review AI detections",
       "stepHint2": "Correct ingredient names",
       "stepHint3": "Add these items to the fridge",
@@ -262,12 +264,13 @@
       "saveToFridge": "Save to fridge",
       "cookNow": "Cook now",
       "backToEdit": "Back to edit",
+      "editAllNames": "Edit all names",
       "saveToPreview": "Go to save",
       "savedMessage": "Added {{count}} ingredients to the fridge"
     },
     "manualEdit": {
       "title": "Edit ingredient names",
-      "subtitle": "A-001-d · Add while viewing capture",
+      "subtitle": "Add while viewing the captured photo",
       "sectionDetected": "Detected ingredients",
       "ingredientIndex": "Ingredient {{index}}",
       "sectionManualAdd": "Add manually",
@@ -285,7 +288,8 @@
       "batchEdit": "Batch edit",
       "editSelected": "Edit",
       "clear": "Clear",
-      "empty": "No ingredients yet. Add some from the camera.",
+      "empty": "Pick ingredients you have or plan to buy, then cook one dish. You can also add items with the camera.",
+      "emptyTitle": "Your fridge is empty",
       "gacha": "Random pick",
       "cook": "Cook",
       "cookWithCount": "Cook ({{count}})",
@@ -305,6 +309,21 @@
       "searchLabel": "Search",
       "searchPlaceholder": "Search by ingredient name",
       "searchSubmit": "Search"
+    },
+    "catalogPick": {
+      "title": "Staple ingredients",
+      "subtitle": "Pick 3 and cook 1 dish",
+      "hint": "Choose what you have or plan to buy. Selected items go into the fridge, then we generate one recipe from them.",
+      "searchPlaceholder": "Search other ingredients",
+      "sectionStarter": "Staples",
+      "sectionSearch": "Search results",
+      "searchEmpty": "No matching ingredients",
+      "inFridge": "In fridge",
+      "needMore": "Pick ingredients",
+      "cook": "Cook 1 dish with {{count}}",
+      "cta": "Pick staple ingredients",
+      "ctaTitle": "Pick staple ingredients",
+      "ctaSub": "Choose from the catalog and generate one recipe"
     },
     "sort": {
       "addedAscFreshFirst": "Oldest added (fresh first)",
@@ -378,13 +397,15 @@
     "sectionDifficulty": "Difficulty",
     "sectionGenre": "Cuisine",
     "sectionServings": "Servings (0.5 steps)",
+    "sectionDishCount": "Number of dishes",
+    "dishCountHint": "Generate separate recipes from the selected ingredients (ingredients may appear in multiple dishes)",
     "sectionSeasoning": "Seasoning",
     "note": "Phase 1: UI only. Generated recipe is fixed mock data.",
     "generate": "Generate recipe",
     "confirmTitle": "Confirm generation",
     "confirmBody": "Generate a recipe with these settings?",
     "confirmIngredients": "Ingredients: {{names}}",
-    "confirmConditions": "{{genre}} · {{difficulty}} · {{cookingTime}} · {{servings}}"
+    "confirmConditions": "{{genre}} · {{difficulty}} · {{cookingTime}} · {{servings}} · {{dishCount}}"
   },
   "recipe": {
     "home": {
@@ -400,7 +421,7 @@
       "noPhotoHint": "Photos taken after cooking will appear here",
       "sourceIngredients": "Ingredients: {{names}}",
       "meta": "{{genre}} · {{difficulty}} · {{minutes}} min · {{servings}} servings",
-      "emptyHistory": "No recipes yet. Generate one from the camera or fridge.",
+      "emptyHistory": "No recipes yet. Pick fridge items or staple ingredients to generate one.",
       "emptyCollection": "No finished-dish photos yet.\nTake one after cooking to see it here.",
       "shareSns": "Share to SNS"
     },
@@ -408,7 +429,8 @@
       "title": "Generating",
       "subtitle": "C-001-a",
       "gachaLoading": "Creating mystery-pot recipe from random picks…",
-      "normalLoading": "AI is generating recipe… (C-001-a)",
+      "normalLoading": "AI is generating recipe…",
+      "multiLoading": "AI is generating {{count}} recipes…",
       "backToFridge": "Back to fridge"
     },
     "detail": {
@@ -520,9 +542,12 @@
       "legal": "Legal",
       "login": "Log in",
       "screenGallery": "Screen gallery (live preview)",
+      "replayTutorial": "Replay first-time tutorial",
+      "replayTutorialConfirmTitle": "Start over from the first-time flow?",
+      "replayTutorialConfirmMessage": "The fridge and recipes will be cleared, then you'll return to picking staple ingredients.",
       "resetDemo": "Reset demo data",
       "resetDemoConfirmTitle": "Reset demo data?",
-      "resetDemoConfirmMessage": "Ingredients, recipes, shopping list, and other data will return to the initial state."
+      "resetDemoConfirmMessage": "Ingredients, recipes, shopping list, and other data will return to an empty initial state."
     },
     "screenGallery": {
       "title": "Screen gallery",
@@ -541,6 +566,7 @@
       "receiptResult": "Receipt result",
       "cookingConfirm": "Cooking conditions",
       "fridgeHome": "Fridge home",
+      "catalogPick": "Staple ingredients",
       "fridgeSearch": "Ingredient search",
       "ingredientEdit": "Edit ingredient",
       "ingredientBatchEdit": "Batch edit",
@@ -595,12 +621,38 @@
     },
     "help": {
       "title": "Help",
-      "subtitle": "D-001-d",
-      "sectionUsage": "How to use",
-      "step1": "1. \"Capture\" ingredients with the camera (mock)",
-      "step2": "2. Review AI results, edit, and save to fridge",
-      "step3": "3. Select ingredients and generate a recipe",
-      "step4": "4. Follow steps with checkboxes and timers"
+      "subtitle": "Quick guide",
+      "flowTitle": "Dinner in 3 steps",
+      "flow1Title": "Add ingredients",
+      "flow1Body": "Take a photo, or tap a few staples.",
+      "flow2Title": "Choose what to cook",
+      "flow2Body": "Tap fridge items, then tap Cook.",
+      "flow3Title": "Follow the recipe",
+      "flow3Body": "Check off steps as you go. Timers are there when you need them.",
+      "tryCta": "Pick staple ingredients",
+      "sectionAdd": "How to add ingredients",
+      "catalogTitle": "No food on hand? That’s fine",
+      "catalogBody": "Pick about three staples like onion or eggs and cook one dish. Use what you have, or what you’ll buy.",
+      "cameraTitle": "Add from a photo",
+      "cameraBody": "Shoot from the dashboard, or pick from your album. If a name is wrong, fix it before saving.",
+      "receiptTitle": "Add from a receipt",
+      "receiptBody": "Choose a photo from your album, then switch to Receipt to read it.",
+      "sectionCook": "How to cook",
+      "fridgeTitle": "Fridge gestures",
+      "fridgeBody": "Tap to choose items for cooking. Long-press to edit or delete. Select several to edit them together.",
+      "gachaTitle": "Not sure what to make?",
+      "gachaBody": "Tap Random pick to generate a recipe from fridge items.",
+      "dishTitle": "Cooking more than one dish?",
+      "dishBody": "Set Number of dishes to 2 or 3. You’ll get separate menus from the same ingredients.",
+      "afterTitle": "When you’re done",
+      "afterBody": "Reduce what’s left of the ingredients you used, and save a photo of the finished dish.",
+      "sectionTrouble": "If you’re stuck",
+      "quotaTitle": "It says you’re out of uses",
+      "quotaBody": "The free plan has a daily limit. Watch an ad or go Premium to continue.",
+      "wrongTitle": "The ingredient name is wrong",
+      "wrongBody": "You can fix it before saving, or later in the fridge.",
+      "retryTitle": "Want to start over?",
+      "retryBody": "Use Replay first-time tutorial in Settings to go back to an empty fridge."
     },
     "premium": {
       "title": "Premium",

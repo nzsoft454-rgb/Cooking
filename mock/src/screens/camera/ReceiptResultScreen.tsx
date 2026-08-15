@@ -1,5 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { useMemo, useRef, useState } from 'react';
+import type { NavigationProp } from '@react-navigation/native';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Alert,
@@ -28,8 +29,8 @@ import {
 } from '../../components/ui';
 import { AttributeField } from '../../components/d1Layout';
 import type { ReceiptLineItem } from '../../data/receiptMock';
-import { resetToDashboardHome } from '../../navigation/resetToDashboardHome';
-import { CameraStackParamList } from '../../navigation/types';
+import { navigateTabScreen, resetToDashboardHome } from '../../navigation/navigationHelpers';
+import { CameraStackParamList, RootTabParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 import type { Ingredient, IngredientAttribute } from '../../types';
@@ -76,7 +77,7 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
   const { addIngredients, updateIngredient, softDeleteIngredient } = useApp();
   const { imageUrl } = route.params;
   const defaultQty = t('common.defaultQuantity');
-  const [originalRows] = useState<ReceiptRow[]>(() => route.params.items.map(toRow));
+  const [originalRows, setOriginalRows] = useState<ReceiptRow[]>(() => route.params.items.map(toRow));
   const [step, setStep] = useState<AnalysisStep>(1);
   const [rows, setRows] = useState<ReceiptRow[]>(() => route.params.items.map(toRow));
   const [editIndex, setEditIndex] = useState(0);
@@ -87,6 +88,14 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
   React.useEffect(() => {
     setNewQty(defaultQty);
   }, [defaultQty]);
+
+  useEffect(() => {
+    const next = route.params.items.map(toRow);
+    setOriginalRows(next);
+    setRows(next);
+    setEditIndex(0);
+    savedIngredientsRef.current = null;
+  }, [route.params.items, route.params.imageUrl]);
 
   const knownCount = useMemo(() => rows.filter((r) => r.known).length, [rows]);
   const reviewCount = useMemo(() => rows.filter(needsReview).length, [rows]);
@@ -153,8 +162,9 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
       t('camera.receiptResult.savedMessage', { count: created.length })
     );
     // 分析フローを閉じ、ダッシュボードに戻ったときに結果画面が残らないようにする
-    resetToDashboardHome(navigation);
-    navigation.getParent()?.navigate('FridgeTab', { screen: 'FridgeHome' });
+    const parent = navigation.getParent<NavigationProp<RootTabParamList>>();
+    if (parent) navigateTabScreen(parent, 'FridgeTab', 'FridgeHome');
+    requestAnimationFrame(() => resetToDashboardHome(navigation));
   };
 
   const cookNow = () => {
@@ -162,6 +172,7 @@ export function ReceiptResultScreen({ navigation, route }: Props) {
     navigation.navigate('CookingConfirm', {
       ingredientIds: created.map((c) => c.id),
       ingredientNames: created.map((c) => c.name),
+      origin: 'camera',
     });
   };
 

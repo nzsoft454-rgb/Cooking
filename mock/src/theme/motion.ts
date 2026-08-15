@@ -2,6 +2,8 @@ import type { ViewStyle } from 'react-native';
 
 /** 控えめな UI モーション定数 */
 export const MOTION = {
+  /** スタック・タブ・ステップ切替など画面遷移の共通速度 */
+  durationTransition: 200,
   durationFast: 160,
   durationNormal: 200,
   pressScale: 0.98,

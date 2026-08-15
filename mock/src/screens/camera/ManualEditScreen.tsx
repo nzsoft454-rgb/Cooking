@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import {
@@ -34,6 +34,15 @@ export function ManualEditScreen({ navigation, route }: Props) {
   );
   const [newName, setNewName] = useState('');
   const [newQty, setNewQty] = useState(defaultQty);
+
+  useEffect(() => {
+    setItems(
+      route.params.items.map((i) => ({
+        ...i,
+        attribute: i.attribute ?? guessIngredientAttribute(i.name),
+      }))
+    );
+  }, [route.params.items]);
 
   const updateName = (index: number, name: string) => {
     setItems((prev) =>

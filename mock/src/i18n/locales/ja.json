@@ -48,6 +48,7 @@
     "planPremium": "プレミアム",
     "planFree": "無料",
     "servings": "{{count}}人前",
+    "dishCount": "{{count}}品",
     "minutes": "{{count}}分",
     "minutesSuffix": "分",
     "servingsSuffix": "人前",
@@ -78,6 +79,7 @@
   },
   "confidence": {
     "high": "高",
+    "medium": "中",
     "low": "低",
     "manual": "手動"
   },
@@ -162,7 +164,7 @@
     "recentIngredientsTitle": "最近追加した食材",
     "seeAll": "すべて見る",
     "remaining": "残量 {{percent}}%",
-    "noIngredients": "食材がまだありません。上のカメラから追加しましょう"
+    "noIngredients": "食材がまだありません。よく使う食材を選ぶか、カメラから追加しましょう"
   },
   "camera": {
     "home": {
@@ -179,7 +181,7 @@
     },
     "receiptResult": {
       "title": "レシート読取結果",
-      "subtitle": "R-001-c",
+      "subtitle": "読み取り結果の確認と修正",
       "stepHint1": "読み取り結果を確認してください",
       "stepHint2": "食材名を修正してください",
       "stepHint3": "この内容で冷蔵庫に追加します",
@@ -199,7 +201,7 @@
     },
     "captureConfirm": {
       "title": "画像確認",
-      "subtitle": "A-001-a",
+      "subtitle": "解析前の確認",
       "caption": "撮影した画像（モック）",
       "captionAlbum": "選択したレシート画像",
       "captionFoodAlbum": "選択した食材画像",
@@ -225,7 +227,7 @@
     "analyzing": {
       "title": "分析中",
       "titleReceipt": "レシート読取中",
-      "subtitle": "A-001-b",
+      "subtitle": "AIが画像を解析しています",
       "loading": "AIが食材を分析中…",
       "loadingReceipt": "レシートを読み取り中…",
       "errorPhoto": "食材の解析に失敗しました",
@@ -233,7 +235,7 @@
     },
     "analysisResult": {
       "title": "分析結果",
-      "subtitle": "A-001-c",
+      "subtitle": "検出結果の確認と修正",
       "stepHint1": "AIの判定を確認してください",
       "stepHint2": "食材名を修正してください",
       "stepHint3": "この内容で冷蔵庫に追加します",
@@ -262,12 +264,13 @@
       "saveToFridge": "冷蔵庫に保存",
       "cookNow": "そのまま料理",
       "backToEdit": "修正に戻る",
+      "editAllNames": "まとめて修正",
       "saveToPreview": "保存へ",
       "savedMessage": "{{count}}件の食材を冷蔵庫に追加しました"
     },
     "manualEdit": {
       "title": "食材名の修正",
-      "subtitle": "A-001-d · 撮影画像を確認しながら追加",
+      "subtitle": "撮影画像を確認しながら追加",
       "sectionDetected": "検出食材",
       "ingredientIndex": "食材 {{index}}",
       "sectionManualAdd": "手動追加",
@@ -285,7 +288,8 @@
       "batchEdit": "まとめて編集",
       "editSelected": "編集",
       "clear": "クリア",
-      "empty": "食材がありません。カメラから追加してください。",
+      "empty": "家にある／これから買う食材を選ぶと、すぐに1品作れます。撮影でも追加できます。",
+      "emptyTitle": "冷蔵庫は空です",
       "gacha": "おまかせガチャ",
       "cook": "料理する",
       "cookWithCount": "料理する（{{count}}）",
@@ -305,6 +309,21 @@
       "searchLabel": "検索",
       "searchPlaceholder": "食材名で検索",
       "searchSubmit": "検索する"
+    },
+    "catalogPick": {
+      "title": "よく使う食材",
+      "subtitle": "3つ選んで1品作る",
+      "hint": "家にあるもの、またはこれから買うものを選んでください。選んだ食材は冷蔵庫に入り、その範囲でレシピを1品生成します。",
+      "searchPlaceholder": "他の食材を探す",
+      "sectionStarter": "定番",
+      "sectionSearch": "検索結果",
+      "searchEmpty": "一致する食材がありません",
+      "inFridge": "登録済",
+      "needMore": "食材を選ぶ",
+      "cook": "この{{count}}つで1品作る",
+      "cta": "よく使う食材を選ぶ",
+      "ctaTitle": "よく使う食材を選ぶ",
+      "ctaSub": "カタログから選んで、すぐに1品レシピを作る"
     },
     "sort": {
       "addedAscFreshFirst": "入庫古い順（生成品優先）",
@@ -378,13 +397,15 @@
     "sectionDifficulty": "難易度",
     "sectionGenre": "ジャンル",
     "sectionServings": "人数（0.5人前刻み）",
+    "sectionDishCount": "作る品数",
+    "dishCountHint": "選んだ食材の範囲で、別々のレシピを指定品数分生成します（同じ食材を複数品で使ってもOK）",
     "sectionSeasoning": "味付け",
     "note": "※フェーズ1では選択UIのみ。生成結果は固定ダミーレシピです。",
     "generate": "レシピを生成する",
     "confirmTitle": "レシピ生成の確認",
     "confirmBody": "次の条件でレシピを生成しますか？",
     "confirmIngredients": "食材: {{names}}",
-    "confirmConditions": "{{genre}} · {{difficulty}} · {{cookingTime}} · {{servings}}"
+    "confirmConditions": "{{genre}} · {{difficulty}} · {{cookingTime}} · {{servings}} · {{dishCount}}"
   },
   "recipe": {
     "home": {
@@ -400,7 +421,7 @@
       "noPhotoHint": "調理後に撮影した写真がここに表示されます",
       "sourceIngredients": "食材: {{names}}",
       "meta": "{{genre}} · {{difficulty}} · {{minutes}}分 · {{servings}}人前",
-      "emptyHistory": "まだレシピがありません。カメラまたは冷蔵庫から生成してください。",
+      "emptyHistory": "まだレシピがありません。冷蔵庫の食材を選ぶか、よく使う食材から1品作ってみましょう。",
       "emptyCollection": "出来上がり写真がまだありません。\n調理完了後に撮影するとここに並びます。",
       "shareSns": "SNSでシェア"
     },
@@ -408,7 +429,8 @@
       "title": "生成中",
       "subtitle": "C-001-a",
       "gachaLoading": "ガチャ食材で闇鍋レシピ作成中…",
-      "normalLoading": "AIがレシピを生成中…（C-001-a）",
+      "normalLoading": "AIがレシピを生成中…",
+      "multiLoading": "AIが{{count}}品のレシピを生成中…",
       "backToFridge": "冷蔵庫に戻る"
     },
     "detail": {
@@ -520,9 +542,12 @@
       "legal": "権利・契約",
       "login": "ログイン",
       "screenGallery": "画面ギャラリー（実画面確認）",
+      "replayTutorial": "チュートリアルをやり直す",
+      "replayTutorialConfirmTitle": "初回の流れからやり直しますか？",
+      "replayTutorialConfirmMessage": "冷蔵庫とレシピを空にして、よく使う食材を選ぶ画面に戻ります。",
       "resetDemo": "デモデータをリセット",
       "resetDemoConfirmTitle": "デモデータをリセットしますか？",
-      "resetDemoConfirmMessage": "食材・レシピ・買い物リストなどが初期状態に戻ります。"
+      "resetDemoConfirmMessage": "食材・レシピ・買い物リストなどが空の初期状態に戻ります。"
     },
     "screenGallery": {
       "title": "画面ギャラリー",
@@ -541,6 +566,7 @@
       "receiptResult": "レシート読取結果",
       "cookingConfirm": "調理条件",
       "fridgeHome": "冷蔵庫ホーム",
+      "catalogPick": "よく使う食材",
       "fridgeSearch": "食材検索",
       "ingredientEdit": "食材編集・削除",
       "ingredientBatchEdit": "まとめて編集",
@@ -595,12 +621,38 @@
     },
     "help": {
       "title": "ヘルプ",
-      "subtitle": "D-001-d",
-      "sectionUsage": "使い方",
-      "step1": "1. カメラで食材を「撮影」（モック）",
-      "step2": "2. AI判定を確認・修正して冷蔵庫へ保存",
-      "step3": "3. 食材を選んでレシピ生成",
-      "step4": "4. 手順チェック＆タイマーで調理"
+      "subtitle": "かんたんガイド",
+      "flowTitle": "今日のご飯まで",
+      "flow1Title": "食材を入れる",
+      "flow1Body": "写真を撮るか、よく使う食材をタップするだけです。",
+      "flow2Title": "料理するものを選ぶ",
+      "flow2Body": "冷蔵庫で使いたい食材をタップして、「料理する」を押します。",
+      "flow3Title": "レシピどおりに作る",
+      "flow3Body": "手順にチェックを入れながら進めます。タイマーもあります。",
+      "tryCta": "よく使う食材を選んでみる",
+      "sectionAdd": "食材の入れ方",
+      "catalogTitle": "手元に食材がなくてもOK",
+      "catalogBody": "玉ねぎ・卵などを3つ選ぶと、すぐ1品作れます。家にあるものでも、これから買うものでも大丈夫です。",
+      "cameraTitle": "写真から入れる",
+      "cameraBody": "ダッシュボードで撮影するか、アルバムから選びます。名前が違っていたら、保存前に直せます。",
+      "receiptTitle": "レシートから入れる",
+      "receiptBody": "アルバムで写真を選んだあと、「レシート」に切り替えて読み取ります。",
+      "sectionCook": "料理のしかた",
+      "fridgeTitle": "冷蔵庫の操作",
+      "fridgeBody": "タップで料理に使う食材を選ぶ。長押しで名前や量の編集・削除。いくつか選ぶと、まとめて編集できます。",
+      "gachaTitle": "何作るか迷ったら",
+      "gachaBody": "「おまかせガチャ」を押すと、冷蔵庫の食材からランダムにレシピを作ります。",
+      "dishTitle": "一度に何品作る？",
+      "dishBody": "「作る品数」で2品・3品にもできます。同じ食材で、別のメニューが出ます。",
+      "afterTitle": "作り終わったら",
+      "afterBody": "使った分だけ残量を減らして、完成写真を残せます。",
+      "sectionTrouble": "困ったとき",
+      "quotaTitle": "「回数がない」と出る",
+      "quotaBody": "無料プランは1日の回数に上限があります。広告を見るか、プレミアムにすると続けられます。",
+      "wrongTitle": "食材名が違う",
+      "wrongBody": "保存する前に直せます。あとから冷蔵庫でも編集できます。",
+      "retryTitle": "最初からやり直したい",
+      "retryBody": "設定の「チュートリアルをやり直す」で、空の冷蔵庫に戻れます。"
     },
     "premium": {
       "title": "プレミアム",

@@ -1,7 +1,9 @@
 import {
+  buildGeminiThinkingConfig,
   GEMINI_API_BASE,
   GEMINI_MODEL_FALLBACKS,
   getGeminiApiKey,
+  getGeminiFetchTimeoutMs,
 } from '../../config/gemini';
 import {
   GeminiApiError,
@@ -9,8 +11,8 @@ import {
   GeminiNotConfiguredError,
 } from './errors';
 
-/** Gemini API 呼び出しの上限（ms） */
-const GEMINI_FETCH_TIMEOUT_MS = 90_000;
+/** Gemini API 呼び出しの上限（ms）。EXPO_PUBLIC_GEMINI_TIMEOUT_MS で上書き可 */
+const GEMINI_FETCH_TIMEOUT_MS = getGeminiFetchTimeoutMs();
 
 export type GeminiPart =
   | { text: string }
@@ -87,10 +89,12 @@ async function requestGeminiContent(
   if (!apiKey) throw new GeminiNotConfiguredError();
 
   const url = `${GEMINI_API_BASE}/models/${model}:generateContent`;
+  const thinkingConfig = buildGeminiThinkingConfig(model);
   const body = {
     contents: [{ role: 'user', parts: options.parts.map(toApiPart) }],
     generationConfig: {
       temperature: options.temperature ?? 0.2,
+      ...(thinkingConfig ? { thinkingConfig } : {}),
       ...(options.jsonMode
         ? {
             responseMimeType: 'application/json',

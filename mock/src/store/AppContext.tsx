@@ -12,9 +12,6 @@ import {
   DEMO_SEED_VERSION,
   DEMO_USER_ID,
   INITIAL_USER,
-  SEED_COOKED_PHOTOS,
-  SEED_INGREDIENTS,
-  SEED_RECIPES,
 } from '../data/dummy';
 import type {
   CookedDishPhoto,
@@ -144,10 +141,10 @@ function withDailyGeminiReset(user: UserProfile): UserProfile {
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
   const [user, setUser] = useState<UserProfile>(INITIAL_USER);
-  const [ingredients, setIngredients] = useState<Ingredient[]>(SEED_INGREDIENTS);
-  const [recipes, setRecipes] = useState<Recipe[]>(SEED_RECIPES);
+  const [ingredients, setIngredients] = useState<Ingredient[]>([]);
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [shoppingList, setShoppingList] = useState<ShoppingItem[]>([]);
-  const [cookedPhotos, setCookedPhotos] = useState<CookedDishPhoto[]>(SEED_COOKED_PHOTOS);
+  const [cookedPhotos, setCookedPhotos] = useState<CookedDishPhoto[]>([]);
   const [language, setLanguage] = useState<AppLanguage>(() => getDeviceLanguage());
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
@@ -164,28 +161,28 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           setUser(nextUser);
           const storedSeedVersion = parsed.demoSeedVersion ?? 1;
           const shouldRefreshSeed = storedSeedVersion < DEMO_SEED_VERSION;
-          // 空配列は「ユーザーが全削除した状態」なのでシードに戻さない
+          // v6 以降は空の冷蔵庫が初期状態。空配列はユーザーが全削除した状態としても保持する
           setIngredients(
             shouldRefreshSeed
-              ? SEED_INGREDIENTS
+              ? []
               : normalizeIngredients(
-                  Array.isArray(parsed.ingredients) ? parsed.ingredients : SEED_INGREDIENTS
+                  Array.isArray(parsed.ingredients) ? parsed.ingredients : []
                 )
           );
           setRecipes(
             shouldRefreshSeed
-              ? SEED_RECIPES
+              ? []
               : Array.isArray(parsed.recipes)
                 ? parsed.recipes
-                : SEED_RECIPES
+                : []
           );
           setShoppingList(Array.isArray(parsed.shoppingList) ? parsed.shoppingList : []);
           setCookedPhotos(
             shouldRefreshSeed
-              ? SEED_COOKED_PHOTOS
+              ? []
               : Array.isArray(parsed.cookedPhotos)
                 ? parsed.cookedPhotos
-                : SEED_COOKED_PHOTOS
+                : []
           );
           if (parsed.language === 'ja' || parsed.language === 'en') {
             setLanguage(parsed.language);
@@ -484,10 +481,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const resetDemoData = useCallback(() => {
     setUser(INITIAL_USER);
-    setIngredients(SEED_INGREDIENTS);
-    setRecipes(SEED_RECIPES);
+    setIngredients([]);
+    setRecipes([]);
     setShoppingList([]);
-    setCookedPhotos(SEED_COOKED_PHOTOS);
+    setCookedPhotos([]);
     setLanguage(getDeviceLanguage());
     setNotificationsEnabled(true);
     resetFridgeCardEnterAnimation();

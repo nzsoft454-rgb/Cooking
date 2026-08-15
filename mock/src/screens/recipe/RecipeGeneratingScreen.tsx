@@ -1,22 +1,25 @@
-import { CommonActions } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import {
   ConfirmDialog,
+  FooterBar,
+  FooterPrimaryButton,
   HeroCard,
   Header,
   Screen,
 } from '../../components/ui';
 import {
-  generateRecipe,
+  generateRecipes,
 } from '../../services/generateRecipe';
-import { RecipeStackParamList } from '../../navigation/types';
+import { resetToRecipeHome, resetTabToHome } from '../../navigation/navigationHelpers';
+import { RecipeStackParamList, RootTabParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 import { getGeminiApiHintKey } from '../../utils/geminiApiHint';
 import { resolveGeminiErrorKey } from '../../utils/resolveGeminiError';
+import type { NavigationProp } from '@react-navigation/native';
 
 type Props = NativeStackScreenProps<RecipeStackParamList, 'RecipeGenerating'>;
 
@@ -31,39 +34,28 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
     mode = 'normal',
     generationKey = 0,
     geminiPreConsumed = false,
+    origin,
   } = route.params;
   const isGacha = mode === 'gacha';
   const cancelledRef = useRef(false);
   const [quotaDialogOpen, setQuotaDialogOpen] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const flowOrigin = origin ?? (isGacha ? 'fridge' : undefined);
 
   const cancelGeneration = () => {
     cancelledRef.current = true;
   };
 
-  const goBackToFridge = () => {
+  const leaveGenerating = () => {
     cancelGeneration();
-    navigation.dispatch(
-      CommonActions.reset({
-        index: 0,
-        routes: [{ name: 'RecipeHome' }],
-      })
-    );
-    navigation.getParent()?.navigate('FridgeTab', { screen: 'FridgeHome' });
-  };
-
-  const handleBack = () => {
-    cancelGeneration();
-    navigation.goBack();
-  };
-
-  const exitOnQuota = () => {
-    setQuotaDialogOpen(false);
-    if (isGacha) {
-      goBackToFridge();
-      return;
+    resetToRecipeHome(navigation);
+    const parent = navigation.getParent<NavigationProp<RootTabParamList>>();
+    if (!parent) return;
+    if (flowOrigin === 'fridge') {
+      resetTabToHome(parent, 'FridgeTab');
+    } else if (flowOrigin === 'camera') {
+      resetTabToHome(parent, 'DashboardTab');
     }
-    handleBack();
   };
 
   useEffect(() => {
@@ -91,21 +83,23 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
       }
 
       try {
-        const generated = await generateRecipe(
+        const generatedList = await generateRecipes(
           ingredientNames,
           conditions,
           isGacha ? 'gacha' : 'normal',
         );
         if (aborted()) return;
 
-        const recipe = addRecipe({
-          ...generated,
-          userMemo: '',
-          isFavorite: false,
-        });
+        const savedRecipes = generatedList.map((generated) =>
+          addRecipe({
+            ...generated,
+            userMemo: '',
+            isFavorite: false,
+          }),
+        );
         completed = true;
         navigation.replace('RecipeDetail', {
-          recipeId: recipe.id,
+          recipeId: savedRecipes[0].id,
           ingredientIds,
         });
       } catch (err) {
@@ -141,16 +135,19 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
     user.isPremium,
   ]);
 
+  const dishTotal = Math.max(1, conditions.dishCount);
   const label = isGacha
     ? t('recipe.generating.gachaLoading')
-    : t('recipe.generating.normalLoading');
+    : dishTotal > 1
+      ? t('recipe.generating.multiLoading', { count: dishTotal })
+      : t('recipe.generating.normalLoading');
 
   return (
     <Screen edges={['top']}>
       <Header
         title={t('recipe.generating.title')}
         subtitle={t('recipe.generating.subtitle')}
-        onBack={isGacha ? goBackToFridge : handleBack}
+        onBack={leaveGenerating}
       />
       <View style={styles.center}>
         <HeroCard style={styles.loadingCard}>
@@ -163,9 +160,18 @@ export function RecipeGeneratingScreen({ navigation, route }: Props) {
         </HeroCard>
       </View>
 
+      {error ? (
+        <FooterBar>
+          <FooterPrimaryButton label={t('common.back')} onPress={leaveGenerating} />
+        </FooterBar>
+      ) : null}
+
       <ConfirmDialog
         visible={quotaDialogOpen}
-        onClose={exitOnQuota}
+        onClose={() => {
+          setQuotaDialogOpen(false);
+          leaveGenerating();
+        }}
         title={t('gemini.quotaZero')}
         body={t('gemini.quotaExceeded')}
         dismissLabel={t('common.close')}

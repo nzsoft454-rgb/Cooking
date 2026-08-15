@@ -55,10 +55,17 @@ JSONのみ返してください:
   ]
 }`;
 
+export type DishGenerationContext = {
+  dishIndex: number;
+  dishTotal: number;
+  previousDishes: Array<{ title: string; ingredients: string[] }>;
+};
+
 export function buildRecipePrompt(
   sourceIngredients: string[],
   conditions: RecipeConditions,
   gacha: boolean,
+  dishContext?: DishGenerationContext,
 ): string {
   const ingredients = sourceIngredients.length
     ? sourceIngredients.join('、')
@@ -68,10 +75,36 @@ export function buildRecipePrompt(
     ? 'ガチャモード: 抽選された残り物を無理やり使う、ユーモアのあるレシピ名にしてください。title の先頭に「【食材ガチャ】」を付けてください。'
     : '通常モード: 実用的で再現しやすい家庭料理にしてください。';
 
+  const dishTotal = dishContext?.dishTotal ?? conditions.dishCount;
+  const dishIndex = dishContext?.dishIndex ?? 1;
+
+  const multiDishNote =
+    dishTotal > 1
+      ? `
+複数品モード: 全${dishTotal}品のうち${dishIndex}品目を生成してください。
+- 使える食材の候補: ${ingredients}
+- この1品では、候補から使う食材を自由に選んでください（全部使っても、一部だけでもOK）
+- 同じ食材を複数の品目で使っても構いません（例: 玉ねぎのみで2品なら、玉ねぎを使った別々の2メニュー）
+- 他の品目とメニュー名・調理法が被らないよう、バリエーションを出してください
+- 候補にない食材は追加しない
+- 例: ねぎ・牛肉・じゃがいもで2品 → 1品目は3つ全部、2品目はねぎと牛肉だけ、など
+${
+  dishContext?.previousDishes.length
+    ? `- すでに決まった品目（被らないように）:\n${dishContext.previousDishes
+        .map(
+          (dish, i) =>
+            `  ${i + 1}. ${dish.title}（使用: ${dish.ingredients.join('、') || '—'}）`,
+        )
+        .join('\n')}`
+    : ''
+}`
+      : '';
+
   return `あなたは日本の家庭向けレシピ生成AIです。
 以下の条件でレシピを1件だけ生成してください。
 
 ${gachaNote}
+${multiDishNote}
 
 使う食材: ${ingredients}
 調理時間: ${conditions.cookingTime}
@@ -79,7 +112,7 @@ ${gachaNote}
 ジャンル: ${conditions.genre}
 人数: ${conditions.servings}人前
 味付け: ${conditions.seasoning}
-品数: ${conditions.dishCount}
+作る品数: ${dishTotal}品（このレスポンスは${dishIndex}品目）
 
 JSONのみ返してください:
 {

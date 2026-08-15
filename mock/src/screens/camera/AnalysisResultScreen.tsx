@@ -1,5 +1,6 @@
+import type { NavigationProp } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Alert,
@@ -27,8 +28,8 @@ import {
   SectionTitle,
 } from '../../components/ui';
 import { AttributeField } from '../../components/d1Layout';
-import { resetToDashboardHome } from '../../navigation/resetToDashboardHome';
-import { CameraStackParamList } from '../../navigation/types';
+import { navigateTabScreen, resetToDashboardHome } from '../../navigation/navigationHelpers';
+import { CameraStackParamList, RootTabParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 import type { DetectedItem, Ingredient } from '../../types';
@@ -71,7 +72,7 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
   const { addIngredients, updateIngredient, softDeleteIngredient } = useApp();
   const imageUrl = route.params.imageUrl;
   const defaultQty = t('common.defaultQuantity');
-  const [originalItems] = useState<DetectedItem[]>(
+  const [originalItems, setOriginalItems] = useState<DetectedItem[]>(
     route.params.items.map(normalizeDetectedItem),
   );
   const [step, setStep] = useState<AnalysisStep>(1);
@@ -84,15 +85,23 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
   const savedIngredientsRef = useRef<Ingredient[] | null>(null);
 
   const confidenceLabel = (c: string) => {
-    if (c === 'high') return t('confidence.high');
-    if (c === 'low') return t('confidence.low');
-    if (c === 'manual') return t('confidence.manual');
+    if (c === 'high' || c === 'medium' || c === 'low' || c === 'manual') {
+      return t(`confidence.${c}`);
+    }
     return c;
   };
 
   React.useEffect(() => {
     setNewQty(defaultQty);
   }, [defaultQty]);
+
+  useEffect(() => {
+    const next = route.params.items.map(normalizeDetectedItem);
+    setOriginalItems(next);
+    setItems(next);
+    setEditIndex(0);
+    savedIngredientsRef.current = null;
+  }, [route.params.items, route.params.imageUrl]);
 
   const reviewCount = React.useMemo(() => items.filter(needsReview).length, [items]);
 
@@ -150,8 +159,9 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
       t('camera.analysisResult.savedMessage', { count: created.length })
     );
     // 分析フローを閉じ、ダッシュボードに戻ったときに分析結果が残らないようにする
-    resetToDashboardHome(navigation);
-    navigation.getParent()?.navigate('FridgeTab', { screen: 'FridgeHome' });
+    const parent = navigation.getParent<NavigationProp<RootTabParamList>>();
+    if (parent) navigateTabScreen(parent, 'FridgeTab', 'FridgeHome');
+    requestAnimationFrame(() => resetToDashboardHome(navigation));
   };
 
   const cookNow = () => {
@@ -159,6 +169,7 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
     navigation.navigate('CookingConfirm', {
       ingredientIds: created.map((c) => c.id),
       ingredientNames: created.map((c) => c.name),
+      origin: 'camera',
     });
   };
 
@@ -467,6 +478,13 @@ export function AnalysisResultScreen({ navigation, route }: Props) {
               label={t('common.back')}
               variant="ghost"
               onPress={() => setStep(1)}
+            />
+            <FooterPrimaryButton
+              label={t('camera.analysisResult.editAllNames')}
+              variant="secondary"
+              onPress={() =>
+                navigation.navigate('ManualEdit', { items, imageUrl })
+              }
             />
             <FooterPrimaryButton
               label={t('camera.analysisResult.saveToPreview')}

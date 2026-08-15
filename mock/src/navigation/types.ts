@@ -16,6 +16,7 @@ export type CameraStackParamList = {
   CookingConfirm: {
     ingredientIds: string[];
     ingredientNames: string[];
+    origin?: 'camera';
   };
 };
 
@@ -25,11 +26,13 @@ export type FridgeStackParamList = {
     query: string;
     sortKey: FridgeSortKey;
   };
+  CatalogPick: undefined;
   IngredientEdit: { ingredientId: string };
   IngredientBatchEdit: { ingredientIds: string[] };
   CookingConfirm: {
     ingredientIds: string[];
     ingredientNames: string[];
+    origin?: 'fridge';
   };
 };
 
@@ -45,6 +48,8 @@ export type RecipeStackParamList = {
     generationKey?: number;
     /** ガチャ開始前に FridgeHome で Gemini を消費済み */
     geminiPreConsumed?: boolean;
+    /** 生成キャンセル時に戻すタブ */
+    origin?: 'camera' | 'fridge';
   };
   RecipeDetail: { recipeId: string; ingredientIds?: string[] };
   PostCookConsume: {

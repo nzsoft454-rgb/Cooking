@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Alert, StyleSheet, Text, View } from 'react-native';
-import { HeroCard, Header, Screen } from '../../components/ui';
+import { HeroCard, Header, FooterBar, FooterPrimaryButton, Screen } from '../../components/ui';
 import { CameraStackParamList } from '../../navigation/types';
 import { analyzeImage } from '../../services/analyzeImage';
 import { useApp } from '../../store/AppContext';
@@ -83,6 +83,7 @@ export function AnalyzingScreen({ navigation, route }: Props) {
       <Header
         title={isReceipt ? t('camera.analyzing.titleReceipt') : t('camera.analyzing.title')}
         subtitle={t('camera.analyzing.subtitle')}
+        onBack={() => navigation.goBack()}
       />
       <View style={styles.center}>
         <HeroCard style={styles.loadingCard}>
@@ -96,6 +97,11 @@ export function AnalyzingScreen({ navigation, route }: Props) {
           </View>
         </HeroCard>
       </View>
+      {error ? (
+        <FooterBar>
+          <FooterPrimaryButton label={t('common.back')} onPress={() => navigation.goBack()} />
+        </FooterBar>
+      ) : null}
     </Screen>
   );
 }

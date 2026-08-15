@@ -124,7 +124,7 @@ export function RecipeHomeScreen({ navigation, route }: Props) {
     if (route.params?.initialTab) {
       setTab(route.params.initialTab);
     }
-  }, [route.params?.initialTab]);
+  }, [route.params, route.params?.initialTab]);
 
   const list = useMemo(() => {
     if (tab === 'fav') return recipes.filter((r) => r.isFavorite);

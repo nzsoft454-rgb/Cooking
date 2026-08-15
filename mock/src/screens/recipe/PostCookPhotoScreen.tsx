@@ -173,7 +173,15 @@ export function PostCookPhotoScreen({ navigation, route }: Props) {
 
         subtitle={t('recipe.postCookPhoto.subtitle')}
 
-        onBack={() => navigation.goBack()}
+        onBack={() =>
+          navigation.reset({
+            index: 1,
+            routes: [
+              { name: 'RecipeHome' },
+              { name: 'RecipeDetail', params: { recipeId } },
+            ],
+          })
+        }
 
       />
 

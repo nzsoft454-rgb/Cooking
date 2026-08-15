@@ -30,6 +30,7 @@ type Props = {
   onToggle: (id: string) => void;
   onEdit: (id: string) => void;
   emptyMessage: string;
+  emptyComponent?: React.ReactNode;
 };
 
 type CardProps = {
@@ -178,6 +179,7 @@ export function FridgeIngredientGrid({
   onToggle,
   onEdit,
   emptyMessage,
+  emptyComponent,
 }: Props) {
   const { width: screenWidth } = useWindowDimensions();
   const cardWidth =
@@ -190,9 +192,13 @@ export function FridgeIngredientGrid({
       extraData={selected}
       keyExtractor={(item) => item.id}
       numColumns={NUM_COLUMNS}
-      contentContainerStyle={styles.grid}
-      columnWrapperStyle={styles.row}
-      ListEmptyComponent={<Text style={styles.empty}>{emptyMessage}</Text>}
+      contentContainerStyle={[styles.grid, items.length === 0 && styles.gridEmpty]}
+      columnWrapperStyle={items.length === 0 ? undefined : styles.row}
+      ListEmptyComponent={
+        <View style={{ width: screenWidth - FRIDGE_GRID_H_PAD * 2 }}>
+          {emptyComponent ?? <Text style={styles.empty}>{emptyMessage}</Text>}
+        </View>
+      }
       renderItem={({ item, index }) => {
         const isRowEnd = (index + 1) % NUM_COLUMNS === 0;
         const thumbSize = Math.min(56, Math.floor(cardWidth - 12));
@@ -219,6 +225,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: FRIDGE_GRID_H_PAD,
     paddingTop: 12,
     paddingBottom: 8,
+  },
+  gridEmpty: {
+    flexGrow: 1,
   },
   list: {
     flex: 1,

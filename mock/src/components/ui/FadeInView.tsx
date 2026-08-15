@@ -18,7 +18,7 @@ export function FadeInView({
     opacity.setValue(0.93);
     Animated.timing(opacity, {
       toValue: 1,
-      duration: MOTION.durationFast,
+      duration: MOTION.durationTransition,
       useNativeDriver: true,
     }).start();
   }, [contentKey, opacity]);

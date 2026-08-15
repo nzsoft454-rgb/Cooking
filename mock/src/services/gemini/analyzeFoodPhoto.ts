@@ -16,7 +16,7 @@ import {
 import { FOOD_PHOTO_PROMPT } from './prompts';
 import { FOOD_PHOTO_RESPONSE_SCHEMA } from './schemas';
 
-const MAX_ANALYSIS_ATTEMPTS = 3;
+const MAX_ANALYSIS_ATTEMPTS = 2;
 const RETRY_BOX_PROMPT_SUFFIX =
   '\n\n重要: 各 item に必ず box_2d を含めてください。座標は 0-1000 の [ymin, xmin, ymax, xmax] です。';
 

@@ -64,6 +64,7 @@ export function FridgeSearchScreen({ navigation, route }: Props) {
     navigation.navigate('CookingConfirm', {
       ingredientIds: selected,
       ingredientNames: selectedNames(),
+      origin: 'fridge',
     });
   };
 

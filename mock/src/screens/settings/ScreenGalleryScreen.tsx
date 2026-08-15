@@ -1,4 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { NavigationProp } from '@react-navigation/native';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text } from 'react-native';
@@ -7,7 +8,8 @@ import { SettingsRow } from '../../components/layout/ListRows';
 import { CAPTURE_IMAGE_KEY, RECEIPT_IMAGE_KEY } from '../../data/images';
 import { DEFAULT_CONDITIONS, DUMMY_DETECTED } from '../../data/dummy';
 import { MOCK_RECEIPT_LINES } from '../../data/receiptMock';
-import { SettingsStackParamList } from '../../navigation/types';
+import { openTabScreenFresh, type RootTabName } from '../../navigation/navigationHelpers';
+import type { RootTabParamList, SettingsStackParamList } from '../../navigation/types';
 import { useApp } from '../../store/AppContext';
 import { SettingsSubScreenLayout, settingsStyles } from './SettingsSubScreenLayout';
 
@@ -45,8 +47,9 @@ export function ScreenGalleryScreen({ navigation }: Props) {
   const gachaIngredientIds = gachaPool.slice(0, 2).map((item) => item.id);
   const gachaIngredientNames = gachaPool.slice(0, 2).map((item) => item.name);
 
-  const go = (tab: string, screen: string, params?: object) => {
-    navigation.getParent()?.navigate(tab, { screen, params });
+  const go = (tab: RootTabName, screen: string, params?: object) => {
+    const parent = navigation.getParent<NavigationProp<RootTabParamList>>();
+    if (parent) openTabScreenFresh(parent, tab, screen, params);
   };
 
   const groups: GalleryGroup[] = [
@@ -73,7 +76,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           onPress: () =>
             go('DashboardTab', 'Analyzing', {
               imageUrl: CAPTURE_IMAGE_KEY,
-              mode: 'food',
+              mode: 'photo',
             }),
         },
         {
@@ -112,7 +115,11 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
             if (ingredientIds.length < 1) return;
-            go('DashboardTab', 'CookingConfirm', { ingredientIds, ingredientNames });
+            go('DashboardTab', 'CookingConfirm', {
+              ingredientIds,
+              ingredientNames,
+              origin: 'camera',
+            });
           },
         },
       ],
@@ -124,6 +131,11 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           id: 'B-001',
           label: t('settings.screenGallery.fridgeHome'),
           onPress: () => go('FridgeTab', 'FridgeHome'),
+        },
+        {
+          id: 'B-001-catalog',
+          label: t('settings.screenGallery.catalogPick'),
+          onPress: () => go('FridgeTab', 'CatalogPick'),
         },
         {
           id: 'B-001-search',
@@ -160,7 +172,11 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
             if (ingredientIds.length < 1) return;
-            go('FridgeTab', 'CookingConfirm', { ingredientIds, ingredientNames });
+            go('FridgeTab', 'CookingConfirm', {
+              ingredientIds,
+              ingredientNames,
+              origin: 'fridge',
+            });
           },
         },
       ],
@@ -184,6 +200,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
               ingredientNames,
               conditions: DEFAULT_CONDITIONS,
               generationKey: Date.now(),
+              origin: 'camera',
             });
           },
         },
@@ -199,6 +216,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
               conditions: DEFAULT_CONDITIONS,
               mode: 'gacha',
               generationKey: Date.now(),
+              origin: 'fridge',
             });
           },
         },

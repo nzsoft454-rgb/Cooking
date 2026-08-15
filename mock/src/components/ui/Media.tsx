@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ActivityIndicator,
+  Animated,
   Image,
   ImageLoadEventData,
   LayoutChangeEvent,
@@ -17,6 +18,7 @@ import {
 } from 'react-native';
 import { IMAGE_COLORS } from '../../data/dummy';
 import { colors } from '../../theme/colors';
+import { MOTION } from '../../theme/motion';
 import { resolveImageSource } from '../../utils/resolveImageSource';
 import { ZoomableLightboxImage } from './ZoomableLightboxImage';
 
@@ -182,11 +184,31 @@ function ImageLightbox({
   const { t } = useTranslation();
   const source = resolveImageSource(imageUrl);
   const { width: screenW, height: screenH } = useWindowDimensions();
+  const backdropOpacity = React.useRef(new Animated.Value(0)).current;
+  const contentOpacity = React.useRef(new Animated.Value(0)).current;
 
   const imageFrame = useMemo(
     () => ({ width: Math.max(screenW - 32, 1), height: Math.max(screenH - 120, 1) }),
     [screenH, screenW],
   );
+
+  useEffect(() => {
+    if (!visible) return;
+    backdropOpacity.setValue(0);
+    contentOpacity.setValue(0);
+    Animated.parallel([
+      Animated.timing(backdropOpacity, {
+        toValue: 1,
+        duration: MOTION.durationTransition,
+        useNativeDriver: true,
+      }),
+      Animated.timing(contentOpacity, {
+        toValue: 1,
+        duration: MOTION.durationTransition,
+        useNativeDriver: true,
+      }),
+    ]).start();
+  }, [visible, backdropOpacity, contentOpacity]);
 
   if (!source) return null;
 
@@ -194,18 +216,18 @@ function ImageLightbox({
     <Modal
       visible={visible}
       transparent
-      animationType="fade"
+      animationType="none"
       onRequestClose={onClose}
       statusBarTranslucent
     >
-      <View style={styles.lightboxRoot}>
+      <Animated.View style={[styles.lightboxRoot, { opacity: backdropOpacity }]}>
         <Pressable
           style={styles.lightboxBackdrop}
           onPress={onClose}
           accessibilityRole="button"
           accessibilityLabel={t('common.close')}
         />
-        <View style={styles.lightboxContent} pointerEvents="box-none">
+        <Animated.View style={[styles.lightboxContent, { opacity: contentOpacity }]} pointerEvents="box-none">
           <ZoomableLightboxImage
             source={source}
             width={imageFrame.width}
@@ -222,8 +244,8 @@ function ImageLightbox({
           >
             <Text style={styles.lightboxCloseText}>{t('common.close')}</Text>
           </Pressable>
-        </View>
-      </View>
+        </Animated.View>
+      </Animated.View>
     </Modal>
   );
 }

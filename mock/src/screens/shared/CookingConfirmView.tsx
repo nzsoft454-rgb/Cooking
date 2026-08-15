@@ -1,4 +1,4 @@
-import { CommonActions, NavigationProp, useFocusEffect, useNavigation } from '@react-navigation/native';
+import { NavigationProp, useFocusEffect, useNavigation } from '@react-navigation/native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -24,14 +24,16 @@ import {
   confirmStyles,
 } from '../../components/ui';
 import { DEFAULT_CONDITIONS, delay } from '../../data/dummy';
+import { resetStackTo, type CookingOrigin } from '../../navigation/navigationHelpers';
 import { useApp } from '../../store/AppContext';
 import { colors } from '../../theme/colors';
 import type { RecipeConditions } from '../../types';
-import type { CameraStackParamList, RootTabParamList } from '../../navigation/types';
+import type { RootTabParamList } from '../../navigation/types';
 
 type Props = {
   ingredientIds: string[];
   ingredientNames: string[];
+  origin: CookingOrigin;
 };
 
 type ModalStep = null | 'confirm' | 'quota' | 'watchingAd';
@@ -41,6 +43,9 @@ const AD_REWARD = 1;
 
 /** 0.5人前〜4人前（0.5刻み） */
 const SERVING_OPTIONS = Array.from({ length: 8 }, (_, i) => (i + 1) * 0.5);
+
+/** 作る品数 */
+const DISH_COUNT_OPTIONS = [1, 2, 3, 4];
 
 type ConditionOption = { value: string; labelKey: string };
 
@@ -138,7 +143,38 @@ function ServingChipSection({
   );
 }
 
-export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
+function DishCountChipSection({
+  selected,
+  onSelect,
+}: {
+  selected: number;
+  onSelect: (v: number) => void;
+}) {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <SectionTitle label={t('cookingConfirm.sectionDishCount')} />
+      <Panel style={styles.chipPanel}>
+        <View style={styles.chipBlock}>
+          <Text style={styles.dishCountHint}>{t('cookingConfirm.dishCountHint')}</Text>
+          <View style={styles.chipRow}>
+            {DISH_COUNT_OPTIONS.map((v) => (
+              <Chip
+                key={v}
+                label={t('common.dishCount', { count: v })}
+                selected={selected === v}
+                onPress={() => onSelect(v)}
+              />
+            ))}
+          </View>
+        </View>
+      </Panel>
+    </>
+  );
+}
+
+export function CookingConfirmView({ ingredientIds, ingredientNames, origin }: Props) {
   const { t } = useTranslation();
   const stackNav = useNavigation();
   const navigation = useNavigation<NavigationProp<RootTabParamList>>();
@@ -198,16 +234,6 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
     navigatingRef.current = true;
     setModalStep(null);
     setAdMessageKey(null);
-    // ダッシュボード経由の場合は分析フローを閉じておく
-    const stackState = stackNav.getState();
-    if (stackState?.routeNames?.includes('DashboardHome')) {
-      stackNav.dispatch(
-        CommonActions.reset({
-          index: 0,
-          routes: [{ name: 'DashboardHome' satisfies keyof CameraStackParamList }],
-        })
-      );
-    }
     navigation.navigate('RecipeTab', {
       screen: 'RecipeGenerating',
       params: {
@@ -215,7 +241,11 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
         ingredientNames,
         conditions,
         generationKey: Date.now(),
+        origin,
       },
+    });
+    requestAnimationFrame(() => {
+      resetStackTo(stackNav, origin === 'camera' ? 'DashboardHome' : 'FridgeHome');
     });
   };
 
@@ -283,6 +313,11 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
           onSelect={(v) => setField('servings', v)}
         />
 
+        <DishCountChipSection
+          selected={conditions.dishCount}
+          onSelect={(v) => setField('dishCount', v)}
+        />
+
         <ChipSection
           label={t('cookingConfirm.sectionSeasoning')}
           options={SEASONING_OPTIONS}
@@ -313,6 +348,7 @@ export function CookingConfirmView({ ingredientIds, ingredientNames }: Props) {
             difficulty: conditionLabel(conditions.difficulty),
             cookingTime: conditionLabel(conditions.cookingTime),
             servings: t('common.servings', { count: conditions.servings }),
+            dishCount: t('common.dishCount', { count: conditions.dishCount }),
           }),
         ]}
         cancelLabel={t('common.cancel')}
@@ -422,6 +458,12 @@ const styles = StyleSheet.create({
   chipRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+  },
+  dishCountHint: {
+    marginBottom: 10,
+    fontSize: 12,
+    color: colors.inkMuted,
+    lineHeight: 18,
   },
   notePanel: {
     marginTop: 20,

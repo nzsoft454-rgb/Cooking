@@ -10,6 +10,7 @@ export function CookingConfirmScreen({ route }: Props) {
     <CookingConfirmView
       ingredientIds={route.params.ingredientIds}
       ingredientNames={route.params.ingredientNames}
+      origin={route.params.origin ?? 'camera'}
     />
   );
 }
