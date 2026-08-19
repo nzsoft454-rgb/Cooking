@@ -10,6 +10,7 @@ config.resolver.unstable_enablePackageExports = false;
 config.resolver.blockList = [
   /.*[/\\]android[/\\]\.cxx[/\\].*/,
   /.*[/\\]android[/\\]build[/\\].*/,
+  /.*[/\\]\.venv-img[/\\].*/,
 ];
 
 module.exports = config;

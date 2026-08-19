@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "karatsukihokkikai",
+    "name": "殻付きホッキ貝",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きホッキ貝 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukihokkikai.jpg"
+  },
+  {
+    "slug": "karatsukibaikai",
+    "name": "殻付きバイ貝",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きバイ貝 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukibaikai.jpg"
+  },
+  {
+    "slug": "karatsukihotate",
+    "name": "殻付きホタテ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きホタテ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukihotate.jpg"
+  },
+  {
+    "slug": "karatsukiebi",
+    "name": "殻付きエビ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きエビ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukiebi.jpg"
+  },
+  {
+    "slug": "karatsukikani",
+    "name": "殻付きカニ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きカニ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukikani.jpg"
+  },
+  {
+    "slug": "ikaichiyahoshi",
+    "name": "イカ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イカ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikaichiyahoshi.jpg"
+  },
+  {
+    "slug": "sabaichiyahoshi",
+    "name": "サバ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw サバ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sabaichiyahoshi.jpg"
+  },
+  {
+    "slug": "ajiichiyahoshi",
+    "name": "アジ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw アジ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ajiichiyahoshi.jpg"
+  },
+  {
+    "slug": "hokkeichiyahoshi",
+    "name": "ホッケ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ホッケ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hokkeichiyahoshi.jpg"
+  },
+  {
+    "slug": "sanmaichiyahoshi",
+    "name": "サンマ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw サンマ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sanmaichiyahoshi.jpg"
+  },
+  {
+    "slug": "iwashiichiyahoshi",
+    "name": "イワシ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イワシ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_iwashiichiyahoshi.jpg"
+  },
+  {
+    "slug": "iwashimaruboshishi",
+    "name": "イワシ丸干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イワシ丸干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_iwashimaruboshishi.jpg"
+  },
+  {
+    "slug": "kamasuichiyahoshi",
+    "name": "カマス一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw カマス一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kamasuichiyahoshi.jpg"
+  },
+  {
+    "slug": "sawaraichiyahoshi",
+    "name": "サワラ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw サワラ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sawaraichiyahoshi.jpg"
+  },
+  {
+    "slug": "buriichiyahoshi",
+    "name": "ブリ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ブリ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_buriichiyahoshi.jpg"
+  },
+  {
+    "slug": "kanpachiichiyahoshi",
+    "name": "カンパチ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw カンパチ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kanpachiichiyahoshi.jpg"
+  },
+  {
+    "slug": "hirameichiyahoshi",
+    "name": "ヒラメ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ヒラメ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hirameichiyahoshi.jpg"
+  },
+  {
+    "slug": "kareiichiyahoshi",
+    "name": "カレイ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw カレイ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kareiichiyahoshi.jpg"
+  },
+  {
+    "slug": "taiichiyahoshi",
+    "name": "タイ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw タイ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_taiichiyahoshi.jpg"
+  },
+  {
+    "slug": "madaiichiyahoshi",
+    "name": "マダイ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw マダイ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_madaiichiyahoshi.jpg"
+  }
+]

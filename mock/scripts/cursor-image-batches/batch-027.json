@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "kinakona",
+    "name": "きな粉",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw きな粉 (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kinakona.jpg"
+  },
+  {
+    "slug": "kuromamekona",
+    "name": "黒豆粉",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw 黒豆粉 (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kuromamekona.jpg"
+  },
+  {
+    "slug": "wasanbon",
+    "name": "和三盆",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw 和三盆 (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_wasanbon.jpg"
+  },
+  {
+    "slug": "aamondopuudoru",
+    "name": "アーモンドプードル",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw アーモンドプードル (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_aamondopuudoru.jpg"
+  },
+  {
+    "slug": "heezerunattsupuudoru",
+    "name": "ヘーゼルナッツプードル",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw ヘーゼルナッツプードル (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_heezerunattsupuudoru.jpg"
+  },
+  {
+    "slug": "pisutachiopuudoru",
+    "name": "ピスタチオプードル",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw ピスタチオプードル (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pisutachiopuudoru.jpg"
+  },
+  {
+    "slug": "maronpeesuto",
+    "name": "マロンペースト",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw マロンペースト (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_maronpeesuto.jpg"
+  },
+  {
+    "slug": "kuripeesuto",
+    "name": "栗ペースト",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw 栗ペースト (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kuripeesuto.jpg"
+  },
+  {
+    "slug": "ramureezun",
+    "name": "ラムレーズン",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw ラムレーズン (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ramureezun.jpg"
+  },
+  {
+    "slug": "mikkusunattsu",
+    "name": "ミックスナッツ",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw ミックスナッツ (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mikkusunattsu.jpg"
+  },
+  {
+    "slug": "iisuto",
+    "name": "イースト",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw イースト (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_iisuto.jpg"
+  },
+  {
+    "slug": "majipan",
+    "name": "マジパン",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw マジパン (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_majipan.jpg"
+  },
+  {
+    "slug": "dangokona",
+    "name": "団子粉",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw 団子粉 (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_dangokona.jpg"
+  },
+  {
+    "slug": "konsome",
+    "name": "コンソメ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw コンソメ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_konsome.jpg"
+  },
+  {
+    "slug": "buiyon",
+    "name": "ブイヨン",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ブイヨン (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_buiyon.jpg"
+  },
+  {
+    "slug": "karyuukonsome",
+    "name": "顆粒コンソメ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 顆粒コンソメ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karyuukonsome.jpg"
+  },
+  {
+    "slug": "chuukakonsome",
+    "name": "中華コンソメ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 中華コンソメ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chuukakonsome.jpg"
+  },
+  {
+    "slug": "wafuukonsome",
+    "name": "和風コンソメ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 和風コンソメ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_wafuukonsome.jpg"
+  },
+  {
+    "slug": "demigurasusoosu",
+    "name": "デミグラスソース",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw デミグラスソース (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_demigurasusoosu.jpg"
+  },
+  {
+    "slug": "howaitosoosu",
+    "name": "ホワイトソース",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ホワイトソース (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_howaitosoosu.jpg"
+  }
+]

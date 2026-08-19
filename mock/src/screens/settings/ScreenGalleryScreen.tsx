@@ -18,7 +18,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'ScreenGallery'>;
 type GalleryGroup = {
   title: string;
   items: {
-    id: string;
+    key: string;
     label: string;
     hint?: string;
     onPress: () => void;
@@ -57,12 +57,12 @@ export function ScreenGalleryScreen({ navigation }: Props) {
       title: t('settings.screenGallery.sectionCamera'),
       items: [
         {
-          id: 'A-001',
+          key: 'dashboard',
           label: t('settings.screenGallery.cameraHome'),
           onPress: () => go('DashboardTab', 'DashboardHome'),
         },
         {
-          id: 'A-001-a',
+          key: 'A-001-a',
           label: t('settings.screenGallery.captureConfirm'),
           onPress: () =>
             go('DashboardTab', 'CaptureConfirm', {
@@ -71,7 +71,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'A-001-b',
+          key: 'A-001-b',
           label: t('settings.screenGallery.analyzing'),
           onPress: () =>
             go('DashboardTab', 'Analyzing', {
@@ -80,7 +80,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'A-001-c',
+          key: 'A-001-c',
           label: t('settings.screenGallery.analysisResult'),
           onPress: () =>
             go('DashboardTab', 'AnalysisResult', {
@@ -89,7 +89,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'A-001-d',
+          key: 'A-001-d',
           label: t('settings.screenGallery.manualEdit'),
           onPress: () =>
             go('DashboardTab', 'ManualEdit', {
@@ -98,7 +98,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'R-001-c',
+          key: 'R-001-c',
           label: t('settings.screenGallery.receiptResult'),
           onPress: () =>
             go('DashboardTab', 'ReceiptResult', {
@@ -110,7 +110,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'A-001-e',
+          key: 'A-001-e',
           label: t('settings.screenGallery.cookingConfirm'),
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
@@ -128,17 +128,17 @@ export function ScreenGalleryScreen({ navigation }: Props) {
       title: t('settings.screenGallery.sectionFridge'),
       items: [
         {
-          id: 'B-001',
+          key: 'B-001',
           label: t('settings.screenGallery.fridgeHome'),
           onPress: () => go('FridgeTab', 'FridgeHome'),
         },
         {
-          id: 'B-001-catalog',
+          key: 'B-001-catalog',
           label: t('settings.screenGallery.catalogPick'),
           onPress: () => go('FridgeTab', 'CatalogPick'),
         },
         {
-          id: 'B-001-search',
+          key: 'B-001-search',
           label: t('settings.screenGallery.fridgeSearch'),
           onPress: () =>
             go('FridgeTab', 'FridgeSearch', {
@@ -147,7 +147,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
             }),
         },
         {
-          id: 'B-001-a',
+          key: 'B-001-a',
           label: t('settings.screenGallery.ingredientEdit'),
           hint: t('settings.screenGallery.needsOneIngredient'),
           onPress: () => {
@@ -156,7 +156,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'B-001-batch',
+          key: 'B-001-batch',
           label: t('settings.screenGallery.ingredientBatchEdit'),
           hint: t('settings.screenGallery.needsTwoIngredients'),
           onPress: () => {
@@ -167,7 +167,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'B-001-cook',
+          key: 'B-001-cook',
           label: t('settings.screenGallery.fridgeCookingConfirm'),
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
@@ -185,12 +185,12 @@ export function ScreenGalleryScreen({ navigation }: Props) {
       title: t('settings.screenGallery.sectionRecipe'),
       items: [
         {
-          id: 'C-001',
+          key: 'C-001',
           label: t('settings.screenGallery.recipeHome'),
           onPress: () => go('RecipeTab', 'RecipeHome'),
         },
         {
-          id: 'C-001-a',
+          key: 'C-001-a',
           label: t('settings.screenGallery.recipeGenerating'),
           hint: t('settings.screenGallery.needsIngredients'),
           onPress: () => {
@@ -205,7 +205,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'C-001-gacha',
+          key: 'C-001-gacha',
           label: t('settings.screenGallery.recipeGeneratingGacha'),
           hint: t('settings.screenGallery.needsGachaIngredients'),
           onPress: () => {
@@ -221,7 +221,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'C-001-b',
+          key: 'C-001-b',
           label: t('settings.screenGallery.recipeDetail'),
           hint: t('settings.screenGallery.needsRecipe'),
           onPress: () => {
@@ -233,7 +233,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'C-001-consume',
+          key: 'C-001-consume',
           label: t('settings.screenGallery.postCookConsume'),
           hint: t('settings.screenGallery.needsRecipe'),
           onPress: () => {
@@ -246,7 +246,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'C-001-photo',
+          key: 'C-001-photo',
           label: t('settings.screenGallery.postCookPhoto'),
           hint: t('settings.screenGallery.needsRecipe'),
           onPress: () => {
@@ -258,7 +258,7 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           },
         },
         {
-          id: 'C-001-photo-detail',
+          key: 'C-001-photo-detail',
           label: t('settings.screenGallery.cookedPhotoDetail'),
           hint: t('settings.screenGallery.needsPhoto'),
           onPress: () => {
@@ -272,42 +272,42 @@ export function ScreenGalleryScreen({ navigation }: Props) {
       title: t('settings.screenGallery.sectionSettings'),
       items: [
         {
-          id: 'D-001',
+          key: 'D-001',
           label: t('settings.screenGallery.settingsHome'),
           onPress: () => go('SettingsTab', 'SettingsHome'),
         },
         {
-          id: 'D-001-a',
+          key: 'D-001-a',
           label: t('settings.home.legal'),
           onPress: () => navigation.navigate('Legal'),
         },
         {
-          id: 'D-001-b',
+          key: 'D-001-b',
           label: t('settings.home.language'),
           onPress: () => navigation.navigate('Language'),
         },
         {
-          id: 'D-001-c',
+          key: 'D-001-c',
           label: t('settings.home.profile'),
           onPress: () => navigation.navigate('Profile'),
         },
         {
-          id: 'D-001-d',
+          key: 'D-001-d',
           label: t('settings.home.help'),
           onPress: () => navigation.navigate('Help'),
         },
         {
-          id: 'D-001-e',
+          key: 'D-001-e',
           label: t('settings.home.premium'),
           onPress: () => navigation.navigate('Premium'),
         },
         {
-          id: 'D-001-f',
+          key: 'D-001-f',
           label: t('settings.home.notifications'),
           onPress: () => navigation.navigate('Notifications'),
         },
         {
-          id: 'login',
+          key: 'login',
           label: t('settings.home.login'),
           onPress: () => navigation.navigate('Login'),
         },
@@ -328,11 +328,11 @@ export function ScreenGalleryScreen({ navigation }: Props) {
           <SectionTitle label={group.title} />
           <Panel style={settingsStyles.panel}>
             {group.items.map((item, index) => (
-              <React.Fragment key={item.id}>
+              <React.Fragment key={item.key}>
                 {index > 0 ? <PanelDivider /> : null}
                 <SettingsRow
                   label={item.label}
-                  meta={item.hint ? `${item.id} · ${item.hint}` : item.id}
+                  meta={item.hint}
                   onPress={item.onPress}
                 />
               </React.Fragment>

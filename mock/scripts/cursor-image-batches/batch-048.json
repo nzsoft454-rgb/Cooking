@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "roozumariifureeku",
+    "name": "ローズマリーフレーク",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ローズマリーフレーク (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_roozumariifureeku.jpg"
+  },
+  {
+    "slug": "mintofureeku",
+    "name": "ミントフレーク",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ミントフレーク (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mintofureeku.jpg"
+  },
+  {
+    "slug": "seejifureeku",
+    "name": "セージフレーク",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw セージフレーク (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_seejifureeku.jpg"
+  },
+  {
+    "slug": "dirufureeku",
+    "name": "ディルフレーク",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ディルフレーク (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_dirufureeku.jpg"
+  },
+  {
+    "slug": "fennerufureeku",
+    "name": "フェンネルフレーク",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw フェンネルフレーク (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_fennerufureeku.jpg"
+  },
+  {
+    "slug": "purobansuhaabu",
+    "name": "プロバンスハーブ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw プロバンスハーブ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_purobansuhaabu.jpg"
+  },
+  {
+    "slug": "sumookukuriimuchiizu",
+    "name": "スモーククリームチーズ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw スモーククリームチーズ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sumookukuriimuchiizu.jpg"
+  },
+  {
+    "slug": "haabukuriimuchiizu",
+    "name": "ハーブクリームチーズ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ハーブクリームチーズ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_haabukuriimuchiizu.jpg"
+  },
+  {
+    "slug": "furesshumottsuarera",
+    "name": "フレッシュモッツァレラ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw フレッシュモッツァレラ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_furesshumottsuarera.jpg"
+  },
+  {
+    "slug": "doraimottsuarera",
+    "name": "ドライモッツァレラ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ドライモッツァレラ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_doraimottsuarera.jpg"
+  },
+  {
+    "slug": "suraisuchedaa",
+    "name": "スライスチェダー",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw スライスチェダー (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_suraisuchedaa.jpg"
+  },
+  {
+    "slug": "burokkuchedaa",
+    "name": "ブロックチェダー",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ブロックチェダー (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_burokkuchedaa.jpg"
+  },
+  {
+    "slug": "suraisugooda",
+    "name": "スライスゴーダ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw スライスゴーダ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_suraisugooda.jpg"
+  },
+  {
+    "slug": "burokkugooda",
+    "name": "ブロックゴーダ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ブロックゴーダ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_burokkugooda.jpg"
+  },
+  {
+    "slug": "konaparumezan",
+    "name": "粉パルメザン",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw 粉パルメザン (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_konaparumezan.jpg"
+  },
+  {
+    "slug": "kezuriparumezan",
+    "name": "削りパルメザン",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw 削りパルメザン (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kezuriparumezan.jpg"
+  },
+  {
+    "slug": "pekoriinoromaano",
+    "name": "ペコリーノロマーノ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ペコリーノロマーノ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pekoriinoromaano.jpg"
+  },
+  {
+    "slug": "pekoriinoshichiria",
+    "name": "ペコリーノシチリア",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ペコリーノシチリア (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pekoriinoshichiria.jpg"
+  },
+  {
+    "slug": "konaguranapadaano",
+    "name": "粉グラナパダーノ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw 粉グラナパダーノ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_konaguranapadaano.jpg"
+  },
+  {
+    "slug": "kezuriguranapadaano",
+    "name": "削りグラナパダーノ",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw 削りグラナパダーノ (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kezuriguranapadaano.jpg"
+  }
+]

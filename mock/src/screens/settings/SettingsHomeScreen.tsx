@@ -23,14 +23,14 @@ import { colors } from '../../theme/colors';
 
 type Props = NativeStackScreenProps<SettingsStackParamList, 'SettingsHome'>;
 
-const LINKS: { key: keyof SettingsStackParamList; labelKey: string; id: string }[] = [
-  { key: 'Profile', labelKey: 'settings.home.profile', id: 'D-001-c' },
-  { key: 'Premium', labelKey: 'settings.home.premium', id: 'D-001-e' },
-  { key: 'Notifications', labelKey: 'settings.home.notifications', id: 'D-001-f' },
-  { key: 'Language', labelKey: 'settings.home.language', id: 'D-001-b' },
-  { key: 'Help', labelKey: 'settings.home.help', id: 'D-001-d' },
-  { key: 'Legal', labelKey: 'settings.home.legal', id: 'D-001-a' },
-  { key: 'Login', labelKey: 'settings.home.login', id: 'ログイン' },
+const LINKS: { key: keyof SettingsStackParamList; labelKey: string }[] = [
+  { key: 'Profile', labelKey: 'settings.home.profile' },
+  { key: 'Premium', labelKey: 'settings.home.premium' },
+  { key: 'Notifications', labelKey: 'settings.home.notifications' },
+  { key: 'Language', labelKey: 'settings.home.language' },
+  { key: 'Help', labelKey: 'settings.home.help' },
+  { key: 'Legal', labelKey: 'settings.home.legal' },
+  { key: 'Login', labelKey: 'settings.home.login' },
 ];
 
 export function SettingsHomeScreen({ navigation }: Props) {
@@ -102,7 +102,6 @@ export function SettingsHomeScreen({ navigation }: Props) {
               {index > 0 ? <PanelDivider /> : null}
               <SettingsRow
                 label={t(item.labelKey)}
-                meta={item.id}
                 onPress={() => navigation.navigate(item.key)}
               />
             </React.Fragment>

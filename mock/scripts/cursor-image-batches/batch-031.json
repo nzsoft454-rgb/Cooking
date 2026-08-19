@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "koriandaashiido",
+    "name": "コリアンダーシード",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw コリアンダーシード (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_koriandaashiido.jpg"
+  },
+  {
+    "slug": "masutaado",
+    "name": "マスタード",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw マスタード (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_masutaado.jpg"
+  },
+  {
+    "slug": "wasabi_2",
+    "name": "わさび",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw わさび (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_wasabi_2.jpg"
+  },
+  {
+    "slug": "karashi",
+    "name": "からし",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw からし (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karashi.jpg"
+  },
+  {
+    "slug": "shouga",
+    "name": "生姜",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw 生姜 (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shouga.jpg"
+  },
+  {
+    "slug": "arabikikikoshou",
+    "name": "粗挽き胡椒",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw 粗挽き胡椒 (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_arabikikikoshou.jpg"
+  },
+  {
+    "slug": "saihikikoshou",
+    "name": "細挽き胡椒",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw 細挽き胡椒 (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_saihikikoshou.jpg"
+  },
+  {
+    "slug": "habanero",
+    "name": "ハバネロ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ハバネロ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_habanero.jpg"
+  },
+  {
+    "slug": "harapeenyo",
+    "name": "ハラペーニョ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ハラペーニョ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_harapeenyo.jpg"
+  },
+  {
+    "slug": "chiri",
+    "name": "チリ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw チリ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chiri.jpg"
+  },
+  {
+    "slug": "banira",
+    "name": "バニラ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw バニラ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_banira.jpg"
+  },
+  {
+    "slug": "chai",
+    "name": "チャイ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw チャイ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chai.jpg"
+  },
+  {
+    "slug": "haabu",
+    "name": "ハーブ",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw ハーブ (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_haabu.jpg"
+  },
+  {
+    "slug": "supaisu",
+    "name": "スパイス",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw スパイス (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_supaisu.jpg"
+  },
+  {
+    "slug": "kurosoi",
+    "name": "クロソイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw クロソイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kurosoi.jpg"
+  },
+  {
+    "slug": "kinme",
+    "name": "キンメ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw キンメ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kinme.jpg"
+  },
+  {
+    "slug": "nodai",
+    "name": "ノダイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ノダイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_nodai.jpg"
+  },
+  {
+    "slug": "maruko",
+    "name": "マルコ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw マルコ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_maruko.jpg"
+  },
+  {
+    "slug": "moika",
+    "name": "モイカ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw モイカ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_moika.jpg"
+  },
+  {
+    "slug": "yariika",
+    "name": "ヤリイカ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ヤリイカ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_yariika.jpg"
+  }
+]

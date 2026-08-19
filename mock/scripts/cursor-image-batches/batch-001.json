@@ -1,82 +1,142 @@
 [
   {
-    "slug": "rennyuu",
-    "name": "練乳"
+    "slug": "cabbage",
+    "name": "キャベツ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw キャベツ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_cabbage.jpg"
   },
   {
-    "slug": "kokonattsuoiru",
-    "name": "ココナッツオイル"
+    "slug": "napa",
+    "name": "白菜",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白菜 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_napa.jpg"
   },
   {
-    "slug": "honjouzoushouyu",
-    "name": "本醸造醤油"
+    "slug": "tomato",
+    "name": "トマト",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw トマト (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_tomato.jpg"
   },
   {
-    "slug": "amakusasu",
-    "name": "天草酢"
+    "slug": "eggplant",
+    "name": "ナス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw ナス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_eggplant.jpg"
   },
   {
-    "slug": "nijishikomishouyu",
-    "name": "二次仕込み醤油"
+    "slug": "green_pepper",
+    "name": "ピーマン",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw ピーマン (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_green_pepper.jpg"
   },
   {
-    "slug": "shootoningu",
-    "name": "ショートニング"
+    "slug": "carrot",
+    "name": "にんじん",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw にんじん (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_carrot.jpg"
   },
   {
-    "slug": "joruno",
-    "name": "ジョルノ"
+    "slug": "daikon",
+    "name": "大根",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 大根 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_daikon.jpg"
   },
   {
-    "slug": "kinkan_2",
-    "name": "金柑"
+    "slug": "burdock",
+    "name": "ごぼう",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw ごぼう (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_burdock.jpg"
   },
   {
-    "slug": "sawaakuriimu",
-    "name": "サワークリーム"
+    "slug": "lotus_root",
+    "name": "れんこん",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw れんこん (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_lotus_root.jpg"
   },
   {
-    "slug": "rakkyou",
-    "name": "ラッキョウ"
+    "slug": "sweet_potato",
+    "name": "さつまいも",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw さつまいも (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sweet_potato.jpg"
   },
   {
-    "slug": "mirinfuuchouajiryou",
-    "name": "みりん風調味料"
+    "slug": "potato",
+    "name": "じゃがいも",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw じゃがいも (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_potato.jpg"
   },
   {
-    "slug": "kuriimu",
-    "name": "クリーム"
+    "slug": "nagaimo",
+    "name": "長芋",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 長芋 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_nagaimo.jpg"
   },
   {
-    "slug": "ryourishu",
-    "name": "料理酒"
+    "slug": "onion",
+    "name": "玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_onion.jpg"
   },
   {
-    "slug": "pureenyooguruto",
-    "name": "プレーンヨーグルト"
+    "slug": "green_onion",
+    "name": "長ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 長ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_green_onion.jpg"
   },
   {
-    "slug": "taihakuabura",
-    "name": "太白油"
+    "slug": "garlic",
+    "name": "にんにく",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw にんにく (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_garlic.jpg"
   },
   {
-    "slug": "nomuyooguruto",
-    "name": "飲むヨーグルト"
+    "slug": "asparagus",
+    "name": "アスパラガス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw アスパラガス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_asparagus.jpg"
   },
   {
-    "slug": "soiyooguruto",
-    "name": "ソイヨーグルト"
+    "slug": "corn",
+    "name": "とうもろこし",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw とうもろこし (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_corn.jpg"
   },
   {
-    "slug": "hachinosu",
-    "name": "ハチノス"
+    "slug": "bean_sprout",
+    "name": "もやし",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw もやし (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_bean_sprout.jpg"
   },
   {
-    "slug": "nattsuchoko",
-    "name": "ナッツチョコ"
+    "slug": "radish",
+    "name": "ラディッシュ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw ラディッシュ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_radish.jpg"
   },
   {
-    "slug": "enajiidorinku",
-    "name": "エナジードリンク"
+    "slug": "red_onion",
+    "name": "紫玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 紫玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_red_onion.jpg"
   }
 ]

@@ -20,13 +20,15 @@ import {
   markFridgeCardEntered,
 } from '../../utils/fridgeCardAnimation';
 
-const NUM_COLUMNS = 4;
 const GRID_GAP = 6;
 export const FRIDGE_GRID_H_PAD = 10;
+export const FRIDGE_GRID_COLUMNS = [3, 4] as const;
+export type FridgeGridColumns = (typeof FRIDGE_GRID_COLUMNS)[number];
 
 type Props = {
   items: Ingredient[];
   selected: string[];
+  numColumns?: FridgeGridColumns;
   onToggle: (id: string) => void;
   onEdit: (id: string) => void;
   emptyMessage: string;
@@ -176,6 +178,7 @@ function FridgeIngredientCard({
 export function FridgeIngredientGrid({
   items,
   selected,
+  numColumns = 4,
   onToggle,
   onEdit,
   emptyMessage,
@@ -183,15 +186,16 @@ export function FridgeIngredientGrid({
 }: Props) {
   const { width: screenWidth } = useWindowDimensions();
   const cardWidth =
-    (screenWidth - FRIDGE_GRID_H_PAD * 2 - GRID_GAP * (NUM_COLUMNS - 1)) / NUM_COLUMNS;
+    (screenWidth - FRIDGE_GRID_H_PAD * 2 - GRID_GAP * (numColumns - 1)) / numColumns;
 
   return (
     <FlatList
+      key={`fridge-grid-${numColumns}`}
       style={styles.list}
       data={items}
       extraData={selected}
       keyExtractor={(item) => item.id}
-      numColumns={NUM_COLUMNS}
+      numColumns={numColumns}
       contentContainerStyle={[styles.grid, items.length === 0 && styles.gridEmpty]}
       columnWrapperStyle={items.length === 0 ? undefined : styles.row}
       ListEmptyComponent={
@@ -200,7 +204,7 @@ export function FridgeIngredientGrid({
         </View>
       }
       renderItem={({ item, index }) => {
-        const isRowEnd = (index + 1) % NUM_COLUMNS === 0;
+        const isRowEnd = (index + 1) % numColumns === 0;
         const thumbSize = Math.min(56, Math.floor(cardWidth - 12));
 
         return (

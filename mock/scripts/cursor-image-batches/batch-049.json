@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "perira",
+    "name": "ペリラ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw ペリラ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_perira.jpg"
+  },
+  {
+    "slug": "shisobebiiriifu",
+    "name": "シソベビーリーフ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw シソベビーリーフ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shisobebiiriifu.jpg"
+  },
+  {
+    "slug": "boutsukiminitomato",
+    "name": "房付きミニトマト",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 房付きミニトマト (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_boutsukiminitomato.jpg"
+  },
+  {
+    "slug": "sayatsukiedamame",
+    "name": "さや付き枝豆",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw さや付き枝豆 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sayatsukiedamame.jpg"
+  },
+  {
+    "slug": "shinkyou",
+    "name": "新姜",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 新姜 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shinkyou.jpg"
+  },
+  {
+    "slug": "menegi",
+    "name": "芽ネギ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 芽ネギ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_menegi.jpg"
+  },
+  {
+    "slug": "aonegi_3",
+    "name": "青ネギ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 青ネギ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_aonegi_3.jpg"
+  },
+  {
+    "slug": "chounegi",
+    "name": "長ネギ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 長ネギ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chounegi.jpg"
+  },
+  {
+    "slug": "akadamanegi",
+    "name": "赤玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akadamanegi.jpg"
+  },
+  {
+    "slug": "ougyokunegi",
+    "name": "黄玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 黄玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ougyokunegi.jpg"
+  },
+  {
+    "slug": "shirodamanegi",
+    "name": "白玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirodamanegi.jpg"
+  },
+  {
+    "slug": "akakyabetsu",
+    "name": "赤キャベツ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤キャベツ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akakyabetsu.jpg"
+  },
+  {
+    "slug": "shirokyabetsu",
+    "name": "白キャベツ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白キャベツ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirokyabetsu.jpg"
+  },
+  {
+    "slug": "murasakikyabetsu",
+    "name": "紫キャベツ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 紫キャベツ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_murasakikyabetsu.jpg"
+  },
+  {
+    "slug": "midorikyabetsu",
+    "name": "緑キャベツ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 緑キャベツ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_midorikyabetsu.jpg"
+  },
+  {
+    "slug": "akaretasu",
+    "name": "赤レタス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤レタス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akaretasu.jpg"
+  },
+  {
+    "slug": "midoriretasu",
+    "name": "緑レタス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 緑レタス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_midoriretasu.jpg"
+  },
+  {
+    "slug": "murasakiretasu",
+    "name": "紫レタス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 紫レタス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_murasakiretasu.jpg"
+  },
+  {
+    "slug": "shiroretasu",
+    "name": "白レタス",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白レタス (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shiroretasu.jpg"
+  },
+  {
+    "slug": "akadaikon",
+    "name": "赤大根",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤大根 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akadaikon.jpg"
+  }
+]

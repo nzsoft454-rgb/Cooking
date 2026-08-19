@@ -31,10 +31,56 @@ IMAGE_MODELS = [
 ]
 
 PROMPT = (
-    "Professional food product photo of {name} (Japanese ingredient). "
-    "Single ingredient only, centered on a clean white plate or neutral surface. "
-    "Soft natural lighting, realistic, appetizing, no text, no watermark, no people, no packaging labels."
+    "Professional food photography of raw {name} ({category_hint}). "
+    "Japanese cooking ingredient. Single ingredient only, no dish, no recipe. "
+    "Centered on clean white plate or light marble. Soft natural lighting, photorealistic. "
+    "No text, no logo, no people, no packaging. "
+    "Avoid cooked meal, soup, bento, illustration."
 )
+
+CATEGORY_HINTS: dict[str, str] = {
+    "野菜": "Whole fresh vegetable as sold at a Japanese supermarket.",
+    "肉類": "Raw uncooked meat only, fresh butcher cut.",
+    "魚介類": "Fresh raw seafood for cooking, not sashimi platter.",
+    "調味料": "Condiment in a small plain bowl, no branded bottle.",
+    "きのこ": "Fresh mushroom, whole or clustered, raw uncooked.",
+    "果物": "Whole fresh fruit as sold at a Japanese supermarket.",
+    "豆類": "Raw beans or legumes, dried or fresh, uncooked.",
+    "乳製品": "Plain dairy product without branded packaging.",
+    "穀物・麺": "Raw grain, rice, or uncooked noodles on a plate.",
+    "スパイス": "Spice or herb, loose in a small plain bowl.",
+    "油脂": "Cooking oil or fat in a small plain dish.",
+    "乾物": "Dried food ingredient, loose on a plate.",
+    "海藻": "Raw or dried seaweed for cooking.",
+    "ナッツ・種": "Nuts or seeds, loose on a plain plate.",
+    "漬物": "Japanese pickled vegetable, small portion on plate.",
+    "菓子・デザート材料": "Baking or dessert ingredient, raw uncooked.",
+    "加工食品": "Processed food ingredient without branded packaging.",
+    "缶詰": "Canned food contents on a plate, no visible can label.",
+}
+
+INTERNAL_CATEGORY_HINTS: dict[str, str] = {
+    "vegetable": CATEGORY_HINTS["野菜"],
+    "meat": CATEGORY_HINTS["肉類"],
+    "seafood": CATEGORY_HINTS["魚介類"],
+    "fruit": CATEGORY_HINTS["果物"],
+    "soy_dairy": "Soy or dairy ingredient without branded packaging.",
+    "grain": CATEGORY_HINTS["穀物・麺"],
+}
+
+DEFAULT_CATEGORY_HINT = "Japanese cooking ingredient as sold for home cooking."
+
+
+def category_hint_for(entry: dict) -> str:
+    excel_cat = (entry.get("excelCategory") or "").strip()
+    if excel_cat in CATEGORY_HINTS:
+        return CATEGORY_HINTS[excel_cat]
+    internal = (entry.get("category") or "").strip()
+    return INTERNAL_CATEGORY_HINTS.get(internal, DEFAULT_CATEGORY_HINT)
+
+
+def build_prompt(entry: dict) -> str:
+    return PROMPT.format(name=entry["name"], category_hint=category_hint_for(entry))
 
 
 def load_api_key() -> str:
@@ -89,13 +135,13 @@ def save_under_limit(img: Image.Image, dest: Path) -> int:
     return dest.stat().st_size
 
 
-def request_image(api_key: str, model: str, name: str) -> bytes | None:
+def request_image(api_key: str, model: str, prompt: str) -> bytes | None:
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
         f"{model}:generateContent"
     )
     body = {
-        "contents": [{"role": "user", "parts": [{"text": PROMPT.format(name=name)}]}],
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "responseModalities": ["TEXT", "IMAGE"],
             "imageConfig": {"aspectRatio": "1:1"},
@@ -124,12 +170,12 @@ def request_image(api_key: str, model: str, name: str) -> bytes | None:
     return None
 
 
-def generate_with_fallback(api_key: str, name: str) -> tuple[bytes | None, str | None]:
+def generate_with_fallback(api_key: str, prompt: str) -> tuple[bytes | None, str | None]:
     errors: list[str] = []
     for model in IMAGE_MODELS:
         for attempt in range(4):
             try:
-                data = request_image(api_key, model, name)
+                data = request_image(api_key, model, prompt)
                 if data:
                     return data, model
                 errors.append(f"{model}: no image in response")
@@ -188,12 +234,29 @@ def needs_generation(dest: Path, *, force: bool) -> bool:
 
 def check_quota(api_key: str) -> bool:
     print("checking image generation quota...", flush=True)
-    raw, info = generate_with_fallback(api_key, "りんご")
+    raw, info = generate_with_fallback(api_key, build_prompt({"name": "りんご", "excelCategory": "果物"}))
     if raw:
         print("quota OK (test image generated)", flush=True)
         return True
     print(f"quota check failed: {info}", flush=True)
     return False
+
+
+def load_slug_filter() -> set[str] | None:
+    if "--excel1000" in sys.argv:
+        slug_path = Path(__file__).resolve().parent / "ingredient-excel1000-slugs.json"
+        if not slug_path.exists():
+            raise SystemExit("Run build-ingredient-catalog-merge-excel.py first")
+        rows = json.loads(slug_path.read_text(encoding="utf-8"))
+        return {row["slug"] for row in rows}
+    for arg in sys.argv[1:]:
+        if arg.startswith("--slugs-file="):
+            slug_path = Path(arg.split("=", 1)[1])
+            rows = json.loads(slug_path.read_text(encoding="utf-8"))
+            if rows and isinstance(rows[0], dict):
+                return {row["slug"] for row in rows}
+            return set(rows)
+    return None
 
 
 def main() -> None:
@@ -210,6 +273,10 @@ def main() -> None:
     if not meta_path.exists():
         raise SystemExit("Run build-ingredient-catalog-merge-excel.py first")
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    slug_filter = load_slug_filter()
+    if slug_filter is not None:
+        meta = [e for e in meta if e["imageFile"].replace("ing_", "").replace(".jpg", "") in slug_filter]
+        print(f"slug filter: {len(slug_filter)} -> {len(meta)} targets", flush=True)
     targets = unique_image_targets(meta)
     progress = load_progress()
     sizes: dict[str, int] = {}
@@ -251,8 +318,9 @@ def main() -> None:
             break
 
         name = entry["name"]
+        prompt = build_prompt(entry)
         print(f"[{attempted + 1}/{len(pending) if limit else '?'}] generating {slug} ({name})...", flush=True)
-        raw, info = generate_with_fallback(api_key, name)
+        raw, info = generate_with_fallback(api_key, prompt)
         attempted += 1
         if not raw:
             progress.setdefault("errors", {})[slug] = info or "unknown"

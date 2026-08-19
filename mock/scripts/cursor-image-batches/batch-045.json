@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "anagoichiyahoshi",
+    "name": "アナゴ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw アナゴ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_anagoichiyahoshi.jpg"
+  },
+  {
+    "slug": "hotaruikaichiyahoshi",
+    "name": "ホタルイカ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ホタルイカ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hotaruikaichiyahoshi.jpg"
+  },
+  {
+    "slug": "ikanagoichiyahoshi",
+    "name": "イカナゴ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イカナゴ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikanagoichiyahoshi.jpg"
+  },
+  {
+    "slug": "katakuchiiwashiichiyahoshi",
+    "name": "カタクチイワシ一夜干し",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw カタクチイワシ一夜干し (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_katakuchiiwashiichiyahoshi.jpg"
+  },
+  {
+    "slug": "nashirasu",
+    "name": "生しらす",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生しらす (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_nashirasu.jpg"
+  },
+  {
+    "slug": "namachirimen",
+    "name": "生ちりめん",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生ちりめん (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_namachirimen.jpg"
+  },
+  {
+    "slug": "ikachiwariiwashi",
+    "name": "生かち割りいわし",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生かち割りいわし (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikachiwariiwashi.jpg"
+  },
+  {
+    "slug": "ikashiokara",
+    "name": "いか塩辛",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw いか塩辛 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikashiokara.jpg"
+  },
+  {
+    "slug": "oikura",
+    "name": "生いくら",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生いくら (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_oikura.jpg"
+  },
+  {
+    "slug": "namatarako",
+    "name": "生たらこ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生たらこ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_namatarako.jpg"
+  },
+  {
+    "slug": "namamentaiko",
+    "name": "生明太子",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生明太子 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_namamentaiko.jpg"
+  },
+  {
+    "slug": "namatobiko",
+    "name": "生とびこ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 生とびこ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_namatobiko.jpg"
+  },
+  {
+    "slug": "kansouhiyokomame",
+    "name": "乾燥ひよこ豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥ひよこ豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansouhiyokomame.jpg"
+  },
+  {
+    "slug": "kansouuguisumame",
+    "name": "乾燥うぐいす豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥うぐいす豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansouuguisumame.jpg"
+  },
+  {
+    "slug": "kansoukintokimame",
+    "name": "乾燥金時豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥金時豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansoukintokimame.jpg"
+  },
+  {
+    "slug": "kansouootsubuazuki",
+    "name": "乾燥大粒小豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥大粒小豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansouootsubuazuki.jpg"
+  },
+  {
+    "slug": "kansoukotsubuazuki",
+    "name": "乾燥小粒小豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥小粒小豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansoukotsubuazuki.jpg"
+  },
+  {
+    "slug": "kansoushiroazuki",
+    "name": "乾燥白小豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥白小豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansoushiroazuki.jpg"
+  },
+  {
+    "slug": "kansoukuromame",
+    "name": "乾燥黒豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥黒豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansoukuromame.jpg"
+  },
+  {
+    "slug": "kansoudaizu",
+    "name": "乾燥大豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 乾燥大豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansoudaizu.jpg"
+  }
+]

@@ -1,9 +1,10 @@
+import { Ionicons } from '@expo/vector-icons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { FridgeIngredientGrid } from '../../components/fridge/FridgeIngredientGrid';
+import { FridgeIngredientGrid, type FridgeGridColumns } from '../../components/fridge/FridgeIngredientGrid';
 import { FridgeListToolbar } from '../../components/fridge/FridgeListToolbar';
 import { FridgeSortMenuModal } from '../../components/fridge/FridgeSortMenuModal';
 import {
@@ -40,6 +41,52 @@ type FridgeDialog =
 
 type GachaDraw = { ids: string[]; names: string[] };
 
+function FridgeGridColumnToggle({
+  columns,
+  onChange,
+}: {
+  columns: FridgeGridColumns;
+  onChange: (columns: FridgeGridColumns) => void;
+}) {
+  const { t } = useTranslation();
+
+  return (
+    <View style={styles.gridColumnBar}>
+      <Text style={styles.gridColumnBarLabel}>{t('fridge.home.gridColumnsTitle')}</Text>
+      <View style={styles.gridColumnSegment}>
+        {([3, 4] as const).map((count) => {
+          const selected = columns === count;
+          return (
+            <Pressable
+              key={count}
+              onPress={() => onChange(count)}
+              style={({ pressed }) => [
+                styles.gridColumnOption,
+                selected && styles.gridColumnOptionActive,
+                pressed && { opacity: 0.85 },
+              ]}
+              accessibilityRole="button"
+              accessibilityState={{ selected }}
+              accessibilityLabel={t('fridge.home.gridColumnsLabel', { count })}
+            >
+              <Ionicons
+                name="grid-outline"
+                size={14}
+                color={selected ? colors.primary : colors.inkMuted}
+              />
+              <Text
+                style={[styles.gridColumnOptionText, selected && styles.gridColumnOptionTextActive]}
+              >
+                {t('fridge.home.gridColumnsLabel', { count })}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
+
 export function FridgeHomeScreen({ navigation, route }: Props) {
   const { t, i18n } = useTranslation();
   const rootNav = useNavigation<NavigationProp<RootTabParamList>>();
@@ -51,6 +98,7 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
   );
   const [dialog, setDialog] = useState<FridgeDialog>(null);
   const [gachaDraw, setGachaDraw] = useState<GachaDraw | null>(null);
+  const [gridColumns, setGridColumns] = useState<FridgeGridColumns>(4);
 
   useEffect(() => {
     if (route.params?.sortKey) {
@@ -194,10 +242,13 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
           </View>
         }
         subHeader={
-          <FridgeListToolbar
-            sortKey={sortKey}
-            onOpenMenu={() => setSortMenuOpen(true)}
-          />
+          <View style={styles.subHeaderStack}>
+            <FridgeListToolbar
+              sortKey={sortKey}
+              onOpenMenu={() => setSortMenuOpen(true)}
+            />
+            <FridgeGridColumnToggle columns={gridColumns} onChange={setGridColumns} />
+          </View>
         }
       />
 
@@ -257,6 +308,7 @@ export function FridgeHomeScreen({ navigation, route }: Props) {
       <FridgeIngredientGrid
         items={sorted}
         selected={selected}
+        numColumns={gridColumns}
         onToggle={toggle}
         onEdit={(id) => navigation.navigate('IngredientEdit', { ingredientId: id })}
         emptyMessage={t('fridge.home.empty')}
@@ -374,6 +426,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    flexShrink: 1,
+    minWidth: 0,
+  },
+  subHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingRight: 12,
+    gap: 8,
   },
   countBadgeWrap: {
     flex: 0,
@@ -419,6 +479,53 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '700',
     color: colors.inkMuted,
+  },
+  subHeaderStack: {
+    width: '100%',
+  },
+  gridColumnBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+    backgroundColor: colors.surface,
+  },
+  gridColumnBarLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.ink,
+  },
+  gridColumnSegment: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  gridColumnOption: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    minHeight: 32,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: colors.radius,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surfaceMuted,
+  },
+  gridColumnOptionActive: {
+    borderColor: colors.primary,
+    backgroundColor: colors.primarySoft,
+  },
+  gridColumnOptionText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.inkMuted,
+  },
+  gridColumnOptionTextActive: {
+    color: colors.primary,
   },
   selectBarWrap: {
     marginHorizontal: 16,

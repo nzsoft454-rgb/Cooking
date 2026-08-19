@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "niwatorisasamiburokku",
+    "name": "鶏ささみブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鶏ささみブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_niwatorisasamiburokku.jpg"
+  },
+  {
+    "slug": "niwatorimomoburokku",
+    "name": "鶏ももブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鶏ももブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_niwatorimomoburokku.jpg"
+  },
+  {
+    "slug": "niwatorimuneburokku",
+    "name": "鶏むねブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鶏むねブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_niwatorimuneburokku.jpg"
+  },
+  {
+    "slug": "niwatoritebamotoburokku",
+    "name": "鶏手羽元ブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鶏手羽元ブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_niwatoritebamotoburokku.jpg"
+  },
+  {
+    "slug": "niwatoritebasakiburokku",
+    "name": "鶏手羽先ブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鶏手羽先ブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_niwatoritebasakiburokku.jpg"
+  },
+  {
+    "slug": "butahireburokku",
+    "name": "豚ヒレブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚ヒレブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_butahireburokku.jpg"
+  },
+  {
+    "slug": "butakataburokku",
+    "name": "豚カタブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚カタブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_butakataburokku.jpg"
+  },
+  {
+    "slug": "butamomoburokku",
+    "name": "豚ももブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚ももブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_butamomoburokku.jpg"
+  },
+  {
+    "slug": "ushihireburokku",
+    "name": "牛ヒレブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛ヒレブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushihireburokku.jpg"
+  },
+  {
+    "slug": "ushikataburokku",
+    "name": "牛カタブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛カタブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushikataburokku.jpg"
+  },
+  {
+    "slug": "ushimomoburokku",
+    "name": "牛ももブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛ももブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushimomoburokku.jpg"
+  },
+  {
+    "slug": "gyuukataroosuburokku",
+    "name": "牛肩ロースブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛肩ロースブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_gyuukataroosuburokku.jpg"
+  },
+  {
+    "slug": "ushiroosuburokku",
+    "name": "牛ロースブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛ロースブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushiroosuburokku.jpg"
+  },
+  {
+    "slug": "ushibaraburokku",
+    "name": "牛バラブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛バラブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushibaraburokku.jpg"
+  },
+  {
+    "slug": "reddorenteiru",
+    "name": "レッドレンティル",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw レッドレンティル (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_reddorenteiru.jpg"
+  },
+  {
+    "slug": "guriinrenteiru",
+    "name": "グリーンレンティル",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw グリーンレンティル (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_guriinrenteiru.jpg"
+  },
+  {
+    "slug": "burakkurenteiru",
+    "name": "ブラックレンティル",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw ブラックレンティル (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_burakkurenteiru.jpg"
+  },
+  {
+    "slug": "ieroorenteiru",
+    "name": "イエローレンティル",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw イエローレンティル (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ieroorenteiru.jpg"
+  },
+  {
+    "slug": "supurittopee",
+    "name": "スプリットペー",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw スプリットペー (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_supurittopee.jpg"
+  },
+  {
+    "slug": "burakkuaidopii",
+    "name": "ブラックアイドピー",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw ブラックアイドピー (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_burakkuaidopii.jpg"
+  }
+]

@@ -169,7 +169,7 @@
   "camera": {
     "home": {
       "title": "Camera",
-      "subtitle": "A-001 · Ingredient capture",
+      "subtitle": "Ingredient capture",
       "hint": "Tap Take photo to open the camera",
       "hintSub": "After capture, continue to AI analysis (mock)",
       "capture": "Take photo",
@@ -281,7 +281,7 @@
   "fridge": {
     "home": {
       "title": "Fridge",
-      "subtitle": "B-001",
+      "subtitle": "Manage ingredients",
       "ingredientLabel": "Items",
       "selectedBar": "{{count}} selected",
       "selectedTag": "Selected",
@@ -308,7 +308,11 @@
       "sortLabel": "Sort",
       "searchLabel": "Search",
       "searchPlaceholder": "Search by ingredient name",
-      "searchSubmit": "Search"
+      "searchSubmit": "Search",
+      "gridColumnsTitle": "Layout",
+      "gridColumnsLabel": "{{count}} cols",
+      "gridColumnsSwitchTo3": "Switch to 3 columns",
+      "gridColumnsSwitchTo4": "Switch to 4 columns"
     },
     "catalogPick": {
       "title": "Staple ingredients",
@@ -337,7 +341,7 @@
     },
     "search": {
       "title": "Search results",
-      "subtitle": "B-001-A",
+      "subtitle": "Search ingredients",
       "resultFor": "Results for \"{{query}}\"",
       "resultCount": "{{count}} matches",
       "empty": "No ingredients match \"{{query}}\"",
@@ -347,7 +351,7 @@
     },
     "ingredientEdit": {
       "title": "Edit ingredient",
-      "subtitle": "B-001-a",
+      "subtitle": "Edit name and amount",
       "notFound": "Ingredient not found",
       "editingEyebrow": "EDITING",
       "sectionBasic": "Basic info",
@@ -364,7 +368,7 @@
     "batchEdit": {
       "title": "Batch edit",
       "emptyTitle": "No selected ingredients",
-      "subtitle": "B-001-a · {{count}} items",
+      "subtitle": "Editing {{count}} items",
       "batchEyebrow": "BATCH EDIT",
       "batchTitle": "Edit {{count}} items at once",
       "sectionTargets": "Target ingredients",
@@ -390,7 +394,7 @@
   },
   "cookingConfirm": {
     "title": "Cooking preferences",
-    "subtitle": "A-001-e · Prompt settings",
+    "subtitle": "Cooking preferences",
     "sectionIngredients": "Ingredients",
     "ingredientsEyebrow": "INGREDIENTS",
     "sectionCookingTime": "Cooking time",
@@ -410,7 +414,7 @@
   "recipe": {
     "home": {
       "title": "Recipes",
-      "subtitle": "C-001 · History / Favorites / Collection",
+      "subtitle": "History, favorites, and collection",
       "sectionDisplay": "View",
       "tabHistory": "History",
       "tabFavorite": "★",
@@ -427,7 +431,7 @@
     },
     "generating": {
       "title": "Generating",
-      "subtitle": "C-001-a",
+      "subtitle": "Generating recipe",
       "gachaLoading": "Creating mystery-pot recipe from random picks…",
       "normalLoading": "AI is generating recipe…",
       "multiLoading": "AI is generating {{count}} recipes…",
@@ -529,7 +533,7 @@
   "settings": {
     "home": {
       "title": "Settings",
-      "subtitle": "D-001",
+      "subtitle": "Account and app settings",
       "accountEyebrow": "ACCOUNT",
       "planMeta": "Plan: {{plan}} · Gemini left {{remaining}}/{{max}}",
       "planMetaPremium": "Plan: {{plan}} · Gemini left ∞",
@@ -594,14 +598,14 @@
     },
     "legal": {
       "title": "Legal",
-      "subtitle": "D-001-a",
+      "subtitle": "Terms and privacy",
       "sectionTerms": "Terms",
       "termsMock": "Terms of service & privacy policy (mock text)",
       "disclaimer": "This app is a prototype mock. No external APIs, billing, or real camera are connected."
     },
     "language": {
       "title": "Language",
-      "subtitle": "D-001-b",
+      "subtitle": "Display language",
       "sectionDisplay": "Display language",
       "japanese": "Japanese",
       "english": "English",
@@ -609,7 +613,7 @@
     },
     "profile": {
       "title": "Profile",
-      "subtitle": "D-001-c",
+      "subtitle": "Account info",
       "sectionAccount": "Account info",
       "uid": "UID: {{uid}}",
       "email": "Email: {{email}}",
@@ -656,7 +660,7 @@
     },
     "premium": {
       "title": "Premium",
-      "subtitle": "D-001-e",
+      "subtitle": "Plan details",
       "sectionPlan": "Current plan",
       "sectionChoose": "Choose a plan",
       "planMonthly": "1 month",
@@ -675,7 +679,7 @@
     },
     "notifications": {
       "title": "Notifications",
-      "subtitle": "D-001-f",
+      "subtitle": "Notification settings",
       "sectionAlerts": "Alert settings",
       "fridgeAlert": "Added-date reminder",
       "note": "Demo: after turning ON, use the button below to schedule a notification in ~1 minute for items added 7+ days ago.",

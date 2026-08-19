@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "baabekyuusoosu",
+    "name": "バーベキューソース",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw バーベキューソース (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_baabekyuusoosu.jpg"
+  },
+  {
+    "slug": "suteekisoosu",
+    "name": "ステーキソース",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ステーキソース (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_suteekisoosu.jpg"
+  },
+  {
+    "slug": "gyouzanotare",
+    "name": "餃子のタレ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 餃子のタレ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_gyouzanotare.jpg"
+  },
+  {
+    "slug": "harumakikinotare",
+    "name": "春巻きのタレ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 春巻きのタレ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_harumakikinotare.jpg"
+  },
+  {
+    "slug": "sushizu",
+    "name": "寿司酢",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 寿司酢 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sushizu.jpg"
+  },
+  {
+    "slug": "amazu",
+    "name": "甘酢",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 甘酢 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_amazu.jpg"
+  },
+  {
+    "slug": "kyousu",
+    "name": "強酢",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 強酢 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kyousu.jpg"
+  },
+  {
+    "slug": "sanshuumiso",
+    "name": "三州味噌",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 三州味噌 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sanshuumiso.jpg"
+  },
+  {
+    "slug": "hishio",
+    "name": "ひしお",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ひしお (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hishio.jpg"
+  },
+  {
+    "slug": "shouyukouji",
+    "name": "醤油麹",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 醤油麹 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shouyukouji.jpg"
+  },
+  {
+    "slug": "misokouji",
+    "name": "味噌麹",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 味噌麹 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_misokouji.jpg"
+  },
+  {
+    "slug": "mirinkasu",
+    "name": "みりん粕",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw みりん粕 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mirinkasu.jpg"
+  },
+  {
+    "slug": "karashimiso",
+    "name": "からしみそ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw からしみそ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karashimiso.jpg"
+  },
+  {
+    "slug": "yuzumiso",
+    "name": "柚子みそ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 柚子みそ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_yuzumiso.jpg"
+  },
+  {
+    "slug": "fisshusoosu",
+    "name": "フィッシュソース",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw フィッシュソース (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_fisshusoosu.jpg"
+  },
+  {
+    "slug": "tamarindopeesuto",
+    "name": "タマリンドペースト",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw タマリンドペースト (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_tamarindopeesuto.jpg"
+  },
+  {
+    "slug": "paamushugaa",
+    "name": "パームシュガー",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw パームシュガー (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_paamushugaa.jpg"
+  },
+  {
+    "slug": "sanbaruorekku",
+    "name": "サンバルオレック",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw サンバルオレック (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_sanbaruorekku.jpg"
+  },
+  {
+    "slug": "chuukasuupunomoto",
+    "name": "中華スープの素",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 中華スープの素 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chuukasuupunomoto.jpg"
+  },
+  {
+    "slug": "wakamesuupunomoto",
+    "name": "わかめスープの素",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw わかめスープの素 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_wakamesuupunomoto.jpg"
+  }
+]

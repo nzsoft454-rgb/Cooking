@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "pintomame",
+    "name": "ピント豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw ピント豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pintomame.jpg"
+  },
+  {
+    "slug": "neibiibiinzu",
+    "name": "ネイビービーンズ",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw ネイビービーンズ (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_neibiibiinzu.jpg"
+  },
+  {
+    "slug": "soimiito",
+    "name": "ソイミート",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw ソイミート (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_soimiito.jpg"
+  },
+  {
+    "slug": "daizumiito",
+    "name": "大豆ミート",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw 大豆ミート (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_daizumiito.jpg"
+  },
+  {
+    "slug": "ejiputomame",
+    "name": "エジプト豆",
+    "excelCategory": "豆類",
+    "prompt": "Professional food photography of raw エジプト豆 (Raw beans or legumes, dried or fresh, uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ejiputomame.jpg"
+  },
+  {
+    "slug": "makaroni",
+    "name": "マカロニ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw マカロニ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_makaroni.jpg"
+  },
+  {
+    "slug": "fujirri",
+    "name": "フジッリ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw フジッリ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_fujirri.jpg"
+  },
+  {
+    "slug": "pennerigaate",
+    "name": "ペンネリガーテ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw ペンネリガーテ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pennerigaate.jpg"
+  },
+  {
+    "slug": "barubiini",
+    "name": "バルビーニ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw バルビーニ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_barubiini.jpg"
+  },
+  {
+    "slug": "orekiette",
+    "name": "オレキエッテ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw オレキエッテ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_orekiette.jpg"
+  },
+  {
+    "slug": "papparuderre",
+    "name": "パッパルデッレ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw パッパルデッレ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_papparuderre.jpg"
+  },
+  {
+    "slug": "tariaterre",
+    "name": "タリアテッレ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw タリアテッレ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_tariaterre.jpg"
+  },
+  {
+    "slug": "zenryuukonapasuta",
+    "name": "全粒粉パスタ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw 全粒粉パスタ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_zenryuukonapasuta.jpg"
+  },
+  {
+    "slug": "kansouudon",
+    "name": "乾燥うどん",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw 乾燥うどん (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansouudon.jpg"
+  },
+  {
+    "slug": "kansousoba",
+    "name": "乾燥そば",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw 乾燥そば (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansousoba.jpg"
+  },
+  {
+    "slug": "kansouraamen",
+    "name": "乾燥ラーメン",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw 乾燥ラーメン (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kansouraamen.jpg"
+  },
+  {
+    "slug": "mochi",
+    "name": "もち",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw もち (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mochi.jpg"
+  },
+  {
+    "slug": "raisupeepaa",
+    "name": "ライスペーパー",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw ライスペーパー (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_raisupeepaa.jpg"
+  },
+  {
+    "slug": "toruteiiya",
+    "name": "トルティーヤ",
+    "excelCategory": "穀物・麺",
+    "prompt": "Professional food photography of raw トルティーヤ (Raw grain, rice, or uncooked noodles on a plate.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_toruteiiya.jpg"
+  },
+  {
+    "slug": "konnyaku",
+    "name": "こんにゃく",
+    "excelCategory": "加工食品",
+    "prompt": "Professional food photography of raw こんにゃく (Processed food ingredient without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_konnyaku.jpg"
+  }
+]

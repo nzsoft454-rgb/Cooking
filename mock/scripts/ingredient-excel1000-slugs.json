@@ -1,0 +1,5002 @@
+[
+  {
+    "slug": "mizunasu",
+    "name": "水茄子",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "marunasu",
+    "name": "丸茄子",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chitose",
+    "name": "千歳",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "taasai",
+    "name": "タアサイ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "morokoshi",
+    "name": "モロコシ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "koorurabi",
+    "name": "コールラビ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "serufiiyu",
+    "name": "セルフィーユ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "suisuchaado",
+    "name": "スイスチャード",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rubiichoko",
+    "name": "ルビーチョコ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "paasunippu",
+    "name": "パースニップ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seroriakku",
+    "name": "セロリアック",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sanchu",
+    "name": "サンチュ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chimasanchu",
+    "name": "チマサンチュ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minidaikon",
+    "name": "ミニ大根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "fudansou",
+    "name": "フダンソウ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aisupuranto",
+    "name": "アイスプラント",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "toumyou",
+    "name": "豆苗",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "riifuretasu",
+    "name": "リーフレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "bataaretasu",
+    "name": "バターレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "furiruretasu",
+    "name": "フリルレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "romeinretasu",
+    "name": "ロメインレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rubiiretasu",
+    "name": "ルビーレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "romanesuko",
+    "name": "ロマネスコ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "furageoretto",
+    "name": "フラゲオレット",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sunappumame",
+    "name": "スナップ豆",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minipapurika",
+    "name": "ミニパプリカ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akapapurika",
+    "name": "赤パプリカ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kipapurika",
+    "name": "黄パプリカ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "orenjipapurika",
+    "name": "オレンジパプリカ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirokiyuuri",
+    "name": "白きゅうり",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "fushikyuuri",
+    "name": "節きゅうり",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shironasu",
+    "name": "白ナス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "komenasu",
+    "name": "米ナス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chounasu",
+    "name": "長ナス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "marunasu_2",
+    "name": "丸ナス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shounasu",
+    "name": "小ナス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minikyuuri",
+    "name": "ミニきゅうり",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "zukkiininohana",
+    "name": "ズッキーニの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kabochanohana",
+    "name": "かぼちゃの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kabochanowakaba",
+    "name": "かぼちゃの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kabochanokuki",
+    "name": "かぼちゃの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minikabocha",
+    "name": "ミニかぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "hachisunkabocha",
+    "name": "八寸南瓜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ebisukabocha",
+    "name": "エビス南瓜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kurikabocha",
+    "name": "くり南瓜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seiyoukabocha",
+    "name": "西洋かぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "bataanattsusukasshu",
+    "name": "バターナッツスカッシュ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "derikeetosukasshu",
+    "name": "デリケートスカッシュ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "pateipan",
+    "name": "パティパン",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "gooyanowakaba",
+    "name": "ゴーヤの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "gooyanotane",
+    "name": "ゴーヤの種",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "okuranowakaba",
+    "name": "オクラの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "toumorokoshinowakaba",
+    "name": "とうもろこしの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "toumorokoshinohige",
+    "name": "とうもろこしのひげ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "suiitokoon",
+    "name": "スイートコーン",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kyuujounegi_2",
+    "name": "九条葱",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kanounegi_2",
+    "name": "叶ねぎ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shironegi_2",
+    "name": "白葱",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aonegi_2",
+    "name": "青葱",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shounegi",
+    "name": "小ネギ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shintamanegi_2",
+    "name": "新玉葱",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "danshakuimo",
+    "name": "男爵いも",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "meekuin",
+    "name": "メークイン",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kitaakari",
+    "name": "キタアカリ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shinjaga",
+    "name": "新じゃが",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shinjagaimo",
+    "name": "新じゃがいも",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "manganteratougarashi",
+    "name": "万願寺とうがらし",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kanchoutougarashi",
+    "name": "甘長とうがらし",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "daikonnoha",
+    "name": "大根の葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "daikonnokawa",
+    "name": "大根の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ninjinnoha",
+    "name": "人参の葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "myougame",
+    "name": "みょうが芽",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "oobanomi",
+    "name": "大葉の実",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aojiso",
+    "name": "青じそ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "hakusainoshin",
+    "name": "白菜の芯",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kyabetsunoshin",
+    "name": "キャベツの芯",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kyabetsunogaiyou",
+    "name": "キャベツの外葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tamaneginoshin",
+    "name": "玉ねぎの芯",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "satoimonome",
+    "name": "里芋の芽",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "nagaimonokawa",
+    "name": "長芋の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "satsumaimonokawa",
+    "name": "さつまいもの皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "jagaimonokawa",
+    "name": "じゃがいもの皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "komatsunanokuki",
+    "name": "小松菜の茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "hourenkusanone",
+    "name": "ほうれん草の根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "edamamenowakaba",
+    "name": "枝豆の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "burokkoriinokuki",
+    "name": "ブロッコリーの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "karifurawaanokuki",
+    "name": "カリフラワーの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shiroasupara",
+    "name": "白アスパラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "guriin_asupara",
+    "name": "グリーンアスパラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "murasakiasupara",
+    "name": "紫アスパラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tougannokawa",
+    "name": "冬瓜の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirourinokawa",
+    "name": "白瓜の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "etsuurinokawa",
+    "name": "越瓜の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shishitounojakumi",
+    "name": "シシトウの若実",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "edamamenosaya",
+    "name": "枝豆のさや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "riifuameransasu",
+    "name": "リーフアメランサス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rutabaganoha",
+    "name": "ルタバガの葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seiyoujinsan",
+    "name": "西洋人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "hakujinsan",
+    "name": "白人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kokujinsan",
+    "name": "黒人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minininjin",
+    "name": "ミニ人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aotomato",
+    "name": "青トマト",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "furuutsutomato",
+    "name": "フルーツトマト",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "minizukkiini",
+    "name": "ミニズッキーニ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ieroozukkiini",
+    "name": "イエローズッキーニ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "bebiiriifu",
+    "name": "ベビーリーフ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "saradayoubebiiriifu",
+    "name": "サラダ用ベビーリーフ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "karafurukyarotto",
+    "name": "カラフルキャロット",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sutoraipubiitsu",
+    "name": "ストライプビーツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "goorudenbiitsu",
+    "name": "ゴールデンビーツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rubiibiitsu",
+    "name": "ルビービーツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sayamame",
+    "name": "サヤマメ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kuushinna",
+    "name": "空芯菜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chingenna_2",
+    "name": "チンゲン菜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "wasabina",
+    "name": "わさび菜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shinseikyounome",
+    "name": "新生姜の芽",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rukkoramikkusu",
+    "name": "ルッコラミックス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "haabusaradamikkusu",
+    "name": "ハーブサラダミックス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "miniretasu",
+    "name": "ミニレタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "guriinriifu",
+    "name": "グリーンリーフ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "reddoriifu",
+    "name": "レッドリーフ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rubiiokura",
+    "name": "ルビーオクラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "reddookura",
+    "name": "レッドオクラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ingenmame",
+    "name": "インゲン豆",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kizukkiini",
+    "name": "黄ズッキーニ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "maruzukkiini",
+    "name": "丸ズッキーニ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chouzukkiini",
+    "name": "長ズッキーニ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aokawakabocha",
+    "name": "青皮かぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akagawakabocha",
+    "name": "赤皮かぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirokabocha",
+    "name": "白かぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kurikabocha_2",
+    "name": "栗かぼちゃ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tajimakabocha",
+    "name": "但馬南瓜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seiyoukabocha_2",
+    "name": "西洋南瓜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "riifutomato",
+    "name": "リーフトマト",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "koutoudotomato",
+    "name": "高糖度トマト",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "nanohananotsubomi",
+    "name": "菜の花のつぼみ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shungikunowakaba",
+    "name": "春菊の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sanshounowakaba",
+    "name": "山椒の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sanshounome",
+    "name": "山椒の芽",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kashounomi",
+    "name": "花椒の実",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "naganeginoshiro",
+    "name": "長葱の白",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "naganeginoao",
+    "name": "長葱の青",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "wasabikuki",
+    "name": "わさび茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "namawasabi",
+    "name": "生わさび",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "wasabiha",
+    "name": "わさび葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "wasabi",
+    "name": "山葵",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "myouganokuki",
+    "name": "みょうがの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "myouganone",
+    "name": "みょうがの根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "oobanokuki",
+    "name": "大葉の茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shisonowakaba",
+    "name": "シソの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aotougarashinowakaba",
+    "name": "青唐辛子の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akatougarashinowakaba",
+    "name": "赤唐辛子の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shishitounowakaba",
+    "name": "ししとうの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "toumorokoshinojakumi",
+    "name": "とうもろこしの若実",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "edamamenowakasaya",
+    "name": "枝豆の若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sayaingennowakasaya",
+    "name": "さやいんげんの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sayaendounowakasaya",
+    "name": "さやえんどうの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sunappuendounowakasaya",
+    "name": "スナップエンドウの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sunoopiisunowakasaya",
+    "name": "スノーピースの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ingennowakasaya",
+    "name": "インゲンの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "guriinpiisunowakasaya",
+    "name": "グリーンピースの若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ejiputomamenowakasaya",
+    "name": "エジプト豆の若さや",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "serorinoha",
+    "name": "セロリの葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "serorinokuki",
+    "name": "セロリの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "fennerunokuki",
+    "name": "フェンネルの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "fennerunoha",
+    "name": "フェンネルの葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "dirunoha",
+    "name": "ディルの葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "bajirunowakaba",
+    "name": "バジルの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "pakuchiinone",
+    "name": "パクチーの根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "pakuchiinokuki",
+    "name": "パクチーの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "mintonowakaba",
+    "name": "ミントの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "roozumariinowakaba",
+    "name": "ローズマリーの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "taimunowakaba",
+    "name": "タイムの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seejinowakaba",
+    "name": "セージの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "oreganonowakaba",
+    "name": "オレガノの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "paserinone",
+    "name": "パセリの根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "paserinokuki",
+    "name": "パセリの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kuresonnowakaba",
+    "name": "クレソンの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "radisshunoha",
+    "name": "ラディッシュの葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "daikonnowakaba",
+    "name": "大根の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kabunowakaba",
+    "name": "カブの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kabunokuki",
+    "name": "カブの茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "burokkoriinowakaba",
+    "name": "ブロッコリーの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "karifurawaanowakaba",
+    "name": "カリフラワーの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "nasunohana",
+    "name": "ナスの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kyuurinohana",
+    "name": "きゅうりの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tomatonowakaba",
+    "name": "トマトの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "piimannowakaba",
+    "name": "ピーマンの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tougarashinohana",
+    "name": "とうがらしの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "okuranohana",
+    "name": "オクラの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "gooyanohana",
+    "name": "ゴーヤの花",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "satoimonokawa",
+    "name": "里芋の皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "nagaimonokuki",
+    "name": "長芋の茎",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tamaneginokawa",
+    "name": "玉ねぎの皮",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ninnikunowakaba",
+    "name": "にんにくの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shouganowakaba",
+    "name": "しょうがの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "neginowakaba",
+    "name": "ねぎの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "retasunoshin",
+    "name": "レタスの芯",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "hourenkusanowakaba",
+    "name": "ほうれん草の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "komatsunanowakaba",
+    "name": "小松菜の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "mizunanowakaba",
+    "name": "水菜の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "mittsuhanowakaba",
+    "name": "三つ葉の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "moroheiyanowakaba",
+    "name": "モロヘイヤの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kuushinnanowakaba",
+    "name": "空心菜の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chingennanowakaba",
+    "name": "チンゲン菜の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chingennanowakaba_2",
+    "name": "青梗菜の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "nanohananowakaba",
+    "name": "菜の花の若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rukkoranowakaba",
+    "name": "ルッコラの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "keerunowakaba",
+    "name": "ケールの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "radisshunowakaba",
+    "name": "ラディッシュの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "fennerunowakaba",
+    "name": "フェンネルの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chikorinowakaba",
+    "name": "チコリの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "endaibunowakaba",
+    "name": "エンダイブの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "rutabaganowakaba",
+    "name": "ルタバガの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "koorurabinowakaba",
+    "name": "コールラビの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "paasunippunowakaba",
+    "name": "パースニップの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "seroriakkunowakaba",
+    "name": "セロリアックの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "biitsunowakaba",
+    "name": "ビーツの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "yaakonnowakaba",
+    "name": "ヤーコンの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "myouganowakaba",
+    "name": "みょうがの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "wasabinowakaba",
+    "name": "わさびの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "mizunanowakaba_2",
+    "name": "みずなの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "tsurumurasakinowakaba",
+    "name": "ツルムラサキの若葉",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "honshimeji",
+    "name": "ホンシメジ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "murasakishimeji",
+    "name": "ムラサキシメジ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "nashiitake",
+    "name": "生しいたけ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "umaitake",
+    "name": "生まいたけ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "haenoki",
+    "name": "生えのき",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "nashimeji",
+    "name": "生しめじ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namaeringi",
+    "name": "生エリンギ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "ikinokomikkusu",
+    "name": "生きのこミックス",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "awachatake",
+    "name": "アワチャタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "yamakoutake",
+    "name": "ヤマコウタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "kaigaratake",
+    "name": "カイガラタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "kikurage",
+    "name": "キクラゲ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "unameko",
+    "name": "生なめこ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namabunashimeji",
+    "name": "生ぶなしめじ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namabenishimeji",
+    "name": "生ベニシメジ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namahonshimeji",
+    "name": "生ホンシメジ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namamurasakishimeji",
+    "name": "生ムラサキシメジ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namarengetake",
+    "name": "生レンゲ茸",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namayamabushitake",
+    "name": "生ヤマブシタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namanebutake",
+    "name": "生ネブタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namanumeritake",
+    "name": "生ヌメリタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakarakasatake",
+    "name": "生カラカサタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakawaratake",
+    "name": "生カワラタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namashirokikurage",
+    "name": "生シロキクラゲ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakurokikurage",
+    "name": "生クロキクラゲ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namahiratake",
+    "name": "生ヒラタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namatamogitake",
+    "name": "生タモギタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namaamitake",
+    "name": "生アミタケ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namaporuchiini",
+    "name": "生ポルチーニ",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namamasshuruumu",
+    "name": "生マッシュルーム",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namamasshuruumusuraisu",
+    "name": "生マッシュルームスライス",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namamasshuruumuhooru",
+    "name": "生マッシュルームホール",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakinoko3tanemikkusu",
+    "name": "生キノコ3種ミックス",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakinoko4tanemikkusu",
+    "name": "生キノコ4種ミックス",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "namakinoko5tanemikkusu",
+    "name": "生キノコ5種ミックス",
+    "excelCategory": "きのこ"
+  },
+  {
+    "slug": "ra_furansu",
+    "name": "ラ・フランス",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ru_rekuchie",
+    "name": "ル・レクチエ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "hakutou",
+    "name": "白桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "outou",
+    "name": "黄桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "aoringo",
+    "name": "青りんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kougyoku",
+    "name": "紅玉",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ourin",
+    "name": "王林",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "tsugaru",
+    "name": "つがる",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shinanosuiito",
+    "name": "シナノスイート",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "hebesu",
+    "name": "へべす",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kankitsu",
+    "name": "かんきつ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "guuzuberii",
+    "name": "グーズベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kashisu",
+    "name": "カシス",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "reddokaranto",
+    "name": "レッドカラント",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "burakkukaranto",
+    "name": "ブラックカラント",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "howaitokaranto",
+    "name": "ホワイトカラント",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "reezun",
+    "name": "レーズン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "puruun",
+    "name": "プルーン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kuranberii",
+    "name": "クランベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraiichijiku",
+    "name": "ドライイチジク",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraiapurikotto",
+    "name": "ドライアプリコット",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraimangoo",
+    "name": "ドライマンゴー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraipainappuru",
+    "name": "ドライパイナップル",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraibanana",
+    "name": "ドライバナナ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraikiui",
+    "name": "ドライキウイ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "dorairingo",
+    "name": "ドライりんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraimikan",
+    "name": "ドライみかん",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraiyuzu",
+    "name": "ドライゆず",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "dorairemon",
+    "name": "ドライレモン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraiorenji",
+    "name": "ドライオレンジ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraigureepufuruutsu",
+    "name": "ドライグレープフルーツ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "dorairaimu",
+    "name": "ドライライム",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraipasshonfuruutsu",
+    "name": "ドライパッションフルーツ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "dorairaichi",
+    "name": "ドライライチ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "dorairazuberii",
+    "name": "ドライラズベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraisutoroberii",
+    "name": "ドライストロベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraicherii",
+    "name": "ドライチェリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraiburuuberii",
+    "name": "ドライブルーベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraikuranberii",
+    "name": "ドライクランベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "doraitomato",
+    "name": "ドライトマト",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "butakoma",
+    "name": "豚こま",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushikoma",
+    "name": "牛こま",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "wakadori",
+    "name": "若鶏",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsuji",
+    "name": "仔羊",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ramuhikiniku",
+    "name": "ラムひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "usaginiku",
+    "name": "うさぎ肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushisune",
+    "name": "牛すね",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiranpu",
+    "name": "牛ランプ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "koushi",
+    "name": "仔牛",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "koushi_2",
+    "name": "子牛",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushimomo_2",
+    "name": "牛モモ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushikata",
+    "name": "牛カタ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butatoro",
+    "name": "豚トロ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butabarausugiri",
+    "name": "豚バラ薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butaroosuusugiri",
+    "name": "豚ロース薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "tonkenroosuusugiri",
+    "name": "豚肩ロース薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butamomousugiri",
+    "name": "豚もも薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butahireusugiri",
+    "name": "豚ヒレ薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butakatausugiri",
+    "name": "豚カタ薄切り",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatoritebanaka",
+    "name": "鶏手羽中",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatoridoramusuteikku",
+    "name": "鶏ドラムスティック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "gyuutannaka",
+    "name": "牛タン中",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "gyuutansaki",
+    "name": "牛タン先",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butatannaka",
+    "name": "豚タン中",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butatansaki",
+    "name": "豚タン先",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushisaaroin",
+    "name": "牛サーロイン",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushishatooburian",
+    "name": "牛シャトーブリアン",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushisujiniku",
+    "name": "牛スジ肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiteeruniku",
+    "name": "牛テール肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ramukataroosu",
+    "name": "ラム肩ロース",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujikataroosu",
+    "name": "仔羊肩ロース",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujireggu",
+    "name": "仔羊レッグ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujirakku",
+    "name": "仔羊ラック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujichoppu",
+    "name": "仔羊チョップ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujishorudaa",
+    "name": "仔羊ショルダー",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kohitsujihikiniku",
+    "name": "仔羊ひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "usagiroosu",
+    "name": "うさぎロース",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "usagireggu",
+    "name": "うさぎレッグ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "usagihikiniku",
+    "name": "うさぎひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchoumomo",
+    "name": "七面鳥もも",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchoumune",
+    "name": "七面鳥むね",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchousasami",
+    "name": "七面鳥ささみ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchouteba",
+    "name": "七面鳥手羽",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchouhikiniku",
+    "name": "七面鳥ひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "shichimenchourebaa",
+    "name": "七面鳥レバー",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidorimomo",
+    "name": "地鶏もも",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidorimune",
+    "name": "地鶏むね",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidorisasami",
+    "name": "地鶏ささみ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidoriteba",
+    "name": "地鶏手羽",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidorihikiniku",
+    "name": "地鶏ひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "jidorirebaa",
+    "name": "地鶏レバー",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kamohikiniku",
+    "name": "鴨ひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kamorebaa",
+    "name": "鴨レバー",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kamoshinzou",
+    "name": "鴨心臓",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "kamosunagimo",
+    "name": "鴨砂肝",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "umahikiniku",
+    "name": "馬ひき肉",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butabarakiriotoshi",
+    "name": "豚バラ切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butaroosukiriotoshi",
+    "name": "豚ロース切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "tonkenroosukiriotoshi",
+    "name": "豚肩ロース切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butamomokiriotoshi",
+    "name": "豚もも切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushibarakiriotoshi",
+    "name": "牛バラ切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiroosukiriotoshi",
+    "name": "牛ロース切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "gyuukataroosukiriotoshi",
+    "name": "牛肩ロース切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushimomokiriotoshi",
+    "name": "牛もも切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorisasamikiriotoshi",
+    "name": "鶏ささみ切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorimomokiriotoshi",
+    "name": "鶏もも切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorimunekiriotoshi",
+    "name": "鶏むね切り落とし",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "nodoguro",
+    "name": "ノドグロ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kisu",
+    "name": "キス",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kajiki",
+    "name": "カジキ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "mejimaguro",
+    "name": "メジマグロ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shimaaji",
+    "name": "シマアジ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kurodai",
+    "name": "クロダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "madai",
+    "name": "マダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hotaruika",
+    "name": "ホタルイカ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikanago",
+    "name": "イカナゴ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "katakuchiiwashi",
+    "name": "カタクチイワシ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shirako",
+    "name": "白子",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ankimo",
+    "name": "あん肝",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sujiko_2",
+    "name": "筋子",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "chirimenjako",
+    "name": "ちりめんじゃこ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shirasuhoshi",
+    "name": "しらす干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kachiwariiwashi",
+    "name": "かち割りいわし",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "niboshishikona",
+    "name": "煮干し粉",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "katsuofushikona",
+    "name": "かつお節粉",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "honmaguro",
+    "name": "本マグロ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "takoashi",
+    "name": "タコ足",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikaashi",
+    "name": "イカ足",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "garubanzomame",
+    "name": "ガルバンゾ豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "reddokidonii",
+    "name": "レッドキドニー",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kanierinbo",
+    "name": "カニエリンボ",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "tenpe",
+    "name": "テンペ",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "saradamame",
+    "name": "サラダ豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "bataamiruku",
+    "name": "バターミルク",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "kuriimufuresshu",
+    "name": "クリームフレッシュ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "katakuriko",
+    "name": "片栗粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kyourikiko",
+    "name": "強力粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "hakurikiko",
+    "name": "薄力粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "zenryuukona",
+    "name": "全粒粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "pankona",
+    "name": "パン粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "koonsutaachi",
+    "name": "コーンスターチ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tapiokakona",
+    "name": "タピオカ粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "shiratamako",
+    "name": "白玉粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "joushinkona",
+    "name": "上新粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "doumyoujikona",
+    "name": "道明寺粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tenpurakona",
+    "name": "天ぷら粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "okonomiyakikona",
+    "name": "お好み焼き粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "takoyakikona",
+    "name": "たこ焼き粉",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "pankeekimikkusu",
+    "name": "パンケーキミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "hottokeekimikkusu",
+    "name": "ホットケーキミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "mafinmikkusu",
+    "name": "マフィンミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kukkiimikkusu",
+    "name": "クッキーミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "keekimikkusu",
+    "name": "ケーキミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "panmikkusu",
+    "name": "パンミックス",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namaudon",
+    "name": "生うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nasoba",
+    "name": "生そば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namaraamen",
+    "name": "生ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namasupagettei",
+    "name": "生スパゲッティ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namapasuta",
+    "name": "生パスタ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namachuukamen",
+    "name": "生中華麺",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namayakisoba",
+    "name": "生焼きそば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namahiyamugi",
+    "name": "生ひやむぎ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nasoumen",
+    "name": "生そうめん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "ikishimen",
+    "name": "生きしめん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namareimen",
+    "name": "生冷麺",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namaharusame",
+    "name": "生春雨",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namabiifun",
+    "name": "生ビーフン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namaraisunuudoru",
+    "name": "生ライスヌードル",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "namafoo",
+    "name": "生フォー",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "toubanjan",
+    "name": "豆板醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "tenmenshou",
+    "name": "甜面醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "xoshou",
+    "name": "XO醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "oisutaasoosu",
+    "name": "オイスターソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "usutaasoosu",
+    "name": "ウスターソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "kechappu",
+    "name": "ケチャップ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "mayoneezu",
+    "name": "マヨネーズ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "tarutarusoosu",
+    "name": "タルタルソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "tonkatsusoosu",
+    "name": "とんかつソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "okonomisoosu",
+    "name": "お好みソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "yakinikunotare",
+    "name": "焼肉のタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sukiyakinotare",
+    "name": "すきやきのタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "teriyakisoosu",
+    "name": "照り焼きソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "yuzukoshou",
+    "name": "柚子胡椒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "shiokouji",
+    "name": "塩麹",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sakekasu",
+    "name": "酒粕",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "yuzukoshou_2",
+    "name": "ゆずこしょう",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuunousoosu",
+    "name": "中濃ソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "awasesu",
+    "name": "合わせ酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sanbaizu",
+    "name": "三杯酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "shihaisu",
+    "name": "四杯酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "nanpuraa",
+    "name": "ナンプラー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "shaoshinsake",
+    "name": "シャオシン酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "shoukoushu",
+    "name": "紹興酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "teriyakisoosu_2",
+    "name": "テリヤキソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ajipon",
+    "name": "味ぽん",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "gomadare",
+    "name": "ごまだれ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "misodare",
+    "name": "みそだれ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chinso",
+    "name": "陳醋",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chinkoukouzu",
+    "name": "鎮江香醋",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "kochujan",
+    "name": "コチュジャン",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "misopeesuto",
+    "name": "味噌ペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "gomapeesuto",
+    "name": "ごまペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "piinattsupeesuto",
+    "name": "ピーナッツペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "aamondopeesuto",
+    "name": "アーモンドペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "heezerunattsupeesuto",
+    "name": "ヘーゼルナッツペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "kashuupeesuto",
+    "name": "カシューペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "pisutachiopeesuto",
+    "name": "ピスタチオペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "makademiapeesuto",
+    "name": "マカデミアペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "burajirunattsupeesuto",
+    "name": "ブラジルナッツペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "kurumipeesuto",
+    "name": "くるみペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "dijonmasutaado",
+    "name": "ディジョンマスタード",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "tsubumasutaado",
+    "name": "粒マスタード",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "kaienpeppaa",
+    "name": "カイエンペッパー",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "roozupeppaa",
+    "name": "ローズペッパー",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "guriinpeppaa",
+    "name": "グリーンペッパー",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "pinkupeppaa",
+    "name": "ピンクペッパー",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "sumookupapurika",
+    "name": "スモークパプリカ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "sumookusoruto",
+    "name": "スモークソルト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "fenuguriiku",
+    "name": "フェヌグリーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "junipaaberii",
+    "name": "ジュニパーベリー",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "harissa",
+    "name": "ハリッサ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "suriracha",
+    "name": "スリラチャ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "tabasuko",
+    "name": "タバスコ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "chirisoosu",
+    "name": "チリソース",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "wasabipeesuto",
+    "name": "わさびペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "karashipeesuto",
+    "name": "からしペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "shougapeesuto",
+    "name": "生姜ペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "ninnikupeesuto",
+    "name": "にんにくペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "onionpeesuto",
+    "name": "オニオンペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "gaarikkupeesuto",
+    "name": "ガーリックペースト",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "komeburanabura",
+    "name": "米ブラン油",
+    "excelCategory": "油脂"
+  },
+  {
+    "slug": "komehaigaabura",
+    "name": "米胚芽油",
+    "excelCategory": "油脂"
+  },
+  {
+    "slug": "henpushiidooiru",
+    "name": "ヘンプシードオイル",
+    "excelCategory": "油脂"
+  },
+  {
+    "slug": "hoshidaikon",
+    "name": "干し大根",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshigobou",
+    "name": "干しごぼう",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshininjin",
+    "name": "干しにんじん",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshitamanegi",
+    "name": "干し玉ねぎ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshitomato",
+    "name": "干しトマト",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshipaseri",
+    "name": "干しパセリ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshibajiru",
+    "name": "干しバジル",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshioregano",
+    "name": "干しオレガノ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshitaimu",
+    "name": "干しタイム",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshiroozumarii",
+    "name": "干しローズマリー",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshiminto",
+    "name": "干しミント",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshiseeji",
+    "name": "干しセージ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshidiru",
+    "name": "干しディル",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshifenneru",
+    "name": "干しフェンネル",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshikoriandaa",
+    "name": "干しコリアンダー",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshikumin",
+    "name": "干しクミン",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshikarudamon",
+    "name": "干しカルダモン",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshikuroobu",
+    "name": "干しクローブ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshinatsumegu",
+    "name": "干しナツメグ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshishinamon",
+    "name": "干しシナモン",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshiporuchiini",
+    "name": "干しポルチーニ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshimasshuruumu",
+    "name": "干しマッシュルーム",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "rausukonbu",
+    "name": "羅臼昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "rishirikonbu",
+    "name": "利尻昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "hidakakonbu",
+    "name": "日高昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "choukonbu",
+    "name": "長昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "makotokonbu",
+    "name": "真昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "choununo",
+    "name": "長布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "aomoriwakame",
+    "name": "青森わかめ",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "sanrikuwakame",
+    "name": "三陸わかめ",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "iwamozuku",
+    "name": "岩もずく",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "okinawamozuku",
+    "name": "沖縄もずく",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "popiishiido",
+    "name": "ポピーシード",
+    "excelCategory": "ナッツ・種"
+  },
+  {
+    "slug": "rengenotane",
+    "name": "レンゲの種",
+    "excelCategory": "ナッツ・種"
+  },
+  {
+    "slug": "rengemame",
+    "name": "レンゲ豆",
+    "excelCategory": "ナッツ・種"
+  },
+  {
+    "slug": "henpushiido",
+    "name": "ヘンプシード",
+    "excelCategory": "ナッツ・種"
+  },
+  {
+    "slug": "asazukekenomoto",
+    "name": "浅漬けの素",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "nukatoko",
+    "name": "ぬか床",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "beekingupaudaa",
+    "name": "ベーキングパウダー",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "beekingusooda",
+    "name": "ベーキングソーダ",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "kinakona",
+    "name": "きな粉",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "kuromamekona",
+    "name": "黒豆粉",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "wasanbon",
+    "name": "和三盆",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "aamondopuudoru",
+    "name": "アーモンドプードル",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "heezerunattsupuudoru",
+    "name": "ヘーゼルナッツプードル",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "pisutachiopuudoru",
+    "name": "ピスタチオプードル",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "maronpeesuto",
+    "name": "マロンペースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "kuripeesuto",
+    "name": "栗ペースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "ramureezun",
+    "name": "ラムレーズン",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "doraifuruutsumikkusu",
+    "name": "ドライフルーツミックス",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "nattsumikkusu",
+    "name": "ナッツミックス",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "mikkusunattsu",
+    "name": "ミックスナッツ",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "iisuto",
+    "name": "イースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "majipan",
+    "name": "マジパン",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "dangokona",
+    "name": "団子粉",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "konsome",
+    "name": "コンソメ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "buiyon",
+    "name": "ブイヨン",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "karyuukonsome",
+    "name": "顆粒コンソメ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukakonsome",
+    "name": "中華コンソメ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "wafuukonsome",
+    "name": "和風コンソメ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "demigurasusoosu",
+    "name": "デミグラスソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "howaitosoosu",
+    "name": "ホワイトソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "baabekyuusoosu",
+    "name": "バーベキューソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "suteekisoosu",
+    "name": "ステーキソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "gyouzanotare",
+    "name": "餃子のタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "harumakikinotare",
+    "name": "春巻きのタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sushizu",
+    "name": "寿司酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "amazu",
+    "name": "甘酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "kyousu",
+    "name": "強酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sanshuumiso",
+    "name": "三州味噌",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "hishio",
+    "name": "ひしお",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "shouyukouji",
+    "name": "醤油麹",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "misokouji",
+    "name": "味噌麹",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "mirinkasu",
+    "name": "みりん粕",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "karashimiso",
+    "name": "からしみそ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "yuzumiso",
+    "name": "柚子みそ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "fisshusoosu",
+    "name": "フィッシュソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "tamarindopeesuto",
+    "name": "タマリンドペースト",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "paamushugaa",
+    "name": "パームシュガー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sanbaruorekku",
+    "name": "サンバルオレック",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukasuupunomoto",
+    "name": "中華スープの素",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "wakamesuupunomoto",
+    "name": "わかめスープの素",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "karyuuwafuudashi",
+    "name": "顆粒和風だし",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "karyuuchuukadashi",
+    "name": "顆粒中華だし",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ryouriyounihonshu",
+    "name": "料理用日本酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ryouriyoushoukoushu",
+    "name": "料理用紹興酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "misodare_2",
+    "name": "味噌ダレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "yakitorinotare",
+    "name": "焼き鳥のタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "tenpuratsuyu",
+    "name": "天ぷらつゆ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ponsuawase",
+    "name": "ポン酢合わせ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ponsujouyu",
+    "name": "ポン酢醤油",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukadakkusoosu",
+    "name": "中華ダックソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "ruu",
+    "name": "ルー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukatenmenshou",
+    "name": "中華甜面醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukatoubanjan",
+    "name": "中華豆板醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaxoshou",
+    "name": "中華XO醤",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaoisutaasoosu",
+    "name": "中華オイスターソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukausutaasoosu",
+    "name": "中華ウスターソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukakechappu",
+    "name": "中華ケチャップ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukamayoneezu",
+    "name": "中華マヨネーズ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaponsu",
+    "name": "中華ポン酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukayuzukoshou",
+    "name": "中華柚子胡椒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukashiokouji",
+    "name": "中華塩麹",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukasakekasu",
+    "name": "中華酒粕",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukachuunousoosu",
+    "name": "中華中濃ソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukatonkatsusoosu",
+    "name": "中華とんかつソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaokonomisoosu",
+    "name": "中華お好みソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukayakinikunotare",
+    "name": "中華焼肉のタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukasukiyakinotare",
+    "name": "中華すきやきのタレ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukateriyakisoosu",
+    "name": "中華照り焼きソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukayuzukoshou_2",
+    "name": "中華ゆずこしょう",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaawasesu",
+    "name": "中華合わせ酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukasanbaizu",
+    "name": "中華三杯酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukashihaisu",
+    "name": "中華四杯酢",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukananpuraa",
+    "name": "中華ナンプラー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukashaoshinsake",
+    "name": "中華シャオシン酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukashoukoushu",
+    "name": "中華紹興酒",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukateriyakisoosu_2",
+    "name": "中華テリヤキソース",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukaajipon",
+    "name": "中華味ぽん",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukagomadare",
+    "name": "中華ごまだれ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "chuukamisodare",
+    "name": "中華みそだれ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "serorishiido",
+    "name": "セロリシード",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "koriandaashiido",
+    "name": "コリアンダーシード",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "masutaado",
+    "name": "マスタード",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "wasabi_2",
+    "name": "わさび",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "karashi",
+    "name": "からし",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "shouga",
+    "name": "生姜",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "arabikikikoshou",
+    "name": "粗挽き胡椒",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "saihikikoshou",
+    "name": "細挽き胡椒",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "habanero",
+    "name": "ハバネロ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "harapeenyo",
+    "name": "ハラペーニョ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "chiri",
+    "name": "チリ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "banira",
+    "name": "バニラ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "chai",
+    "name": "チャイ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "haabu",
+    "name": "ハーブ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "supaisu",
+    "name": "スパイス",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "kurosoi",
+    "name": "クロソイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kinme",
+    "name": "キンメ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "nodai",
+    "name": "ノダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "maruko",
+    "name": "マルコ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "moika",
+    "name": "モイカ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "yariika",
+    "name": "ヤリイカ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kouika",
+    "name": "コウイカ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "aoriika",
+    "name": "アオリイカ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "mebaru",
+    "name": "メバル",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "soi",
+    "name": "ソイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hoya",
+    "name": "ホヤ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "namako",
+    "name": "ナマコ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kyabia",
+    "name": "キャビア",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikanoshiokara",
+    "name": "いかの塩辛",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikura_2",
+    "name": "いくら",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shirasu_2",
+    "name": "しらす",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "chirimen",
+    "name": "ちりめん",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kachiwari",
+    "name": "かち割り",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ushiribuai",
+    "name": "牛リブアイ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushitoppubureedo",
+    "name": "牛トップブレード",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushifurappu",
+    "name": "牛フラップ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiichibo",
+    "name": "牛イチボ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiude",
+    "name": "牛ウデ",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butaroosuburokku",
+    "name": "豚ロースブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butabaraburokku",
+    "name": "豚バラブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "tonkenroosuburokku",
+    "name": "豚肩ロースブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorisasamiburokku",
+    "name": "鶏ささみブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorimomoburokku",
+    "name": "鶏ももブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatorimuneburokku",
+    "name": "鶏むねブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatoritebamotoburokku",
+    "name": "鶏手羽元ブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "niwatoritebasakiburokku",
+    "name": "鶏手羽先ブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butahireburokku",
+    "name": "豚ヒレブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butakataburokku",
+    "name": "豚カタブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "butamomoburokku",
+    "name": "豚ももブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushihireburokku",
+    "name": "牛ヒレブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushikataburokku",
+    "name": "牛カタブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushimomoburokku",
+    "name": "牛ももブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "gyuukataroosuburokku",
+    "name": "牛肩ロースブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushiroosuburokku",
+    "name": "牛ロースブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "ushibaraburokku",
+    "name": "牛バラブロック",
+    "excelCategory": "肉類"
+  },
+  {
+    "slug": "reddorenteiru",
+    "name": "レッドレンティル",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "guriinrenteiru",
+    "name": "グリーンレンティル",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "burakkurenteiru",
+    "name": "ブラックレンティル",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "ieroorenteiru",
+    "name": "イエローレンティル",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "supurittopee",
+    "name": "スプリットペー",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "burakkuaidopii",
+    "name": "ブラックアイドピー",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "pintomame",
+    "name": "ピント豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "neibiibiinzu",
+    "name": "ネイビービーンズ",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "soimiito",
+    "name": "ソイミート",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "daizumiito",
+    "name": "大豆ミート",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "ejiputomame",
+    "name": "エジプト豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "makaroni",
+    "name": "マカロニ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "fujirri",
+    "name": "フジッリ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "pennerigaate",
+    "name": "ペンネリガーテ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "barubiini",
+    "name": "バルビーニ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "orekiette",
+    "name": "オレキエッテ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "papparuderre",
+    "name": "パッパルデッレ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tariaterre",
+    "name": "タリアテッレ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "zenryuukonapasuta",
+    "name": "全粒粉パスタ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kansouudon",
+    "name": "乾燥うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kansousoba",
+    "name": "乾燥そば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kansouraamen",
+    "name": "乾燥ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "mochi",
+    "name": "もち",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "raisupeepaa",
+    "name": "ライスペーパー",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "toruteiiya",
+    "name": "トルティーヤ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "konnyaku",
+    "name": "こんにゃく",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "itakonnyaku",
+    "name": "板こんにゃく",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "itokonnyaku",
+    "name": "糸こんにゃく",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "shirataki",
+    "name": "しらたき",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "kanikama",
+    "name": "かにかま",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "kanifuumikamaboko",
+    "name": "かに風味かまぼこ",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "sakekama",
+    "name": "さけかま",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "tarakama",
+    "name": "たらかま",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "beekon_endo",
+    "name": "ベーコンエンド",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "beekonsuraisu",
+    "name": "ベーコンスライス",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "neriwasabi",
+    "name": "練りワサビ",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "nerikarashi",
+    "name": "練りからし",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "itawasabi",
+    "name": "板わさび",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "hoei",
+    "name": "ホエイ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "rakutoosu",
+    "name": "ラクトース",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "nyuutou",
+    "name": "乳糖",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "bataamirukupaudaa",
+    "name": "バターミルクパウダー",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "dasshifunnyuu",
+    "name": "脱脂粉乳",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "zenshifunchichi",
+    "name": "全脂粉乳",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "mottsuarera",
+    "name": "モッツァレラ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "chedaa",
+    "name": "チェダー",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "gooda",
+    "name": "ゴーダ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "parumezan",
+    "name": "パルメザン",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "hoshipapurika",
+    "name": "干しパプリカ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshimekabu",
+    "name": "干しめかぶ",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshinori_2",
+    "name": "干し海苔",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "hoshikaisou",
+    "name": "干し海藻",
+    "excelCategory": "乾物"
+  },
+  {
+    "slug": "shiomozuku",
+    "name": "塩もずく",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansouwakame",
+    "name": "乾燥わかめ",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansoumozuku",
+    "name": "乾燥もずく",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansouhijiki",
+    "name": "乾燥ひじき",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansoumekabu",
+    "name": "乾燥めかぶ",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansoukonbu",
+    "name": "乾燥昆布",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansounori",
+    "name": "乾燥のり",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansounori_2",
+    "name": "乾燥海苔",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kansoukaisou",
+    "name": "乾燥海藻",
+    "excelCategory": "海藻"
+  },
+  {
+    "slug": "kimuchinomoto",
+    "name": "キムチの素",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "tsuna",
+    "name": "ツナ",
+    "excelCategory": "缶詰"
+  },
+  {
+    "slug": "piinattsubataa",
+    "name": "ピーナッツバター",
+    "excelCategory": "缶詰"
+  },
+  {
+    "slug": "sarusa",
+    "name": "サルサ",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "sanukiudon",
+    "name": "讃岐うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "inaniwaudon",
+    "name": "稲庭うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "gotouudon",
+    "name": "五島うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "iseudon",
+    "name": "伊勢うどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "teuchichiudon",
+    "name": "手打ちうどん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "hakataraamen",
+    "name": "博多ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "sappororaamen",
+    "name": "札幌ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "toukyouraamen",
+    "name": "東京ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "yokohamakakeiraamen",
+    "name": "横浜家系ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nagoyaraamen",
+    "name": "名古屋ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "oosakaraamen",
+    "name": "大阪ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "fukuokaraamen",
+    "name": "福岡ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kumamotoraamen",
+    "name": "熊本ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nagasakichanponmen",
+    "name": "長崎ちゃんぽん麺",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kakoshimaraamen",
+    "name": "鹿児島ラーメン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "okinawasookisoba",
+    "name": "沖縄ソーキそば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "juuwarisoba",
+    "name": "十割そば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nihachisoba",
+    "name": "二八そば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "ishiusuhikisoba",
+    "name": "石臼挽きそば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "teuchichisoba",
+    "name": "手打ちそば",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "miwasoumen",
+    "name": "三輪そうめん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "ibonoito",
+    "name": "揖保の糸",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tenobesoumen",
+    "name": "手延べそうめん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "teuchichihiyamugi",
+    "name": "手打ちひやむぎ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "teuchichikishimen",
+    "name": "手打ちきしめん",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kankokureimen",
+    "name": "韓国冷麺",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "moriokareimen",
+    "name": "盛岡冷麺",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "betonamufoo",
+    "name": "ベトナムフォー",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tairaisunuudoru",
+    "name": "タイライスヌードル",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "shingapoorubiifun",
+    "name": "シンガポールビーフン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "kaperiini",
+    "name": "カペリーニ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "rabiori",
+    "name": "ラビオリ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nyokki",
+    "name": "ニョッキ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "akihimeichigo",
+    "name": "章姫いちご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "tochiotomeichigo",
+    "name": "とちおとめいちご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "amaouichigo",
+    "name": "あまおういちご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shiroichigo",
+    "name": "白いちご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "sanfujiringo",
+    "name": "サンふじりんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "akibaeringo",
+    "name": "秋映りんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "tokiringo",
+    "name": "トキりんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "mitsuiriringo",
+    "name": "蜜入りりんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kyohoubudou",
+    "name": "巨峰ぶどう",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "pioonebudou",
+    "name": "ピオーネぶどう",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shainmasukattobudou",
+    "name": "シャインマスカットぶどう",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "deraueabudou",
+    "name": "デラウェアぶどう",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "naiagarabudou",
+    "name": "ナイアガラぶどう",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shiranuimikan",
+    "name": "不知火みかん",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "setokamikan",
+    "name": "せとかみかん",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "hassakumikan",
+    "name": "はっさくみかん",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "neeburuorenji",
+    "name": "ネーブルオレンジ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kawanakashimahakutou",
+    "name": "川中島白桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "hakuhoumomo",
+    "name": "白鳳桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "asamahakutou",
+    "name": "浅間白桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ookubomomo",
+    "name": "大久保桃",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "fuyuukaki",
+    "name": "富有柿",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "jiroukaki",
+    "name": "次郎柿",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "taakikaki",
+    "name": "太秋柿",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "amagaki",
+    "name": "甘柿",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shibugaki",
+    "name": "渋柿",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "nijusseikinashi",
+    "name": "二十世紀梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kousuinashi",
+    "name": "幸水梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "housuinashi",
+    "name": "豊水梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "shuuhounashi",
+    "name": "秀峰梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "nansuinashi",
+    "name": "南水梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ouakinashi",
+    "name": "王秋梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "niitakanashi",
+    "name": "新高梨",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kodamasuika",
+    "name": "小玉スイカ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ootamasuika",
+    "name": "大玉スイカ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kisuika",
+    "name": "黄スイカ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "masukumeron",
+    "name": "マスクメロン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "akanikumeron",
+    "name": "赤肉メロン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "midorinikumeron",
+    "name": "緑肉メロン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "nettomeron",
+    "name": "ネットメロン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "goorudopainappuru",
+    "name": "ゴールドパイナップル",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "sunakkupainappuru",
+    "name": "スナックパイナップル",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "firipinbanana",
+    "name": "フィリピンバナナ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "goorudokiui",
+    "name": "ゴールドキウイ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "guriinkiui",
+    "name": "グリーンキウイ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "reddokiui",
+    "name": "レッドキウイ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "goorudenreezun",
+    "name": "ゴールデンレーズン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "burakkureezun",
+    "name": "ブラックレーズン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "sarutanareezun",
+    "name": "サルタナレーズン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "tanenashipuruun",
+    "name": "種なしプルーン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "tanearipuruun",
+    "name": "種ありプルーン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "torukosandoraiichijiku",
+    "name": "トルコ産ドライイチジク",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "torukosandoraiapurikotto",
+    "name": "トルコ産ドライアプリコット",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "firipinsandoraimangoo",
+    "name": "フィリピン産ドライマンゴー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "taisandoraipainappuru",
+    "name": "タイ産ドライパイナップル",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "firipinsandoraibanana",
+    "name": "フィリピン産ドライバナナ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "nzsandoraikiui",
+    "name": "NZ産ドライキウイ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "aomorisandorairingo",
+    "name": "青森産ドライりんご",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "wakayamasandoraimikan",
+    "name": "和歌山産ドライみかん",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kouchisandoraiyuzu",
+    "name": "高知産ドライゆず",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "hiroshimasandorairemon",
+    "name": "広島産ドライレモン",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "ehimesandoraiorenji",
+    "name": "愛媛産ドライオレンジ",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "amerikasandoraicherii",
+    "name": "アメリカ産ドライチェリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "kanadasandoraiburuuberii",
+    "name": "カナダ産ドライブルーベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "amerikasandoraikuranberii",
+    "name": "アメリカ産ドライクランベリー",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "itariasandoraitomato",
+    "name": "イタリア産ドライトマト",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "torukosandoraitomato",
+    "name": "トルコ産ドライトマト",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "akoudai",
+    "name": "アコウダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kijidai",
+    "name": "キジダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "fuedai",
+    "name": "フエダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ishidai",
+    "name": "イシダイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "oonibe",
+    "name": "オオニベ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ainame",
+    "name": "アイナメ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karasukarei",
+    "name": "カラスカレイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "makogarei",
+    "name": "マコガレイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shimakogarei",
+    "name": "シマコガレイ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kichiji",
+    "name": "キチジ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "mutsu",
+    "name": "ムツ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hata",
+    "name": "ハタ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikageso",
+    "name": "イカゲソ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "takogeso",
+    "name": "タコゲソ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukiasari",
+    "name": "殻付きアサリ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukishijimi",
+    "name": "殻付きシジミ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukihamaguri",
+    "name": "殻付きハマグリ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukimuurukai",
+    "name": "殻付きムール貝",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukisazae",
+    "name": "殻付きサザエ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukitsubukai",
+    "name": "殻付きツブ貝",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukiawabi",
+    "name": "殻付きアワビ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukihokkikai",
+    "name": "殻付きホッキ貝",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukibaikai",
+    "name": "殻付きバイ貝",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukihotate",
+    "name": "殻付きホタテ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukiebi",
+    "name": "殻付きエビ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "karatsukikani",
+    "name": "殻付きカニ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikaichiyahoshi",
+    "name": "イカ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sabaichiyahoshi",
+    "name": "サバ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ajiichiyahoshi",
+    "name": "アジ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hokkeichiyahoshi",
+    "name": "ホッケ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sanmaichiyahoshi",
+    "name": "サンマ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "iwashiichiyahoshi",
+    "name": "イワシ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "iwashimaruboshishi",
+    "name": "イワシ丸干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kamasuichiyahoshi",
+    "name": "カマス一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sawaraichiyahoshi",
+    "name": "サワラ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "buriichiyahoshi",
+    "name": "ブリ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kanpachiichiyahoshi",
+    "name": "カンパチ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hirameichiyahoshi",
+    "name": "ヒラメ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kareiichiyahoshi",
+    "name": "カレイ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "taiichiyahoshi",
+    "name": "タイ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "madaiichiyahoshi",
+    "name": "マダイ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kurodaiichiyahoshi",
+    "name": "クロダイ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shimaajiichiyahoshi",
+    "name": "シマアジ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "nodoguroichiyahoshi",
+    "name": "ノドグロ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kisuichiyahoshi",
+    "name": "キス一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kajikiichiyahoshi",
+    "name": "カジキ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "mejimaguroichiyahoshi",
+    "name": "メジマグロ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "honmaguroichiyahoshi",
+    "name": "本マグロ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kihadaichiyahoshi",
+    "name": "キハダ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "mekajikiichiyahoshi",
+    "name": "メカジキ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "shiiraichiyahoshi",
+    "name": "シイラ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "katsuoichiyahoshi",
+    "name": "カツオ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "maguroichiyahoshi",
+    "name": "マグロ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "saamonichiyahoshi",
+    "name": "サーモン一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sakeichiyahoshi",
+    "name": "鮭一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "masuichiyahoshi",
+    "name": "鱒一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "sakeichiyahoshi_2",
+    "name": "サケ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "torafuguichiyahoshi",
+    "name": "トラフグ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "fuguichiyahoshi",
+    "name": "フグ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kawahagiichiyahoshi",
+    "name": "カワハギ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "unagiichiyahoshi",
+    "name": "ウナギ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "anagoichiyahoshi",
+    "name": "アナゴ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "hotaruikaichiyahoshi",
+    "name": "ホタルイカ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikanagoichiyahoshi",
+    "name": "イカナゴ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "katakuchiiwashiichiyahoshi",
+    "name": "カタクチイワシ一夜干し",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "nashirasu",
+    "name": "生しらす",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "namachirimen",
+    "name": "生ちりめん",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikachiwariiwashi",
+    "name": "生かち割りいわし",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "ikashiokara",
+    "name": "いか塩辛",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "oikura",
+    "name": "生いくら",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "namatarako",
+    "name": "生たらこ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "namamentaiko",
+    "name": "生明太子",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "namatobiko",
+    "name": "生とびこ",
+    "excelCategory": "魚介類"
+  },
+  {
+    "slug": "kansouhiyokomame",
+    "name": "乾燥ひよこ豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouuguisumame",
+    "name": "乾燥うぐいす豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoukintokimame",
+    "name": "乾燥金時豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouootsubuazuki",
+    "name": "乾燥大粒小豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoukotsubuazuki",
+    "name": "乾燥小粒小豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoushiroazuki",
+    "name": "乾燥白小豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoukuromame",
+    "name": "乾燥黒豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoudaizu",
+    "name": "乾燥大豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouendoumame",
+    "name": "乾燥えんどう豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansoumochimame",
+    "name": "乾燥もち豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouryokutou",
+    "name": "乾燥緑豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouingenmame",
+    "name": "乾燥インゲン豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansousayamame",
+    "name": "乾燥サヤマメ",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouejiputomame",
+    "name": "乾燥エジプト豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouguriinpiisu",
+    "name": "乾燥グリーンピース",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansousunappuendou",
+    "name": "乾燥スナップエンドウ",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansousunoopiisu",
+    "name": "乾燥スノーピース",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouingen",
+    "name": "乾燥インゲン",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansousayaingen",
+    "name": "乾燥さやいんげん",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansousayaendou",
+    "name": "乾燥さやえんどう",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "kansouedamame",
+    "name": "乾燥枝豆",
+    "excelCategory": "豆類"
+  },
+  {
+    "slug": "demigurasuruu",
+    "name": "デミグラスルー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "buraunruu",
+    "name": "ブラウンルー",
+    "excelCategory": "調味料"
+  },
+  {
+    "slug": "koshihikari",
+    "name": "コシヒカリ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "akitakomachi",
+    "name": "あきたこまち",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "hitomebore",
+    "name": "ひとめぼれ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "tsuyahime",
+    "name": "つやひめ",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "yumepirika",
+    "name": "ゆめぴりか",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "mirukiikuiin",
+    "name": "ミルキークイーン",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "nanatsuboshi",
+    "name": "ななつぼし",
+    "excelCategory": "穀物・麺"
+  },
+  {
+    "slug": "raimu",
+    "name": "ライム",
+    "excelCategory": "果物"
+  },
+  {
+    "slug": "itakamaboko",
+    "name": "板かまぼこ",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "suraisukamaboko",
+    "name": "スライスかまぼこ",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "suraisuchikuwa",
+    "name": "スライスちくわ",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "suraisuhanpen",
+    "name": "スライスはんぺん",
+    "excelCategory": "加工食品"
+  },
+  {
+    "slug": "insutantoiisuto",
+    "name": "インスタントイースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "namaiisuto",
+    "name": "生イースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "doraiiisuto",
+    "name": "ドライイースト",
+    "excelCategory": "菓子・デザート材料"
+  },
+  {
+    "slug": "komagirizaasai",
+    "name": "細切りザーサイ",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "takirizaasai",
+    "name": "太切りザーサイ",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "mikkusuzaasai",
+    "name": "ミックスザーサイ",
+    "excelCategory": "漬物"
+  },
+  {
+    "slug": "papurikafureeku",
+    "name": "パプリカフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "chirifureeku",
+    "name": "チリフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "sanshoufunmatsu",
+    "name": "山椒粉末",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "kashoufunmatsu",
+    "name": "花椒粉末",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "bajirufureeku",
+    "name": "バジルフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "oreganofureeku",
+    "name": "オレガノフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "taimufureeku",
+    "name": "タイムフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "roozumariifureeku",
+    "name": "ローズマリーフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "mintofureeku",
+    "name": "ミントフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "seejifureeku",
+    "name": "セージフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "dirufureeku",
+    "name": "ディルフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "fennerufureeku",
+    "name": "フェンネルフレーク",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "purobansuhaabu",
+    "name": "プロバンスハーブ",
+    "excelCategory": "スパイス"
+  },
+  {
+    "slug": "sumookukuriimuchiizu",
+    "name": "スモーククリームチーズ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "haabukuriimuchiizu",
+    "name": "ハーブクリームチーズ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "furesshumottsuarera",
+    "name": "フレッシュモッツァレラ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "doraimottsuarera",
+    "name": "ドライモッツァレラ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "suraisuchedaa",
+    "name": "スライスチェダー",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "burokkuchedaa",
+    "name": "ブロックチェダー",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "suraisugooda",
+    "name": "スライスゴーダ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "burokkugooda",
+    "name": "ブロックゴーダ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "konaparumezan",
+    "name": "粉パルメザン",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "kezuriparumezan",
+    "name": "削りパルメザン",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "pekoriinoromaano",
+    "name": "ペコリーノロマーノ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "pekoriinoshichiria",
+    "name": "ペコリーノシチリア",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "konaguranapadaano",
+    "name": "粉グラナパダーノ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "kezuriguranapadaano",
+    "name": "削りグラナパダーノ",
+    "excelCategory": "乳製品"
+  },
+  {
+    "slug": "perira",
+    "name": "ペリラ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shisobebiiriifu",
+    "name": "シソベビーリーフ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "boutsukiminitomato",
+    "name": "房付きミニトマト",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "sayatsukiedamame",
+    "name": "さや付き枝豆",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shinkyou",
+    "name": "新姜",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "menegi",
+    "name": "芽ネギ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "aonegi_3",
+    "name": "青ネギ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "chounegi",
+    "name": "長ネギ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akadamanegi",
+    "name": "赤玉ねぎ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "ougyokunegi",
+    "name": "黄玉ねぎ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirodamanegi",
+    "name": "白玉ねぎ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akakyabetsu",
+    "name": "赤キャベツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirokyabetsu",
+    "name": "白キャベツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "murasakikyabetsu",
+    "name": "紫キャベツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "midorikyabetsu",
+    "name": "緑キャベツ",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akaretasu",
+    "name": "赤レタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "midoriretasu",
+    "name": "緑レタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "murasakiretasu",
+    "name": "紫レタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shiroretasu",
+    "name": "白レタス",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akadaikon",
+    "name": "赤大根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirodaikon",
+    "name": "白大根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "midoridaikon",
+    "name": "緑大根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "kurodaikon",
+    "name": "黒大根",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akahitosan",
+    "name": "赤人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "midorininjin",
+    "name": "緑人参",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "akajagaimo",
+    "name": "赤じゃがいも",
+    "excelCategory": "野菜"
+  },
+  {
+    "slug": "shirojagaimo",
+    "name": "白じゃがいも",
+    "excelCategory": "野菜"
+  }
+]

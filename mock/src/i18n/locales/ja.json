@@ -169,7 +169,7 @@
   "camera": {
     "home": {
       "title": "カメラ",
-      "subtitle": "A-001 · 食材撮影",
+      "subtitle": "食材撮影",
       "hint": "「撮影する」でカメラが起動します",
       "hintSub": "撮影後に AI 解析へ進めます（解析はモック）",
       "capture": "撮影する",
@@ -281,7 +281,7 @@
   "fridge": {
     "home": {
       "title": "冷蔵庫",
-      "subtitle": "B-001",
+      "subtitle": "食材の管理",
       "ingredientLabel": "食材",
       "selectedBar": "{{count}}点 選択中",
       "selectedTag": "選択中",
@@ -308,7 +308,11 @@
       "sortLabel": "並び替え",
       "searchLabel": "検索",
       "searchPlaceholder": "食材名で検索",
-      "searchSubmit": "検索する"
+      "searchSubmit": "検索する",
+      "gridColumnsTitle": "表示",
+      "gridColumnsLabel": "{{count}}列",
+      "gridColumnsSwitchTo3": "3列表示に切り替え",
+      "gridColumnsSwitchTo4": "4列表示に切り替え"
     },
     "catalogPick": {
       "title": "よく使う食材",
@@ -337,7 +341,7 @@
     },
     "search": {
       "title": "検索結果",
-      "subtitle": "B-001-A",
+      "subtitle": "食材を検索",
       "resultFor": "「{{query}}」の検索結果",
       "resultCount": "{{count}}件ヒット",
       "empty": "「{{query}}」に一致する食材がありません",
@@ -347,7 +351,7 @@
     },
     "ingredientEdit": {
       "title": "食材の編集",
-      "subtitle": "B-001-a",
+      "subtitle": "名前・残量の編集",
       "notFound": "食材が見つかりません",
       "editingEyebrow": "EDITING",
       "sectionBasic": "基本情報",
@@ -364,7 +368,7 @@
     "batchEdit": {
       "title": "まとめて編集",
       "emptyTitle": "選択食材がありません",
-      "subtitle": "B-001-a · {{count}}点",
+      "subtitle": "{{count}}点を編集",
       "batchEyebrow": "BATCH EDIT",
       "batchTitle": "{{count}}点を一括変更",
       "sectionTargets": "対象の食材",
@@ -390,7 +394,7 @@
   },
   "cookingConfirm": {
     "title": "調理条件",
-    "subtitle": "A-001-e · プロンプト設定",
+    "subtitle": "調理条件の設定",
     "sectionIngredients": "使う食材",
     "ingredientsEyebrow": "INGREDIENTS",
     "sectionCookingTime": "調理時間",
@@ -410,7 +414,7 @@
   "recipe": {
     "home": {
       "title": "レシピ",
-      "subtitle": "C-001 · 履歴 / お気に入り / コレクション",
+      "subtitle": "履歴・お気に入り・コレクション",
       "sectionDisplay": "表示",
       "tabHistory": "履歴",
       "tabFavorite": "★",
@@ -427,7 +431,7 @@
     },
     "generating": {
       "title": "生成中",
-      "subtitle": "C-001-a",
+      "subtitle": "レシピを生成しています",
       "gachaLoading": "ガチャ食材で闇鍋レシピ作成中…",
       "normalLoading": "AIがレシピを生成中…",
       "multiLoading": "AIが{{count}}品のレシピを生成中…",
@@ -529,7 +533,7 @@
   "settings": {
     "home": {
       "title": "設定",
-      "subtitle": "D-001",
+      "subtitle": "アカウントとアプリ設定",
       "accountEyebrow": "ACCOUNT",
       "planMeta": "プラン: {{plan}} · Gemini残 {{remaining}}/{{max}}",
       "planMetaPremium": "プラン: {{plan}} · Gemini残 ∞",
@@ -594,14 +598,14 @@
     },
     "legal": {
       "title": "権利・契約",
-      "subtitle": "D-001-a",
+      "subtitle": "利用規約とプライバシー",
       "sectionTerms": "規約",
       "termsMock": "利用規約・プライバシーポリシー（モック文言）",
       "disclaimer": "本アプリは試作モックです。外部API・課金・実カメラは接続されていません。"
     },
     "language": {
       "title": "言語",
-      "subtitle": "D-001-b",
+      "subtitle": "表示言語の切り替え",
       "sectionDisplay": "表示言語",
       "japanese": "日本語",
       "english": "English",
@@ -609,7 +613,7 @@
     },
     "profile": {
       "title": "プロフィール",
-      "subtitle": "D-001-c",
+      "subtitle": "アカウント情報",
       "sectionAccount": "アカウント情報",
       "uid": "UID: {{uid}}",
       "email": "Email: {{email}}",
@@ -656,7 +660,7 @@
     },
     "premium": {
       "title": "プレミアム",
-      "subtitle": "D-001-e",
+      "subtitle": "プランの確認・変更",
       "sectionPlan": "現在のプラン",
       "sectionChoose": "プランを選択",
       "planMonthly": "1か月プラン",
@@ -675,7 +679,7 @@
     },
     "notifications": {
       "title": "通知",
-      "subtitle": "D-001-f",
+      "subtitle": "通知の設定",
       "sectionAlerts": "アラート設定",
       "fridgeAlert": "入庫リマインド",
       "note": "デモ: ONにしたあと下のボタンで、約1分後に入庫から7日以上の食材をお知らせします。（WebはAlert、実機はプッシュ通知）",

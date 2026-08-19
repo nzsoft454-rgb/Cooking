@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Merge existing ingredient catalog with Excel additions (食材一覧800_追加.xlsx)."""
+"""Merge existing ingredient catalog with Excel additions (食材一覧1000_追加.xlsx)."""
 from __future__ import annotations
 
 import json
@@ -12,9 +12,11 @@ import pykakasi
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = Path(__file__).resolve().parent
-EXISTING_META = SCRIPTS / "ingredient-catalog-200.json"
-EXCEL_PATH = Path(r"C:\Users\akiyama\OneDrive\Desktop\食材一覧800_追加.xlsx")
+EXISTING_META = SCRIPTS / "ingredient-catalog-full.json"
+EXISTING_FALLBACK = SCRIPTS / "ingredient-catalog-200.json"
+EXCEL_PATH = Path(r"C:\Users\akiyama\OneDrive\Desktop\食材一覧1000_追加.xlsx")
 OUT_META = SCRIPTS / "ingredient-catalog-full.json"
+OUT_NEW_SLUGS = SCRIPTS / "ingredient-excel1000-slugs.json"
 OUT_CATALOG_TS = ROOT / "src" / "data" / "ingredientCatalog.ts"
 
 KKS = pykakasi.kakasi()
@@ -135,7 +137,7 @@ def load_excel_rows() -> list[dict]:
 
 def write_catalog_ts(entries: list[dict]) -> None:
     lines = [
-        "/** レシート読み取り対応食材カタログ（既存200件 + Excel追加800件） */",
+        "/** レシート読み取り対応食材カタログ（既存 + Excel追加1000件） */",
         "export type IngredientCategory =",
         "  | 'grain'",
         "  | 'vegetable'",
@@ -170,10 +172,11 @@ def write_catalog_ts(entries: list[dict]) -> None:
 def main() -> None:
     if not EXCEL_PATH.exists():
         raise SystemExit(f"Excel not found: {EXCEL_PATH}")
-    if not EXISTING_META.exists():
+    meta_path = EXISTING_META if EXISTING_META.exists() else EXISTING_FALLBACK
+    if not meta_path.exists():
         raise SystemExit("Run build-ingredient-catalog-200.py first")
 
-    existing = json.loads(EXISTING_META.read_text(encoding="utf-8"))
+    existing = json.loads(meta_path.read_text(encoding="utf-8"))
     excel_rows = load_excel_rows()
 
     known_names = {normalize_name(e["name"]) for e in existing}
@@ -182,6 +185,7 @@ def main() -> None:
     merged = list(existing)
     skipped = 0
     added = 0
+    new_slugs: list[dict] = []
 
     for row in excel_rows:
         raw_name = row["name"]
@@ -197,16 +201,22 @@ def main() -> None:
         category = map_excel_category(row["excelCategory"])
         img_slug = image_source_slug(slug)
 
-        merged.append(
+        entry = {
+            "no": len(merged) + 1,
+            "id": slug,
+            "name": name,
+            "aliases": aliases,
+            "category": category,
+            "excelCategory": row["excelCategory"],
+            "imageFile": f"ing_{img_slug}.jpg",
+            "imageKey": f"asset://ing_{img_slug}",
+        }
+        merged.append(entry)
+        new_slugs.append(
             {
-                "no": len(merged) + 1,
-                "id": slug,
+                "slug": img_slug,
                 "name": name,
-                "aliases": aliases,
-                "category": category,
                 "excelCategory": row["excelCategory"],
-                "imageFile": f"ing_{img_slug}.jpg",
-                "imageKey": f"asset://ing_{img_slug}",
             }
         )
         known_names.add(name)
@@ -216,6 +226,7 @@ def main() -> None:
         entry["no"] = i
 
     OUT_META.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT_NEW_SLUGS.write_text(json.dumps(new_slugs, ensure_ascii=False, indent=2), encoding="utf-8")
     write_catalog_ts(
         [
             {

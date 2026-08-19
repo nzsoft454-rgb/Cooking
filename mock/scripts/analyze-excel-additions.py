@@ -10,7 +10,7 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCEL = Path(r"C:\Users\akiyama\OneDrive\Desktop\食材一覧800_追加.xlsx")
+EXCEL = Path(r"C:\Users\akiyama\OneDrive\Desktop\食材一覧1000_追加.xlsx")
 CATALOG_TS = ROOT / "src" / "data" / "ingredientCatalog.ts"
 
 

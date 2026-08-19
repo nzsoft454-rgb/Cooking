@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "kijidai",
+    "name": "キジダイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw キジダイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kijidai.jpg"
+  },
+  {
+    "slug": "fuedai",
+    "name": "フエダイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw フエダイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_fuedai.jpg"
+  },
+  {
+    "slug": "ishidai",
+    "name": "イシダイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イシダイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ishidai.jpg"
+  },
+  {
+    "slug": "oonibe",
+    "name": "オオニベ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw オオニベ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_oonibe.jpg"
+  },
+  {
+    "slug": "ainame",
+    "name": "アイナメ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw アイナメ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ainame.jpg"
+  },
+  {
+    "slug": "karasukarei",
+    "name": "カラスカレイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw カラスカレイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karasukarei.jpg"
+  },
+  {
+    "slug": "makogarei",
+    "name": "マコガレイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw マコガレイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_makogarei.jpg"
+  },
+  {
+    "slug": "shimakogarei",
+    "name": "シマコガレイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw シマコガレイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shimakogarei.jpg"
+  },
+  {
+    "slug": "kichiji",
+    "name": "キチジ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw キチジ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kichiji.jpg"
+  },
+  {
+    "slug": "mutsu",
+    "name": "ムツ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ムツ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mutsu.jpg"
+  },
+  {
+    "slug": "hata",
+    "name": "ハタ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ハタ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hata.jpg"
+  },
+  {
+    "slug": "ikageso",
+    "name": "イカゲソ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw イカゲソ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikageso.jpg"
+  },
+  {
+    "slug": "takogeso",
+    "name": "タコゲソ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw タコゲソ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_takogeso.jpg"
+  },
+  {
+    "slug": "karatsukiasari",
+    "name": "殻付きアサリ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きアサリ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukiasari.jpg"
+  },
+  {
+    "slug": "karatsukishijimi",
+    "name": "殻付きシジミ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きシジミ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukishijimi.jpg"
+  },
+  {
+    "slug": "karatsukihamaguri",
+    "name": "殻付きハマグリ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きハマグリ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukihamaguri.jpg"
+  },
+  {
+    "slug": "karatsukimuurukai",
+    "name": "殻付きムール貝",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きムール貝 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukimuurukai.jpg"
+  },
+  {
+    "slug": "karatsukisazae",
+    "name": "殻付きサザエ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きサザエ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukisazae.jpg"
+  },
+  {
+    "slug": "karatsukitsubukai",
+    "name": "殻付きツブ貝",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きツブ貝 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukitsubukai.jpg"
+  },
+  {
+    "slug": "karatsukiawabi",
+    "name": "殻付きアワビ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw 殻付きアワビ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karatsukiawabi.jpg"
+  }
+]

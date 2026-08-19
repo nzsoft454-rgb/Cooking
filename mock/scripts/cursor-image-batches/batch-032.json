@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "kouika",
+    "name": "コウイカ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw コウイカ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kouika.jpg"
+  },
+  {
+    "slug": "aoriika",
+    "name": "アオリイカ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw アオリイカ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_aoriika.jpg"
+  },
+  {
+    "slug": "mebaru",
+    "name": "メバル",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw メバル (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mebaru.jpg"
+  },
+  {
+    "slug": "soi",
+    "name": "ソイ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ソイ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_soi.jpg"
+  },
+  {
+    "slug": "hoya",
+    "name": "ホヤ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ホヤ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hoya.jpg"
+  },
+  {
+    "slug": "namako",
+    "name": "ナマコ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ナマコ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_namako.jpg"
+  },
+  {
+    "slug": "kyabia",
+    "name": "キャビア",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw キャビア (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kyabia.jpg"
+  },
+  {
+    "slug": "ikanoshiokara",
+    "name": "いかの塩辛",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw いかの塩辛 (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikanoshiokara.jpg"
+  },
+  {
+    "slug": "ikura_2",
+    "name": "いくら",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw いくら (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ikura_2.jpg"
+  },
+  {
+    "slug": "shirasu_2",
+    "name": "しらす",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw しらす (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirasu_2.jpg"
+  },
+  {
+    "slug": "chirimen",
+    "name": "ちりめん",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw ちりめん (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_chirimen.jpg"
+  },
+  {
+    "slug": "kachiwari",
+    "name": "かち割り",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw かち割り (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kachiwari.jpg"
+  },
+  {
+    "slug": "ushiribuai",
+    "name": "牛リブアイ",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛リブアイ (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushiribuai.jpg"
+  },
+  {
+    "slug": "ushitoppubureedo",
+    "name": "牛トップブレード",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛トップブレード (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushitoppubureedo.jpg"
+  },
+  {
+    "slug": "ushifurappu",
+    "name": "牛フラップ",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛フラップ (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushifurappu.jpg"
+  },
+  {
+    "slug": "ushiichibo",
+    "name": "牛イチボ",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛イチボ (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushiichibo.jpg"
+  },
+  {
+    "slug": "ushiude",
+    "name": "牛ウデ",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 牛ウデ (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ushiude.jpg"
+  },
+  {
+    "slug": "butaroosuburokku",
+    "name": "豚ロースブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚ロースブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_butaroosuburokku.jpg"
+  },
+  {
+    "slug": "butabaraburokku",
+    "name": "豚バラブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚バラブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_butabaraburokku.jpg"
+  },
+  {
+    "slug": "tonkenroosuburokku",
+    "name": "豚肩ロースブロック",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 豚肩ロースブロック (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_tonkenroosuburokku.jpg"
+  }
+]

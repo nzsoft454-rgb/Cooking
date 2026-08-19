@@ -54,9 +54,11 @@
     "ingredients:images": "python scripts/sync-ingredient-images-200.py",
     "ingredients:images:missing": "python scripts/sync-ingredient-images-200.py --only-missing",
     "ingredients:images:gemini": "python scripts/generate-ingredient-images-gemini.py",
-    "ingredients:images:gemini:check": "python scripts/generate-ingredient-images-gemini.py --check-quota",
+    "ingredients:images:gemini:excel1000": "python scripts/generate-ingredient-images-gemini.py --excel1000",
     "ingredients:images:cursor:pending": "python scripts/list-pending-cursor-images.py",
+    "ingredients:images:cursor:pending:excel1000": "python scripts/list-pending-cursor-images.py --excel1000",
     "ingredients:images:cursor:batches": "python scripts/list-pending-cursor-images.py && python scripts/split-cursor-image-batches.py 20",
+    "ingredients:images:cursor:batches:excel1000": "python scripts/list-pending-cursor-images.py --excel1000 && python scripts/split-cursor-image-batches.py 20",
     "ingredients:build": "python scripts/build-ingredient-catalog-merge-excel.py && python scripts/generate-ingredient-images-ts.py && python scripts/sync-ingredient-images-200.py --only-missing",
     "ios": "node scripts/start-expo.cjs --ios",
     "web": "node scripts/start-expo.cjs --web"

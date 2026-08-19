@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "kyohoubudou",
+    "name": "巨峰ぶどう",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 巨峰ぶどう (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kyohoubudou.jpg"
+  },
+  {
+    "slug": "pioonebudou",
+    "name": "ピオーネぶどう",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw ピオーネぶどう (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_pioonebudou.jpg"
+  },
+  {
+    "slug": "shainmasukattobudou",
+    "name": "シャインマスカットぶどう",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw シャインマスカットぶどう (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shainmasukattobudou.jpg"
+  },
+  {
+    "slug": "deraueabudou",
+    "name": "デラウェアぶどう",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw デラウェアぶどう (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_deraueabudou.jpg"
+  },
+  {
+    "slug": "naiagarabudou",
+    "name": "ナイアガラぶどう",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw ナイアガラぶどう (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_naiagarabudou.jpg"
+  },
+  {
+    "slug": "shiranuimikan",
+    "name": "不知火みかん",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 不知火みかん (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shiranuimikan.jpg"
+  },
+  {
+    "slug": "setokamikan",
+    "name": "せとかみかん",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw せとかみかん (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_setokamikan.jpg"
+  },
+  {
+    "slug": "hassakumikan",
+    "name": "はっさくみかん",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw はっさくみかん (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hassakumikan.jpg"
+  },
+  {
+    "slug": "neeburuorenji",
+    "name": "ネーブルオレンジ",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw ネーブルオレンジ (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_neeburuorenji.jpg"
+  },
+  {
+    "slug": "kawanakashimahakutou",
+    "name": "川中島白桃",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 川中島白桃 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kawanakashimahakutou.jpg"
+  },
+  {
+    "slug": "hakuhoumomo",
+    "name": "白鳳桃",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 白鳳桃 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hakuhoumomo.jpg"
+  },
+  {
+    "slug": "asamahakutou",
+    "name": "浅間白桃",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 浅間白桃 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_asamahakutou.jpg"
+  },
+  {
+    "slug": "ookubomomo",
+    "name": "大久保桃",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 大久保桃 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ookubomomo.jpg"
+  },
+  {
+    "slug": "fuyuukaki",
+    "name": "富有柿",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 富有柿 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_fuyuukaki.jpg"
+  },
+  {
+    "slug": "jiroukaki",
+    "name": "次郎柿",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 次郎柿 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_jiroukaki.jpg"
+  },
+  {
+    "slug": "taakikaki",
+    "name": "太秋柿",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 太秋柿 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_taakikaki.jpg"
+  },
+  {
+    "slug": "amagaki",
+    "name": "甘柿",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 甘柿 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_amagaki.jpg"
+  },
+  {
+    "slug": "shibugaki",
+    "name": "渋柿",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 渋柿 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shibugaki.jpg"
+  },
+  {
+    "slug": "nijusseikinashi",
+    "name": "二十世紀梨",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 二十世紀梨 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_nijusseikinashi.jpg"
+  },
+  {
+    "slug": "kousuinashi",
+    "name": "幸水梨",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 幸水梨 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kousuinashi.jpg"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "ryokucha",
+    "name": "緑茶",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw 緑茶 (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ryokucha.jpg"
+  },
+  {
+    "slug": "barusamikosu",
+    "name": "バルサミコ酢",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw バルサミコ酢 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_barusamikosu.jpg"
+  },
+  {
+    "slug": "heezerunattsumiruku",
+    "name": "ヘーゼルナッツミルク",
+    "excelCategory": "乳製品",
+    "prompt": "Professional food photography of raw ヘーゼルナッツミルク (Plain dairy product without branded packaging.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_heezerunattsumiruku.jpg"
+  },
+  {
+    "slug": "shintamanegi",
+    "name": "新玉ねぎ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 新玉ねぎ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shintamanegi.jpg"
+  },
+  {
+    "slug": "ponsu",
+    "name": "ポン酢",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ポン酢 (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_ponsu.jpg"
+  },
+  {
+    "slug": "kamomomoniku",
+    "name": "鴨もも肉",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 鴨もも肉 (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kamomomoniku.jpg"
+  },
+  {
+    "slug": "tarabagani",
+    "name": "タラバガニ",
+    "excelCategory": "魚介類",
+    "prompt": "Professional food photography of raw タラバガニ (Fresh raw seafood for cooking, not sashimi platter.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_tarabagani.jpg"
+  },
+  {
+    "slug": "shironegi",
+    "name": "白ネギ",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白ネギ (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shironegi.jpg"
+  },
+  {
+    "slug": "umeboshi",
+    "name": "梅干し",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 梅干し (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_umeboshi.jpg"
+  },
+  {
+    "slug": "haabuteii",
+    "name": "ハーブティー",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw ハーブティー (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_haabuteii.jpg"
+  },
+  {
+    "slug": "mentsuyu",
+    "name": "めんつゆ",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw めんつゆ (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_mentsuyu.jpg"
+  },
+  {
+    "slug": "inoshishiroosu",
+    "name": "猪ロース",
+    "excelCategory": "肉類",
+    "prompt": "Professional food photography of raw 猪ロース (Raw uncooked meat only, fresh butcher cut.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_inoshishiroosu.jpg"
+  },
+  {
+    "slug": "karin_2",
+    "name": "花梨",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 花梨 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karin_2.jpg"
+  },
+  {
+    "slug": "shirodashi",
+    "name": "白だし",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 白だし (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirodashi.jpg"
+  },
+  {
+    "slug": "boke",
+    "name": "木瓜",
+    "excelCategory": "果物",
+    "prompt": "Professional food photography of raw 木瓜 (Whole fresh fruit as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_boke.jpg"
+  },
+  {
+    "slug": "konbudashi",
+    "name": "昆布だし",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 昆布だし (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_konbudashi.jpg"
+  },
+  {
+    "slug": "aamondopaudaa",
+    "name": "アーモンドパウダー",
+    "excelCategory": "菓子・デザート材料",
+    "prompt": "Professional food photography of raw アーモンドパウダー (Baking or dessert ingredient, raw uncooked.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_aamondopaudaa.jpg"
+  },
+  {
+    "slug": "hondashi",
+    "name": "ほんだし",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw ほんだし (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_hondashi.jpg"
+  },
+  {
+    "slug": "baniraessensu",
+    "name": "バニラエッセンス",
+    "excelCategory": "スパイス",
+    "prompt": "Professional food photography of raw バニラエッセンス (Spice or herb, loose in a small plain bowl.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_baniraessensu.jpg"
+  },
+  {
+    "slug": "karyuudashi",
+    "name": "顆粒だし",
+    "excelCategory": "調味料",
+    "prompt": "Professional food photography of raw 顆粒だし (Condiment in a small plain bowl, no branded bottle.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_karyuudashi.jpg"
+  }
+]

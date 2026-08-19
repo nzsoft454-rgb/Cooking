@@ -17,8 +17,8 @@ FOOD_DIR = ROOT / "assets" / "food"
 META_PATH = Path(__file__).resolve().parent / "ingredient-catalog-full.json"
 META_FALLBACK = Path(__file__).resolve().parent / "ingredient-catalog-200.json"
 
-MAX_BYTES = 300 * 1024
-TARGET = (800, 800)
+MAX_BYTES = 120 * 1024
+TARGET = (512, 512)
 
 CATEGORY_COLORS = {
     "grain": ("#F5E6C8", "#C4A35A"),
@@ -62,20 +62,20 @@ LEGACY_JPG = {
 }
 
 LEGACY_PNG = {
-    "onion": "tamanegi_onion.png",
-    "cucumber": "kyuuri_cucumber.png",
-    "eggplant": "nasu_eggplant.png",
+    "onion": "tamanegi_onion.jpg",
+    "cucumber": "kyuuri_cucumber.jpg",
+    "eggplant": "nasu_eggplant.jpg",
     "green_pepper": "piman_greenpepper.jpg",
     "spinach": "hourensou_spinach.jpg",
     "komatsuna": "hourensou_spinach.jpg",
-    "daikon": "kabu_turnip.png",
-    "carrot": "kabu_turnip.png",
-    "potato": "kabu_turnip.png",
+    "daikon": "kabu_turnip.jpg",
+    "carrot": "kabu_turnip.jpg",
+    "potato": "kabu_turnip.jpg",
     "tomato": "sample_ingredient_300kb.jpg",
-    "shiitake": "capture-erungi.png",
-    "shimeji": "capture-erungi.png",
-    "enoki": "capture-erungi.png",
-    "okra": "okura_gombo.png",
+    "shiitake": "capture-erungi.jpg",
+    "shimeji": "capture-erungi.jpg",
+    "enoki": "capture-erungi.jpg",
+    "okra": "okura_gombo.jpg",
 }
 
 # English search hints for Wikimedia (Japanese name appended in query)

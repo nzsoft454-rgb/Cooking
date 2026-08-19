@@ -9,8 +9,8 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 FOOD = ROOT / "assets" / "food"
-MAX_BYTES = 300 * 1024
-TARGET = (800, 800)
+MAX_BYTES = 120 * 1024
+TARGET = (512, 512)
 
 
 def save_under_limit(img: Image.Image, dest: Path) -> int:

@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "shirodaikon",
+    "name": "白大根",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白大根 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirodaikon.jpg"
+  },
+  {
+    "slug": "midoridaikon",
+    "name": "緑大根",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 緑大根 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_midoridaikon.jpg"
+  },
+  {
+    "slug": "kurodaikon",
+    "name": "黒大根",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 黒大根 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_kurodaikon.jpg"
+  },
+  {
+    "slug": "akahitosan",
+    "name": "赤人参",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤人参 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akahitosan.jpg"
+  },
+  {
+    "slug": "midorininjin",
+    "name": "緑人参",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 緑人参 (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_midorininjin.jpg"
+  },
+  {
+    "slug": "akajagaimo",
+    "name": "赤じゃがいも",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 赤じゃがいも (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_akajagaimo.jpg"
+  },
+  {
+    "slug": "shirojagaimo",
+    "name": "白じゃがいも",
+    "excelCategory": "野菜",
+    "prompt": "Professional food photography of raw 白じゃがいも (Whole fresh vegetable as sold at a Japanese supermarket.). Japanese cooking ingredient. Single ingredient only, no dish, no recipe. Centered on clean white plate or light marble. Soft natural lighting, photorealistic. No text, no logo, no people, no packaging. Avoid cooked meal, soup, bento, illustration.",
+    "dest": "mock/assets/food/ing_shirojagaimo.jpg"
+  }
+]
